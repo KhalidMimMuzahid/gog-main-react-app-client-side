@@ -1,0 +1,23 @@
+.brand {
+    
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    text-transform: uppercase;
+    color: var(--pink-500);
+  }
+  .mb-custom {
+    margin-bottom: 20px ;
+  }
+  .mb-custom2{
+    margin-bottom: -20px;
+  }
+  
+  .darkmode .brand {
+    color: var(--white-100);
+  }

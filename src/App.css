@@ -1,38 +1,313 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
+
+
+
+
+/* css copyed form previous code  */
+    .wrapper_pop.showm {
+      visibility: visible;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    
+
+    /* .modal {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1.1);
+      transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    } */
+
+    .wrapper_pop {
+      position: fixed;
+      max-width: 430px;
+      width: 100%;
+      background: #fff;
+      padding: 34px;
+      border-radius: 6px;
+      box-shadow: 0 5px 10px rgba(14, 13, 13, 0);
+      visibility: visible;
+      opacity: 1;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, 5%);
+      border: 3px solid #999999;
+      z-index: 11;
+      display: none;
+      margin-top: 2rem;
+
+    }
+   
+
+
+    .wrapper_pop h2 {
+      position: relative;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--dark-v1);
+    }
+
+    .wrapper_pop h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 28px;
+      border-radius: 12px;
+      background: var(--lite-v1);
+    }
+
+    .wrapper_pop form {
+      margin-top: 30px;
+    }
+
+    .wrapper_pop form .input-box {
+      height: 52px;
+      margin: 23px 0;
+    }
+
+    form .input-box input {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      padding: 0 4px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #333;
+      border: none;
+    border-bottom: 2px solid #ccc;
+      transition: all 0.3s ease;
+    }
+
+    .input-box input:focus,
+    .input-box input:valid {
+      border-color: var(--lite-v1);
+    }
+
+    form .policy {
+      display: flex;
+      align-items: center;
+    }
+
+    form h3 {
+      color: #707070;
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 10px;
+    }
+
+    .input-box.button input {
+      color: #fff;
+      letter-spacing: 1px;
+      border: none;
+      background: var(--lite-v1);
+      cursor: pointer;
+    }
+
+    .input-box.button input:hover {
+      background: (--lite-v1);
+    }
+
+    form .text h3 {
+      color: #333;
+      width: 100%;
+      text-align: center;
+    }
+
+    form .text h3 a {
+      color: var(--lite-v1);
+      text-decoration: none;
+    }
+
+    form .text h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .login-drop-down {
+      height: 100%;
+      width: 100%;
+      outline: none;
+      padding: 15px 15px;
+      font-size: 15px;
+      font-weight: 400;
+      color: #333;
+      border: 1.5px solid #c7bebe;
+      border-bottom-width: 2.5px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    .options {
+      color: black;
+    }
+
+    .nav_button button{
+  border-radius: 5px;
+  padding: 6px 8px;
+ 
+  margin-top: 1rem;
+  
+}
+    .nav-apply-now {
+      color: #ffffff;
+      background: #bd2626;
+  border: 2px solid  #bd2626;
+
+    }
+    .nav-apply-now:hover,
+    .nav-apply-now:focus{
+      animation: pulse 1s;
+      box-shadow: 0 0 0 1em  transparent;
+     
+    }
+    @keyframes pulse {
+  0% { box-shadow: 0 0 0 0 silver;
+  border-radius: 5px;}
+}
+    .nav-sign-up {
+      color: #000000;
+      background: #ffffff;
+  border: 2px solid #000000;
+     
+    }
+    .nav-sign-up:hover {
+      color: #ffffff;
+      background-color: var(--dark-v1);
+ 
+    }
+
+    .wrapper-left{
+      display: block;
+    }
+
+   .close-button{
+    float: right;
+    bottom: 30px;
+    left: 30px;
+    width: 40px;
+    background-color: transparent;
+    font-size: 37px;
+    font-weight: 550;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 75%;
+    transition: all 0.2s ease-in;
+}
+.close-button:hover{
+  background-color:var(--lite-v1);
+  opacity: 0.7;
+  color: black;
+}
+.input-box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
   pointer-events: none;
+  color: #16252D;
+  transition: 0.2s ease all;
+  
 }
+.input-box input {
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+  display: block;
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom: 2px solid #00C374;
+  outline: none;
+}
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -1.5rem;
+  font-size: 0.8rem;
+  color: #00C374;
+}
+.school-button{
+   background-color: var(--dark-v1);
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--dark-v1);
+    padding: 4px;
+    padding-bottom: 3px;
+    margin: 0px 60px 10px 10px;
+    color: #fff;
+    box-shadow: 2px 2px 3px #999;
+    font-size: 14px;
+}
+    @media screen and (max-width: 1120px) {
+      .wrapper-left{
+      display: flex;
+    }
+   
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    @media screen and (max-width: 600px) {
+      .wrapper_pop{
+        /* display: block; */
+    height: auto;
+    width: 90vw;
+    position: fixed;
+      }
+  }
+  .nav_button button{
+    width:30%
+  }
+  
+ 
+}
+@media screen and (max-width: 450px){
+  .nav_button button{
+    width:60%;
+    margin-left:13px;
   }
 }
+    @media screen and (min-width: 600px) and (max-width: 1800px) {
+      
+      .wrapper_pop {
+      position: fixed;
+      max-width: 750px;
+      width: 100%;
+      background: #fff;
+      padding: 34px;
+      border-radius: 6px;
+      box-shadow: 0 5px 10px rgba(14, 13, 13, 0);
+      visibility: visible;
+      opacity: 1;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, 5%);
+      border: 3px solid #999999;
+      z-index: 11;
+      display: none;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    }
+    .input-box-wrap{
+      display: flex;
+      flex-wrap: nowrap;
+      gap:20px
+    }
+    .input-box-container{
+      width: 50%;
+      display: flex;
+    flex-direction: column;
+    }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  }  

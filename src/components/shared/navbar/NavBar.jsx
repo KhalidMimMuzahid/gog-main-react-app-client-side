@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -9,11 +9,23 @@ import { Link } from 'react-router-dom';
 import './NavBar.css'
 
 import logo from '../../../assets/images/latestlogo.jpg'
+import { AuthContext } from '../../../context/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 
 const NavBar = () => {
     // state for the nav items show 
     const [showDropdown, setShowDropdown] = useState(false);
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+      logOut()
+          .then(() => {
+            toast.success('Successfully logged out');
+           })
+          .catch(err => console.log(err));
+  }
     
     return (
       <>
@@ -57,7 +69,16 @@ const NavBar = () => {
                 </Nav>
                 
                   <Button variant="btn btn-danger me-3" className='nav-apply-now'>Apply Now</Button>
-                  <Link to='signup'><span><Button variant="outline-dark ">Sign Up</Button></span></Link>
+                  
+                  { user?.uid ?
+                    <>
+                      <Button onClick={handleLogOut} variant="outline-dark ">Log Out</Button>
+                    </>
+                    :
+                    <Link to='signup'><span><Button variant="outline-dark ">Sign Up</Button></span></Link>
+                  }
+                  
+                  
                 
               </Offcanvas.Body>
             </Navbar.Offcanvas>

@@ -1,3 +1,229 @@
 body{
      font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+
+.login-form {
+     background-color: #91d0cc;
+     padding: 100px 0;
+ }
+ 
+ 
+ .singForm {
+     padding: 60px;
+     border-radius: 5px;
+     background-image: linear-gradient(to bottom, #5ddd85, #0699263b);
+     max-width: 530px;
+     margin: 0 auto;
+     width: 100%;
+     font-family: 'Jost', sans-serif;
+ }
+ 
+ .fluid {
+     overflow: hidden;
+ }
+ 
+ 
+ .sing-title {
+     color: #fff;
+     display: flex;
+     padding: 224px 25px;
+     overflow: hidden;
+     background-image: linear-gradient(to bottom, #4b4b4b, #070707);
+     flex-direction: column;
+     justify-content: center;
+     margin: auto;
+     border-radius: 5px;
+ }
+ 
+ 
+ .sing-title h2 {
+     font-size: 35px;
+     font-weight: 900;
+ }
+ 
+ .sing-title .text-tran {
+     color: transparent;
+     -webkit-text-stroke: 1px #fff;
+     padding-left: 2px;
+ }
+ 
+ .title-login.text-center p {
+     font-size: 25px;
+     margin-bottom: 25px;
+     font-weight: 400;
+     color: #fff;
+ }
+ 
+ .title-login.text-center h2 {
+     font-size: 38px;
+     font-weight: 700;
+     color: #fff;
+ }
+ 
+ .input-form input ,.input-form textarea {
+     font-size: 16px;
+     outline: none;
+     color: #535353;
+     border-radius: 3px;
+     border: 1px solid #fff;
+     background: #fff;
+     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%);
+     float: left;
+     width: 100%;
+     padding: 13px 40px 11px 15px;
+     margin: 10px 0;
+ }
+
+ .ponter{
+    cursor: pointer;
+ }
+
+ .text-center {
+     text-align: center!important;
+     margin-top: 20px;
+     color: white;
+     font-weight: 700;
+     margin: 0;
+     
+ }
+ .googelIcon{
+     margin-bottom: 5px;   
+     
+ }
+
+ .googleSignUpButton{
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 40px !important;
+ }
+ 
+ .singForm {
+     padding: 60px;
+     border-radius: 5px;
+     background-image: linear-gradient(to bottom, #5ddd85, #0699263b);
+     max-width: 530px;
+     margin: 0 auto;
+     width: 100%;
+     font-family: 'Jost', sans-serif;
+ }
+ 
+ .title-login.text-center p {
+     font-size: 25px;
+     margin-bottom: 25px;
+     font-weight: 400;
+     color: #fff;
+ }
+ 
+ .title-login.text-center h2 {
+     font-size: 38px;
+     font-weight: 700;
+     color: #fff;
+ }
+ 
+ .input-form input {
+     font-size: 16px;
+     outline: none;
+     color: #535353;
+     border-radius: 3px;
+     border: 1px solid #fff;
+     background: #fff;
+     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 6%);
+     float: left;
+     width: 100%;
+     padding: 13px 40px 11px 15px;
+     margin: 10px 0;
+ }
+ 
+ .googelIcon{
+     margin-top: -4px;
+ }
+ 
+ 
+ button.submit {
+     border: none;
+     color: #fff;
+     text-align: center;
+     position: relative;
+     line-height: 46px;
+     z-index: 1;
+     transition: all .7s ease;
+     border-radius: 3px;
+     text-transform: uppercase;
+     font-size: 15px;
+     font-weight: 400;
+     width: 100%;
+     margin-bottom: 15px;
+     background-image: linear-gradient(to bottom, #ffb400, #ff8a00);
+ }
+ 
+ 
+ button.submit:hover {
+     border: 2px solid #ff8a00;
+     background: transparent;
+     color: #ff8a00;
+ }
+ 
+ .social-login button:hover {
+     background: #ff8a00;
+     color: #fff;
+ }
+ 
+ .social-login button {
+     font-size: 13px;
+     font-weight: 600;
+     margin: 0 2px 5px 0;
+     height: 40px;
+     padding: 0 13px;
+     text-align: center;
+     text-decoration: none;
+     color: #4867aa;
+     background: #fff;
+     box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+ }
+ 
+ .social-login {
+     text-align: center;
+ }
+ 
+ 
+ 
+ .forget {
+     text-align: center;
+     margin-bottom: 13px;
+     font-size: 16px;
+ }
+ 
+ .forget a {
+     text-decoration: none;
+     color: #ff8a00;
+ }
+ 
+ .forget a:hover {
+     color: #fff;
+ }
+ 
+ .sing-title.login-p {
+     padding: 208px 25px;
+ }
+ 
+ /* responsive */
+ 
+ @media (max-width: 425.98px) { 
+     .title-login.text-center h2 {
+         font-size: 22px;
+     }
+     
+   }
+ 
+ @media (max-width: 991.98px) { 
+     .sing-title{
+         display: none;
+     }
+   }
+ 
+ 
+   @media (max-width: 1199.98px) { 
+     .sing-title{
+         display: none;
+     }
+   }

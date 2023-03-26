@@ -77,11 +77,11 @@ span.yellow {
     box-shadow: 0 2px 24px rgb(0 0 0 / 12%);
     border: 2px #11252d;
     border-radius: 25px;
-    width: 460px;
+   
     overflow: hidden;
     height: auto;
-    margin: 3rem 1rem;
-    max-height: 500px;
+    margin: 3rem 0rem;
+    
 }
 
 #FSDA, #FWD-school, #DA, #FWD, #ELECTRICAL, #MECHANICAL {

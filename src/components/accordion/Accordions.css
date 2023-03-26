@@ -1,0 +1,27 @@
+.accordion-area {
+    padding: 60px 0;
+}
+
+.accordion-area h2 {
+    color: #11252d;
+    margin-bottom: 21px;
+    font-weight: 600;
+}
+
+.accordion-area .accordion-button:not(.collapsed) {
+    color: #00c374;
+    background-color: transparent;
+    border-bottom: 1px solid #00c374;
+    font-weight: 600;
+}
+
+.accordion-area .accordion-body {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+    color: #6d6d6de8;
+}
+
+.accordion-area .accordion-button:focus {   
+    box-shadow: none;
+}

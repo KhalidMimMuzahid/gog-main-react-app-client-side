@@ -116,20 +116,16 @@ const NavBar = () => {
                     show={showDropdown}
                   >
                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
+                    <NavDropdown.Item href="/courses/python">
+                    Python
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action5">
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown>
-
-                  <Nav.Link>
-                    <Link className="text-dark text-decoration-none">
-                      Hire From Us
-                    </Link>
-                  </Nav.Link>
+                  
+                  <Nav.Link><Link className='text-dark text-decoration-none' to={'/hire'}>Hire From Us</Link></Nav.Link>
                 </Nav>
 
                 <span>

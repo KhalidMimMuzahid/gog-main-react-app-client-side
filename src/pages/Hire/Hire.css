@@ -1,0 +1,37 @@
+.hire-left {
+    max-width: 600px;
+    margin-top: 7rem;
+}
+
+.hire-left>h1 {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.9rem,4vw,46px);
+    line-height: clamp(2.375rem,5vw,4.313rem);
+}
+
+.hire-left p {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(23px,3vw,23px);
+    line-height: 35px;
+}
+
+.apply-now-hire {
+    color: #fff;
+    background-color: #11252D;
+    font-size: 17px;
+    text-align: center;
+    padding: 0.9em 2.5em;
+    border: 0px;
+    border-radius: 5px;
+    margin: 0.6rem 0rem;
+}
+
+.apply-now-hire:hover, .apply-now-hire:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 1em transparent;
+}
+

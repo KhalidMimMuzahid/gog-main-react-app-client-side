@@ -1,8 +1,10 @@
 import React from 'react';
+import './About.css'
+import { GrPersonalComputer, IconName } from "react-icons/gr";
 
 const About = () => {
     return (
-        <div>
+        <div className='about-area'>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
@@ -23,6 +25,53 @@ const About = () => {
                                 offering
                                 various technical programs with guaranteed job opportunities.
                             </p>
+                        </div>
+                        <div class="messageceo">
+                            <h1 class="txt_about_us">Message From CEO</h1>
+                            <p class="txt_about_content">
+                                At Geeks of Gurukul, we strive to provide our students with the skills and knowledge they need to succeed in today's fast-paced world. Our comprehensive training programs cover a wide range of technologies, including SQL, Machine Learning, Python, Artificial Intelligence, Cybersecurity, Data Structures and Algorithms, and Tableau/Power BI.
+
+                                Our expert instructors and cutting-edge curriculum are designed to help you understand the fundamentals of each technology and apply your learning to your future career. We provide hands-on training using real-world scenarios to help you gain practical experience and prepare for the challenges of the modern workplace.
+
+                                Whether you're a student looking to enhance your technical skills or a professional seeking to stay ahead of the curve, we have a program that can help you achieve your goals. Enroll in one of our training programs today and take the first step towards a successful future!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-5 offset-md-1">
+                        <div class="abt-card1">
+                            <p class="abt_bold">2021</p>
+                            <p class="abt_subtext">We Started Our Journey</p>
+                        </div>
+                    </div>
+                    <div className="col-md-5">
+                        <div class="abt-card2">
+                            <p class="abt_bold">450+</p>
+                            <p class="abt_subtext">Students Currently Enrolled</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-6 col-lg-4" >
+                        <div class="abt-card3">
+                            {/* <GrPersonalComputer></GrPersonalComputer> */}
+                            <p class="abt_bold2"> 30+</p>
+                            <p class="abt_bold3">Total Batches</p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4" >
+                        <div class="abt-card4">
+                            
+                            <p class="abt_bold2"> 96%</p>
+                            <p class="abt_bold3">Placemnt Rate</p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4" >
+                        <div class="abt-card5">
+                            
+                            <p class="abt_bold2"> 200+</p>
+                            <p class="abt_bold3">Hiring Partners</p>
                         </div>
                     </div>
                 </div>

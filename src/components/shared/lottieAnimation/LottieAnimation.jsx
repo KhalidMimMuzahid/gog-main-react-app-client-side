@@ -1,6 +1,7 @@
 import React from "react";
 import Lottie from "lottie-web";
 import { Container, Row, Col } from "react-bootstrap";
+import './LottieAnimation.css'
 
 const LottieAnimation = () => {
   React.useEffect(() => {
@@ -16,9 +17,10 @@ const LottieAnimation = () => {
     };
   }, []);
 
+
   return (
       
-        <div>
+        <div className="lotteSizeClass">
           <div className="lottie-player1" />
         </div>
       

@@ -1,0 +1,28 @@
+.brands-title h4{
+    color: red;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.brands-title h2{
+    color: #11252D;
+    text-align: center;
+    font-weight: bold;
+}
+
+.brands-slider img {
+    object-fit: contain;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    height: 100px;
+    width: 200px;
+}
+
+.brands-slider .overlay::before{
+    background: transparent;
+}
+.brands-slider .overlay::after{
+    background: transparent;
+}

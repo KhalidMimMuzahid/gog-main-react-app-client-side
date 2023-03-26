@@ -7,7 +7,7 @@ const Banner = () => {
         <div className='hero-Area-Ancor-Fixed'>
             <div className="container">
                 <div className='row align-items-center'>
-                    <div className='col-md-7'>
+                    <div className='col-lg-7'>
 
 
 
@@ -48,7 +48,7 @@ const Banner = () => {
 
 
                     </div>
-                    <div className='col-md-5'>
+                    <div className='col-lg-5'>
                         <div className="new_hero">
                             <h1 className="hero-h1">if(Your Choice == "Geeks of Gurukul")</h1>
                             <div className="hero-inner">

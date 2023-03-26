@@ -1,0 +1,243 @@
+.master-area{
+    background-color: #11252d;
+    padding: 30px 0;
+}
+
+.Register_masterclass {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.Register_masterclass p {
+    color: #36B97E;
+}
+
+.Register_masterclass h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.master-area {
+    font-family: montserrat;
+}
+
+span.green-title {
+    color: #4CA259;
+}
+
+span.red-title {
+    color: #BD2626;
+}
+
+.form-width {
+  background: #FFFFFF;
+  box-shadow: 0px -40px 70px rgba(0, 0, 0, 0.03), 0px 87.866px 70.2928px rgba(0, 0, 0, 0.03), 0px 56.9502px 41.1668px rgba(0, 0, 0, 0.024), 0px 33.8447px 22.3896px rgba(0, 0, 0, 0.02), 0px 17.5732px 11.4226px rgba(0, 0, 0, 0.016), 0px 7.15945px 5.72756px rgba(0, 0, 0, 0.01), 0px 1.62715px 2.76615px rgba(0, 0, 0, 0.008);
+  border-radius: 15px;
+  padding: 1px 25px;
+}
+
+p.styles_form_title {
+    font-size: 38px;
+    text-align: center;
+    font-weight: 600;
+    color: #16252D;
+    line-height: 39px;
+    padding: 0px 20px;
+    margin: 0;
+}
+
+
+.styles_form_title {
+    font-size: 38px;
+    text-align: center;
+    font-weight: 600;
+    color: #16252D;
+    line-height: 39px;
+    padding: 0px 20px;
+    margin: 0;
+}
+
+
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group input {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+    display: block;
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+}
+
+.form-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    color: #16252D;
+    transition: 0.2s ease all;
+}
+
+.form-group input:focus, .form-group input:valid {
+    border-bottom: 2px solid #00C374;
+    outline: none;
+}
+
+#terms-and-conditions {
+    accent-color: #00C374;
+}
+
+input[type=checkbox] {
+    zoom: 1;
+}
+
+.live-title {
+    padding-top: 20px;
+}
+
+.form-group1 a {
+    color: #000;
+}
+
+#register-button {
+    
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17.46px;
+    background-color: #16252D;
+    color: white;
+    margin: 2% 20%;
+    text-align: center;
+    padding: 11px 30px;
+    border-radius: 4px;
+    font-family: Poppins,arial,sans-serif;
+}
+
+.left_card {
+    padding: 36px 5px;
+    margin-bottom: 30px;
+    background-color: #FFFFFF;
+    border-radius: 5%;
+    overflow: hidden;
+    border-radius: 20px;
+    
+}
+
+.content>h2 {
+    margin: 0rem 3rem;
+    text-align: start;
+    color: #11252d;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.content>h6 {
+    margin: 0rem 2rem 0rem 3rem;
+    text-align: start;
+    color: #858F93;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* slider */
+
+.webinar {
+    display: flex;
+    flex-direction: row;
+    color: #000000;
+    background-color: #D9FFEC;
+    margin: 1rem 2rem 2rem 2.3rem;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    
+    height: 304px;
+}
+
+.text_a {
+    height: 215px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text_a h2, .text_a h3 {
+    font-size: 27px;
+    padding-top: 5px;
+    
+    font-weight: 700;
+    margin: -2rem 1rem 2rem;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.webinar_dates {
+    display: flex;
+    margin: 1rem 1rem 3rem;
+    gap: 1rem;
+    color: #01c475;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cover_icon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cover_icon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.webinar_dates span {
+    margin-left: 10px;
+    color: #000;
+    font-weight: 600;
+}
+
+.content h2, h6, h3 {
+    padding: 0.1rem;
+    margin: 0.5rem 3rem;
+    text-align: start;
+    color: #0e2027;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text_a h6 {
+    font-size: 16px;
+    color: #11262f;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+span.instructorName-logo {
+    display: flex;
+}
+
+span.instructorName-logo img {
+    width: 28%;
+    height: auto;
+}
+
+.img_a {
+    padding: 1rem;
+    width: 155px;
+}
+
+.swiper-slide .img_a img {
+    width: 100%;
+    height: auto;
+}
+
+
+.left_card .swiper-button-prev, .left_card .swiper-button-next {
+    color: #01c475;
+}

@@ -1,0 +1,101 @@
+.about-area{
+    margin-bottom: 100px;
+}
+
+h1.txt_about_us {
+    background-color: #f7cf5f;
+    font-size: 38px;
+    font-weight: 700;
+    color: #11252d;
+    display: inline-block;
+    padding: 10px;
+    font-family: montserrat;
+}
+
+
+
+.txt_about_content {
+font-size: 15px;
+color: #11252d;
+line-height: 1.5em;
+font-family: montserrat;
+}
+
+.about {
+margin-bottom: 60px;
+}
+
+.abt-card1, .abt-card2 {
+    background-color: #4452e5;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 2.5em;
+    /* width: 40em; */
+    margin-top: 40px;
+}
+
+.abt_bold {
+    font-size: 5em;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    color: #f7cf5f;
+    font-weight: 700;
+}
+
+.abt_subtext {
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.abt-card2 {
+    background-color: #01c173;
+}
+
+.abt-card3, .abt-card4, .abt-card5 {
+  
+    padding: 3em;
+    border-radius: 2.5em;
+  
+    margin-top: 1em;
+    align-items: center;
+   
+}
+
+.abt_bold2 {
+    font-size: 3em;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    color: #fcfffd;
+    font-weight: 700;
+}
+
+.abt_bold3 {
+    font-size: 2em;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    color: #fcfffd;
+    font-weight: 700;
+}
+
+.abt-card3 {
+    background-color: #ba2424;
+  
+}
+
+.abt-card4 {
+    background-color: #45c1cd;
+  
+}
+
+.abt-card5 {
+    background-color: #db8f6d;
+  
+}

@@ -1,0 +1,103 @@
+#hire-from {
+    scroll-margin-top: 50px;
+}
+.hire-from {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+ 
+    background-color: #11252D;
+    padding: 2rem 5rem 4rem;
+}
+
+.hire-right img {
+    width: 100%;
+    height: auto;
+}
+
+.hire-from h2 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 700;
+}
+
+.hire-from p {
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin: 2rem 0;
+    text-align: center;
+
+}
+
+.wrapper_hire {
+    position: relative;
+    
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(14, 13, 13, 0);
+}
+
+.box-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.box-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper_hire form .input-box {
+    height: 52px;
+    margin: 15px 0;
+}
+
+.hire-from form .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 0 4px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    border: none !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: aliceblue;
+}
+
+.hire-from form h3 {
+    color: #707070;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.hire-from form .policy {
+    display: flex;
+    align-items: center;
+}
+
+.hire-from .input-box.button input {
+    color: white;
+    letter-spacing: 1px;
+    border: none;
+    background: #00c374;
+    cursor: pointer;
+    margin: auto;
+    max-width: 184px;
+    border-radius: 5px;
+    height: 45px;
+    font-weight: 500;
+}
+
+

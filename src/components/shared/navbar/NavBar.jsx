@@ -56,8 +56,8 @@ const NavBar = () => {
                     show={showDropdown}
                   >
                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      Another action
+                    <NavDropdown.Item href="/courses/python">
+                    Python
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action5">
@@ -65,7 +65,7 @@ const NavBar = () => {
                     </NavDropdown.Item>
                   </NavDropdown>
                   
-                  <Nav.Link><Link className='text-dark text-decoration-none'>Hire From Us</Link></Nav.Link>
+                  <Nav.Link><Link className='text-dark text-decoration-none' to={'/hire'}>Hire From Us</Link></Nav.Link>
                 </Nav>
                 
                   <Button variant="btn btn-danger me-3" className='nav-apply-now'>Apply Now</Button>

@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./SignUp.css";
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from "../../../context/AuthProvider";
+import "./SignUp.css";
 
 const SignUp = () => {
   
@@ -142,8 +142,8 @@ const SignUp = () => {
               </div>
 
               <div className="forget">
-                                    <Link to='/login'>Have a account Login</Link>
-                                </div>
+              <p>Have an account please <Link to='/login'>Login</Link></p>
+                              </div>
             </div>
           </div>
         </div>

@@ -46,7 +46,7 @@ const Brands = () => {
                                 <img src={adimage8} alt="" />
                                 <img src={adimage9} alt="" />
                                 <img src={adimage10} alt="" />
-                                <img src={adimage11} alt="" />
+                                
                                 <img src={adimage12} alt="" />
                                 <img src={adimage13} alt="" />
                                 <img src={adimage14} alt="" />
@@ -56,9 +56,22 @@ const Brands = () => {
                                 <img src={adimage18} alt="" />
                                 <img src={adimage19} alt="" />
                                 <img src={adimage20} alt="" />
+                                <img src={adimage11} alt="" />
                                 
                             </Marquee>
                             <Marquee>
+                                
+                                
+                                <img src={adimage12} alt="" />
+                                <img src={adimage13} alt="" />
+                                <img src={adimage14} alt="" />
+                                <img src={adimage15} alt="" />
+                                <img src={adimage16} alt="" />
+                                <img src={adimage17} alt="" />
+                                <img src={adimage18} alt="" />
+                                <img src={adimage19} alt="" />
+                                <img src={adimage20} alt="" />
+                                <img src={adimage11} alt="" />
                                 <img src={adimage} alt="" />
                                 <img src={adimage2} alt="" />
                                 <img src={adimage3} alt="" />
@@ -69,16 +82,7 @@ const Brands = () => {
                                 <img src={adimage8} alt="" />
                                 <img src={adimage9} alt="" />
                                 <img src={adimage10} alt="" />
-                                <img src={adimage11} alt="" />
-                                <img src={adimage12} alt="" />
-                                <img src={adimage13} alt="" />
-                                <img src={adimage14} alt="" />
-                                <img src={adimage15} alt="" />
-                                <img src={adimage16} alt="" />
-                                <img src={adimage17} alt="" />
-                                <img src={adimage18} alt="" />
-                                <img src={adimage19} alt="" />
-                                <img src={adimage20} alt="" />
+                                
                                 
                             </Marquee>
                     

@@ -14,8 +14,8 @@ const Footer = () => {
                                 <h4>Geeks of Gurukul</h4>
                                 <ul>
                                     <li><a href="/about">About Us</a></li>
-                                    <li><a href="/#school">Our Courses</a></li>
-                                    <li><a href="hire_us">Hire From Us</a></li>
+                                    <li><a href="/courses/python">Our Courses</a></li>
+                                    <li><a href="/hire">Hire From Us</a></li>
                                     <li><a href="industrial_courses">Industrial Courses</a></li>
                                     <li><a href="/">Blog</a></li>
                                 </ul>
@@ -25,9 +25,9 @@ const Footer = () => {
                             <div className="footer-col">
                                 <h4>Geeks of Gurukul</h4>
                                 <ul>
-                                    <li><a href="/about_us">FAQ</a></li>
-                                    <li><a href="/#school">Privacy Policy</a></li>
-                                    <li><a href="/#school">Terms & Conditons</a></li>
+                                    <li><a href="/#faq">FAQ</a></li>
+                                    <li><a href="/privacy">Privacy Policy</a></li>
+                                    <li><a href="/conditon">Terms & Conditons</a></li>
                                 </ul>
                             </div>
                         </div>

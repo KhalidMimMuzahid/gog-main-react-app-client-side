@@ -1,0 +1,29 @@
+
+.privacy-area{
+    padding: 100px 0;
+}
+
+.privacy-area h1 {
+    line-height: 23px;
+    margin-bottom: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.privacy-area p {
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.privacy-area ul {
+    padding-left: 4%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.privacy-area li {
+    font-size: 12px;
+    line-height: 23px;
+    font-family: 'Poppins', sans-serif;
+}

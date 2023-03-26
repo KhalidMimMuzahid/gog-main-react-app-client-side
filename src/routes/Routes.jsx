@@ -5,6 +5,7 @@ import SignUp from "../components/shared/signUp/SignUp";
 import Main from "../layout/main/Main";
 import About from "../pages/About/About";
 import ArtificialIntelligence from "../pages/Artificial-Intelligence/ArtificialIntelligence";
+import Conditons from "../pages/Conditons/Conditons";
 import Courses from "../pages/Courses/Courses";
 import Cyber from "../pages/Cyber-Security/Cyber";
 import DataVisualization from "../pages/Data-Visualization/DataVisualization";
@@ -13,6 +14,7 @@ import Hire from "../pages/Hire/Hire";
 import Home from "../pages/home/Home";
 import Java from "../pages/Java/Java";
 import MachineLearning from "../pages/Machine-Learning/MachineLearning";
+import Privacy from "../pages/Privacy/Privacy";
 import Python from "../pages/Python/Python";
 import SQL from "../pages/SQL/SQL";
 
@@ -41,6 +43,14 @@ export const router = createBrowserRouter([
             {
                 path: '/hire',
                 element: <Hire></Hire>
+            },
+            {
+                path: '/privacy',
+                element: <Privacy></Privacy>
+            },
+            {
+                path: '/conditon',
+                element: <Conditons></Conditons>
             },
             
             

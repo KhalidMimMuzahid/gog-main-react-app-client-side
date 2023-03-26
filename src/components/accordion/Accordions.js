@@ -4,7 +4,7 @@ import './Accordions.css'
 
 const Accordions = () => {
     return (
-        <div className='accordion-area'>
+        <div className='accordion-area' id='faq'>
             <div className="container">
                 <h2>Frequently Asked Questions</h2>
                 <div className="row">

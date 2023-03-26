@@ -1,6 +1,7 @@
 import React from "react";
 import "./OurProram.css";
 import { AiFillCheckCircle, AiFillClockCircle } from "react-icons/ai";
+import { Icon } from '@iconify/react';
 
 const OurProgram = () => {
   return (
@@ -39,19 +40,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <AiFillCheckCircle/>
+                <Icon icon="mdi:check-decagram" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="game-icons:duration" />
                   Duration-36 weeks
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="mdi:books" />
                   Eligibity-School Students
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="la:industry" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -60,7 +61,7 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                  <AiFillClockCircle/>
+                  <Icon icon="mdi:alarm-clock-multiple" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -101,19 +102,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="mdi:check-decagram" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="game-icons:duration" />
                   Duration-36 weeks
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="mdi:books" />
                   Eligibity-School Students
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="la:industry" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -125,7 +126,7 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                  <AiFillClockCircle/>
+                  <Icon icon="mdi:alarm-clock-multiple" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -180,19 +181,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <AiFillCheckCircle/>
+                <Icon icon="mdi:check-decagram" />
                   Eligibility - All degrees & branches
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="game-icons:duration" />
                   Duration - 35weeks
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="la:industry" />
                   Led by Team of IITians
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
                   Class Timings : Flexible time as per student
                 </li>
               </ul>
@@ -201,7 +202,7 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                  <AiFillClockCircle/>
+                  <Icon icon="mdi:alarm-clock-multiple" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -239,19 +240,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="mdi:check-decagram" />
                   Eligibility - All degrees & branches
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="game-icons:duration" />
                   Duration - 35weeks
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="la:industry" />
                   Led by Team of IITians
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
                   Class Timings : Flexible time as per student
                 </li>
               </ul>
@@ -263,7 +264,7 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                  <AiFillClockCircle/>
+                  <Icon icon="mdi:alarm-clock-multiple" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -319,19 +320,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <AiFillCheckCircle/>
+                <Icon icon="mdi:check-decagram" />
                   Eligibility - Engineering branches
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="game-icons:duration" />
                   Duration - 45weeks
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="la:industry" />
                   Led by Team of IITians
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
                   Class Timings : Flexible time as per student
                 </li>
               </ul>
@@ -340,7 +341,7 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                  <AiFillClockCircle/>
+                  <Icon icon="mdi:alarm-clock-multiple" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -378,19 +379,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="mdi:check-decagram" />
                   Eligibility - Engineering branches
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="game-icons:duration" />
                   Duration - 45weeks
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="la:industry" />
                   Led by Team of IITians
                 </li>
                 <li class="course-contnet">
-                <AiFillCheckCircle/>
+                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
                   Class Timings : Flexible time as per student
                 </li>
               </ul>
@@ -402,7 +403,7 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                  <AiFillClockCircle/>
+                  <Icon icon="mdi:alarm-clock-multiple" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>

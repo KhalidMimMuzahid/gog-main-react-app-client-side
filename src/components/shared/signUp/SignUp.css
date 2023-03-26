@@ -78,12 +78,29 @@ body{
     cursor: pointer;
  }
 
+.apply-btn{
+    margin-top: 10px;
+    background-color: #4CA45A;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 100%;
+}
+.apply-btn:hover{
+    background-color: #2bbd44;;
+    color: white;
+    
+}
+
+
  .text-center {
      text-align: center!important;
      margin-top: 20px;
      color: white;
      font-weight: 700;
      margin: 0;
+     text-shadow: 2px 2px 4px #969696 ;
      
  }
  .googelIcon{
@@ -153,14 +170,14 @@ body{
      font-weight: 400;
      width: 100%;
      margin-bottom: 15px;
-     background-image: linear-gradient(to bottom, #ffb400, #ff8a00);
+     background-image: linear-gradient(to bottom, #20c741, #4CA15D);
  }
  
  
  button.submit:hover {
-     border: 2px solid #ff8a00;
-     background: transparent;
-     color: #ff8a00;
+    border: 2px solid #4CA15D;
+    background: transparent;
+    color: #4CA15D;
  }
  
  .social-login button:hover {
@@ -191,12 +208,17 @@ body{
      text-align: center;
      margin-bottom: 13px;
      font-size: 16px;
+     color: white;
+     font-weight: 700;
+     font-family: 'Jost', sans-serif;
+     font-size: 16px;
+     text-shadow: 2px 2px 4px #969696 ;
  }
  
  .forget a {
      text-decoration: none;
-     color: #ff8a00;
- }
+     color: green;
+ }  
  
  .forget a:hover {
      color: #fff;

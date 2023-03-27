@@ -24,37 +24,34 @@ const NavBar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
-  // for modal submit fuction 
-  const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
+  // for modal submit fuction
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm(); // ract hook from
   //const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
-  const [signUpError, setSignUPError] = useState('')
+  const [signUpError, setSignUPError] = useState("");
 
-
-
-  // getting data form React hook form 
+  // getting data form React hook form
   const handleFormData = (applyData) => {
     console.log(applyData);
 
-    fetch('http://localhost:5000/apply-data', {
-      method: 'PUT',
+    fetch("http://localhost:5000/apply-data", {
+      method: "PUT",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(applyData)
+      body: JSON.stringify(applyData),
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log("save user", data);
         //navigate('/');
-        toast.success('Successfully Applied!');
-        setShow(false)
-      })
-
-  }
-
-
-
+        toast.success("Successfully Applied!");
+        setShow(false);
+      });
+  };
 
   // for log out
   const handleLogOut = () => {
@@ -116,8 +113,8 @@ const NavBar = () => {
                     show={showDropdown}
                   >
                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="/courses/python">
-                      Python
+                    <NavDropdown.Item >
+                      <Link className="text-dark text-decoration-none" to='/courses/python'>Python</Link>
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action5">
@@ -125,7 +122,14 @@ const NavBar = () => {
                     </NavDropdown.Item>
                   </NavDropdown>
 
-                  <Nav.Link><Link className='text-dark text-decoration-none' to={'/hire'}>Hire From Us</Link></Nav.Link>
+                  <Nav.Link>
+                    <Link
+                      className="text-dark text-decoration-none"
+                      to={"/hire"}
+                    >
+                      Hire From Us
+                    </Link>
+                  </Nav.Link>
                 </Nav>
 
                 <span>
@@ -215,7 +219,7 @@ const NavBar = () => {
                 <p className="text-red-500">{errors.phone.message}</p>
               )}
             </div>
-            <button className="apply-btn" type="submit" >
+            <button className="apply-btn" type="submit">
               Apply Now
             </button>
             {signUpError && <p className="text-red-600">{signUpError}</p>}

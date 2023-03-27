@@ -1,7 +1,6 @@
 import React from "react";
 import "./OurProram.css";
-import { AiFillCheckCircle, AiFillClockCircle } from "react-icons/ai";
-import { Icon } from '@iconify/react';
+import { Icon } from "@iconify/react";
 
 const OurProgram = () => {
   return (
@@ -13,7 +12,11 @@ const OurProgram = () => {
               <div id="school" class="styles_head__n8iVE">
                 <p class="upcoming-p">OUR PROGRAM</p>
                 <h1>
-                  UPCOMING <span class="yellow font-bold"><bold> SCHOOL CHAMP</bold> </span> BATCHES
+                  UPCOMING{" "}
+                  <span class="yellow font-bold">
+                    <bold> SCHOOL CHAMP</bold>{" "}
+                  </span>{" "}
+                  BATCHES
                 </h1>
                 <span class="span-typewriter">
                   We have courses for students from class 6th to 12th where they
@@ -40,19 +43,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                <Icon icon="mdi:check-decagram" />
+                  <Icon icon="material-symbols:clock-loader-20" />
                   Class Timings : Flexible time as per student
                 </li>
-                <li class="course-contnet">
-                <Icon icon="game-icons:duration" />
+                <li class="course-contnet ">
+                  <Icon icon="material-symbols:hourglass-top" />
                   Duration-36 weeks
                 </li>
                 <li class="course-contnet">
-                <Icon icon="mdi:books" />
+                  <Icon icon="mdi:books" />
                   Eligibity-School Students
                 </li>
                 <li class="course-contnet">
-                <Icon icon="la:industry" />
+                  <Icon icon="codicon:organization" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -61,7 +64,10 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                  <Icon icon="mdi:alarm-clock-multiple" />
+                    <img
+                      src={require("../../assets/svgIcons/clock.svg").default}
+                      alt="mySvgImage"
+                    />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -102,19 +108,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                <Icon icon="mdi:check-decagram" />
+                  <Icon icon="material-symbols:clock-loader-20" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                <Icon icon="game-icons:duration" />
+                  <Icon icon="material-symbols:hourglass-top" />
                   Duration-36 weeks
                 </li>
                 <li class="course-contnet">
-                <Icon icon="mdi:books" />
+                  <Icon icon="mdi:books" />
                   Eligibity-School Students
                 </li>
                 <li class="course-contnet">
-                <Icon icon="la:industry" />
+                  <Icon icon="codicon:organization" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -126,7 +132,10 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                  <Icon icon="mdi:alarm-clock-multiple" />
+                    <img
+                      src={require("../../assets/svgIcons/clock.svg").default}
+                      alt="mySvgImage"
+                    />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -158,10 +167,15 @@ const OurProgram = () => {
               <div id="school" class="styles_head__n8iVE">
                 <p class="upcoming-p">OUR PROGRAM</p>
                 <h1>
-                  UPCOMING <span class="yellow font-bold"><bold> CODING BEES </bold> </span> BATCHES
+                  UPCOMING{" "}
+                  <span class="yellow font-bold">
+                    <bold> CODING BEES </bold>{" "}
+                  </span>{" "}
+                  BATCHES
                 </h1>
                 <span class="span-typewriter">
-                  We provide Job Assistance Tech courses for Graduates and Under Graduates Student and Professionals.
+                  We provide Job Assistance Tech courses for Graduates and Under
+                  Graduates Student and Professionals.
                 </span>
               </div>
             </div>
@@ -174,27 +188,32 @@ const OurProgram = () => {
                 <div class="up-card-rigth">
                   <h3>Full Stack Data Analytics</h3>
                   <p>
-                    Data analytics is the process of examining, interpreting, and transforming data into useful insights and information that can be used to inform business decisions. It involves using statistical and computational methods to identify patterns.
+                    Data analytics is the process of examining, interpreting,
+                    and transforming data into useful insights and information
+                    that can be used to inform business decisions. It involves
+                    using statistical and computational methods to identify
+                    patterns.
                   </p>
                 </div>
               </div>
 
               <ul>
                 <li class="course-contnet">
-                <Icon icon="mdi:check-decagram" />
-                  Eligibility - All degrees & branches
+                  <Icon icon="material-symbols:clock-loader-20" />
+                  Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                <Icon icon="game-icons:duration" />
+                  <Icon icon="material-symbols:hourglass-top" />
                   Duration - 35weeks
                 </li>
                 <li class="course-contnet">
-                <Icon icon="la:industry" />
-                  Led by Team of IITians
+                  <Icon icon="mdi:books" />
+                  Eligibility - All degrees & branches
                 </li>
+
                 <li class="course-contnet">
-                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
-                  Class Timings : Flexible time as per student
+                  <Icon icon="codicon:organization" />
+                  Led by Team of IITians
                 </li>
               </ul>
 
@@ -202,7 +221,10 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                  <Icon icon="mdi:alarm-clock-multiple" />
+                    <img
+                      src={require("../../assets/svgIcons/clock.svg").default}
+                      alt="mySvgImage"
+                    />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -233,27 +255,32 @@ const OurProgram = () => {
                 <div class="up-card-rigth">
                   <h3>Full Stack Web Development</h3>
                   <p>
-                    Full stack web development refers to the process of designing, developing, and deploying a complete web application or website, from the front-end,back-end server-side logic database integration. Creating both the client and server side.
+                    Full stack web development refers to the process of
+                    designing, developing, and deploying a complete web
+                    application or website, from the front-end,back-end
+                    server-side logic database integration. Creating both the
+                    client and server side.
                   </p>
                 </div>
               </div>
 
               <ul>
                 <li class="course-contnet">
-                <Icon icon="mdi:check-decagram" />
-                  Eligibility - All degrees & branches
+                  <Icon icon="material-symbols:clock-loader-20" />
+                  Class Timings : Flexible time as per student
                 </li>
+
                 <li class="course-contnet">
-                <Icon icon="game-icons:duration" />
+                  <Icon icon="material-symbols:hourglass-top" />
                   Duration - 35weeks
                 </li>
                 <li class="course-contnet">
-                <Icon icon="la:industry" />
-                  Led by Team of IITians
+                  <Icon icon="mdi:books" />
+                  Eligibility - All degrees & branches
                 </li>
                 <li class="course-contnet">
-                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
-                  Class Timings : Flexible time as per student
+                  <Icon icon="codicon:organization" />
+                  Led by Team of IITians
                 </li>
               </ul>
 
@@ -264,7 +291,10 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                  <Icon icon="mdi:alarm-clock-multiple" />
+                    <img
+                      src={require("../../assets/svgIcons/clock.svg").default}
+                      alt="mySvgImage"
+                    />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -297,10 +327,15 @@ const OurProgram = () => {
               <div id="school" class="styles_head__n8iVE">
                 <p class="upcoming-p">OUR PROGRAM</p>
                 <h1>
-                  UPCOMING <span class="yellow font-bold"><bold> ENGINEERING NERDS</bold> </span> BATCHES
+                  UPCOMING{" "}
+                  <span class="yellow font-bold">
+                    <bold> ENGINEERING NERDS</bold>{" "}
+                  </span>{" "}
+                  BATCHES
                 </h1>
                 <span class="span-typewriter">
-                  We Provide Job Assistance Engineering Courses for Graduate and Undergraduate, Engineering Folks.
+                  We Provide Job Assistance Engineering Courses for Graduate and
+                  Undergraduate, Engineering Folks.
                 </span>
               </div>
             </div>
@@ -313,27 +348,31 @@ const OurProgram = () => {
                 <div class="up-card-rigth">
                   <h3>Electrical Engineering</h3>
                   <p>
-                    Electrical engineering is a field of engineering that deals with the study and application of electricity, electronics,and electromagnetism. Electrical engineers work in a very wide range of industries and the skills required are likewise variable.
+                    Electrical engineering is a field of engineering that deals
+                    with the study and application of electricity,
+                    electronics,and electromagnetism. Electrical engineers work
+                    in a very wide range of industries and the skills required
+                    are likewise variable.
                   </p>
                 </div>
               </div>
 
               <ul>
                 <li class="course-contnet">
-                <Icon icon="mdi:check-decagram" />
+                  <Icon icon="material-symbols:clock-loader-20" />
+                  Class Timings : Flexible time as per student
+                </li>
+                <li class="course-contnet">
+                  <Icon icon="mdi:books" />
                   Eligibility - Engineering branches
                 </li>
                 <li class="course-contnet">
-                <Icon icon="game-icons:duration" />
+                  <Icon icon="material-symbols:hourglass-top" />
                   Duration - 45weeks
                 </li>
                 <li class="course-contnet">
-                <Icon icon="la:industry" />
+                  <Icon icon="codicon:organization" />
                   Led by Team of IITians
-                </li>
-                <li class="course-contnet">
-                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
-                  Class Timings : Flexible time as per student
                 </li>
               </ul>
 
@@ -341,7 +380,10 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                  <Icon icon="mdi:alarm-clock-multiple" />
+                    <img
+                      src={require("../../assets/svgIcons/clock.svg").default}
+                      alt="mySvgImage"
+                    />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -372,27 +414,30 @@ const OurProgram = () => {
                 <div class="up-card-rigth">
                   <h3>Mechanical Engineering</h3>
                   <p>
-                    Mechanical engineering is a branch of engineering that deals with the design, manufacturing, and maintenance of mechanical systems.Using principles motion,energy,force ensuring designs safely,efficiently,and reliably.
+                    Mechanical engineering is a branch of engineering that deals
+                    with the design, manufacturing, and maintenance of
+                    mechanical systems.Using principles motion,energy,force
+                    ensuring designs safely,efficiently,and reliably.
                   </p>
                 </div>
               </div>
 
               <ul>
                 <li class="course-contnet">
-                <Icon icon="mdi:check-decagram" />
+                  <Icon icon="material-symbols:clock-loader-20" />
+                  Class Timings : Flexible time as per student
+                </li>
+                <li class="course-contnet">
+                  <Icon icon="mdi:books" />
                   Eligibility - Engineering branches
                 </li>
                 <li class="course-contnet">
-                <Icon icon="game-icons:duration" />
+                  <Icon icon="material-symbols:hourglass-top" />
                   Duration - 45weeks
                 </li>
                 <li class="course-contnet">
-                <Icon icon="la:industry" />
+                  <Icon icon="codicon:organization" />
                   Led by Team of IITians
-                </li>
-                <li class="course-contnet">
-                <Icon icon="material-symbols:nest-clock-farsight-analog-outline" />
-                  Class Timings : Flexible time as per student
                 </li>
               </ul>
 
@@ -403,7 +448,10 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                  <Icon icon="mdi:alarm-clock-multiple" />
+                    <img
+                      src={require("../../assets/svgIcons/clock.svg").default}
+                      alt="mySvgImage"
+                    />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>

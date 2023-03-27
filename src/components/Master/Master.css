@@ -38,7 +38,7 @@ span.red-title {
 }
 
 p.styles_form_title {
-    font-size: 38px;
+    font-size: 33px;
     text-align: center;
     font-weight: 600;
     color: #16252D;
@@ -87,6 +87,10 @@ p.styles_form_title {
 .form-group input:focus, .form-group input:valid {
     border-bottom: 2px solid #00C374;
     outline: none;
+}
+
+.form-group1 label {
+    font-size: 15px;
 }
 
 #terms-and-conditions {

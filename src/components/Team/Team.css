@@ -115,3 +115,11 @@
   .swiper-3d .swiper-slide-shadow-right{
       background: none;
   }
+
+  
+@media (min-width: 100px) and (max-width: 500.98px) {
+
+    .team-title p{
+        font-size: 14px;
+    }
+}

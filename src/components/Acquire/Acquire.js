@@ -45,9 +45,9 @@ const Acquire = () => {
 
 
                                     <div class="policy">
-                                        <input type="checkbox" checked="" />
-                                        <h3>I accept all <a href="/terms&amp;conditions">Terms &amp;
-                                            Conditions</a> </h3>
+                                        <input type="checkbox" required=""  id='ready' />
+                                        <label for="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
+                                            Conditions</a> </label>
                                     </div>
                                     <div class="input-box button">
                                         <input type="Submit" value="Apply Now" />

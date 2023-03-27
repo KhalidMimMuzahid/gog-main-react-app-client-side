@@ -27,7 +27,7 @@ const Master = () => {
                 <div className="container">
 
                     <div className="row">
-                        <div className="col-md-7">
+                        <div className="col-lg-12 col-xl-7">
                             <div className="left_card">
                                 <div className="content">
                                     <h2>Upcoming Master Class</h2>
@@ -67,7 +67,7 @@ const Master = () => {
                                         </section>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <section class="webinar">
+                                        <div class="webinar">
                                             <div class="text_a">
                                                 <h2>ML: Master Class</h2>
                                       
@@ -93,12 +93,12 @@ const Master = () => {
                                                 <img class="im" src={machine}/>
                                                     
                                             </div>
-                                        </section>
+                                        </div>
                                     </SwiperSlide>
                                 </Swiper>
                             </div>
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-lg-12 col-xl-5">
 
 
 
@@ -124,7 +124,7 @@ const Master = () => {
                                     </div>
                                     <div class="form-group1">
                                         <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required="" />
-                                        <label> I agree to Geeks of Gurukul's<a href="/terms&amp;conditions"> <span className='green-title'> Terms and Conditions</span></a></label>
+                                        <label for="terms-and-conditions">  I agree to Geeks of Gurukul's<a href="/terms&amp;conditions"> <span className='green-title'> Terms and Conditions</span></a></label>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" id="register-button">Register Now</button>

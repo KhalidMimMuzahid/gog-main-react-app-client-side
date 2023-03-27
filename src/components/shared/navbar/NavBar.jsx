@@ -162,76 +162,92 @@ const NavBar = () => {
       ))}
 
       {/* for Modal */}
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Harry up apply now : &#41;</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {/* // start form  --------------------------------------------- */}
+      <div className="form-model">
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title className="from-title">Please Register</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {/* // start form  --------------------------------------------- */}
+            <div className="form-box">
+              <form onSubmit={handleSubmit(handleFormData)}>
+                <div className="modal-form">
+                  
+                  <input
+                    className="border "
+                    type="text"
+                    name="name"
+                    {...register("name", {
+                      required: "Name is Required",
+                    })}
+                    placeholder="Full Name"
+                  />
+                  {errors.name && (
+                    <p className="text-red-500">{errors.name.message}</p>
+                  )}
+                </div>
+                <div className="modal-form">
+                
+                  
+                  <input
+                    className="border "
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    {...register("email", {
+                      required: "Email is Requried",
+                    })}
+                  />
+                  {errors.email && (
+                    <p className="text-red-500">{errors.email.message}</p>
+                  )}
+                </div>
+                <div className="modal-form">
+              
+                  <input
+                    // type="number"
+                    className="border "
+                    name="phone"
+                    placeholder="Phone Number"
+                    {...register("phone", {
+                      required: "Phone number is required",
+                      maxLength: {
+                        value: 12,
+                        message: "Phone number must be uneder 12 characters",
+                      },
+                    })}
+                  />
+                  {errors.phone && (
+                    <p className="text-red-500">{errors.phone.message}</p>
+                  )}
 
-          <form onSubmit={handleSubmit(handleFormData)}>
-            <div className="input-form">
-              Enter you name:
-              <input
-                className="border "
-                type="text"
-                name="name"
-                {...register("name", {
-                  required: "Name is Required",
-                })}
-                placeholder="Full Name"
-              />
-              {errors.name && (
-                <p className="text-red-500">{errors.name.message}</p>
-              )}
+
+                </div>
+                <div className="modal-form check">
+                  
+                  <input type="checkbox" required="" id='ready' />
+                  <label for="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
+                    Conditions</a> </label>
+                
+                </div>
+                
+                <button className="apply-btn" type="submit">
+                  Apply Now
+                </button>
+                {signUpError && <p className="text-red-600">{signUpError}</p>}
+              </form>
             </div>
-            <div className="input-form">
-              Enter you Email
-              <input
-                className="border "
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                {...register("email", {
-                  required: "Email is Requried",
-                })}
-              />
-              {errors.email && (
-                <p className="text-red-500">{errors.email.message}</p>
-              )}
-            </div>
-            <div className="input-form">
-              Enter you phone numner:
-              <input
-                // type="number"
-                className="border "
-                name="phone"
-                placeholder="Phone Number"
-                {...register("phone", {
-                  required: "Phone number is required",
-                  maxLength: {
-                    value: 12,
-                    message: "Phone number must be uneder 12 characters",
-                  },
-                })}
-              />
-              {errors.phone && (
-                <p className="text-red-500">{errors.phone.message}</p>
-              )}
-            </div>
-            <button className="apply-btn" type="submit">
-              Apply Now
-            </button>
-            {signUpError && <p className="text-red-600">{signUpError}</p>}
-          </form>
-          {/* //-------------------- end form  --------------------------------------------- */}
-        </Modal.Body>
-        <Modal.Footer>
-          {/* <Button variant="outline-secondary" onClick={handleClose}>
+
+            {/* //-------------------- end form  --------------------------------------------- */}
+          </Modal.Body>
+          <Modal.Footer>
+            {/* <Button variant="outline-secondary" onClick={handleClose}>
             Close
         </Button> */}
-        </Modal.Footer>
-      </Modal>
+          </Modal.Footer>
+        </Modal>
+      </div>
+
     </>
   );
 };

@@ -27,7 +27,7 @@ const OurProgram = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-5 offset-md-1">
+          <div className="col-lg-6 col-xl-5 offset-xl-1">
             <div class="up-card up-card-a">
               <div id="FSDA" class="up-card-head up-card-head-1">
                 <div class="up-card-rigth">
@@ -92,7 +92,7 @@ const OurProgram = () => {
             </div>
           </div>
 
-          <div className="col-md-5 ">
+          <div className="col-lg-6 col-xl-5 ">
             <div class="up-card up-card-b">
               <div id="FWD-school" class="up-card-head up-card-head-2">
                 <div class="up-card-rigth">
@@ -182,7 +182,7 @@ const OurProgram = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-5 offset-md-1">
+          <div className="col-lg-6 col-xl-5 offset-xl-1">
             <div class="up-card up-card-a">
               <div id="FSDA" class="up-card-head up-card-head-1">
                 <div class="up-card-rigth">
@@ -249,7 +249,7 @@ const OurProgram = () => {
             </div>
           </div>
 
-          <div className="col-md-5 ">
+          <div className="col-lg-6 col-xl-5 ">
             <div class="up-card up-card-b">
               <div id="FWD-school" class="up-card-head up-card-head-2">
                 <div class="up-card-rigth">
@@ -342,7 +342,7 @@ const OurProgram = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-5 offset-md-1">
+          <div className="col-lg-6 col-xl-5 offset-xl-1">
             <div class="up-card up-card-a">
               <div id="FSDA" class="up-card-head up-card-head-1">
                 <div class="up-card-rigth">
@@ -408,7 +408,7 @@ const OurProgram = () => {
             </div>
           </div>
 
-          <div className="col-md-5 ">
+          <div className="col-lg-6 col-xl-5 ">
             <div class="up-card up-card-b">
               <div id="FWD-school" class="up-card-head up-card-head-2">
                 <div class="up-card-rigth">

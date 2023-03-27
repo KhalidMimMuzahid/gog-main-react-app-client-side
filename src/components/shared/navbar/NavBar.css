@@ -21,3 +21,34 @@
   .darkmode .brand {
     color: var(--white-100);
   }
+
+  .modal-dialog {
+    width: 701px;
+}
+
+.from-title.modal-title.h4 {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: montserrat;
+    position: relative;
+}
+
+.from-title.modal-title.h4:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #02c475;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 12px;
+  background: rgb(224, 236, 248);
+  border: none !important;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

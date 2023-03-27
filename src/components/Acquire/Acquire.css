@@ -74,7 +74,7 @@
     background: aliceblue;
 }
 
-.hire-from form h3 {
+.hire-from form label {
     color: #707070;
     font-size: 12px;
     font-weight: 500;
@@ -101,3 +101,14 @@
 }
 
 
+@media (min-width: 100px) and (max-width: 768.98px) {
+    .box-container {
+        width: 100%;
+        
+    }
+
+    .box-wrap {
+        flex-direction: column;
+    }
+
+}

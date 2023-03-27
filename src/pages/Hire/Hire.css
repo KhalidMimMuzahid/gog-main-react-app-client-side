@@ -35,3 +35,10 @@
     box-shadow: 0 0 0 1em transparent;
 }
 
+@media (min-width: 100px) and (max-width: 768.98px) {
+    .hire-from {
+    
+        padding: 100px 0;
+    }
+
+}

@@ -33,7 +33,7 @@
 
 .styles_head__n8iVE h1 span {
     font-weight: 600;
-    font-size: 36px;
+    
     line-height: 50px;
     text-align: center;
     color: var(--dark-v1);
@@ -274,5 +274,49 @@ li.course-contnet img {
 }
 
 
+@media (min-width: 100px) and (max-width: 500.98px) {
+    .webinar {
+        flex-direction: column;
+    }
+    .up_card_foottx img {
+        margin-right: 0;
+        width: 40px;
+    }
 
+    .hurry_up {
+        font-size: 10px;
+        
+    }
+
+    .limited_seats {
+        font-size: 9px;
+    }
+
+    .stroke_button {
+        width: auto; 
+        
+        margin: 0;
+        font-size: 10px;
+       
+    }
+
+    .solid_button {
+        width: auto;
+       
+        font-size: 12px;
+    }
+
+    .styles_head__n8iVE h1, .styles_head__n8iVE h1 span {
+    
+        font-size: 27px;
+        line-height: 37px;
+        
+    }
+
+    .styles_head__n8iVE span {
+        
+        font-size: 14px;
+        
+    }
+}
 

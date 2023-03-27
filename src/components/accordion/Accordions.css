@@ -1,11 +1,14 @@
-.accordion-area {
-    padding: 60px 0;
-}
+
 
 .accordion-area h2 {
     color: #11252d;
     margin-bottom: 21px;
     font-weight: 600;
+}
+
+.accordion-area {
+    padding-bottom: 60px;
+    padding-top: 50px;
 }
 
 .accordion-area .accordion-button:not(.collapsed) {

@@ -9,7 +9,7 @@ import "./SignUp.css";
 
 const SignUp = () => {
   
-  const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
+    const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
     const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('')
     const location = useLocation();

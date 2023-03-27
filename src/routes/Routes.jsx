@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Apply from "../components/shared/apply/Apply";
+import Login from "../components/shared/login/Login";
 import NotFoundPage from "../components/shared/notFoundPage/NotFoundPage";
 import SignUp from "../components/shared/signUp/SignUp";
 import Main from "../layout/main/Main";
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp/>
+            },
+            {
+                path: '/login',
+                element: <Login/>
             },
             {
                 path: '/apply',

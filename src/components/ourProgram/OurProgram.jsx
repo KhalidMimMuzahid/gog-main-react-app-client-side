@@ -160,7 +160,7 @@ const OurProgram = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div id="bees-program" className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="program-title">
@@ -320,7 +320,7 @@ const OurProgram = () => {
         </div>
       </div>
 
-      <div className="container">
+      <div id="engineering-program" className="container">
         <div className="row">
           <div className="col-md-12">
             <div className="program-title">

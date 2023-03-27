@@ -2,8 +2,6 @@
 
 .slider-area .swiper {
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
   
   .swiper-slide {
@@ -22,7 +20,7 @@
   
   
   .slider-area{
-      padding: 100px 0;
+    padding-top: 30px;
   }
   
   /* custom */

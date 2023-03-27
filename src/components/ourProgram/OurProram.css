@@ -118,15 +118,26 @@ span.yellow {
 }
 
 li.course-contnet svg {
-    color: #00c374;
+    color: #0FB700;
     font-size: 1.25em;
     margin-right: 5px;
 }
+li.course-contnet img {
+    color: #0FB700;
+    font-size: 1.25em;
+    margin-right: 5px;
+}
+
 
 .up_card_foottx svg {
     color: #00c374;
     font-size: 26px;
     margin-right: 5px;
+}
+.up_card_foottx img {
+    color: #00c374 !important;
+    font-size: 26px;
+    margin-right: -5px;
 }
 
 .up-card-rigth h3 {

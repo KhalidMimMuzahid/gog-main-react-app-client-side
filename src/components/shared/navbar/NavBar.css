@@ -52,3 +52,11 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+.modal-form.check input {
+  width: auto;
+  margin-right: 11px;
+}
+.modal-form.check a {
+  text-decoration: none;
+}

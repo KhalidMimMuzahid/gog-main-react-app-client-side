@@ -37,7 +37,7 @@ const NavBar = () => {
   const handleFormData = (applyData) => {
     console.log(applyData);
 
-    fetch("http://localhost:5000/apply-data", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/apply-data", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

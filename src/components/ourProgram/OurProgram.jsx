@@ -125,10 +125,13 @@ const OurProgram = () => {
                     >
                       <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      {" "}
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -191,11 +194,15 @@ const OurProgram = () => {
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
+                      <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -280,12 +287,15 @@ const OurProgram = () => {
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
+                      <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      {" "}
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -350,11 +360,15 @@ const OurProgram = () => {
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
+                      <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -439,12 +453,15 @@ const OurProgram = () => {
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                     <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
+                     <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      {" "}
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -507,11 +524,15 @@ const OurProgram = () => {
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
+                      <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>

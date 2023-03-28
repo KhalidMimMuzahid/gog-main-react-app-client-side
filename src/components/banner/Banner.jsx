@@ -1,8 +1,9 @@
 import React from "react";
+import { Typewriter } from "react-simple-typewriter";
 import LottieAnimation from "../shared/lottieAnimation/LottieAnimation";
 import "./Banner.css";
-
 const Banner = () => {
+
   return (
     <div className="hero-Area-Ancor-Fixed">
       <div className="container">
@@ -10,10 +11,33 @@ const Banner = () => {
           <div className="col-md-12 col-lg-6 col-xl-7">
             <div className="hero-left">
               <div className="heading-div">
-                <h1 className="main-heading">Build Your Career with</h1>
-                <h1 className="main-heading" style={{ color: "#4ba25d" }}>
-                  India's Best Gurukul
-                </h1>
+                <div>
+                  <h1 className="main-heading">
+                    <Typewriter
+                      words={['Build Your Career with']}
+                      loop={1}
+                      cursor
+                      cursorStyle=' '
+                      typeSpeed={70}
+                      
+                      delay={9000}
+                    />
+                  </h1>
+                </div>
+                <div>
+                  <h1 className="main-heading" style={{ color: "#4ba25d" }}>
+
+                    <Typewriter
+                      words={[`India's Best Gurukul`]}
+                      loop={1}
+                      cursor
+                      cursorStyle=' '
+                      typeSpeed={70}
+                      delaySpeed={1000}
+                    />
+                  </h1>
+                </div>
+
               </div>
 
               <p className="section-text">
@@ -27,7 +51,18 @@ const Banner = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-xl-5">
             <div className="new_hero">
-              <h1 className="hero-h1">if(Your Choice == "Geeks of Gurukul")</h1>
+              <div>
+                <h1 className="hero-h1">
+                  <Typewriter
+                    words={[`if(Your Choice == "Geeks of Gurukul")`]}
+                    loop={1}
+                    cursor
+                    cursorStyle=' '
+                    typeSpeed={70}
+                    delaySpeed={1000}
+                  /></h1>
+              </div>
+
               <div className="hero-inner">
                 <div className="left-part">
                   <div className="top-curly-brace">&#123;</div>

@@ -115,6 +115,7 @@ const OurProgram = () => {
                   <div class="upcoming_footer_buttons">
                     <button
                       onClick={handleShow}
+                      
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >

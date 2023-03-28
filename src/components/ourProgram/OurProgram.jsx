@@ -4,6 +4,10 @@ import { Icon } from "@iconify/react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { Modal } from "react-bootstrap";
+import schoolChamps from "../../assets/pdfdocs/SchoolChamps.pdf"
+import codingBeesProgram from "../../assets/pdfdocs/Coding-Bees-Program.pdf"
+import engineeringNerds from "../../assets/pdfdocs/Engineering nerds program.pdf"
+import { Link } from "react-router-dom";
 
 const OurProgram = () => {
   // for the apply modal
@@ -36,7 +40,7 @@ const OurProgram = () => {
         console.log("save user", data);
         //navigate('/');
         //toast.success("Successfully Applied!");
-        setShow(false);
+        setShow(false); // cloase modal 
       });
   };
 
@@ -119,7 +123,7 @@ const OurProgram = () => {
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      Know Details
+                      <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
                     <button class="solid_button" onclick="openForm()">
                       {" "}
@@ -183,11 +187,11 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form2').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      Know Details
+                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
                     </button>
                     <button class="solid_button" onclick="openForm()">
                       Apply Now
@@ -272,11 +276,11 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form1').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      Know Details
+                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
                     </button>
                     <button class="solid_button" onclick="openForm()">
                       {" "}
@@ -342,11 +346,11 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form2').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      Know Details
+                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
                     </button>
                     <button class="solid_button" onclick="openForm()">
                       Apply Now
@@ -431,11 +435,11 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form1').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      Know Details
+                     <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
                     </button>
                     <button class="solid_button" onclick="openForm()">
                       {" "}
@@ -499,11 +503,11 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form2').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      Know Details
+                      <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing' target="_blank">Know Details</a>
                     </button>
                     <button class="solid_button" onclick="openForm()">
                       Apply Now
@@ -521,7 +525,7 @@ const OurProgram = () => {
        <div className="form-model">
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title className="from-title">Please Register</Modal.Title>
+            <Modal.Title className="from-title">Register here to Know the Details</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             {/* // start form  --------------------------------------------- */}
@@ -587,9 +591,9 @@ const OurProgram = () => {
                 
                 </div>
                 
-                <button className="apply-btn" type="submit">
-                  Apply Now
-                </button>
+                <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing'><button  className="apply-btn" type="submit">
+                  Submit
+                </button></a>
                 {signUpError && <p className="text-red-600">{signUpError}</p>}
               </form>
             </div>

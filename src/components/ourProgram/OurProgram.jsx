@@ -1,8 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "./OurProram.css";
 import { Icon } from "@iconify/react";
+import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+import { Modal } from "react-bootstrap";
+import schoolChamps from "../../assets/pdfdocs/SchoolChamps.pdf"
+import codingBeesProgram from "../../assets/pdfdocs/Coding-Bees-Program.pdf"
+import engineeringNerds from "../../assets/pdfdocs/Engineering nerds program.pdf"
+import { Link } from "react-router-dom";
 
 const OurProgram = () => {
+  // for the apply modal
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  // for modal submit fuction
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm(); // ract hook from
+  //const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
+  const [signUpError, setSignUPError] = useState("");
+
+  // getting data form React hook form
+  const handleFormData = (applyData) => {
+    console.log(applyData);
+
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/apply-data", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(applyData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("save user", data);
+        //navigate('/');
+        //toast.success("Successfully Applied!");
+        setShow(false); // cloase modal 
+      });
+  };
+
+
   return (
     <div className="program-area">
       <div className="container">
@@ -76,16 +118,20 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form1').style.display='block'"
+                      onClick={handleShow}
+                      
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      Know Details
+                      <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      {" "}
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -144,15 +190,19 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form2').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      Know Details
+                      <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -233,16 +283,19 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form1').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      Know Details
+                      <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      {" "}
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -303,15 +356,19 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form2').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      Know Details
+                      <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -392,16 +449,19 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form1').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      Know Details
+                     <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      {" "}
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -460,15 +520,19 @@ const OurProgram = () => {
 
                   <div class="upcoming_footer_buttons">
                     <button
-                      onclick="document.getElementById('popup-brochure-form2').style.display='block'"
+                      onClick={handleShow}
                       class="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      Know Details
+                      <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
-                    <button class="solid_button" onclick="openForm()">
-                      Apply Now
-                    </button>
+                    <Link to="signup">
+                      <span>
+                        <button class="solid_button" onclick="openForm()">
+                          Apply Now
+                        </button>
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -476,6 +540,99 @@ const OurProgram = () => {
           </div>
         </div>
       </div>
+
+
+{/*s---------------- for Modal------------------------ */}
+       <div className="form-model">
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title className="from-title">Register here to Know the Details</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {/* // start form  --------------------------------------------- */}
+            <div className="form-box">
+              <form onSubmit={handleSubmit(handleFormData)}>
+                <div className="modal-form">
+                  
+                  <input
+                    className="border "
+                    type="text"
+                    name="name"
+                    {...register("name", {
+                      required: "Name is Required",
+                    })}
+                    placeholder="Full Name"
+                  />
+                  {errors.name && (
+                    <p className="text-red-500">{errors.name.message}</p>
+                  )}
+                </div>
+                <div className="modal-form">
+                
+                  
+                  <input
+                    className="border "
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    {...register("email", {
+                      required: "Email is Requried",
+                    })}
+                  />
+                  {errors.email && (
+                    <p className="text-red-500">{errors.email.message}</p>
+                  )}
+                </div>
+                <div className="modal-form">
+              
+                  <input
+                    // type="number"
+                    className="border "
+                    name="phone"
+                    placeholder="Phone Number"
+                    {...register("phone", {
+                      required: "Phone number is required",
+                      maxLength: {
+                        value: 12,
+                        message: "Phone number must be uneder 12 characters",
+                      },
+                    })}
+                  />
+                  {errors.phone && (
+                    <p className="text-red-500">{errors.phone.message}</p>
+                  )}
+
+
+                </div>
+                <div className="modal-form check">
+                  
+                  <input type="checkbox" required="" id='ready' />
+                  <label for="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
+                    Conditions</a> </label>
+                
+                </div>
+                
+                <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing'><button  className="apply-btn" type="submit">
+                  Submit
+                </button></a>
+                {signUpError && <p className="text-red-600">{signUpError}</p>}
+              </form>
+            </div>
+
+            {/* //-------------------- end form  --------------------------------------------- */}
+          </Modal.Body>
+          <Modal.Footer>
+            {/* <Button variant="outline-secondary" onClick={handleClose}>
+            Close
+        </Button> */}
+          </Modal.Footer>
+        </Modal>
+      </div>
+
+ {/* -----------------end-modal----------------      */}
+
+
+
     </div>
   );
 };

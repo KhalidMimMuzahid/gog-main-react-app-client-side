@@ -112,6 +112,14 @@ span.yellow {
     margin-bottom: 14px;
     margin-left: 0rem;
 }
+.stroke_button a{
+    text-decoration: none;
+    color: black;
+}
+.stroke_button a:hover{
+    text-decoration: none;
+    color: black;
+}
 
 .up-card-head-1 h3 {
     color: rgb(226, 175, 5);

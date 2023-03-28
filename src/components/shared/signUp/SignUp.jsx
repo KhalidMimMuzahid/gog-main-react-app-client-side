@@ -8,69 +8,69 @@ import { AuthContext } from "../../../context/AuthProvider";
 import "./SignUp.css";
 
 const SignUp = () => {
-  
-    const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
-    const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
-    const [signUpError, setSignUPError] = useState('')
-    const location = useLocation();
-    const navigate = useNavigate();
-    
-    const from = location.state?.from?.pathname || '/';
 
-    const handleSignUp = (data) => {
-        console.log(data);
-        setSignUPError('');
+  const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
+  const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
+  const [signUpError, setSignUPError] = useState('')
+  const location = useLocation();
+  const navigate = useNavigate();
 
-        createUser(data.email, data.password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                toast.success('User Created Successfully.')
-                const userInfo = {
-                    displayName: data.name,
-                    email: data.email
-                }
-                updateUserProfile(userInfo)
-                    .then(() => { 
-                        console.log("Save Use: ", userInfo);
-                        saveUser(data.name, data.email);
-                    })
-                    .catch(err => console.log(err));
-            })
-            .catch(error => {
-                console.log(error)
-                setSignUPError(error.message)
-            });
-    }
+  const from = location.state?.from?.pathname || '/';
 
-     // google sign in handle 
-     const handleGoogleSignIn = () => {
-        googleSignIn()
-        .then(result => {
-            const user = result.user;
-            //console.log(user);
-            saveUser(user.displayName, user.email);
-            toast.success('Successfully logged in');
-            navigate(from, { replace: true });
-        })
-        .catch(error => console.error(error));
-    }
+  const handleSignUp = (data) => {
+    console.log(data);
+    setSignUPError('');
 
-    const saveUser = (name, email) =>{
-        const user ={name, email};
-        fetch('https://geeks-of-gurukul-server-side.vercel.app/users', {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-        .then(res => res.json())
-        .then(data =>{
-            //console.log("save user", data);
-            navigate('/');
-        })
-    }
+    createUser(data.email, data.password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        toast.success('User Created Successfully.')
+        const userInfo = {
+          displayName: data.name,
+          email: data.email
+        }
+        updateUserProfile(userInfo)
+          .then(() => {
+            console.log("Save Use: ", userInfo);
+            saveUser(data.name, data.email);
+          })
+          .catch(err => console.log(err));
+      })
+      .catch(error => {
+        console.log(error)
+        setSignUPError(error.message)
+      });
+  }
+
+  // google sign in handle 
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then(result => {
+        const user = result.user;
+        //console.log(user);
+        saveUser(user.displayName, user.email);
+        toast.success('Successfully logged in');
+        navigate(from, { replace: true });
+      })
+      .catch(error => console.error(error));
+  }
+
+  const saveUser = (name, email) => {
+    const user = { name, email };
+    fetch('https://geeks-of-gurukul-server-side.vercel.app/users', {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+      .then(res => res.json())
+      .then(data => {
+        //console.log("save user", data);
+        navigate('/');
+      })
+  }
 
   return (
     <div className="mt-4 mb-5 ">
@@ -135,15 +135,54 @@ const SignUp = () => {
                 </button>
                 {signUpError && <p className="text-red-600">{signUpError}</p>}
               </form>
-                    <p className="text-center">Or Sing up with</p>
+              <p className="text-center">Or Sing up with</p>
               <div className="text-center googelIcon">
-                                   <Button className="googleSignUpButton" onClick={handleGoogleSignIn}><FcGoogle/></Button>
-                                    
+                <Button className="googleSignUpButton" onClick={handleGoogleSignIn}><FcGoogle /></Button>
+
               </div>
 
               <div className="forget">
-              <p>Have an account please <Link to='/login'>Login</Link></p>
-                              </div>
+                <p>Have an account please <Link to='/login'>Login</Link></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-12">
+          <div className="new-login-from">
+            <div className="title-sing">
+              <h2>
+                <Link to="/signup">Sign Up</Link>
+              </h2>
+              <Link to="/login">Sign in</Link>
+            </div>
+            <div className="google-sing-in">
+              <div className="text-center googelIcon">
+                <button className="google-Button" onClick={handleGoogleSignIn}><FcGoogle /></button>
+
+              </div>
+              <p>Or use your Email and Mobile Number for registration </p>
+              <form >
+                <div className="from-box-sing">
+                  <div className="from-box-input">
+                    <input type="text" placeholder="Full Name" />
+                  </div>
+                  <div className="from-box-input">
+                    <input type="text" placeholder="Email Address" />
+                  </div>
+                  <div className="from-box-input">
+                    <input type="text" placeholder="Mobile Number" />
+                  </div>
+                  <div className="from-box-input">
+                    <input type="text" placeholder="Password" />
+                  </div>
+                  <div className="from-box-input">
+                    <input type="text" placeholder="Confirm Password" />
+                  </div>
+                  <div className="sing-up-submit">
+                    <button type="submit">SING UP</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

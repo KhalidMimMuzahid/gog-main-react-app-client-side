@@ -28,7 +28,8 @@ const SignUp = () => {
         toast.success('User Created Successfully.')
         const userInfo = {
           displayName: data.name,
-          email: data.email
+          email: data.email,
+          phone: data.phone
         }
         updateUserProfile(userInfo)
           .then(() => {
@@ -75,29 +76,39 @@ const SignUp = () => {
   return (
     <div className="mt-4 mb-5 ">
       <div className="form-class ">
-        <div className="col-md-12 col-lg-12 ">
-          <div className="bg-login">
-            <div className="singForm">
-              <div className="title-login text-center">
-                <p>Please Register</p>
+       
+{/* ----------------------------start resgistration from  =-----------------------------*/}
+        <div className="col-md-12">
+          <div className="new-login-from">
+            <div className="title-sing">
+              <h2>
+                <Link to="/signup">Sign Up</Link>
+              </h2>
+              <Link to="/login">Sign in</Link>
+            </div>
+            <div className="google-sing-in">
+              <div className="text-center googelIcon">
+                <button className="google-Button" onClick={handleGoogleSignIn}><FcGoogle /></button>
+
               </div>
+              <p>Or use your Email and Mobile Number for registration </p>
               <form onSubmit={handleSubmit(handleSignUp)}>
-                <div className="input-form">
-                  <input
+                <div className="from-box-sing">
+                  <div className="from-box-input">
+                    <input 
                     type="text"
                     name="name"
+                    placeholder="Full Name"
                     {...register("name", {
                       required: "Name is Required",
                     })}
-                    placeholder="Full Name"
-                  />
-                  {errors.name && (
+                    />
+                    {errors.name && (
                     <p className="text-red-500">{errors.name.message}</p>
                   )}
-                </div>
-                <div className="input-form">
-                  <input
-                    type="email"
+                  </div>
+                  <div className="from-box-input">
+                    <input type="email"
                     name="email"
                     placeholder="Email Address"
                     {...register("email", {
@@ -107,10 +118,24 @@ const SignUp = () => {
                   {errors.email && (
                     <p className="text-red-500">{errors.email.message}</p>
                   )}
-                </div>
-                <div className="input-form">
-                  <input
-                    type="password"
+                  </div>
+                  <div className="from-box-input">
+                    <input type="number" placeholder="Mobile Number" 
+                    name="phone"
+                    {...register("phone", {
+                      required: "Phone is Requried",
+                      maxLength: {
+                        value: 12,
+                        message: "Phone number must be uneder 12 characters",
+                      },
+                    })}
+                    />
+                    {errors.phone && (
+                    <p className="text-red-500">{errors.phone.message}</p>
+                  )}
+                  </div>
+                  <div className="from-box-input">
+                    <input  type="password"
                     name="password"
                     placeholder="Password"
                     {...register("password", {
@@ -129,63 +154,28 @@ const SignUp = () => {
                   {errors.password && (
                     <p className="text-red-500">{errors.password.message}</p>
                   )}
-                </div>
-                <button className="submit" type="submit">
-                  REGISTER
-                </button>
-                {signUpError && <p className="text-red-600">{signUpError}</p>}
-              </form>
-              <p className="text-center">Or Sing up with</p>
-              <div className="text-center googelIcon">
-                <Button className="googleSignUpButton" onClick={handleGoogleSignIn}><FcGoogle /></Button>
-
-              </div>
-
-              <div className="forget">
-                <p>Have an account please <Link to='/login'>Login</Link></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-12">
-          <div className="new-login-from">
-            <div className="title-sing">
-              <h2>
-                <Link to="/signup">Sign Up</Link>
-              </h2>
-              <Link to="/login">Sign in</Link>
-            </div>
-            <div className="google-sing-in">
-              <div className="text-center googelIcon">
-                <button className="google-Button" onClick={handleGoogleSignIn}><FcGoogle /></button>
-
-              </div>
-              <p>Or use your Email and Mobile Number for registration </p>
-              <form >
-                <div className="from-box-sing">
-                  <div className="from-box-input">
-                    <input type="text" placeholder="Full Name" />
                   </div>
                   <div className="from-box-input">
-                    <input type="text" placeholder="Email Address" />
-                  </div>
-                  <div className="from-box-input">
-                    <input type="text" placeholder="Mobile Number" />
-                  </div>
-                  <div className="from-box-input">
-                    <input type="text" placeholder="Password" />
-                  </div>
-                  <div className="from-box-input">
-                    <input type="text" placeholder="Confirm Password" />
+                    <input type="password"
+                    name="passwordConfirm" placeholder="Confirm Password" 
+                    {...register("passwordConfirm", {
+                      required: "Confirm Password is Requried",
+                    })}
+                    />
+                    {errors.passwordConfirm && (
+                    <p className="text-red-500">{errors.passwordConfirm.message}</p>
+                    )}
                   </div>
                   <div className="sing-up-submit">
                     <button type="submit">SING UP</button>
                   </div>
+                  {signUpError && <p className="text-red-500">{signUpError}</p>}
                 </div>
               </form>
             </div>
           </div>
         </div>
+{/* --------------------------end rgitration from---------------------  */}
       </div>
     </div>
   );

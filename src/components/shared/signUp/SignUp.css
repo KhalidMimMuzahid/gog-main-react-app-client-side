@@ -79,6 +79,10 @@ body {
     cursor: pointer;
 }
 
+.text-red-500{
+    color: red;
+}
+
 .apply-btn {
     margin-top: 10px;
     background-color: #4CA45A;

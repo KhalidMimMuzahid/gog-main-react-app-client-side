@@ -77,7 +77,8 @@ p.styles_form_title {
 
 .form-group label {
     position: absolute;
-    top: 0;
+    top: -10px;
+    font-size: 14px;
     left: 0;
     pointer-events: none;
     color: #16252D;
@@ -91,10 +92,12 @@ p.styles_form_title {
 
 .form-group1 label {
     font-size: 15px;
+    margin-left: 5px;
 }
 
 #terms-and-conditions {
     accent-color: #00C374;
+    margin-left: 6px
 }
 
 input[type=checkbox] {
@@ -103,11 +106,19 @@ input[type=checkbox] {
 
 .live-title {
     padding-top: 20px;
+    margin-bottom: 50px;
 }
 
 .form-group1 a {
     color: #000;
 }
+
+
+.content h2:hover h6 {
+    color: red;
+}
+
+
 
 #register-button {
     
@@ -130,7 +141,7 @@ input[type=checkbox] {
     border-radius: 5%;
     overflow: hidden;
     border-radius: 20px;
-    
+    height: 100%;
 }
 
 .content>h2 {
@@ -220,6 +231,7 @@ input[type=checkbox] {
     color: #11262f;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+    margin-left: 1rem;
 }
 
 span.instructorName-logo {
@@ -237,7 +249,7 @@ span.instructorName-logo img {
 }
 
 .swiper-slide .img_a img {
-    width: 100%;
+    width: 123px;
     height: auto;
 }
 

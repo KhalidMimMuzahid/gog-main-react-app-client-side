@@ -20,6 +20,7 @@ const Master = () => {
     return (
         <div>
             <div className='master-area'>
+                
                 <div class="Register_masterclass">
                     <p>Hey Learners!!! Let’s </p>
                     <h1>Register <span className='green-title'>Master Class </span>at <span className='red-title'>₹ 0/-</span></h1>
@@ -111,8 +112,8 @@ const Master = () => {
                                 </div>
                                 <form id="register-form">
                                     <div class="form-group">
-                                        <input type="text" id="name" name="name" required="" autocomplete="on" />
                                         <label for="full-name">Full Name</label>
+                                        <input type="text" id="name" name="name" required="" autocomplete="on" />
                                     </div>
                                     <div class="form-group">
                                         <input type="email" id="email" name="email" required="" />
@@ -123,7 +124,7 @@ const Master = () => {
                                         <label for="mobile-number">Mobile Number</label>
                                     </div>
                                     <div class="form-group1">
-                                        <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required="" />
+                                        <input type="checkbox" checked id="terms-and-conditions" name="terms-and-conditions" required="" />
                                         <label for="terms-and-conditions">  I agree to Geeks of Gurukul's<a href="/terms&amp;conditions"> <span className='green-title'> Terms and Conditions</span></a></label>
                                     </div>
                                     <div class="form-group">

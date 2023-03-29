@@ -13,11 +13,11 @@ const Footer = () => {
                             <div className="footer-col">
                                 <h4>Geeks of Gurukul</h4>
                                 <ul>
-                                    <li><a href="/about">About Us</a></li>
-                                    <li><a href="/courses/python">Our Courses</a></li>
-                                    <li><a href="/hire">Hire From Us</a></li>
-                                    <li><a href="industrial_courses">Industrial Courses</a></li>
-                                    <li><a href="/">Blog</a></li>
+                                    <li><Link to="/about" target='_blank'>About Us</Link></li>
+                                    <li><Link to="/courses/python" target='_blank'>Our Courses</Link></li>
+                                    <li><Link to="/hire"  target='_blank'>Hire From Us</Link></li>
+                                    <li><Link to="/courses/python" target='_blank'>Industrial Courses</Link></li>
+                                    <li><Link to="/">Blog</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -26,8 +26,8 @@ const Footer = () => {
                                 <h4>Geeks of Gurukul</h4>
                                 <ul>
                                     <li><a href="/#faq">FAQ</a></li>
-                                    <li><a href="/privacy">Privacy Policy</a></li>
-                                    <li><a href="/conditon">Terms & Conditons</a></li>
+                                    <li><Link to="/privacy" target='_blank'>Privacy Policy</Link></li>
+                                    <li><Link to="/conditon" target='_blank'>Terms & Conditons</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -35,8 +35,9 @@ const Footer = () => {
                             <div className="footer-col">
                                 <h4>Geeks of Gurukul</h4>
                                 <ul>
-                                    <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwPkcPGDNbtThMdTLFLpstBcKnbgkfQQZpVjmhSRdJjZwFGnCfDgmDsZWJxSnRwMVgQGdnF">support@geeksofgurulkul.com</a></li>
-                                    <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwPkcPGDNbtThMdTLFLpstBcKnbgkfQQZpVjmhSRdJjZwFGnCfDgmDsZWJxSnRwMVgQGdnF">admission@geeksofgurukul.com</a></li>
+                                    
+                                    <li><Link to="mailto:support@geeksofgurulkul.com">support@geeksofgurulkul.com</Link></li>
+                                    <li><Link to="mailto:admission@geeksofgurukul.com">admission@geeksofgurukul.com</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -45,10 +46,10 @@ const Footer = () => {
                                 <h4>follow us</h4>
                                 <div class="social-links">
                                     
-                                        <Link href="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/" target="_blank"><FaFacebookF></FaFacebookF></Link>
-                                        <Link href="https://twitter.com/geeksofgurukul" target="_blank"><FaTwitter></FaTwitter></Link>
-                                        <Link href="https://www.instagram.com/geeks_of_gurukul/" target="_blank"><FaInstagram></FaInstagram></Link>
-                                        <Link href="https://www.linkedin.com/company/geeks-of-gurukul/" target="_blank"><FaLinkedinIn></FaLinkedinIn></Link>
+                                        <Link to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/" target="_blank"><FaFacebookF></FaFacebookF></Link>
+                                        <Link to="https://twitter.com/geeksofgurukul" target="_blank"><FaTwitter></FaTwitter></Link>
+                                        <Link to="https://www.instagram.com/geeks_of_gurukul/" target="_blank"><FaInstagram></FaInstagram></Link>
+                                        <Link to="https://www.linkedin.com/company/geeks-of-gurukul/" target="_blank"><FaLinkedinIn></FaLinkedinIn></Link>
                                 </div>
                             </div>
                         </div>

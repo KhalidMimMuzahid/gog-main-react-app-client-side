@@ -1,6 +1,6 @@
 import React from "react";
-import { Typewriter } from "react-simple-typewriter";
 import LottieAnimation from "../shared/lottieAnimation/LottieAnimation";
+import TypeWriterEffect from 'react-typewriter-effect';
 import "./Banner.css";
 const Banner = () => {
 
@@ -11,31 +11,28 @@ const Banner = () => {
           <div className="col-md-12 col-lg-6 col-xl-7">
             <div className="hero-left">
               <div className="heading-div">
+
                 <div>
-                  <h1 className="main-heading">
-                    <Typewriter
-                      words={['Build Your Career with']}
-                      loop={1}
-                      cursor
-                      cursorStyle=' '
-                      typeSpeed={70}
-                      
-                      delay={9000}
+                  <div className="main-heading">
+                    <TypeWriterEffect
+                      startDelay={100}
+                      cursorColor="transparent"
+                      text="Build Your Career with"
+                      typeSpeed={100}
                     />
-                  </h1>
+
+                  </div>
                 </div>
                 <div>
-                  <h1 className="main-heading" style={{ color: "#4ba25d" }}>
-
-                    <Typewriter
-                      words={[`India's Best Gurukul`]}
-                      loop={1}
-                      cursor
-                      cursorStyle=' '
-                      typeSpeed={70}
-                      delaySpeed={1000}
+                  <div className="main-heading" style={{ color: "#4ba25d" }}>
+                    <TypeWriterEffect
+                      startDelay={3000}
+                      cursorColor="transparent"
+                      text={`India's Best Gurukul`}
+                      typeSpeed={100}
                     />
-                  </h1>
+
+                  </div>
                 </div>
 
               </div>
@@ -52,15 +49,14 @@ const Banner = () => {
           <div className="col-lg-6 col-md-12 col-xl-5">
             <div className="new_hero">
               <div>
-                <h1 className="hero-h1">
-                  <Typewriter
-                    words={[`if(Your Choice == "Geeks of Gurukul")`]}
-                    loop={1}
-                    cursor
-                    cursorStyle=' '
-                    typeSpeed={70}
-                    delaySpeed={1000}
-                  /></h1>
+                <div className="hero-h1">
+                  <TypeWriterEffect
+                    startDelay={100}
+                    cursorColor="transparent"
+                    text={`if(Your Choice == "Geeks of Gurukul")`}
+                    typeSpeed={100}
+                  />
+                </div>
               </div>
 
               <div className="hero-inner">

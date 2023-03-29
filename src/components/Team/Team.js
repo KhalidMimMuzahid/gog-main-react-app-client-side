@@ -20,6 +20,12 @@ import team7 from '../../assets/images/teams/7.jpg'
 import team8 from '../../assets/images/teams/8.jpg'
 import team9 from '../../assets/images/teams/9.jpg'
 import team10 from '../../assets/images/teams/10.jpg'
+import education from '../../assets/images/teams/Guwahati.png'
+import education1 from '../../assets/images/teams/Kharagpur.png'
+import education2 from '../../assets/images/teams/Madras .png'
+import education3 from '../../assets/images/teams/Roorkee .png'
+import education4 from '../../assets/images/teams/sandeep.jpeg'
+import education5 from '../../assets/images/teams/Thapar.png'
 
 const Team = () => {
     return (
@@ -31,176 +37,186 @@ const Team = () => {
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
 
-                        <Swiper
-                            effect={"coverflow"}
-                            grabCursor={true}
-                            centeredSlides={true}
-                            slidesPerView={"auto"}
-                            spaceBetween={70}
-                            autoplay={{
-                                delay: 1000,
-                                disableOnInteraction: false,
-                            }}
-                            coverflowEffect={{
-                                rotate: 0,
-                                stretch: 0,
-                                depth: 100,
-                                modifier: 3,
-
-                                slideShadows: true,
-                            }}
-
-                            breakpoints={{
-                                640: {
-                                    modifier: 1,
-                                },
-                                768: {
-                                    modifier: 2,
-                                },
-                                1024: {
-                                    modifier: 3,
-                                },
-                            }}
-                            modules={[EffectCoverflow, Autoplay]}
-                            className="mySwiper"
-                        >
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team1} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Subhod khullar</p>
-                                        <p className="team-title">Lead Instructor</p>
-                                        <p className="team-education">Mtech-IIT Roorkee | Phd-IIT Roorkee</p>
-
-                                    </div>
+                            <div className="team-img">
+                                <img src={team1} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Subhod khullar</p>
+                                <p className="team-title">Lead Instructor</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Roorkee" src={education3} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
                                 </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team2} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Rohit Sahu</p>
-                                        <p className="team-title">Lead Curriculum Engineer</p>
-                                        <p className="team-education">Mtech-IIT Roorkee | Phd-IIT Roorkee</p>
 
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team3} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Sandeep kumar</p>
-                                        <p className="team-title">Lead Instructor</p>
-                                        <p className="team-education">Mtech-Thapar University | Phd-IIT Roorkee</p>
+                            </div>
 
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team4} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Rohit rana</p>
-                                        <p className="team-title">Associate Director - Curriculum</p>
-                                        <p className="team-education">Mtech-IIT Kharagpur | Phd-IIT Roorkee</p>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team5} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Rajiv Rana</p>
-                                        <p className="team-title">Lead Student Experience</p>
-                                        <p className="team-education">Mtech-IIT Kharagpur | Phd-IIT Roorkee</p>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team6} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Praveen Sai Teella</p>
-                                        <p className="team-title">Lead Instructor</p>
-                                        <p className="team-education">Btech-IIT Guwahati</p>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team7} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Manish d pepal</p>
-                                        <p className="team-title">Lead Instructor</p>
-                                        <p className="team-education">Mtech-IIT Kharagpur | Phd-IIT Roorkee</p>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team8} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Deepika Yadav</p>
-                                        <p className="team-title">Lead Student Experience</p>
-                                        <p className="team-education">Mtech-IIT Madras | Phd-IIT Roorkee</p>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team9} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Arun chauhan </p>
-                                        <p className="team-title">Associate Director - Curriculum</p>
-                                        <p className="team-education">Mtech-IIT Kharagpur | Phd-IIT Roorkee</p>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide className="single-card">
-                                <div className="single-member">
-                                    <div className="team-img">
-                                        <img src={team10} alt="" />
-                                    </div>
-                                    <div className="team-text">
-                                        <p className="team-name">Ajay Kumar</p>
-                                        <p className="team-title">Associate Director - Curriculum</p>
-                                        <p className="team-education">Mtech-IIT Kharagpur | Phd-IIT Roorkee</p>
-
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-
-
-
-                        </Swiper>
+                        </div>
                     </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team2} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Rohit Sahu</p>
+                                <p className="team-title">Lead Curriculum Engineer</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Roorkee" src={education3} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team3} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Sandeep kumar</p>
+                                <p className="team-title">Lead Instructor</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Roorkee" src={education5} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team4} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Rohit rana</p>
+                                <p className="team-title">Associate Director - Curriculum</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Kharagpur " src={education1} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team5} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Rajiv Rana</p>
+                                <p className="team-title">Lead Student Experience</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Kharagpur" src={education1} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team6} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Praveen Sai Teella</p>
+                                <p className="team-title">Lead Instructor</p>
+                                <div className="team-education">
+                                    <img title="Btech-IIT Guwahati" src={education} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team7} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Manish d pepal</p>
+                                <p className="team-title">Lead Instructor</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Kharagpur " src={education1} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team8} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Deepika Yadav</p>
+                                <p className="team-title">Lead Student Experience</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Roorkee" src={education3} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team9} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Arun chauhan </p>
+                                <p className="team-title">Associate Director - Curriculum</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Roorkee" src={education3} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-3">
+                        <div className="single-member">
+
+                            <div className="team-img">
+                                <img src={team10} alt="" />
+                            </div>
+                            <div className="team-text">
+                                <p className="team-name">Ajay Kumar</p>
+                                <p className="team-title">Associate Director - Curriculum</p>
+                                <div className="team-education">
+                                    <img title="Mtech-IIT Roorkee" src={education3} alt="" />
+                                    <img title="Phd-IIT Roorkee" src={education3} alt="" />
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                  
                 </div>
             </div>
         </div>

@@ -35,17 +35,19 @@ const Brands = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="brands-slider">
-                            <Marquee>
+                            <Marquee
+                            speed={40}
+                            >
                                 <img src={adimage} alt="" />
                                 <img src={adimage2} alt="" />
                                 <img src={adimage3} alt="" />
                                 <img src={adimage4} alt="" />
+                                <img src={adimage10} alt="" />
                                 <img src={adimage5} alt="" />
                                 <img src={adimage6} alt="" />
                                 <img src={adimage7} alt="" />
                                 <img src={adimage8} alt="" />
                                 <img src={adimage9} alt="" />
-                                <img src={adimage10} alt="" />
                                 
                                 <img src={adimage12} alt="" />
                                 <img src={adimage13} alt="" />
@@ -56,10 +58,11 @@ const Brands = () => {
                                 <img src={adimage18} alt="" />
                                 <img src={adimage19} alt="" />
                                 <img src={adimage20} alt="" />
-                                <img src={adimage11} alt="" />
                                 
                             </Marquee>
-                            <Marquee>
+                            <Marquee
+                            speed={40}
+                            >
                                 
                                 
                                 <img src={adimage12} alt="" />
@@ -81,7 +84,6 @@ const Brands = () => {
                                 <img src={adimage7} alt="" />
                                 <img src={adimage8} alt="" />
                                 <img src={adimage9} alt="" />
-                                <img src={adimage10} alt="" />
                                 
                                 
                             </Marquee>

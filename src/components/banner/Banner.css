@@ -22,7 +22,7 @@
     color: #4ba25d;
 }
 
-.hero-h1 {
+.hero-h1 h1 {
     color: #bd2626;
     font-family: Courier New;
     font-size: 1.5rem;
@@ -258,14 +258,14 @@
 }
 
 .main-heading {
-    color: var(--oxford-blue);
     font-size: 50px;
-    line-height: 1;
-    margin-bottom: 10px;
-    font-weight: 700;
+    
     font-family: 'Poppins', sans-serif;
 }
 
+.main-heading h1{
+    font-weight: 700;
+}
 
 .section-text {
     margin-bottom: 17px;

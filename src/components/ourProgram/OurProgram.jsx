@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./OurProram.css";
-import { Icon } from "@iconify/react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { Modal } from "react-bootstrap";
@@ -8,6 +7,13 @@ import schoolChamps from "../../assets/pdfdocs/SchoolChamps.pdf"
 import codingBeesProgram from "../../assets/pdfdocs/Coding-Bees-Program.pdf"
 import engineeringNerds from "../../assets/pdfdocs/Engineering nerds program.pdf"
 import { Link } from "react-router-dom";
+// svg icon for cards componsts 
+import Vector from "../../assets/iconsSVG/Vector.svg"
+import calassTime from "../../assets/iconsSVG/classTime.svg"
+import hourGlass from "../../assets/iconsSVG/hourglass.png"
+import teamLeads from "../../assets/iconsSVG/teamLeads.svg"
+import timeHerryUp from "../../assets/iconsSVG/timeHerryUp.svg"
+
 
 const OurProgram = () => {
   // for the apply modal
@@ -39,7 +45,7 @@ const OurProgram = () => {
       .then((data) => {
         console.log("save user", data);
         //navigate('/');
-        //toast.success("Successfully Applied!");
+        toast.success("Thank you, We are pleased to know you");
         setShow(false); // cloase modal 
       });
   };
@@ -85,19 +91,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:clock-loader-20" />
+                <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet ">
-                  <Icon icon="material-symbols:hourglass-top" />
+                <img src={hourGlass} alt="" />
                   Duration-36 weeks
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="mdi:books" />
+                <img src={Vector} alt="" />
                   Eligibity-School Students
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="codicon:organization" />
+                <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -106,10 +112,7 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                    <img
-                      src={require("../../assets/svgIcons/clock.svg").default}
-                      alt="mySvgImage"
-                    />
+                  <img src={timeHerryUp} alt="" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -154,19 +157,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:clock-loader-20" />
+                <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:hourglass-top" />
+                <img src={hourGlass} alt="" />
                   Duration-36 weeks
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="mdi:books" />
+                <img src={Vector} alt="" />
                   Eligibity-School Students
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="codicon:organization" />
+                <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -178,10 +181,7 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                    <img
-                      src={require("../../assets/svgIcons/clock.svg").default}
-                      alt="mySvgImage"
-                    />
+                  <img src={timeHerryUp} alt="" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -249,20 +249,20 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:clock-loader-20" />
+                <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:hourglass-top" />
+                <img src={hourGlass} alt="" />
                   Duration - 35weeks
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="mdi:books" />
+                <img src={Vector} alt="" />
                   Eligibility - All degrees & branches
                 </li>
 
                 <li class="course-contnet">
-                  <Icon icon="codicon:organization" />
+                <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -271,10 +271,7 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                    <img
-                      src={require("../../assets/svgIcons/clock.svg").default}
-                      alt="mySvgImage"
-                    />
+                  <img src={timeHerryUp} alt="" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -319,20 +316,20 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:clock-loader-20" />
+                <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
 
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:hourglass-top" />
+                <img src={hourGlass} alt="" />
                   Duration - 35weeks
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="mdi:books" />
+                <img src={Vector} alt="" />
                   Eligibility - All degrees & branches
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="codicon:organization" />
+                <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -344,10 +341,7 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                    <img
-                      src={require("../../assets/svgIcons/clock.svg").default}
-                      alt="mySvgImage"
-                    />
+                  <img src={timeHerryUp} alt="" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -416,19 +410,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:clock-loader-20" />
+                <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="mdi:books" />
+                <img src={Vector} alt="" />
                   Eligibility - Engineering branches
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:hourglass-top" />
+                <img src={hourGlass} alt="" />
                   Duration - 45weeks
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="codicon:organization" />
+                <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -437,10 +431,7 @@ const OurProgram = () => {
                 <hr class="card_hr" />
                 <div class=" upcomig_hurry_up">
                   <div class="up_card_foottx">
-                    <img
-                      src={require("../../assets/svgIcons/clock.svg").default}
-                      alt="mySvgImage"
-                    />
+                  <img src={timeHerryUp} alt="" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>
@@ -484,19 +475,19 @@ const OurProgram = () => {
 
               <ul>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:clock-loader-20" />
+                <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="mdi:books" />
+                <img src={Vector} alt="" />
                   Eligibility - Engineering branches
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="material-symbols:hourglass-top" />
+                <img src={hourGlass} alt="" />
                   Duration - 45weeks
                 </li>
                 <li class="course-contnet">
-                  <Icon icon="codicon:organization" />
+                <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
@@ -508,10 +499,7 @@ const OurProgram = () => {
                 upcomig_hurry_up"
                 >
                   <div class="up_card_foottx">
-                    <img
-                      src={require("../../assets/svgIcons/clock.svg").default}
-                      alt="mySvgImage"
-                    />
+                  <img src={timeHerryUp} alt="" />
                     <p class="hurry_up">
                       Hurry up <br />
                       <span class="limited_seats">Limited Seats</span>

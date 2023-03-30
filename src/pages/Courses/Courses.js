@@ -10,7 +10,8 @@ import Data  from '../../assets/images/Crouse/tableau.jpg'
 import Learning from '../../assets/images/Crouse/machine learning.jpg'
 import Artificial from '../../assets/images/Crouse/AI.jpg'
 import NavBar from '../../components/shared/navbar/NavBar';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
+import Footer from '../../components/shared/footer/Footer';
 
 const Courses = () => {
     return (
@@ -23,26 +24,28 @@ const Courses = () => {
                             <div className="row">
                                 <div className="col-md-12 col-lg-6">
                                     <div className="course-button">
-                                        <Link to='/courses/python' className="active_button" >
+                                        <NavLink to='/courses/python' className={({ isActive }) =>
+                                    isActive ? 'active active_button' : 'active_button'
+                                } >
                                             <img src={python} alt="" />
                                             <h1 className="active_h1">Python</h1>
-                                        </Link>
-                                        <Link to='/courses/sql' className="active_button" >
+                                        </NavLink>
+                                        <NavLink to='/courses/sql' className="active_button" >
                                             <img src={SQL} alt="" />
                                             <h1 className="active_h1">SQL</h1>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-lg-6">
                                     <div className="course-button">
-                                        <Link to='/courses/java' className="active_button" >
+                                        <NavLink to='/courses/java' className="active_button" >
                                             <img src={Java} alt="" />
                                             <h1 className="active_h1">Java Programming</h1>
-                                        </Link>
-                                        <Link to='/courses/dsa' className="active_button" >
+                                        </NavLink>
+                                        <NavLink to='/courses/dsa' className="active_button" >
                                             <img src={DSA} alt="" />
                                             <h1 className="active_h1">DSA</h1>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -53,26 +56,26 @@ const Courses = () => {
                             <div className="row">
                                 <div className="col-md-12 col-lg-6">
                                     <div className="course-button">
-                                        <Link to='/courses/cyber' className="active_button" >
+                                        <NavLink to='/courses/cyber' className="active_button" >
                                             <img src={Cyber} alt="" />
                                             <h1 className="active_h1">Cyber Security</h1>
-                                        </Link>
-                                        <Link to='/courses/dataVisualization' className="active_button" >
+                                        </NavLink>
+                                        <NavLink to='/courses/dataVisualization' className="active_button" >
                                             <img src={Data} alt="" />
                                             <h1 className="active_h1">Data Visualization</h1>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </div>
                                 <div className="col-md-12 col-lg-6">
                                     <div className="course-button">
-                                        <Link to='/courses/machineLearning' className="active_button" >
+                                        <NavLink to='/courses/machineLearning' className="active_button" >
                                             <img src={Learning} alt="" />
                                             <h1 className="active_h1">Machine Learning</h1>
-                                        </Link>
-                                        <Link to='/courses/ArtificialIntelligence' className="active_button" >
+                                        </NavLink>
+                                        <NavLink to='/courses/ArtificialIntelligence' className="active_button" >
                                             <img src={Artificial} alt="" />
                                             <h1 className="active_h1">Artificial Intelligence</h1>
-                                        </Link>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -87,6 +90,7 @@ const Courses = () => {
 
             </div>
             <Outlet></Outlet>
+            <Footer></Footer>
         </div>
         
     );

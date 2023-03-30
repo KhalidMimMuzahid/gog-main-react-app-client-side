@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
+import './Login.css'
+
+import { AiFillFacebook } from 'react-icons/ai';
 
 const Login = () => {
 
@@ -18,7 +20,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || '/';
 
   const handleSignUp = (data) => {
-    //console.log(data);
+    console.log(data);
     setSignUPError('');
     signIn(data.email, data.password)
       .then(result => {
@@ -65,66 +67,7 @@ const Login = () => {
   return (
     <div className="mt-4 mb-5 ">
       <div className="form-class ">
-        <div className="col-md-12 col-lg-12 ">
-          <div className="bg-login">
-            <div className="singForm">
-              <div className="title-login text-center">
-                <p>Please Login</p>
-              </div>
-              <form onSubmit={handleSubmit(handleSignUp)}>
-
-                <div className="input-form">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    {...register("email", {
-                      required: "Email is Requried",
-                    })}
-                  />
-                  {errors.email && (
-                    <p className="text-red-500">{errors.email.message}</p>
-                  )}
-                </div>
-                <div className="input-form">
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    {...register("password", {
-                      required: "Password is required",
-                      minLength: {
-                        value: 6,
-                        message: "Password must be 6 characters long",
-                      },
-                      pattern: {
-                        value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
-                        message:
-                          "Password must have uppercase, number and special characters",
-                      },
-                    })}
-                  />
-                  {errors.password && (
-                    <p className="text-red-500">{errors.password.message}</p>
-                  )}
-                </div>
-                <button className="submit" type="submit">
-                  Login
-                </button>
-                {signUpError && <p className="text-red-600">{signUpError}</p>}
-              </form>
-              <p className="text-center">Or Sing up with</p>
-              <div className="text-center googelIcon">
-                <Button className="googleSignUpButton" onClick={handleGoogleSignIn}><FcGoogle /></Button>
-
-              </div>
-
-              <div className="forget">
-                <p>Do not have account! Please <Link to='/signup'>Register</Link></p>
-              </div>
-            </div>
-          </div>
-        </div>
+       
         <div className="col-md-12">
           <div className="new-login-from">
             <div className="title-sing">
@@ -135,27 +78,53 @@ const Login = () => {
               
             </div>
             <div className="google-sing-in">
-              <div className="text-center googelIcon">
-                <button className="google-Button" onClick={handleGoogleSignIn}><FcGoogle /></button>
-
-              </div>
-              <p>Continue with your accout </p>
-              <form >
+            <div className='button-google-custom'>
+              <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                <FcGoogle /> <span>Signin with Google</span>
+              </button>
+            </div>
+            <div className='button-google-custom'>
+                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                    <AiFillFacebook /> <span>Signin with Facebook</span>
+                  </button>
+                </div>
+              <p className='form-text'>Continue with your accout </p>
+              <form onSubmit={handleSubmit(handleSignUp)}>
                 <div className="from-box-sing">
                  
                   <div className="from-box-input">
-                    <input type="text" placeholder="Email Address" />
+                    <input type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    {...register("email", {
+                      
+                    })}
+                  />
                   </div>
+                  {errors.email && (
+                    <p className="text-red-500">{errors.email.message}</p>
+                  )}
                
                   <div className="from-box-input">
-                    <input type="text" placeholder="Password" />
+                    <input 
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    {...register("password", {
+              
+                    })}
+                  />
                   </div>
+                  {errors.password && (
+                    <p className="text-red-500">{errors.password.message}</p>
+                  )}
 
                   <p>Forget Your Password?</p>
                 
                   <div className="sing-up-submit">
-                    <button type="submit">SING UP</button>
+                    <button type="submit">SIGN IN</button>
                   </div>
+                  {signUpError && <p className="text-red-500-pass">{signUpError}</p>}
                 </div>
               </form>
             </div>

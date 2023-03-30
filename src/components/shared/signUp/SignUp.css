@@ -75,12 +75,31 @@ body {
     margin: 10px 0;
 }
 
+.pass-fild{
+    display: flex;
+}
+
+.pass-fild button {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .ponter {
     cursor: pointer;
 }
 
+.text-red-500-pass{
+    color: red !important;
+    font-size: 1rem !important;
+    margin-top: 10px;
+}
+
 .text-red-500{
-    color: red;
+    color: red !important;
+    
 }
 
 .apply-btn {
@@ -319,6 +338,23 @@ button.google-Button svg {
     font-size: 48px;
 }
 
+button.btn-fabecbook{
+    background-color: #405A93;
+    border: #405A93;
+    color: white;
+}
+button.btn-fabecbook:hover{
+    background-color: white;
+    color: #405A93;
+    border: 1px solid #405A93;
+}
+button.btn-fabecbook svg{
+    background-color: #405A93;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
 .google-sing-in p {
     font-family: 'Poppins';
     font-style: normal;
@@ -330,17 +366,24 @@ button.google-Button svg {
 }
 
 .from-box-input input {
+    
+    
     width: 100%;
-    margin-bottom: 16px;
-    background: #FCFCFC;
     /* 01 */
-    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    
     border-radius: 5px;
     border: none;
     padding: 10px 24px;
     outline: none;
     font-family: 'Poppins';
     font-style: normal;
+}
+
+.from-box-input{
+    margin-bottom: 16px;
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 5px;
 }
 
 .sing-up-submit button {

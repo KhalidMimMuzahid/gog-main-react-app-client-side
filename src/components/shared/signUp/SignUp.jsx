@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./SignUp.css";
 
-import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEyeInvisible, AiOutlineEye, AiFillFacebook } from 'react-icons/ai';
 
 const SignUp = () => {
   const {
@@ -100,11 +100,18 @@ const SignUp = () => {
             </div>
             <div className="google-sing-in">
               <div className="text-center googelIcon">
-                <button className="google-Button" onClick={handleGoogleSignIn}>
-                  <FcGoogle />
-                </button>
+                <div className='button-google-custom'>
+                  <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                    <FcGoogle /> <span>Signin with Google</span>
+                  </button>
+                </div>
+                <div className='button-google-custom'>
+                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                    <AiFillFacebook /> <span>Signin with Facebook</span>
+                  </button>
+                </div>
               </div>
-              <p>Or use your Email and Mobile Number for registration </p>
+              <p style={{marginTop: "-20px", fontSize: "12px"}}>Or use your Email and Mobile Number for registration </p>
               <form onSubmit={handleSubmit(handleSignUp)}>
                 <div className="from-box-sing">
                   <div className="from-box-input">
@@ -209,7 +216,7 @@ const SignUp = () => {
                       </p>
                     )}
                   <div className="sing-up-submit">
-                    <button type="submit">SING UP</button>
+                    <button type="submit">SIGN UP</button>
                   </div>
                   {signUpError && <p className="text-red-500-pass">{signUpError}</p>}
                 </div>

@@ -338,6 +338,23 @@ button.google-Button svg {
     font-size: 48px;
 }
 
+button.btn-fabecbook{
+    background-color: #405A93;
+    border: #405A93;
+    color: white;
+}
+button.btn-fabecbook:hover{
+    background-color: white;
+    color: #405A93;
+    border: 1px solid #405A93;
+}
+button.btn-fabecbook svg{
+    background-color: #405A93;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
 .google-sing-in p {
     font-family: 'Poppins';
     font-style: normal;

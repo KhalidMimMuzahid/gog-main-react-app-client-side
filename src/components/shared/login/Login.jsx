@@ -5,6 +5,9 @@ import { toast } from 'react-hot-toast';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
+import './Login.css'
+
+import { AiFillFacebook } from 'react-icons/ai';
 
 const Login = () => {
 
@@ -75,11 +78,17 @@ const Login = () => {
               
             </div>
             <div className="google-sing-in">
-              <div className="text-center googelIcon">
-                <button className="google-Button" onClick={handleGoogleSignIn}><FcGoogle /></button>
-
-              </div>
-              <p>Continue with your accout </p>
+            <div className='button-google-custom'>
+              <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                <FcGoogle /> <span>Signin with Google</span>
+              </button>
+            </div>
+            <div className='button-google-custom'>
+                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                    <AiFillFacebook /> <span>Signin with Facebook</span>
+                  </button>
+                </div>
+              <p className='form-text'>Continue with your accout </p>
               <form onSubmit={handleSubmit(handleSignUp)}>
                 <div className="from-box-sing">
                  
@@ -113,7 +122,7 @@ const Login = () => {
                   <p>Forget Your Password?</p>
                 
                   <div className="sing-up-submit">
-                    <button type="submit">SING UP</button>
+                    <button type="submit">SIGN IN</button>
                   </div>
                   {signUpError && <p className="text-red-500-pass">{signUpError}</p>}
                 </div>

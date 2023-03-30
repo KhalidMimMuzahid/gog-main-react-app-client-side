@@ -58,47 +58,47 @@ export const router = createBrowserRouter([
                 element: <Conditons></Conditons>
             },
             
-            
+            {
+                path: '/courses',
+                element: <Courses></Courses>,
+                children:[
+                    {
+                        path: '/courses/python',
+                        element: <Python></Python>
+                    },
+                    {
+                        path: '/courses/sql',
+                        element: <SQL></SQL>
+                    },
+                    {
+                        path: '/courses/java',
+                        element: <Java></Java>
+                    },
+                    {
+                        path: '/courses/dsa',
+                        element: <DSA></DSA>
+                    },
+                    {
+                        path: '/courses/cyber',
+                        element: <Cyber></Cyber>
+                    },
+                    
+                    {
+                        path: '/courses/dataVisualization',
+                        element: <DataVisualization></DataVisualization>
+                    },
+                    {
+                        path: '/courses/machineLearning',
+                        element: <MachineLearning></MachineLearning>
+                    },
+                    {
+                        path: '/courses/ArtificialIntelligence',
+                        element: <ArtificialIntelligence></ArtificialIntelligence>
+                    },
+                ]
+            }
             
         ]
     },
-    {
-        path: '/courses',
-        element: <Courses></Courses>,
-        children:[
-            {
-                path: '/courses/python',
-                element: <Python></Python>
-            },
-            {
-                path: '/courses/sql',
-                element: <SQL></SQL>
-            },
-            {
-                path: '/courses/java',
-                element: <Java></Java>
-            },
-            {
-                path: '/courses/dsa',
-                element: <DSA></DSA>
-            },
-            {
-                path: '/courses/cyber',
-                element: <Cyber></Cyber>
-            },
-            
-            {
-                path: '/courses/dataVisualization',
-                element: <DataVisualization></DataVisualization>
-            },
-            {
-                path: '/courses/machineLearning',
-                element: <MachineLearning></MachineLearning>
-            },
-            {
-                path: '/courses/ArtificialIntelligence',
-                element: <ArtificialIntelligence></ArtificialIntelligence>
-            },
-        ]
-    }
+
 ])

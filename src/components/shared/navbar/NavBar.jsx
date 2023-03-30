@@ -73,14 +73,17 @@ const NavBar = () => {
           className="shadow-sm mb-custom px-5"
         >
           <Container fluid>
-            <Navbar.Brand href="#">
-              {" "}
-              <img
-                className="brand"
-                style={{ width: "9rem" }}
-                src={logo}
-                alt="logo"
-              />
+            <Navbar.Brand>
+              <Link to={'/'}>
+                <img
+                  className="brand"
+                  style={{ width: "9rem" }}
+                  src={logo}
+                  alt="logo"
+                />
+              </Link>
+
+
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -112,14 +115,81 @@ const NavBar = () => {
                     onMouseLeave={() => setShowDropdown(false)}
                     show={showDropdown}
                   >
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item >
-                      <Link className="text-dark text-decoration-none" to='/courses/python'>Python</Link>
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                      Something else here
-                    </NavDropdown.Item>
+                    <div className="top-menu">
+                      <div className="single-menu">
+                        <p>School Champs Courses</p>
+                        <NavDropdown.Item href={'/#school'}>
+                          <a className="menu-color" > Champs of Basic Coding</a>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href={'/#school'}> <Link className="menu-color">  Champs of Advance Coding</Link>
+                        </NavDropdown.Item>
+
+
+                      </div>
+                      <div className="single-menu">
+                        <p>Code Bees Courses</p>
+                        <NavDropdown.Item href={'/#bees-program'}>
+                          <a className="menu-color" > Full Stack Data
+                            Analytics</a>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href={'/#bees-program'}>
+                          <a className="menu-color" >Full
+                            Stack Web
+                            Development</a>
+                        </NavDropdown.Item>
+
+                      </div>
+                      <div className="single-menu">
+                        <p>Engineering Nerds Courses</p>
+                        <NavDropdown.Item href={'/#engineering-program'}>
+                          <a className="menu-color" >Electrical
+                          Engineering</a>
+                        </NavDropdown.Item>
+                       
+                        <NavDropdown.Item href={'/#engineering-program'}>
+                          <a className="menu-color" >Mechanical
+                          Engineering</a>
+                        </NavDropdown.Item>
+                      </div>
+                      <div className="single-menu">
+                        <p>Engineering Nerds Courses</p>
+                        <div className="menu-sub">
+                          <Link to={'/courses/python'} className="menu-color" >Python</Link>
+                        </div>
+                          <div  className="menu-sub">
+
+                          <Link to={'/courses/sql'} className="menu-color" >SQL</Link>
+                          </div>
+                          <div>
+
+                          <Link to={'/courses/java'} className="menu-color" >Java Programming</Link>
+                          </div>
+                          <div className="menu-sub">
+
+                          <Link to={'/courses/dsa'} className="menu-color" >DSA</Link>
+                          </div>
+                          <div className="menu-sub">
+
+                          <Link to={'/courses/cyber'} className="menu-color" >Cyber Security</Link>
+                          </div>
+                          <div className="menu-sub">
+
+                          <Link to={'/courses/machineLearning'} className="menu-color" >Data Visualization</Link>
+                          </div>
+                          <div className="menu-sub">
+
+                          <Link to={'/courses/machineLearning'} className="menu-color" >Machine Learning</Link>
+                          </div>
+                          <div className="menu-sub">
+
+                          <Link to={'/courses/ArtificialIntelligence'} className="menu-color" >Artificial Intelligence</Link>
+                          </div>
+                       
+                       
+                        
+                      </div>
+                    </div>
+
                   </NavDropdown>
 
                   <Nav.Link>
@@ -172,7 +242,7 @@ const NavBar = () => {
             <div className="form-box">
               <form onSubmit={handleSubmit(handleFormData)}>
                 <div className="modal-form">
-                  
+
                   <input
                     className="border "
                     type="text"
@@ -187,8 +257,8 @@ const NavBar = () => {
                   )}
                 </div>
                 <div className="modal-form">
-                
-                  
+
+
                   <input
                     className="border "
                     type="email"
@@ -203,7 +273,7 @@ const NavBar = () => {
                   )}
                 </div>
                 <div className="modal-form">
-              
+
                   <input
                     // type="number"
                     className="border "
@@ -224,13 +294,13 @@ const NavBar = () => {
 
                 </div>
                 <div className="modal-form check">
-                  
+
                   <input type="checkbox" required="" id='ready' />
                   <label for="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
                     Conditions</a> </label>
-                
+
                 </div>
-                
+
                 <button className="apply-btn" type="submit">
                   Apply Now
                 </button>

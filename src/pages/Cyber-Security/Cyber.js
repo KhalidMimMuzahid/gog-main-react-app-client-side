@@ -1,11 +1,13 @@
 import React from 'react';
-import { BsCheckLg, BsClock, BsHourglass } from "react-icons/bs";
-import { MdComputer } from "react-icons/md";
-import { FaCertificate, FaProjectDiagram } from "react-icons/fa";
+import { BsClockFill, BsPatchCheckFill } from "react-icons/bs";
+
+import Hourglass from '../../assets/images/icon/Group 9115.svg'
+import Computer from '../../assets/images/icon/Vector (2).svg'
+import Certificate from '../../assets/images/icon/Vector (3).svg'
 const Cyber = () => {
     return (
         <div>
-                        <div className='course-area'>
+            <div className='course-area'>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -20,37 +22,33 @@ const Cyber = () => {
 
                                 <ul>
                                     <li className="course-contnet">
-                                        <BsCheckLg></BsCheckLg>
-                                        Eligibility - All degrees &amp; branches
+                                        <BsPatchCheckFill></BsPatchCheckFill>
+                                        Eligibility - All degrees & branches
                                     </li>
                                     <li className="course-contnet">
-                                        <BsHourglass></BsHourglass>
+                                        <img className='img-icon' src={Hourglass} alt="" />
                                         Duration - 1 Month
-                                    </li>
-                                    <li className="course-contnet">
-                                        <BsClock></BsClock>
-                                        Class Timings: Flexible time as per
-                                        student
-                                    </li>
-                                    <li className="course-contnet">
-                                        <MdComputer></MdComputer>
-                                        Class Type: Live Lecture Classes
                                     </li>
 
                                     <li className="course-contnet">
-                                        <FaCertificate></FaCertificate>
+                                        <img className='img-icon' src={Computer} alt="" />
+                                        Class Timings : Flexible time as per student
+                                    </li>
+
+                                    <li className="course-contnet">
+                                        <img className='img-icon' src={Certificate} alt="" />
                                         Course Completion Certificate
                                     </li>
                                     <li className="course-contnet">
-                                        <FaProjectDiagram></FaProjectDiagram>
-                                        Industry-Based Projects
+                                        <BsClockFill></BsClockFill>
+                                        Course Completion Certificate
                                     </li>
                                 </ul>
                                 <hr className="card_hr" />
                                 <div className="upcming_footer">
                                     <div className="upcomig_hurry_up">
                                         <div className="up_card_foottx">
-                                            <BsClock></BsClock>
+                                            <BsClockFill></BsClockFill>
                                             <p className="hurry_up">Hurry up <br /><span className="limited_seats">Limited
                                                 Seats</span> </p>
                                         </div>
@@ -70,10 +68,10 @@ const Cyber = () => {
                         <div className="col-md-6">
                             <div className="courseinfo">
                                 <h1>Are you a student looking to stay safe online and protect your personal information?
-</h1>
+                                </h1>
                                 <p>
-                                Cybersecurity may be the solution you need. With the increasing prevalence of cyber attacks, it is more important than ever to understand how to keep yourself and your data secure.
-Geeks of Gurukul is here to help. We provide hands-on training using real-world scenarios to help you apply your learning to your daily life.<br />
+                                    Cybersecurity may be the solution you need. With the increasing prevalence of cyber attacks, it is more important than ever to understand how to keep yourself and your data secure.
+                                    Geeks of Gurukul is here to help. We provide hands-on training using real-world scenarios to help you apply your learning to your daily life.<br />
 
                                 </p>
                             </div>

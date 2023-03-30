@@ -71,3 +71,7 @@
     color: #24262b;
     background-color: #ffffff;
 }
+
+.footer-col .emails li a{
+    text-transform: lowercase;
+}

@@ -25,7 +25,7 @@ const Footer = () => {
                             <div className="footer-col">
                                 <h4>Geeks of Gurukul</h4>
                                 <ul>
-                                    <li><a href="/#faq">FAQ</a></li>
+                                    <li><Link to="/#faq">FAQ</Link></li>
                                     <li><Link to="/privacy" target='_blank'>Privacy Policy</Link></li>
                                     <li><Link to="/conditon" target='_blank'>Terms & Conditons</Link></li>
                                 </ul>
@@ -34,7 +34,7 @@ const Footer = () => {
                         <div className="col-md-6 col-lg-3" >
                             <div className="footer-col">
                                 <h4>Geeks of Gurukul</h4>
-                                <ul>
+                                <ul className='emails'>
                                     
                                     <li><Link to="mailto:support@geeksofgurulkul.com">support@geeksofgurulkul.com</Link></li>
                                     <li><Link to="mailto:admission@geeksofgurukul.com">admission@geeksofgurukul.com</Link></li>

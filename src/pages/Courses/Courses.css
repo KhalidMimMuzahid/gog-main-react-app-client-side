@@ -54,7 +54,10 @@ a.active.active_button {
     color: #000;
 }
 
-
+a.active_button:hover {
+    background: #000;
+    color: #fff;
+}
 
 
 /* up-card  */
@@ -181,6 +184,10 @@ li.course-contnet svg {
 .up_card_foottx svg {
     font-size: 2rem;
     color: #00c374;
+}
+
+img.img-icon {
+    width: 22px;
 }
 
 /* courseinfo area */

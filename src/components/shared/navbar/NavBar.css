@@ -1,47 +1,49 @@
 .brand {
-    
 
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: -1px;
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-    text-transform: uppercase;
-    color: var(--pink-500);
-  }
-  .mb-custom {
-    margin-bottom: 20px ;
-  }
-  .mb-custom2{
-    margin-bottom: -20px;
-  }
-  
-  .darkmode .brand {
-    color: var(--white-100);
-  }
 
-  .modal-dialog {
-    width: 701px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  text-transform: uppercase;
+  color: var(--pink-500);
+}
+
+.mb-custom {
+  margin-bottom: 20px;
+}
+
+.mb-custom2 {
+  margin-bottom: -20px;
+}
+
+.darkmode .brand {
+  color: var(--white-100);
+}
+
+.modal-dialog {
+  width: 701px;
 }
 
 .from-title.modal-title.h4 {
-    font-size: 22px;
-    font-weight: 600;
-    font-family: montserrat;
-    position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: montserrat;
+  position: relative;
 }
 
 .from-title.modal-title.h4:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 28px;
-    border-radius: 12px;
-    background: #02c475;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  border-radius: 12px;
+  background: #02c475;
 }
 
 .modal-form input {
@@ -57,6 +59,60 @@
   width: auto;
   margin-right: 10px;
 }
+
 .modal-form.check a {
   text-decoration: none;
+}
+
+/* dropdown menu */
+
+.top-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 0 1px #000;
+  padding: 20px 30px;
+  font-family: inherit;
+  gap: 21px;
+}
+
+.single-menu{
+  width: 208px;
+}
+
+.single-menu p{
+  color: #00c374;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+a.menu-color {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: inherit;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+a.menu-color:hover {
+  color: #00c374;
+}
+
+.single-menu:hover a {
+  background: transparent;
+}
+
+.single-menu a {padding: 5px 0;}
+
+.single-menu .dropdown-item{
+  white-space: normal;
+}
+
+.menu-sub {
+  margin: 10px 0;
 }

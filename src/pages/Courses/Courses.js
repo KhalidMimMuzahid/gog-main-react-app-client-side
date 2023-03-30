@@ -16,7 +16,7 @@ import Footer from '../../components/shared/footer/Footer';
 const Courses = () => {
     return (
         <div className='all-course'>
-            <NavBar></NavBar>
+         
             <div className='menu-course'>
                 <div className="container-fluid">
                     <div className="row">
@@ -90,7 +90,7 @@ const Courses = () => {
 
             </div>
             <Outlet></Outlet>
-            <Footer></Footer>
+           
         </div>
         
     );

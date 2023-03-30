@@ -41,6 +41,21 @@
     padding-bottom: 10px;
 }
 
+a.active.active_button {
+    background: #10232b;
+    color: #fff;
+}
+
+.active_button h1 {
+    font-weight: 700;
+}
+
+.active_button:hover {
+    color: #000;
+}
+
+
+
 
 /* up-card  */
 .course-area{

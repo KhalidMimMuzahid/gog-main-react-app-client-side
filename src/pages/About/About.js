@@ -8,9 +8,9 @@ const About = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <div class="about">
-                            <h1 class="txt_about_us">About Us</h1>
-                            <p class="txt_about_content">Geeks of Gurukul is a leading skill building school where we upskill you and provide
+                        <div className="about">
+                            <h1 className="txt_about_us">About Us</h1>
+                            <p className="txt_about_content">Geeks of Gurukul is a leading skill building school where we upskill you and provide
                                 the
                                 opportunity to work directly with industry experts on latest projects. It has been founded with a
                                 mission to solve the problem of learning outcome. We allow you to develop your abilities and get
@@ -26,9 +26,9 @@ const About = () => {
                                 various technical programs with guaranteed job opportunities.
                             </p>
                         </div>
-                        <div class="messageceo">
-                            <h1 class="txt_about_us">Message From CEO</h1>
-                            <p class="txt_about_content">
+                        <div className="messageceo">
+                            <h1 className="txt_about_us">Message From CEO</h1>
+                            <p className="txt_about_content">
                                 At Geeks of Gurukul, we strive to provide our students with the skills and knowledge they need to succeed in today's fast-paced world. Our comprehensive training programs cover a wide range of technologies, including SQL, Machine Learning, Python, Artificial Intelligence, Cybersecurity, Data Structures and Algorithms, and Tableau/Power BI.
 
                                 Our expert instructors and cutting-edge curriculum are designed to help you understand the fundamentals of each technology and apply your learning to your future career. We provide hands-on training using real-world scenarios to help you gain practical experience and prepare for the challenges of the modern workplace.
@@ -40,38 +40,38 @@ const About = () => {
                 </div>
                 <div className="row">
                     <div className="col-md-5 offset-md-1">
-                        <div class="abt-card1">
-                            <p class="abt_bold">2021</p>
-                            <p class="abt_subtext">We Started Our Journey</p>
+                        <div className="abt-card1">
+                            <p className="abt_bold">2021</p>
+                            <p className="abt_subtext">We Started Our Journey</p>
                         </div>
                     </div>
                     <div className="col-md-5">
-                        <div class="abt-card2">
-                            <p class="abt_bold">450+</p>
-                            <p class="abt_subtext">Students Currently Enrolled</p>
+                        <div className="abt-card2">
+                            <p className="abt_bold">450+</p>
+                            <p className="abt_subtext">Students Currently Enrolled</p>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-6 col-lg-4" >
-                        <div class="abt-card3">
+                        <div className="abt-card3">
                             {/* <GrPersonalComputer></GrPersonalComputer> */}
-                            <p class="abt_bold2"> 30+</p>
-                            <p class="abt_bold3">Total Batches</p>
+                            <p className="abt_bold2"> 30+</p>
+                            <p className="abt_bold3">Total Batches</p>
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-4" >
-                        <div class="abt-card4">
+                        <div className="abt-card4">
                             
-                            <p class="abt_bold2"> 96%</p>
-                            <p class="abt_bold3">Placemnt Rate</p>
+                            <p className="abt_bold2"> 96%</p>
+                            <p className="abt_bold3">Placemnt Rate</p>
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-4" >
-                        <div class="abt-card5">
+                        <div className="abt-card5">
                             
-                            <p class="abt_bold2"> 200+</p>
-                            <p class="abt_bold3">Hiring Partners</p>
+                            <p className="abt_bold2"> 200+</p>
+                            <p className="abt_bold3">Hiring Partners</p>
                         </div>
                     </div>
                 </div>

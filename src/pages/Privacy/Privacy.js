@@ -7,7 +7,7 @@ const Privacy = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <div class="privacy-policy">
+                            <div className="privacy-policy">
                                 <h1>Privacy Policy</h1>
                                 <p>
                                     <strong>SCANSKILL EDTECH INDIA PRIVATE LIMITED’S

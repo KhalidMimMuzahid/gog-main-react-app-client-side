@@ -8,7 +8,7 @@ const Conditons = () => {
                     <div className="row">
                         <div className="col-md-12">
                         
-                            <div class="conditions">
+                            <div className="conditions">
                                 <h1>Terms &amp; Conditions</h1> <br />
                                 <p>THESE TERMS OF USE ARE AN ELECTRONIC RECORD IN THE NATURE OF AN
                                     ELECTRONIC CONTRACT FORMED PURSUANT TO THE INFORMATION

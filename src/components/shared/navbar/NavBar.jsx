@@ -297,7 +297,7 @@ const NavBar = () => {
                 <div className="modal-form check">
 
                   <input type="checkbox" required="" id='ready' checked />
-                  <label for="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
+                  <label htmlFor="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
                     Conditions</a> </label>
 
                 </div>

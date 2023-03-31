@@ -21,7 +21,7 @@ const Master = () => {
         <div>
             <div className='master-area'>
                 
-                <div class="Register_masterclass">
+                <div className="Register_masterclass">
                     <p>Hey Learners!!! Let’s </p>
                     <h1>Register <span className='green-title'>Master Class </span>at <span className='red-title'>₹ 0/-</span></h1>
                 </div>
@@ -39,59 +39,59 @@ const Master = () => {
                                 </div>
                                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                                     <SwiperSlide>
-                                        <section class="webinar">
-                                            <div class="text_a">
+                                        <section className="webinar">
+                                            <div className="text_a">
                                                 <h2>Python : Master Class</h2>
                                       
-                                                <div class="webinar_dates">
-                                                    <div class="cover_icon">
+                                                <div className="webinar_dates">
+                                                    <div className="cover_icon">
                                                         <FaCalendarAlt></FaCalendarAlt>
                                                         <span> 01-04-23</span>
                                                         
                                                     </div>
-                                                    <div class="cover_icon">
+                                                    <div className="cover_icon">
                                                         <FaClock></FaClock><span> 10AM-11AM</span>
                                                     </div>
                                                 </div>
 
                                                 <h3>Anjali Agarwal</h3>
                                                 <h6>
-                                                    lead Instructor <br/><span class="instructorName-logo">Data Analyst-<img class="upcoming_master_class_logo" src={Analyst} alt=""/> </span>
+                                                    lead Instructor <br/><span className="instructorName-logo">Data Analyst-<img className="upcoming_master_class_logo" src={Analyst} alt=""/> </span>
 
 
                                                 </h6>
                                             </div>
-                                            <div class="img_a">
-                                                <img class="im" src={python}/>
+                                            <div className="img_a">
+                                                <img className="im" src={python}/>
                                                     
                                             </div>
                                         </section>
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <div class="webinar">
-                                            <div class="text_a">
+                                        <div className="webinar">
+                                            <div className="text_a">
                                                 <h2>ML: Master Class</h2>
                                       
-                                                <div class="webinar_dates">
-                                                    <div class="cover_icon">
+                                                <div className="webinar_dates">
+                                                    <div className="cover_icon">
                                                         <FaCalendarAlt></FaCalendarAlt>
                                                         <span> 01-04-23</span>
                                                         
                                                     </div>
-                                                    <div class="cover_icon">
+                                                    <div className="cover_icon">
                                                         <FaClock></FaClock><span> 10AM-11AM</span>
                                                     </div>
                                                 </div>
 
                                                 <h3>Praveen</h3>
                                                 <h6>
-                                                    lead Instructor <br/><span class="instructorName-logo">Data Analyst-<img class="upcoming_master_class_logo" src={microsoft} alt=""/> </span>
+                                                    lead Instructor <br/><span className="instructorName-logo">Data Analyst-<img className="upcoming_master_class_logo" src={microsoft} alt=""/> </span>
 
 
                                                 </h6>
                                             </div>
-                                            <div class="img_a">
-                                                <img class="im" src={machine}/>
+                                            <div className="img_a">
+                                                <img className="im" src={machine}/>
                                                     
                                             </div>
                                         </div>
@@ -105,29 +105,29 @@ const Master = () => {
 
 
 
-                            <div class="form-width">
-                                <div class="live-title">
-                                    <p class="styles_form_title">Register</p>
-                                    <p class="styles_form_title">Master class for <span className='red-title'>Free!</span></p>
+                            <div className="form-width">
+                                <div className="live-title">
+                                    <p className="styles_form_title">Register</p>
+                                    <p className="styles_form_title">Master class for <span className='red-title'>Free!</span></p>
                                 </div>
                                 <form id="register-form">
-                                    <div class="form-group">
-                                        <label for="full-name">Full Name</label>
-                                        <input type="text" id="name" name="name" required="" autocomplete="on" />
+                                    <div className="form-group">
+                                        <label htmlFor="full-name">Full Name</label>
+                                        <input type="text" id="name" name="name" required=""  />
                                     </div>
-                                    <div class="form-group">
+                                    <div className="form-group">
                                         <input type="email" id="email" name="email" required="" />
-                                        <label for="email">Email ID</label>
+                                        <label htmlFor="email">Email ID</label>
                                     </div>
-                                    <div class="form-group">
+                                    <div className="form-group">
                                         <input type="tel" id="ph_no" name="ph_no" required="" />
-                                        <label for="mobile-number">Mobile Number</label>
+                                        <label htmlFor="mobile-number">Mobile Number</label>
                                     </div>
-                                    <div class="form-group1">
+                                    <div className="form-group1">
                                         <input type="checkbox" checked id="terms-and-conditions" name="terms-and-conditions" required="" />
-                                        <label for="terms-and-conditions">  I agree to Geeks of Gurukul's<a href="/terms&amp;conditions"> <span className='green-title'> Terms and Conditions</span></a></label>
+                                        <label htmlFor="terms-and-conditions">  I agree to Geeks of Gurukul's<a href="/terms&amp;conditions"> <span className='green-title'> Terms and Conditions</span></a></label>
                                     </div>
-                                    <div class="form-group">
+                                    <div className="form-group">
                                         <button type="submit" id="register-button">Register Now</button>
                                     </div>
                                 </form>

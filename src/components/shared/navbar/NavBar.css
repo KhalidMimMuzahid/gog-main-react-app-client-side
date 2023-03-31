@@ -116,3 +116,26 @@ a.menu-color:hover {
 .menu-sub {
   margin: 10px 0;
 }
+
+@media (min-width: 100px) and (max-width: 1000.98px) {
+  .top-menu {
+    display: block;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1100.98px) {
+  .top-menu {
+    right: -300px;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1200.98px) {
+  .top-menu {
+    right: -197px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1352.98px) {
+  .top-menu {
+    right: -97px;
+  }
+}
+
+

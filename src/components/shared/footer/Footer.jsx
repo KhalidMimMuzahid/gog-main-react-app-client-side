@@ -42,9 +42,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-md-6 col-lg-3" >
-                            <div class="footer-col">
+                            <div className="footer-col">
                                 <h4>follow us</h4>
-                                <div class="social-links">
+                                <div className="social-links">
                                     
                                         <Link to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/" target="_blank"><FaFacebookF></FaFacebookF></Link>
                                         <Link to="https://twitter.com/geeksofgurukul" target="_blank"><FaTwitter></FaTwitter></Link>

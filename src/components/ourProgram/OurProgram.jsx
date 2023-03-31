@@ -57,16 +57,16 @@ const OurProgram = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="program-title">
-              <div id="school" class="styles_head__n8iVE">
-                <p class="upcoming-p">OUR PROGRAM</p>
+              <div id="school" className="styles_head__n8iVE">
+                <p className="upcoming-p">OUR PROGRAM</p>
                 <h1>
                   UPCOMING{" "}
-                  <span class="yellow font-bold">
+                  <span className="yellow font-bold">
                     <bold> SCHOOL CHAMP</bold>{" "}
                   </span>{" "}
                   BATCHES
                 </h1>
-                <span class="span-typewriter">
+                <span className="span-typewriter">
                   We have courses for students from class 6th to 12th where they
                   will learn to code in flexible time.
                 </span>
@@ -76,9 +76,9 @@ const OurProgram = () => {
         </div>
         <div className="row">
           <div className="col-lg-6 col-xl-5 offset-xl-1">
-            <div class="up-card up-card-a">
-              <div id="FSDA" class="up-card-head up-card-head-1">
-                <div class="up-card-rigth">
+            <div className="up-card up-card-a">
+              <div id="FSDA" className="up-card-head up-card-head-1">
+                <div className="up-card-rigth">
                   <h3>Champs of Basic Coding</h3>
                   <p>
                     BASIC (Beginners' All-purpose Symbolic Instruction Code) is
@@ -90,47 +90,47 @@ const OurProgram = () => {
               </div>
 
               <ul>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
-                <li class="course-contnet ">
+                <li className="course-contnet ">
                 <img src={hourGlass} alt="" />
                   Duration-36 weeks
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={Vector} alt="" />
                   Eligibity-School Students
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
 
-              <div class="upcming_footer">
-                <hr class="card_hr" />
-                <div class=" upcomig_hurry_up">
-                  <div class="up_card_foottx">
+              <div className="upcming_footer">
+                <hr className="card_hr" />
+                <div className=" upcomig_hurry_up">
+                  <div className="up_card_foottx">
                   <img src={timeHerryUp} alt="" />
-                    <p class="hurry_up">
+                    <p className="hurry_up">
                       Hurry up <br />
-                      <span class="limited_seats">Limited Seats</span>
+                      <span className="limited_seats">Limited Seats</span>
                     </p>
                   </div>
 
-                  <div class="upcoming_footer_buttons">
+                  <div className="upcoming_footer_buttons">
                     <button
                       onClick={handleShow}
                       
-                      class="stroke_button"
+                      className="stroke_button"
                       id="get-school-brochure-1"
                     >
                       <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
                     <Link to="signup">
                       <span>
-                        <button class="solid_button" onclick="openForm()">
+                        <button className="solid_button" onClick="openForm()">
                           Apply Now
                         </button>
                       </span>
@@ -142,9 +142,9 @@ const OurProgram = () => {
           </div>
 
           <div className="col-lg-6 col-xl-5 ">
-            <div class="up-card up-card-b">
-              <div id="FWD-school" class="up-card-head up-card-head-2">
-                <div class="up-card-rigth">
+            <div className="up-card up-card-b">
+              <div id="FWD-school" className="up-card-head up-card-head-2">
+                <div className="up-card-rigth">
                   <h3>Champs of Advance Coding</h3>
                   <p>
                     Students learn the fundamentals of programming through
@@ -156,49 +156,49 @@ const OurProgram = () => {
               </div>
 
               <ul>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={hourGlass} alt="" />
                   Duration-36 weeks
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={Vector} alt="" />
                   Eligibity-School Students
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
 
-              <div class="upcming_footer">
-                <hr class="card_hr" />
+              <div className="upcming_footer">
+                <hr className="card_hr" />
                 <div
-                  class="
+                  className="
                 upcomig_hurry_up"
                 >
-                  <div class="up_card_foottx">
+                  <div className="up_card_foottx">
                   <img src={timeHerryUp} alt="" />
-                    <p class="hurry_up">
+                    <p className="hurry_up">
                       Hurry up <br />
-                      <span class="limited_seats">Limited Seats</span>
+                      <span className="limited_seats">Limited Seats</span>
                     </p>
                   </div>
 
-                  <div class="upcoming_footer_buttons">
+                  <div className="upcoming_footer_buttons">
                     <button
                       onClick={handleShow}
-                      class="stroke_button"
+                      className="stroke_button"
                       id="get-school-brochure-2"
                     >
                       <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
                     <Link to="signup">
                       <span>
-                        <button class="solid_button" onclick="openForm()">
+                        <button className="solid_button" onClick="openForm()">
                           Apply Now
                         </button>
                       </span>
@@ -214,16 +214,16 @@ const OurProgram = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="program-title">
-              <div id="school" class="styles_head__n8iVE">
-                <p class="upcoming-p">OUR PROGRAM</p>
+              <div id="school" className="styles_head__n8iVE">
+                <p className="upcoming-p">OUR PROGRAM</p>
                 <h1>
                   UPCOMING{" "}
-                  <span class="yellow font-bold">
+                  <span className="yellow font-bold">
                     <bold> CODING BEES </bold>{" "}
                   </span>{" "}
                   BATCHES
                 </h1>
-                <span class="span-typewriter">
+                <span className="span-typewriter">
                   We provide Job Assistance Tech courses for Graduates and Under
                   Graduates Student and Professionals.
                 </span>
@@ -233,9 +233,9 @@ const OurProgram = () => {
         </div>
         <div className="row">
           <div className="col-lg-6 col-xl-5 offset-xl-1">
-            <div class="up-card up-card-a">
-              <div id="FSDA" class="up-card-head up-card-head-1">
-                <div class="up-card-rigth">
+            <div className="up-card up-card-a">
+              <div id="FSDA" className="up-card-head up-card-head-1">
+                <div className="up-card-rigth">
                   <h3>Full Stack Data Analytics</h3>
                   <p>
                     Data analytics is the process of examining, interpreting,
@@ -248,47 +248,47 @@ const OurProgram = () => {
               </div>
 
               <ul>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={hourGlass} alt="" />
                   Duration - 35weeks
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={Vector} alt="" />
                   Eligibility - All degrees & branches
                 </li>
 
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
 
-              <div class="upcming_footer">
-                <hr class="card_hr" />
-                <div class=" upcomig_hurry_up">
-                  <div class="up_card_foottx">
+              <div className="upcming_footer">
+                <hr className="card_hr" />
+                <div className=" upcomig_hurry_up">
+                  <div className="up_card_foottx">
                   <img src={timeHerryUp} alt="" />
-                    <p class="hurry_up">
+                    <p className="hurry_up">
                       Hurry up <br />
-                      <span class="limited_seats">Limited Seats</span>
+                      <span className="limited_seats">Limited Seats</span>
                     </p>
                   </div>
 
-                  <div class="upcoming_footer_buttons">
+                  <div className="upcoming_footer_buttons">
                     <button
                       onClick={handleShow}
-                      class="stroke_button"
+                      className="stroke_button"
                       id="get-school-brochure-1"
                     >
                       <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
                     <Link to="signup">
                       <span>
-                        <button class="solid_button" onclick="openForm()">
+                        <button className="solid_button" onClick="openForm()">
                           Apply Now
                         </button>
                       </span>
@@ -300,9 +300,9 @@ const OurProgram = () => {
           </div>
 
           <div className="col-lg-6 col-xl-5 ">
-            <div class="up-card up-card-b">
-              <div id="FWD-school" class="up-card-head up-card-head-2">
-                <div class="up-card-rigth">
+            <div className="up-card up-card-b">
+              <div id="FWD-school" className="up-card-head up-card-head-2">
+                <div className="up-card-rigth">
                   <h3>Full Stack Web Development</h3>
                   <p>
                     Full stack web development refers to the process of
@@ -315,50 +315,50 @@ const OurProgram = () => {
               </div>
 
               <ul>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
 
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={hourGlass} alt="" />
                   Duration - 35weeks
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={Vector} alt="" />
                   Eligibility - All degrees & branches
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
 
-              <div class="upcming_footer">
-                <hr class="card_hr" />
+              <div className="upcming_footer">
+                <hr className="card_hr" />
                 <div
-                  class="
+                  className="
                 upcomig_hurry_up"
                 >
-                  <div class="up_card_foottx">
+                  <div className="up_card_foottx">
                   <img src={timeHerryUp} alt="" />
-                    <p class="hurry_up">
+                    <p className="hurry_up">
                       Hurry up <br />
-                      <span class="limited_seats">Limited Seats</span>
+                      <span className="limited_seats">Limited Seats</span>
                     </p>
                   </div>
 
-                  <div class="upcoming_footer_buttons">
+                  <div className="upcoming_footer_buttons">
                     <button
                       onClick={handleShow}
-                      class="stroke_button"
+                      className="stroke_button"
                       id="get-school-brochure-2"
                     >
                       <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
                     <Link to="signup">
                       <span>
-                        <button class="solid_button" onclick="openForm()">
+                        <button className="solid_button" onClick="openForm()">
                           Apply Now
                         </button>
                       </span>
@@ -375,16 +375,16 @@ const OurProgram = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="program-title">
-              <div id="school" class="styles_head__n8iVE">
-                <p class="upcoming-p">OUR PROGRAM</p>
+              <div id="school" className="styles_head__n8iVE">
+                <p className="upcoming-p">OUR PROGRAM</p>
                 <h1>
                   UPCOMING{" "}
-                  <span class="yellow font-bold">
+                  <span className="yellow font-bold">
                     <bold> ENGINEERING NERDS</bold>{" "}
                   </span>{" "}
                   BATCHES
                 </h1>
-                <span class="span-typewriter">
+                <span className="span-typewriter">
                   We Provide Job Assistance Engineering Courses for Graduate and
                   Undergraduate, Engineering Folks.
                 </span>
@@ -394,9 +394,9 @@ const OurProgram = () => {
         </div>
         <div className="row">
           <div className="col-lg-6 col-xl-5 offset-xl-1">
-            <div class="up-card up-card-a">
-              <div id="FSDA" class="up-card-head up-card-head-1">
-                <div class="up-card-rigth">
+            <div className="up-card up-card-a">
+              <div id="FSDA" className="up-card-head up-card-head-1">
+                <div className="up-card-rigth">
                   <h3>Electrical Engineering</h3>
                   <p>
                     Electrical engineering is a field of engineering that deals
@@ -409,46 +409,46 @@ const OurProgram = () => {
               </div>
 
               <ul>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={Vector} alt="" />
                   Eligibility - Engineering branches
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={hourGlass} alt="" />
                   Duration - 45weeks
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
 
-              <div class="upcming_footer">
-                <hr class="card_hr" />
-                <div class=" upcomig_hurry_up">
-                  <div class="up_card_foottx">
+              <div className="upcming_footer">
+                <hr className="card_hr" />
+                <div className=" upcomig_hurry_up">
+                  <div className="up_card_foottx">
                   <img src={timeHerryUp} alt="" />
-                    <p class="hurry_up">
+                    <p className="hurry_up">
                       Hurry up <br />
-                      <span class="limited_seats">Limited Seats</span>
+                      <span className="limited_seats">Limited Seats</span>
                     </p>
                   </div>
 
-                  <div class="upcoming_footer_buttons">
+                  <div className="upcoming_footer_buttons">
                     <button
                       onClick={handleShow}
-                      class="stroke_button"
+                      className="stroke_button"
                       id="get-school-brochure-1"
                     >
                      <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
                     <Link to="signup">
                       <span>
-                        <button class="solid_button" onclick="openForm()">
+                        <button className="solid_button" onClick="openForm()">
                           Apply Now
                         </button>
                       </span>
@@ -460,9 +460,9 @@ const OurProgram = () => {
           </div>
 
           <div className="col-lg-6 col-xl-5 ">
-            <div class="up-card up-card-b">
-              <div id="FWD-school" class="up-card-head up-card-head-2">
-                <div class="up-card-rigth">
+            <div className="up-card up-card-b">
+              <div id="FWD-school" className="up-card-head up-card-head-2">
+                <div className="up-card-rigth">
                   <h3>Mechanical Engineering</h3>
                   <p>
                     Mechanical engineering is a branch of engineering that deals
@@ -474,49 +474,49 @@ const OurProgram = () => {
               </div>
 
               <ul>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={calassTime} alt="" />
                   Class Timings : Flexible time as per student
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={Vector} alt="" />
                   Eligibility - Engineering branches
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={hourGlass} alt="" />
                   Duration - 45weeks
                 </li>
-                <li class="course-contnet">
+                <li className="course-contnet">
                 <img src={teamLeads} alt="" />
                   Led by Team of IITians
                 </li>
               </ul>
 
-              <div class="upcming_footer">
-                <hr class="card_hr" />
+              <div className="upcming_footer">
+                <hr className="card_hr" />
                 <div
-                  class="
+                  className="
                 upcomig_hurry_up"
                 >
-                  <div class="up_card_foottx">
+                  <div className="up_card_foottx">
                   <img src={timeHerryUp} alt="" />
-                    <p class="hurry_up">
+                    <p className="hurry_up">
                       Hurry up <br />
-                      <span class="limited_seats">Limited Seats</span>
+                      <span className="limited_seats">Limited Seats</span>
                     </p>
                   </div>
 
-                  <div class="upcoming_footer_buttons">
+                  <div className="upcoming_footer_buttons">
                     <button
                       onClick={handleShow}
-                      class="stroke_button"
+                      className="stroke_button"
                       id="get-school-brochure-2"
                     >
                       <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
                     </button>
                     <Link to="signup">
                       <span>
-                        <button class="solid_button" onclick="openForm()">
+                        <button className="solid_button" onClick="openForm()">
                           Apply Now
                         </button>
                       </span>
@@ -595,7 +595,7 @@ const OurProgram = () => {
                 <div className="modal-form check">
                   
                   <input type="checkbox" required="" id='ready' />
-                  <label for="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
+                  <label htmlFor="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
                     Conditions</a> </label>
                 
                 </div>

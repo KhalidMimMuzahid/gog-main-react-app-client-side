@@ -11,17 +11,17 @@ const Hire = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <div class="hire-left">
+                            <div className="hire-left">
                                 <h1>Hire Top Talent that <br /> Deliver
                                     <span className='red-title'> 100% Result</span></h1>
                                 <p>Intensify your Data &amp; Engineering Team with industry ready top
                                     skilled tech talent. </p>
-                                <a href="#hire-from"><button class="apply-now-hire">Hire Now</button></a>
+                                <a href="#hire-from"><button className="apply-now-hire">Hire Now</button></a>
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div class="hire-right">
-                                <img class="hire-img" src={Hireimg} alt="" srcset=""/>
+                            <div className="hire-right">
+                                <img className="hire-img" src={Hireimg} alt="" srcset=""/>
                             </div>
                         </div>
                     </div>

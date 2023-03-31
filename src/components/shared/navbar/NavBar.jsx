@@ -118,6 +118,7 @@ const NavBar = () => {
                     <div className="top-menu">
                       <div className="single-menu">
                         <p>School Champs Courses</p>
+                        <a className="menu-color"  href={'/#temnn'} > Coding</a>
                         <NavDropdown.Item href={'/#school'}>
                           <a className="menu-color" > Champs of Basic Coding</a>
                         </NavDropdown.Item>
@@ -295,7 +296,7 @@ const NavBar = () => {
                 </div>
                 <div className="modal-form check">
 
-                  <input type="checkbox" required="" id='ready' />
+                  <input type="checkbox" required="" id='ready' checked />
                   <label for="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
                     Conditions</a> </label>
 

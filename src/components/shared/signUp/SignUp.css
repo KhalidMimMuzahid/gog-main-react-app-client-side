@@ -178,9 +178,7 @@ body {
     margin: 10px 0;
 }
 
-.googelIcon {
-    margin-top: -4px;
-}
+
 
 
 button.submit {
@@ -325,7 +323,7 @@ button.submit:hover {
 }
 
 .googelIcon {
-    margin-top: 24px;
+    
     margin-bottom: 32px;
 }
 

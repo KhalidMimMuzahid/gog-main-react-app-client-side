@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState }  from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
-const ForgetPassword = () => {
+const SetPassword = () => {
+
     const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from
     const [signUpError, setSignUPError] = useState('')
     
@@ -10,12 +11,13 @@ const ForgetPassword = () => {
         console.log(data);
         setSignUPError('');
     }
+    
     return (
         <div className="mt-4 mb-5 ">
         <div className="form-class ">
           <div className="col-md-12">
             <div className="new-login-from">
-            <p style={{marginBottom:"15px"}}>Enter your email address</p>
+            <p style={{marginBottom:"15px"}}>Enter your new password</p>
               <div className="google-sing-in">
                 
                 <form onSubmit={handleSubmit(handleSignUp)}>
@@ -50,4 +52,4 @@ const ForgetPassword = () => {
     );
 };
 
-export default ForgetPassword;
+export default SetPassword;

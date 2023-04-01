@@ -276,7 +276,7 @@
 
 .main-heading h1 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .section-text {
@@ -327,6 +327,12 @@
 
     .hero {
         max-width: 1440px;
+    }
+
+    .hero-h1 h1 {
+        
+        top: -100px;
+        right: 85px;
     }
 
 }

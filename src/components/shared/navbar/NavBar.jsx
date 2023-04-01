@@ -153,7 +153,11 @@ const NavBar = () => {
                         </NavDropdown.Item>
                       </div>
                       <div className="single-menu">
-                        <p>Engineering Nerds Courses</p>
+                        <p> 
+                        <Link to={'/courses/python'} className="menu-color" >Industrial
+                      Courses</Link>
+                          
+                          </p>
                         <div className="menu-sub">
                           <Link to={'/courses/python'} className="menu-color" >Python</Link>
                         </div>

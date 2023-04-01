@@ -3,6 +3,10 @@
   padding: 0 20px;
 }
 
+.menu-gr nav.shadow-sm.mb-custom.px-5.navbar.navbar-expand-sm.navbar-light.bg-white.sticky-top {
+  margin: 0;
+}
+
 .brand {
 
 
@@ -69,6 +73,8 @@
   text-decoration: none;
 }
 
+
+
 /* dropdown menu */
 
 .top-menu {
@@ -88,7 +94,7 @@
   width: 208px;
 }
 
-.single-menu p{
+.single-menu p, .single-menu p a{
   color: #00c374;
   font-size: 1rem;
   font-weight: 500;

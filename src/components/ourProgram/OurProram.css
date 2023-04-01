@@ -281,6 +281,10 @@ li.course-contnet img {
     gap: 20px;
 }
 
+span.yellow.font-bold {
+    border-bottom: 7px solid yellow;
+    color: #000;
+}
 
 @media (min-width: 100px) and (max-width: 500.98px) {
     .webinar {

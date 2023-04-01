@@ -255,7 +255,7 @@ const OurProgram = () => {
               <ul>
                 <li className="course-contnet">
                 <img src={calassTime} alt="" />
-                  Class Timings : Flexible time as per student
+                100 % Job Assistance
                 </li>
                 <li className="course-contnet">
                 <img src={hourGlass} alt="" />
@@ -322,7 +322,7 @@ const OurProgram = () => {
               <ul>
                 <li className="course-contnet">
                 <img src={calassTime} alt="" />
-                  Class Timings : Flexible time as per student
+                100 % Job Assistance
                 </li>
 
                 <li className="course-contnet">
@@ -416,7 +416,7 @@ const OurProgram = () => {
               <ul>
                 <li className="course-contnet">
                 <img src={calassTime} alt="" />
-                  Class Timings : Flexible time as per student
+                100 % Job Assistance
                 </li>
                 <li className="course-contnet">
                 <img src={Vector} alt="" />
@@ -481,7 +481,7 @@ const OurProgram = () => {
               <ul>
                 <li className="course-contnet">
                 <img src={calassTime} alt="" />
-                  Class Timings : Flexible time as per student
+                100 % Job Assistance
                 </li>
                 <li className="course-contnet">
                 <img src={Vector} alt="" />

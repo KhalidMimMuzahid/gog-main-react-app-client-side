@@ -9,7 +9,7 @@
 }
 
 .hero-Area-Ancor-Fixed .container {
-    width: 1440px;
+    width: 1280px;
 }
 
 .course-inner h1 {
@@ -20,6 +20,7 @@
 
 .hero-Area-Ancor-Fixed {
     font-family: montserrat;
+    margin-top: 52px;
 }
 
 .textColor {
@@ -389,6 +390,17 @@
     }
 }
 
+@media (min-width: 100px) and (max-width: 764.98px) {
+    .hero-Area-Ancor-Fixed .container{
+
+        width: auto;
+    }
+
+    .hero-h1 h1{
+        position: relative;
+        right: auto;
+    }
+}
 
 
 @media(min-width: 1199px) and (max-width: 1282.98px) {

@@ -119,7 +119,7 @@ const Login = () => {
                     <p className="text-red-500">{errors.password.message}</p>
                   )}
 
-                  <p>Forget Your Password?</p>
+                  <Link to='/forget-pass'><span><p className='form-text'>Forget Your Password?</p></span></Link>
                 
                   <div className="sing-up-submit">
                     <button type="submit">SIGN IN</button>

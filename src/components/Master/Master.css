@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 .master-area .container {
     width: 1180px;
 }
@@ -168,11 +172,11 @@ input[type=checkbox] {
 }
 
 .content>h6 {
-    margin: 0rem 2rem 0rem 3rem;
-    margin-top: 10px;
-    color: #858F93;
+    color: #858f93;
     font-size: 16px;
+    margin: 10px 2rem 0 3rem;
     font-family: 'Poppins', sans-serif;
+    font-weight:700;
 }
 
 /* slider */
@@ -186,7 +190,7 @@ input[type=checkbox] {
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    
+    margin-top: 20px;
     height: 304px;
 }
 

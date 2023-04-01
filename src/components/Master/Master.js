@@ -3,7 +3,7 @@ import './Master.css'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation,Pagination } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -42,7 +42,9 @@ const Master = () => {
                                         industry experts
                                     </h6>
                                 </div>
-                                <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                                <Swiper navigation={true} modules={[Navigation,Pagination]} pagination={{
+                                    clickable: true,
+                                }} className="mySwiper">
                                     <SwiperSlide>
                                         <section className="webinar">
                                             <div className="text_a">

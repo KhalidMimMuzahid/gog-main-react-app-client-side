@@ -56,6 +56,7 @@ const Banner = () => {
                     text={`if(Your Choice == "Geeks of Gurukul")`}
                     typeSpeed={100}
                   />
+                  
                 </div>
               </div>
 

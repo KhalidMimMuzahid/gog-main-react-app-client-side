@@ -20,7 +20,7 @@
 
 .hero-Area-Ancor-Fixed {
     font-family: montserrat;
-    margin-top: 52px;
+    margin-top: 180px;
 }
 
 .textColor {
@@ -41,16 +41,15 @@
     white-space: nowrap;
     font-weight: 600;
     position: absolute;
-    top: -90px;
-    right: 85px;
+    top: -42px;
+    left: -87px;
     
 }
 
 .new_hero {
 
     font-family: 'Courier New', Courier, monospace;
-    padding-top: 100px;
-    margin-top: 28px;
+    
 }
 
 .course:hover {
@@ -315,10 +314,7 @@
         font-size: 39px;
     }
 
-    .both {
-
-        margin: 48% 6%;
-    }
+   
 }
 
 
@@ -332,11 +328,7 @@
         max-width: 1440px;
     }
 
-    .hero-h1 h1 {
-        
-        top: -100px;
-        right: 85px;
-    }
+
 
 }
 

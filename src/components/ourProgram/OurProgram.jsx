@@ -21,6 +21,9 @@ const OurProgram = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // for set the pdf url
+  const [pdfUrl, setPdfUrl] = useState("");
+
   // for modal submit fuction
   const {
     register,
@@ -33,6 +36,7 @@ const OurProgram = () => {
   // getting data form React hook form
   const handleFormData = (applyData) => {
     console.log(applyData);
+    setSignUPError("");
 
     fetch("https://geeks-of-gurukul-server-side.vercel.app/apply-data", {
       method: "PUT",
@@ -46,6 +50,8 @@ const OurProgram = () => {
         console.log("save user", data);
         //navigate('/');
         toast.success("Thank you, We are pleased to know you");
+        // Display PDF in new tab
+        window.open(pdfUrl, "_blank");
         setShow(false); // cloase modal 
       });
   };
@@ -121,12 +127,11 @@ const OurProgram = () => {
 
                   <div className="upcoming_footer_buttons">
                     <button
-                      onClick={handleShow}
-                      
+                      onClick={() => {setShow(true); setPdfUrl(schoolChamps)}}
                       className="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
+                      Know Details
                     </button>
                     <Link to="signup">
                       <span>
@@ -190,11 +195,11 @@ const OurProgram = () => {
 
                   <div className="upcoming_footer_buttons">
                     <button
-                      onClick={handleShow}
+                      onClick={() => {setShow(true); setPdfUrl(schoolChamps)}}
                       className="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      <Link to={{pathname: schoolChamps}} target="_blank" rel="noopener noreferrer">Know Details</Link>
+                      Know Details
                     </button>
                     <Link to="signup">
                       <span>
@@ -280,11 +285,11 @@ const OurProgram = () => {
 
                   <div className="upcoming_footer_buttons">
                     <button
-                      onClick={handleShow}
+                      onClick={() => {setShow(true); setPdfUrl(codingBeesProgram)}}
                       className="stroke_button"
                       id="get-school-brochure-1"
                     >
-                      <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
+                      Know Details
                     </button>
                     <Link to="signup">
                       <span>
@@ -350,11 +355,11 @@ const OurProgram = () => {
 
                   <div className="upcoming_footer_buttons">
                     <button
-                      onClick={handleShow}
+                      onClick={() => {setShow(true); setPdfUrl(codingBeesProgram)}}
                       className="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      <Link to={{pathname: codingBeesProgram}} target="_blank" rel="noopener noreferrer">Know Details</Link>
+                      Know Details
                     </button>
                     <Link to="signup">
                       <span>
@@ -440,11 +445,11 @@ const OurProgram = () => {
 
                   <div className="upcoming_footer_buttons">
                     <button
-                      onClick={handleShow}
+                      onClick={() => {setShow(true); setPdfUrl(engineeringNerds)}}
                       className="stroke_button"
                       id="get-school-brochure-1"
                     >
-                     <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
+                    Know Details
                     </button>
                     <Link to="signup">
                       <span>
@@ -508,11 +513,11 @@ const OurProgram = () => {
 
                   <div className="upcoming_footer_buttons">
                     <button
-                      onClick={handleShow}
+                      onClick={() => {setShow(true); setPdfUrl(engineeringNerds)}}
                       className="stroke_button"
                       id="get-school-brochure-2"
                     >
-                      <Link to={{pathname: engineeringNerds}} target="_blank" rel="noopener noreferrer">Know Details</Link>
+                      Know Details
                     </button>
                     <Link to="signup">
                       <span>
@@ -594,15 +599,15 @@ const OurProgram = () => {
                 </div>
                 <div className="modal-form check">
                   
-                  <input type="checkbox" required="" id='ready' />
+                  <input type="checkbox" checked required="" id='ready' />
                   <label htmlFor="ready">I accept all <a href="/terms&amp;conditions">Terms &amp;
                     Conditions</a> </label>
                 
                 </div>
                 
-                <a href='https://drive.google.com/file/d/1Ck3ugHVsvw2KozwHWwuS8L_ZooXF8f4G/view?usp=sharing'><button  className="apply-btn" type="submit">
+                <button  className="apply-btn" type="submit">
                   Submit
-                </button></a>
+                </button>
                 {signUpError && <p className="text-red-600">{signUpError}</p>}
               </form>
             </div>

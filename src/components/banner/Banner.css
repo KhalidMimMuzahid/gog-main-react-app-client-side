@@ -339,6 +339,10 @@
         margin: 33% 6%;
     }
 
+    .main-heading h1 {
+        font-size: 25px;
+    }
+
     .hero-left {
         display: block;
         text-align: center;
@@ -394,19 +398,19 @@
 
     .hero-h1 h1{
         position: relative;
-        right: auto;
+        left: -8px;
+        top: 0;
     }
 }
 
 
-/* @media(min-width: 1199px) and (max-width: 1282.98px) {
+@media(min-width: 767px) and (max-width: 927.98px) {
 
     .hero-h1 h1 {
-        position: absolute;
-        top: -45px;
-        right: 0;
+        
+        left: 0;
     }
-} */
+}
 
 @media(min-width: 991px) and (max-width: 1199.98px) {
     .main-heading h1 {

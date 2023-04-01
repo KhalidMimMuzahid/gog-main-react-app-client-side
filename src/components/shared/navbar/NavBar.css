@@ -3,6 +3,15 @@
   padding: 0 20px;
 }
 
+.menu-gr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 89;
+}
+
 .menu-gr nav.shadow-sm.mb-custom.px-5.navbar.navbar-expand-sm.navbar-light.bg-white.sticky-top {
   margin: 0;
 }

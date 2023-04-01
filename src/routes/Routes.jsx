@@ -19,7 +19,8 @@ import Privacy from "../pages/Privacy/Privacy";
 import Python from "../pages/Python/Python";
 import SQL from "../pages/SQL/SQL";
 import ForgetPassword from "../components/shared/forgotPassword/ForgetPassword";
-import SetPassword from "../components/shared/forgotPassword/ForgetPassword";
+import SetPass from "../components/shared/forgotPassword/SetPass";
+
 
 export const router = createBrowserRouter([
     {
@@ -41,7 +42,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/set-pass',
-                element: <SetPassword/>
+                element: <SetPass/>
             },
             {
                 path: '/login',

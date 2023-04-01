@@ -1,9 +1,8 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
-const SetPassword = () => {
-
+const SetPass = () => {
     const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from
     const [signUpError, setSignUPError] = useState('')
     
@@ -11,7 +10,6 @@ const SetPassword = () => {
         console.log(data);
         setSignUPError('');
     }
-    
     return (
         <div className="mt-4 mb-5 ">
         <div className="form-class ">
@@ -23,19 +21,19 @@ const SetPassword = () => {
                 <form onSubmit={handleSubmit(handleSignUp)}>
                   <div className="from-box-sing">
                    
-                    <div className="from-box-input">
-                      <input type="email"
-                      name="email"
-                      placeholder="Email Address"
-                      {...register("email", {
-                        
-                      })}
+                  <div className="from-box-input">
+                    <input 
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        {...register("password", {
+                
+                        })}
                     />
-                    </div>
-                    {errors.email && (
-                      <p className="text-red-500">{errors.email.message}</p>
-                    )}
-                    
+                  </div>
+                  {errors.password && (
+                    <p className="text-red-500">{errors.password.message}</p>
+                  )}
                     <div className="sing-up-submit">
                         <button style={{marginTop:"2px"}} type="submit">Submit</button>
                     </div>
@@ -52,4 +50,4 @@ const SetPassword = () => {
     );
 };
 
-export default SetPassword;
+export default SetPass;

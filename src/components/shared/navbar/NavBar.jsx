@@ -63,7 +63,7 @@ const NavBar = () => {
   };
 
   return (
-    <>
+    <div className='menu-gr'>
       {["sm"].map((expand) => (
         <Navbar
           key={expand}
@@ -72,7 +72,7 @@ const NavBar = () => {
           expand={expand}
           className="shadow-sm mb-custom px-5"
         >
-          <Container fluid>
+          <div className="container">
             <Navbar.Brand>
               <Link to={'/'}>
                 <img
@@ -228,7 +228,7 @@ const NavBar = () => {
                 )}
               </Offcanvas.Body>
             </Navbar.Offcanvas>
-          </Container>
+          </div>
         </Navbar>
       ))}
 
@@ -319,7 +319,7 @@ const NavBar = () => {
         </Modal>
       </div>
 
-    </>
+    </div>
   );
 };
 

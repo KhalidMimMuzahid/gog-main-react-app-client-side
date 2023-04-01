@@ -1,3 +1,7 @@
+.master-area .container {
+    width: 1180px;
+}
+
 .master-area{
     background-color: #11252d;
     padding: 30px 0;
@@ -256,8 +260,16 @@ span.instructorName-logo img {
 
 .left_card .swiper-button-prev, .left_card .swiper-button-next {
     color: #01c475;
+    right: -1px;
 }
 
+
+@media (min-width: 100px) and (max-width: 1199.98px) {
+    .form-width {
+        margin-top: 30px;
+      }
+
+}
 
 
 @media (min-width: 100px) and (max-width: 596.98px) {

@@ -48,7 +48,7 @@ const Banner = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-xl-5">
             <div className="new_hero">
-              <div>
+              <div className="new-text-hero">
                 <div className="hero-h1">
                   <TypeWriterEffect
                     startDelay={100}

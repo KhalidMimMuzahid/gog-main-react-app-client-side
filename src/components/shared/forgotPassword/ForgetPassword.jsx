@@ -1,14 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const ForgetPassword = () => {
     const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from
     const [signUpError, setSignUPError] = useState('')
+
+    const {sendResetPassword } = useContext(AuthContext);
     
     const handleSignUp = (data) => {
         console.log(data);
         setSignUPError('');
+
+        sendResetPassword(data.email)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+            toast.success('Password reset email sent, Please check your inbox.')
+            Navigate('./login');
+          })
+          .catch(error => {
+            console.log(error)
+            setSignUPError(error.message)
+          });
     }
     return (
         <div className="mt-4 mb-5 ">

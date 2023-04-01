@@ -5,6 +5,10 @@
     margin-bottom: 10px;
 }
 
+.from-box-sing a {
+  text-decoration: none;
+}
+
 .btn-customize {
     width: 100%;
     border-radius: 30px;

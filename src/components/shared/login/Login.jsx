@@ -13,7 +13,7 @@ const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
   const { signIn, googleSignIn } = useContext(AuthContext);
-  const [signUpError, setSignUPError] = useState('')
+  const [signUpError, setSignUPError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -119,7 +119,7 @@ const Login = () => {
                     <p className="text-red-500">{errors.password.message}</p>
                   )}
 
-                  <Link to='/forget-pass'><span><p className='form-text'>Forget Your Password?</p></span></Link>
+                  <Link to='/forget-pass'><p className=' form-text'>Forget Your Password?</p></Link>
                 
                   <div className="sing-up-submit">
                     <button type="submit">SIGN IN</button>

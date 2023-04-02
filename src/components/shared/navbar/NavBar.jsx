@@ -118,7 +118,7 @@ const NavBar = () => {
                     <div className="top-menu">
                       <div className="single-menu">
                         <p>School Champs Courses</p>
-                        <a className="menu-color"  href={'/#temnn'} > Coding</a>
+                        {/* <a className="menu-color"  href={'/#temnn'} > Coding</a> */}
                         <NavDropdown.Item href={'/#school'}>
                           <a className="menu-color" > Champs of Basic Coding</a>
                         </NavDropdown.Item>

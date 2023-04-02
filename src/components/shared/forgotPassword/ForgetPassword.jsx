@@ -16,10 +16,10 @@ const ForgetPassword = () => {
 
         sendResetPassword(data.email)
         .then(result => {
-            const user = result.user;
-            console.log(user);
+            // const user = result.user;
+            // console.log(user);
             toast.success('Password reset email sent, Please check your inbox.')
-            Navigate('./login');
+            // Navigate('./login');
           })
           .catch(error => {
             console.log(error)

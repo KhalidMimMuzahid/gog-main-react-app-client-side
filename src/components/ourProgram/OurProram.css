@@ -51,7 +51,7 @@
 
 span.yellow {
     position: relative;
-    z-index: 0;
+    z-index: 0; 
 }
 
 .styles_head__n8iVE span {
@@ -282,8 +282,19 @@ li.course-contnet img {
 }
 
 span.yellow.font-bold {
-    border-bottom: 7px solid yellow;
+    position: relative;
     color: #000;
+}
+
+span.yellow.font-bold:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 7px;
+    content: '';
+    background: yellow;
+    border-radius: 10px;
 }
 
 @media (min-width: 100px) and (max-width: 500.98px) {

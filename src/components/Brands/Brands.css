@@ -11,10 +11,19 @@
     font-weight: bold;
 }
 
+.brands-slider {
+    margin: 50px 0px;
+}
+
+.brands-slider .marquee-container {
+    margin-bottom: 20px;
+}
+
 .brands-slider img {
     object-fit: contain;
     background-color: white;
     padding: 20px;
+    margin-right: 40px;
     border-radius: 15px;
     height: 100px;
     width: 97px;

@@ -25,8 +25,8 @@ const AuthProvider = ({ children }) => {
     }
 
     // for reset password email
-    const sendResetPassword = (email) => {
-        return sendPasswordResetEmail(email);
+    const sendResetPassword = ( email) => {
+        return sendPasswordResetEmail(auth, email);
     }
 
     // for logOut 

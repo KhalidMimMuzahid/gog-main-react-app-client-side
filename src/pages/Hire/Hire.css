@@ -1,6 +1,9 @@
 .hire-left {
     max-width: 600px;
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
+    margin: auto;
+    top: 12%;
+    position: relative;
 }
 
 .hire-from-area {

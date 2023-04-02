@@ -64,7 +64,7 @@ const Banner = () => {
                 <div className="left-part">
                   <div className="top-curly-brace">&#123;</div>
                   <div className="course-box-container">
-                    <div className="course course1">
+                    <div className="course course1" >
                       <div className="course-inner">
                         <a href="#school">
                           <h1>SCHOOL CHAMPS</h1>

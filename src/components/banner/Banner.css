@@ -43,13 +43,13 @@
     position: absolute;
     top: -42px;
     left: -87px;
-    
+
 }
 
 .new_hero {
     margin-left: 40px;
     font-family: 'Courier New', Courier, monospace;
-    
+
 }
 
 .course:hover {
@@ -309,6 +309,36 @@
     box-shadow: 0 0 0 1em transparent;
 }
 
+@keyframes example3 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes example4 {
+    33% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 1;
+    }
+}
+
+@keyframes example5 {
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* Responsve nes  */
 
@@ -316,10 +346,11 @@
     .main-heading {
         font-size: 39px;
     }
+
     .hero-h1 h1 {
         top: -45px;
     }
-   
+
 }
 
 
@@ -395,12 +426,12 @@
 }
 
 @media (min-width: 100px) and (max-width: 764.98px) {
-    .hero-Area-Ancor-Fixed .container{
+    .hero-Area-Ancor-Fixed .container {
 
         width: auto;
     }
 
-    .hero-h1 h1{
+    .hero-h1 h1 {
         position: relative;
         left: -8px;
         top: 0;
@@ -411,7 +442,7 @@
 @media(min-width: 767px) and (max-width: 927.98px) {
 
     .hero-h1 h1 {
-        
+
         left: 0;
     }
 }
@@ -421,5 +452,5 @@
         font-size: 39px;
     }
 
-    
+
 }

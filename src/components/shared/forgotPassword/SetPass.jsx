@@ -1,14 +1,38 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation } from 'react-router-dom';
+import { AuthContext } from '../../../context/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const SetPass = () => {
+    const {confirmPassword } = useContext(AuthContext);
+    const location = useLocation();  
+
+    console.log("location::::::", location);
     const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from
-    const [signUpError, setSignUPError] = useState('')
+    const [signUpError, setSignUPError] = useState('');
+
+    
     
     const handleSignUp = (data) => {
         console.log(data);
         setSignUPError('');
+
+        const queryParams = new URLSearchParams(location.search)
+
+        const oobCode = queryParams.get("oobCode");
+        // console.log("oob code : ", oobCode , "\npasswod: ",data.password )
+        confirmPassword(oobCode , data.password)
+        .then(result => {
+            // const user = result.user;
+            // console.log(user);
+            toast.success('Password reset completed.');
+            //Navigate('./login');
+          })
+          .catch(error => {
+            console.log(error)
+            setSignUPError(error.message)
+          });
     }
     return (
       <div className='sing-up'>

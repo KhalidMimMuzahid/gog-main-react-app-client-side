@@ -11,7 +11,8 @@ const SetPass = () => {
         setSignUPError('');
     }
     return (
-        <div className="mt-4 mb-5 ">
+      <div className='sing-up'>
+                <div className="mt-4 mb-5 ">
         <div className="form-class ">
           <div className="col-md-12">
             <div className="new-login-from">
@@ -47,6 +48,8 @@ const SetPass = () => {
           </div>
         </div>
         </div>
+      </div>
+
     );
 };
 

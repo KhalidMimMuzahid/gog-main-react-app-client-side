@@ -47,7 +47,7 @@
 }
 
 .new_hero {
-
+    margin-left: 40px;
     font-family: 'Courier New', Courier, monospace;
     
 }
@@ -201,9 +201,10 @@
 
 .equal {
     font-size: 62px;
-    font-weight: 500;
+    font-weight: 600;
     animation-name: example3;
     animation-duration: 20s;
+    font-family: montserrat;
 }
 
 .our_course {
@@ -218,6 +219,7 @@
     font-weight: bold;
     animation-name: example3;
     animation-duration: 5s;
+    font-family: montserrat;
 }
 
 .our_course:hover {
@@ -257,6 +259,7 @@
     flex-direction: column;
     align-items: flex-start;
     font-family: montserrat;
+    padding-left: 40px;
 }
 
 .main-heading {
@@ -346,6 +349,7 @@
     .hero-left {
         display: block;
         text-align: center;
+        padding-left: 0;
     }
 
     .hero-h1 {

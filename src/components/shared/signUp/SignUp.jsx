@@ -30,8 +30,8 @@ const SignUp = () => {
     setSignUPError("");
 
     // for the password cheack 
-    if(data.password !== data.passwordConfirm) {
-        return setSignUPError("Password did not matched!");
+    if (data.password !== data.passwordConfirm) {
+      return setSignUPError("Password did not matched!");
     }
 
     createUser(data.email, data.password)
@@ -87,146 +87,150 @@ const SignUp = () => {
   };
 
   return (
-    <div className="mt-4 mb-5 ">
-      <div className="form-class ">
-        {/* ----------------------------start resgistration from  =-----------------------------*/}
-        <div className="col-md-12">
-          <div className="new-login-from">
-            <div className="title-sing">
-              <h2>
-                <Link to="/signup">Sign Up</Link>
-              </h2>
-              <Link to="/login">Sign in</Link>
-            </div>
-            <div className="google-sing-in">
-              <div className="text-center googelIcon">
-                <div className='button-google-custom'>
-                  <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
-                    <FcGoogle /> <span>Signin with Google</span>
-                  </button>
-                </div>
-                <div className='button-google-custom'>
-                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
-                    <AiFillFacebook /> <span>Signin with Facebook</span>
-                  </button>
-                </div>
+
+    <div className='sing-up'>
+      <div className="mt-4 mb-5 ">
+        <div className="form-class ">
+          {/* ----------------------------start resgistration from  =-----------------------------*/}
+          <div className="col-md-12">
+            <div className="new-login-from">
+              <div className="title-sing">
+                <h2>
+                  <Link to="/signup">Sign Up</Link>
+                </h2>
+                <Link to="/login">Sign in</Link>
               </div>
-              <p style={{marginTop: "-20px", fontSize: "12px"}}>Or use your Email and Mobile Number for registration </p>
-              <form onSubmit={handleSubmit(handleSignUp)}>
-                <div className="from-box-sing">
-                  <div className="from-box-input">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Full Name"
-                      {...register("name", {
-                        required: "Name is Required",
-                      })}
-                    />
-                    
+              <div className="google-sing-in">
+                <div className="text-center googelIcon">
+                  <div className='button-google-custom'>
+                    <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                      <FcGoogle /> <span>Signin with Google</span>
+                    </button>
                   </div>
-                  {errors.name && (
+                  <div className='button-google-custom'>
+                    <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                      <AiFillFacebook /> <span>Signin with Facebook</span>
+                    </button>
+                  </div>
+                </div>
+                <p style={{ marginTop: "-20px", fontSize: "12px" }}>Or use your Email and Mobile Number for registration </p>
+                <form onSubmit={handleSubmit(handleSignUp)}>
+                  <div className="from-box-sing">
+                    <div className="from-box-input">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Full Name"
+                        {...register("name", {
+                          required: "Name is Required",
+                        })}
+                      />
+
+                    </div>
+                    {errors.name && (
                       <p className="text-red-500">{errors.name.message}</p>
                     )}
-                  <div className="from-box-input">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email Address"
-                      {...register("email", {
-                        required: "Email is Requried",
-                      })}
-                    />
-                   
-                  </div>
-                  {errors.email && (
+                    <div className="from-box-input">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        {...register("email", {
+                          required: "Email is Requried",
+                        })}
+                      />
+
+                    </div>
+                    {errors.email && (
                       <p className="text-red-500">{errors.email.message}</p>
                     )}
-                  <div className="from-box-input">
-                    <input
-                      type="text"
-                      placeholder="Mobile Number"
-                      name="phone"
-                      {...register("phone", {
-                        required: "Phone is Requried",
-                        pattern: {
-                          value: /^(0|91)?[6-9][0-9]{9}$/,
-                          message: "Please provide valid phone number",
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.phone && (
+                    <div className="from-box-input">
+                      <input
+                        type="text"
+                        placeholder="Mobile Number"
+                        name="phone"
+                        {...register("phone", {
+                          required: "Phone is Requried",
+                          pattern: {
+                            value: /^(0|91)?[6-9][0-9]{9}$/,
+                            message: "Please provide valid phone number",
+                          },
+                        })}
+                      />
+                    </div>
+                    {errors.phone && (
                       <p className="text-red-500">{errors.phone.message}</p>
                     )}
-                  <div className="from-box-input">
-                    <div className="pass-fild">
-                      <input
-                        type={showPassword ? "text" : "password"}
-                        name="password"
-                        placeholder="Password"
-                        {...register("password", {
-                          required: "Password is required",
-                          minLength: {
-                            value: 6,
-                            message: "Password must be 6 characters long",
-                          },
-                          pattern: {
-                            value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
-                            message:
-                              "Password must have uppercase, number and special characters",
-                          },
-                        })}
-                      />
-                      <button
-                        type="button"
-                        onClick={() => setShowPassword(!showPassword)}
-                      >
-                        {showPassword ? <AiOutlineEyeInvisible/> : <AiOutlineEye/>} 
-                      </button>
+                    <div className="from-box-input">
+                      <div className="pass-fild">
+                        <input
+                          type={showPassword ? "text" : "password"}
+                          name="password"
+                          placeholder="Password"
+                          {...register("password", {
+                            required: "Password is required",
+                            minLength: {
+                              value: 6,
+                              message: "Password must be 6 characters long",
+                            },
+                            pattern: {
+                              value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/,
+                              message:
+                                "Password must have uppercase, number and special characters",
+                            },
+                          })}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPassword(!showPassword)}
+                        >
+                          {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+                        </button>
+                      </div>
+
+
                     </div>
-                    
-                    
-                  </div>
-                  {errors.password && (
+                    {errors.password && (
                       <p className="text-red-500">{errors.password.message}</p>
                     )}
-                  <div className="from-box-input">
-                    <div className="pass-fild">
-                      <input
-                        type={showPassword ? "text" : "password"}
-                        name="passwordConfirm"
-                        placeholder="Confirm Password"
-                        {...register("passwordConfirm", {
-                          required: "Confirm Password is Requried",
-                        })}
-                      />
-                      <button
-                        type="button"
-                        onClick={() => setShowPassword(!showPassword)}
-                      >
-                        {showPassword ? <AiOutlineEyeInvisible/> : <AiOutlineEye/>} 
-                      </button>
+                    <div className="from-box-input">
+                      <div className="pass-fild">
+                        <input
+                          type={showPassword ? "text" : "password"}
+                          name="passwordConfirm"
+                          placeholder="Confirm Password"
+                          {...register("passwordConfirm", {
+                            required: "Confirm Password is Requried",
+                          })}
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPassword(!showPassword)}
+                        >
+                          {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+                        </button>
+                      </div>
+
                     </div>
-                    
-                  </div>
-                  {errors.passwordConfirm && (
+                    {errors.passwordConfirm && (
                       <p className="text-red-500">
                         {errors.passwordConfirm.message}
                       </p>
                     )}
-                  <div className="sing-up-submit">
-                    <button type="submit">SIGN UP</button>
+                    <div className="sing-up-submit">
+                      <button type="submit">SIGN UP</button>
+                    </div>
+                    {signUpError && <p className="text-red-500-pass">{signUpError}</p>}
                   </div>
-                  {signUpError && <p className="text-red-500-pass">{signUpError}</p>}
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
+          {/* --------------------------end rgitration from---------------------  */}
         </div>
-        {/* --------------------------end rgitration from---------------------  */}
       </div>
     </div>
+
   );
 };
 

@@ -27,6 +27,8 @@ const ForgetPassword = () => {
           });
     }
     return (
+      <div className='sing-up'>
+
         <div className="mt-4 mb-5 ">
         <div className="form-class ">
           <div className="col-md-12">
@@ -63,6 +65,7 @@ const ForgetPassword = () => {
           </div>
         </div>
         </div>
+      </div>
     );
 };
 

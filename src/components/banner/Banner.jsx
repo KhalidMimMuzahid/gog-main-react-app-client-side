@@ -125,11 +125,13 @@ const Banner = () => {
                 </div>
                 <div className="both">
                   <div className="equal">=</div>
-                  <a href="/">
-                    <button className="our_course our-button">
-                      Our Courses
-                    </button>
-                  </a>
+                  <div className="ourcoursec-btn-div">
+                    <a href="/">
+                      <button className="our_course our-button">
+                        Our Courses
+                      </button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

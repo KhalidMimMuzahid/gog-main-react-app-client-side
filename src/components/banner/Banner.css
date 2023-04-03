@@ -200,7 +200,12 @@
 .both {
     display: flex;
     flex-wrap: nowrap;
-    margin: 48% 7%;
+    margin: 50% 7%;
+    align-items: center;
+}
+
+.ourcoursec-btn-div button {
+    margin: 16px;
 }
 
 .equal {

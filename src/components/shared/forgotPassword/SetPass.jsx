@@ -8,7 +8,7 @@ const SetPass = () => {
     const {confirmPassword } = useContext(AuthContext);
     const location = useLocation();  
 
-    console.log("location::::::", location);
+    //console.log("location::::::", location);
     const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from
     const [signUpError, setSignUPError] = useState('');
 
@@ -27,7 +27,7 @@ const SetPass = () => {
             // const user = result.user;
             // console.log(user);
             toast.success('Password reset completed.');
-            //Navigate('./login');
+            Navigate('./login');
           })
           .catch(error => {
             console.log(error)

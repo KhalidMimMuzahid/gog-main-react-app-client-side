@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./SignUp.css";
 
-import { AiOutlineEyeInvisible, AiOutlineEye, AiFillFacebook } from 'react-icons/ai';
+import { AiOutlineEyeInvisible, AiOutlineEye, AiFillFacebook, AiFillGithub } from 'react-icons/ai';
 
 const SignUp = () => {
   const {
@@ -70,6 +70,7 @@ const SignUp = () => {
       .catch((error) => console.error(error));
   };
 
+  // for facebook signin 
   const handleFaceboolSignin = () =>{
     FaceboolSignin()
     .then((result) => {
@@ -122,6 +123,11 @@ const SignUp = () => {
                   <div className='button-google-custom'>
                     <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
                       <AiFillFacebook /> <span>Signin with Facebook</span>
+                    </button>
+                  </div>
+                  <div className='button-google-custom'>
+                    <button className="btn-customize btn-github btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
+                      <AiFillGithub /> <span>Signin with GitHub</span>
                     </button>
                   </div>
                 </div>

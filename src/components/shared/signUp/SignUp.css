@@ -338,6 +338,22 @@ button.google-Button {
 button.google-Button svg {
     font-size: 48px;
 }
+button.btn-github{
+    background-color: #4b4c4d;
+    border: #4b4c4d;
+    color: white;
+}
+button.btn-github:hover{
+    background-color: white;
+    border: 1px solid #4b4c4d;
+    color: #4b4c4d;
+}
+button.btn-github svg{
+    background-color: #4b4c4d;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
 
 button.btn-fabecbook{
     background-color: #405A93;

@@ -7,12 +7,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
 import './Login.css'
 
-import { AiFillFacebook } from 'react-icons/ai';
+import { AiFillFacebook, AiFillGithub } from 'react-icons/ai';
 
 const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
-  const { signIn, googleSignIn } = useContext(AuthContext);
+  const { signIn, googleSignIn, FaceboolSignin } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
@@ -46,6 +46,19 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch(error => console.error(error));
+  }
+
+  // for facebook signin 
+  const handleFaceboolSignin = () =>{
+    FaceboolSignin()
+    .then((result) => {
+      const user = result.user;
+      console.log("Facebook user: ", user);
+      saveUser(user.displayName, user.email);
+      toast.success("Successfully logged in");
+      navigate(from, { replace: true });
+    })
+    .catch((error) => console.error(error));
   }
 
   const saveUser = (name, email) => {
@@ -85,8 +98,13 @@ const Login = () => {
                   </button>
                 </div>
                 <div className='button-google-custom'>
-                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
                     <AiFillFacebook /> <span>Signin with Facebook</span>
+                  </button>
+                </div>
+                <div className='button-google-custom'>
+                  <button className="btn-customize btn-github btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
+                    <AiFillGithub /> <span>Signin with GitHub</span>
                   </button>
                 </div>
                 <p className='form-text'>Continue with your accout </p>

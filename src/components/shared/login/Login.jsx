@@ -94,17 +94,17 @@ const Login = () => {
               <div className="google-sing-in">
                 <div className='button-google-custom'>
                   <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
-                    <FcGoogle /> <span>Signin with Google</span>
+                    <FcGoogle /> <span>CONTINUE WITH GOOGLE</span>
                   </button>
                 </div>
                 <div className='button-google-custom'>
                   <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
-                    <AiFillFacebook /> <span>Signin with Facebook</span>
+                    <AiFillFacebook /> <span>CONTINUE WITH FACEBOOK</span>
                   </button>
                 </div>
                 <div className='button-google-custom'>
                   <button className="btn-customize btn-github btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
-                    <AiFillGithub /> <span>Signin with GitHub</span>
+                    <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                   </button>
                 </div>
                 <p className='form-text'>Continue with your accout </p>

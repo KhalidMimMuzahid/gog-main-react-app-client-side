@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+//import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -8,10 +8,10 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import './Team.css'
 // import required modules
-import { EffectCoverflow, Autoplay } from "swiper";
+//import { EffectCoverflow, Autoplay } from "swiper";
 
-import team1 from '../../assets/images/teams/1-removebg-preview.png'
-import team2 from '../../assets/images/teams/2-removebg-preview.png'
+// import team1 from '../../assets/images/teams/1-removebg-preview.png'
+// import team2 from '../../assets/images/teams/2-removebg-preview.png'
 import team3 from '../../assets/images/teams/sandeep-removebg-preview.png'
 import team4 from '../../assets/images/teams/4-removebg-preview.png'
 import team5 from '../../assets/images/teams/5-removebg-preview.png'
@@ -22,10 +22,10 @@ import team9 from '../../assets/images/teams/9-removebg-preview.png'
 import team10 from '../../assets/images/teams/10-removebg-preview.png'
 import education from '../../assets/images/teams/Guwahati.png'
 import education1 from '../../assets/images/teams/Kharagpur.png'
-import education2 from '../../assets/images/teams/Madras .png'
+//import education2 from '../../assets/images/teams/Madras .png'
 import education3 from '../../assets/images/teams/Roorkee .png'
-import education4 from '../../assets/images/teams/sandeep.jpeg'
-import education5 from '../../assets/images/teams/Thapar.png'
+// import education4 from '../../assets/images/teams/sandeep.jpeg'
+// import education5 from '../../assets/images/teams/Thapar.png'
 
 const Team = () => {
     return (
@@ -68,7 +68,7 @@ const Team = () => {
                             </div>
                             <div className="team-text">
                                 <p className="team-name">Ajay Kumar</p>
-                                <p className="team-title">Associate Director - Curriculum</p>
+                                <p className="team-title">Director - Curriculum</p>
                                 <p className="education">
                                     Mtech - IIT Kharagpur
                                 </p>
@@ -186,7 +186,7 @@ const Team = () => {
                             </div>
                             <div className="team-text">
                                 <p className="team-name">Rohit rana</p>
-                                <p className="team-title">Associate Director - Curriculum</p>
+                                <p className="team-title">Associate Director - Operations</p>
                                 <p className="education">Mtech - IIT Kharagpur  , Phd - IIT Roorkee</p>
                                 <div className="team-education">
                                     <img title="Mtech-IIT Kharagpur " src={education1} alt="" />

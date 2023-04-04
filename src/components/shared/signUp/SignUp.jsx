@@ -14,7 +14,7 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm(); // ract hook from
-  const { createUser, updateUserProfile, googleSignIn } =
+  const { createUser, updateUserProfile, googleSignIn, FaceboolSignin } =
     useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();
@@ -70,6 +70,18 @@ const SignUp = () => {
       .catch((error) => console.error(error));
   };
 
+  const handleFaceboolSignin = () =>{
+    FaceboolSignin()
+    .then((result) => {
+      const user = result.user;
+      console.log("Facebook user: ", user);
+      saveUser(user.displayName, user.email);
+      toast.success("Successfully logged in");
+      navigate(from, { replace: true });
+    })
+    .catch((error) => console.error(error));
+  }
+
   const saveUser = (name, email, phone) => {
     const user = { name, email, phone };
     fetch("https://geeks-of-gurukul-server-side.vercel.app/users", {
@@ -108,7 +120,7 @@ const SignUp = () => {
                     </button>
                   </div>
                   <div className='button-google-custom'>
-                    <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                    <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
                       <AiFillFacebook /> <span>Signin with Facebook</span>
                     </button>
                   </div>

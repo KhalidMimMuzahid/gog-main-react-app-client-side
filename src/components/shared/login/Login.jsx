@@ -12,7 +12,7 @@ import { AiFillFacebook, AiFillGithub } from 'react-icons/ai';
 const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
-  const { signIn, googleSignIn, FaceboolSignin } = useContext(AuthContext);
+  const { signIn, googleSignIn, FaceboolSignin, gitHubSignin } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
@@ -54,6 +54,19 @@ const Login = () => {
     .then((result) => {
       const user = result.user;
       console.log("Facebook user: ", user);
+      saveUser(user.displayName, user.email);
+      toast.success("Successfully logged in");
+      navigate(from, { replace: true });
+    })
+    .catch((error) => console.error(error));
+  }
+
+   // for GitHub signin 
+   const handlegitHubSignin = () =>{
+    gitHubSignin()
+    .then((result) => {
+      const user = result.user;
+      console.log("GitHub User ", user);
       saveUser(user.displayName, user.email);
       toast.success("Successfully logged in");
       navigate(from, { replace: true });
@@ -103,7 +116,7 @@ const Login = () => {
                   </button>
                 </div>
                 <div className='button-google-custom'>
-                  <button className="btn-customize btn-github btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
+                  <button className="btn-customize btn-github btn btn-outline" onClick={handlegitHubSignin} style={{ width: "100%", borderRadius: "30px" }}>
                     <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                   </button>
                 </div>

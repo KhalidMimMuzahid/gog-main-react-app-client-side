@@ -27,7 +27,7 @@ const SetPass = () => {
             // const user = result.user;
             // console.log(user);
             toast.success('Password reset completed.');
-            Navigate('./login');
+            //Navigate('./login');
           })
           .catch(error => {
             console.log(error)

@@ -7,7 +7,7 @@ import { Navigation,Pagination } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { FaCalendarAlt, FaClock, IconName } from "react-icons/fa";
+import { FaCalendarAlt, FaClock } from "react-icons/fa";
 import python from '../../assets/images/Crouse/py1.png'
 import machine from '../../assets/images/Crouse/machine learning.jpg'
 import microsoft from '../../assets/images/microsoft.png'
@@ -53,7 +53,7 @@ const Master = () => {
                                                 <div className="webinar_dates">
                                                     <div className="cover_icon">
                                                         <FaCalendarAlt></FaCalendarAlt>
-                                                        <span> 01-04-23</span>
+                                                        <span> 05-04-23</span>
 
                                                     </div>
                                                     <div className="cover_icon">
@@ -69,7 +69,7 @@ const Master = () => {
                                                 </h6>
                                             </div>
                                             <div className="img_a">
-                                                <img className="im" src={python} />
+                                                <img className="im" src={python} alt="pythion img"/>
 
                                             </div>
                                         </section>
@@ -82,7 +82,7 @@ const Master = () => {
                                                 <div className="webinar_dates">
                                                     <div className="cover_icon">
                                                         <FaCalendarAlt></FaCalendarAlt>
-                                                        <span> 01-04-23</span>
+                                                        <span> 05-04-23</span>
 
                                                     </div>
                                                     <div className="cover_icon">
@@ -98,7 +98,7 @@ const Master = () => {
                                                 </h6>
                                             </div>
                                             <div className="img_a">
-                                                <img className="im" src={machine} />
+                                                <img className="im" src={machine} alt="Machine img"/>
 
                                             </div>
                                         </div>

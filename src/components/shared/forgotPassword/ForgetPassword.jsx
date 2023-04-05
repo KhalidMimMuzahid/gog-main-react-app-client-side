@@ -19,7 +19,7 @@ const ForgetPassword = () => {
             // const user = result.user;
             // console.log(user);
             toast.success('Password reset email sent, Please check your inbox.')
-            Navigate('./login');
+            //Navigate('./login');
           })
           .catch(error => {
             console.log(error)

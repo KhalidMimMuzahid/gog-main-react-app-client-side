@@ -7,12 +7,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
 import './Login.css'
 
-import { AiFillFacebook } from 'react-icons/ai';
+import { AiFillFacebook, AiFillGithub } from 'react-icons/ai';
 
 const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
-  const { signIn, googleSignIn } = useContext(AuthContext);
+  const { signIn, googleSignIn, FaceboolSignin, gitHubSignin } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
@@ -48,6 +48,32 @@ const Login = () => {
       .catch(error => console.error(error));
   }
 
+  // for facebook signin 
+  const handleFaceboolSignin = () =>{
+    FaceboolSignin()
+    .then((result) => {
+      const user = result.user;
+      console.log("Facebook user: ", user);
+      saveUser(user.displayName, user.email);
+      toast.success("Successfully logged in");
+      navigate(from, { replace: true });
+    })
+    .catch((error) => console.error(error));
+  }
+
+   // for GitHub signin 
+   const handlegitHubSignin = () =>{
+    gitHubSignin()
+    .then((result) => {
+      const user = result.user;
+      console.log("GitHub User ", user);
+      saveUser(user.displayName, user.email);
+      toast.success("Successfully logged in");
+      navigate(from, { replace: true });
+    })
+    .catch((error) => console.error(error));
+  }
+
   const saveUser = (name, email) => {
     const user = { name, email };
     fetch('https://geeks-of-gurukul-server-side.vercel.app/users', {
@@ -81,12 +107,17 @@ const Login = () => {
               <div className="google-sing-in">
                 <div className='button-google-custom'>
                   <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
-                    <FcGoogle /> <span>Signin with Google</span>
+                    <FcGoogle /> <span>CONTINUE WITH GOOGLE</span>
                   </button>
                 </div>
                 <div className='button-google-custom'>
-                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
-                    <AiFillFacebook /> <span>Signin with Facebook</span>
+                  <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
+                    <AiFillFacebook /> <span>CONTINUE WITH FACEBOOK</span>
+                  </button>
+                </div>
+                <div className='button-google-custom'>
+                  <button className="btn-customize btn-github btn btn-outline" onClick={handlegitHubSignin} style={{ width: "100%", borderRadius: "30px" }}>
+                    <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                   </button>
                 </div>
                 <p className='form-text'>Continue with your accout </p>

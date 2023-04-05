@@ -5,7 +5,7 @@ import "./Banner.css";
 const Banner = () => {
 
   return (
-    <div className="hero-Area-Ancor-Fixed">
+    <div id="lift-up" className="hero-Area-Ancor-Fixed">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-6 col-xl-7">

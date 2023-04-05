@@ -19,6 +19,7 @@ const Home = () => {
             <Accordions></Accordions>
             <ScrollToTop color='#4CA358' style={{borderRadius: "50%", fontWeight:"bold"}}/>
             <WhatsAppMessage/>
+            
         </div>
     );
 };

@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Basic Coding",
+        "price":"3000"
+    },
+    {
+        "name":"Advance Coding",
+        "price":"5000"
+    },
+    {
+        "name":"Full Stack Data Analytics",
+        "price":"6000"
+    },
+    {
+        "name":"Full Stack Web Development",
+        "price":"1100"
+    },
+    {
+        "name":"Electrical Engineering",
+        "price":"1300"
+    },
+    {
+        "name":"Mechanical Engineering",
+        "price":"9000"
+    }
+]

@@ -20,6 +20,8 @@ import Python from "../pages/Python/Python";
 import SQL from "../pages/SQL/SQL";
 import ForgetPassword from "../components/shared/forgotPassword/ForgetPassword";
 import SetPass from "../components/shared/forgotPassword/SetPass";
+import AdmissionForm from "../pages/AdmissionForm/AdmissionForm";
+import Pay from "../pages/Pay/Pay";
 
 
 export const router = createBrowserRouter([
@@ -67,6 +69,14 @@ export const router = createBrowserRouter([
             {
                 path: '/conditon',
                 element: <Conditons></Conditons>
+            },
+            {
+                path: '/admissionForm',
+                element: <AdmissionForm></AdmissionForm>
+            },
+            {
+                path: '/pay',
+                element: <Pay></Pay>
             },
             
             {

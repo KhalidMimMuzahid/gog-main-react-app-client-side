@@ -12,6 +12,7 @@ import { AuthContext } from "../../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
+// import AdmissionForm from "../../../pages/AdmissionForm/AdmissionForm";
 
 const NavBar = () => {
   // state for the nav items show
@@ -244,7 +245,7 @@ const NavBar = () => {
           </Modal.Header>
           <Modal.Body>
             {/* // start form  --------------------------------------------- */}
-            <div className="form-box">
+            {/* <div className="form-box">
               <form onSubmit={handleSubmit(handleFormData)}>
                 <div className="modal-form">
 
@@ -311,7 +312,8 @@ const NavBar = () => {
                 </button>
                 {signUpError && <p className="text-red-600">{signUpError}</p>}
               </form>
-            </div>
+            </div> */}
+            {/* <AdmissionForm></AdmissionForm> */}
 
             {/* //-------------------- end form  --------------------------------------------- */}
           </Modal.Body>

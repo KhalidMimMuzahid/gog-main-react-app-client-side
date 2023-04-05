@@ -10,7 +10,7 @@ import WhatsAppMessage from '../../components/whatsApp/WhatsAppMessage';
 
 const Home = () => {
     return (
-        <div>
+        <div className='home-page'>
             <Banner/>
             <Master></Master>
             <OurProgram/>

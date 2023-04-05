@@ -1,0 +1,68 @@
+.member a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #fff;
+    gap: 14px;
+    border-radius: 6px;
+}
+
+.member {
+    width: 360px;
+    background: #ffffff;
+    padding: 7px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cleverwa-face img {
+    border-radius: 50%;
+}
+
+.cleverwa-info span {
+    font-size: 12px;
+    line-height: 1.5em;
+    opacity: .6;
+    display: block;
+    color: #000;
+}
+
+.member svg {
+    font-size: 34px;
+    color: #10ff10;
+}
+
+.social-midi svg {
+    font-size: 63px;
+    color: #10d810;
+}
+
+.Whats-app {
+    position: fixed;
+    bottom: 50px;
+    left: 42px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.home-page {
+    position: relative;
+}
+
+.member a:hover {
+    background: #8b8b8b;
+    background-color: rgba(245,245,245,1);
+    border-color: rgba(245,245,245,1);
+    color: rgba(85,85,85,1);
+}
+
+span.cleverwa-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+}
+
+.cleverwa-info {
+    margin-left: -80px;
+}

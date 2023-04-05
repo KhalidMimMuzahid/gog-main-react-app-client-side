@@ -30,18 +30,18 @@
 
 .member svg {
     font-size: 34px;
-    color: #10ff10;
+    color: #0dc152;
 }
 
 .social-midi svg {
     font-size: 63px;
-    color: #10d810;
+    color: #0dc152;
 }
 
 .Whats-app {
     position: fixed;
-    bottom: 50px;
-    left: 42px;
+    bottom: 34px;
+    left: 20px;
     z-index: 99;
     cursor: pointer;
 }

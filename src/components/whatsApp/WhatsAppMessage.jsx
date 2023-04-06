@@ -14,7 +14,7 @@ const WhatsAppMessage = () => {
     console.log(displayShow);
 
     return (
-        <div className='Whats-app' title='Chart With WhatsApp'>
+        <div className='Whats-app' title='Chat With WhatsApp'>
             <div className="member" style={{display: displayShow ?  "block" : 'none'}}>
                 
                     <div style={{padding: "5px 10px"}}>

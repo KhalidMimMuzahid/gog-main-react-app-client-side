@@ -17,7 +17,7 @@ const Footer = () => {
                                     <li><Link to="/courses/python" target='_blank'>Our Courses</Link></li>
                                     <li><Link to="/hire"  target='_blank'>Hire From Us</Link></li>
                                     <li><Link to="/courses/python" target='_blank'>Industrial Courses</Link></li>
-                                    <li><Link to="/">Blog</Link></li>
+                                    <li><Link to="https://info.geeksofgurukul.com/" target='_blank'>Blog</Link></li>
                                 </ul>
                             </div>
                         </div>

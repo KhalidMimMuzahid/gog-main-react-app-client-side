@@ -14,7 +14,7 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm(); // ract hook from
-  const { createUser, updateUserProfile, googleSignIn, FaceboolSignin, gitHubSignin } =
+  const { createUser, updateUserProfile, googleSignIn, FaceboolSignin, gitHubSignin, setLoading } =
     useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();
@@ -48,6 +48,7 @@ const SignUp = () => {
           .then(() => {
             console.log("Save Use: ", userInfo);
             saveUser(data.name, data.email, data.phone);
+            setLoading(false)
           })
           .catch((err) => console.log(err));
       })
@@ -65,6 +66,7 @@ const SignUp = () => {
         //console.log(user);
         saveUser(user.displayName, user.email);
         toast.success("Successfully logged in");
+        setLoading(false)
         navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
@@ -78,6 +80,7 @@ const SignUp = () => {
       console.log("GitHub User ", user);
       saveUser(user.displayName, user.email);
       toast.success("Successfully logged in");
+      setLoading(false)
       navigate(from, { replace: true });
     })
     .catch((error) => console.error(error));
@@ -91,6 +94,7 @@ const SignUp = () => {
       console.log("Facebook user: ", user);
       saveUser(user.displayName, user.email);
       toast.success("Successfully logged in");
+      setLoading(false)
       navigate(from, { replace: true });
     })
     .catch((error) => console.error(error));

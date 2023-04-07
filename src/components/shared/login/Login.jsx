@@ -12,7 +12,7 @@ import { AiFillFacebook, AiFillGithub } from 'react-icons/ai';
 const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from 
-  const { signIn, googleSignIn, FaceboolSignin, gitHubSignin } = useContext(AuthContext);
+  const { signIn, googleSignIn, FaceboolSignin, gitHubSignin,setLoading } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
@@ -27,6 +27,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         toast.success('Successfully logged in')
+        setLoading(false)
         navigate(from, { replace: true });
       })
       .catch(error => {
@@ -43,6 +44,7 @@ const Login = () => {
         //console.log(user);
         saveUser(user.displayName, user.email);
         toast.success('Successfully logged in');
+        setLoading(false)
         navigate(from, { replace: true });
       })
       .catch(error => console.error(error));
@@ -55,6 +57,7 @@ const Login = () => {
       const user = result.user;
       console.log("Facebook user: ", user);
       saveUser(user.displayName, user.email);
+      setLoading(false)
       toast.success("Successfully logged in");
       navigate(from, { replace: true });
     })
@@ -68,6 +71,7 @@ const Login = () => {
       const user = result.user;
       console.log("GitHub User ", user);
       saveUser(user.displayName, user.email);
+      setLoading(false)
       toast.success("Successfully logged in");
       navigate(from, { replace: true });
     })

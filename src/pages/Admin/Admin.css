@@ -1,0 +1,61 @@
+.admin-area {
+    padding: 104px 0;
+}
+
+h2.admin-title {
+    text-align: center;
+    padding: 28px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.coupon-user {
+    padding-top: 44px;
+}
+
+.coupon-area {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 36px;
+    border-radius: 5px;
+}
+
+.single-coupon p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.single-coupon {
+    margin-bottom: 31px;
+}
+
+.single-coupon select {
+    width: 100%;
+    font-size: 17px;
+    padding: 5px 11px;
+}
+
+.single-coupon input {
+    width: 100%;
+    font-size: 17px;
+    padding: 5px 11px;
+}
+
+.single-coupon button {
+    background: #00C374;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    margin-top: 26px;
+}
+
+.coupon-user h2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 21px 0;
+}

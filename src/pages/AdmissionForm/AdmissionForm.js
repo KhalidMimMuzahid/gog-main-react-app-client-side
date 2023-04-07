@@ -1,8 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './AdmissionForm.css'
 import { useNavigate } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
+import { AuthContext } from '../../context/AuthProvider';
+import { toast } from 'react-hot-toast';
+import Loading from '../../components/shared/Loading/Loading';
+import { useQuery } from '@tanstack/react-query';
 const AdmissionForm = () => {
+
+
+    // context 
+    const { user } = useContext(AuthContext);
+
+    // loading
+    const [loading, setLoading] = useState(false)
+
 
     // navigate
     const navigate = useNavigate();
@@ -13,19 +25,21 @@ const AdmissionForm = () => {
     // Select Course
     const courses = {
         'Select Programme': ['Select Course '],
-        'School Champs': ['Basic Coding', 'Advance Coding'],
-        'Coding Bees': ['Full Stack Data Analytics', 'Full Stack Web Development'],
-        'Engineering Nerds': ['Electrical Engineering', 'Mechanical Engineering'],
+        'School Champs': ['Select Course', 'Basic Coding', 'Advance Coding'],
+        'Coding Bees': ['Select Course', 'Full Stack Data Analytics', 'Full Stack Web Development'],
+        'Engineering Nerds': ['Select Course', 'Electrical Engineering', 'Mechanical Engineering'],
     }
-
     // Programme value
     const [selectprogramme, setSelectprogramme] = useState('Select Programme');
 
     // Course value
-    const [selectCourse, setSelectCourse] = useState('School Champs')
+    const [aselectCourse, setSelectCourse] = useState('')
 
     // course state
     const [courseName, setCoursName] = useState([])
+
+    // refelhande
+    const [refelInput, setrefelInput] = useState(0)
 
     // data lode 
     useEffect(() => {
@@ -35,45 +49,148 @@ const AdmissionForm = () => {
     }, [])
 
     //main price filter 
-    const mainCourse = courseName?.filter(nameCourse => selectCourse === nameCourse?.name)
+    const mainCourse = courseName?.filter(nameCourse => aselectCourse === nameCourse?.name)
 
+    const selectedOption = useRef('');
 
+    const handleOptionChange = (event) => {
+        selectedOption.current = event.target.value;
+    };
+
+    // Coupon get
+    // react query data fatch
+    const urlcoupon = `http://localhost:5000/coupon`;
+    const { data: coupon = [], refetch, isLoading } = useQuery({
+        queryKey: ['coupon'],
+        queryFn: async () => {
+            const res = await fetch(urlcoupon, {
+                headers: {
+                    // authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+
+            });
+            const data = await res.json();
+            return data
+        }
+    })
+
+    // Coupon get
+    // react query data fatch
+    const urlrefel = `http://localhost:5000/referee`;
+    const { data: referee = [] } = useQuery({
+        queryKey: ['referee'],
+        queryFn: async () => {
+            const res = await fetch(urlrefel, {
+                headers: {
+                    // authorization: `bearer ${localStorage.getItem('accessToken')}`
+                }
+
+            });
+            const data = await res.json();
+            return data
+        }
+    })
+
+    console.log(referee.data);
 
 
     // fromHandler
     const fromHandler = (e) => {
-        e.preventDefault()
-        const common = e.target
-        const name = common.name.value
 
+        e.preventDefault()
+        // setLoading(true)
+        const common = e.target
+        const name = common.name.value;
+        const email = common.email.value;
+        const phone = common.phone.value;
+        const date = common.date.value;
+        const course = aselectCourse
+        const gander = selectedOption.current;
+
+
+        const usersInfo = {
+            name, email, phone, date, course, refelInput, gander
+        }
+
+
+        // fetch user post
+        fetch('http://localhost:5000/booking', {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json',
+
+            },
+            body: JSON.stringify(usersInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    toast.success('Successfully sign up')
+                    setLoading(false)
+                }
+            })
+            .catch(error => {
+                toast.error(error.message)
+                setLoading(false)
+            })
+
+
+        // console.log(usersInfo);
         // navigate('/pay/')
     }
 
     // payment system count
     const discount = mainCourse[0]?.price - 150
 
+
     // Coupon Code
     const [couponInput, setCouponInput] = useState(0)
     const couponHandler = (e) => {
         e.preventDefault()
-        const coupon = e.target.coupon.value;
-        setCouponInput(coupon)
+        const coupon1s = e.target.coupon.value;
+
+        const couponcount = coupon?.data?.filter(couponcheck => coupon1s === couponcheck?.coupon && couponcheck?.selectCourse == aselectCourse && couponcheck?.selectprogramme === selectprogramme)
+
+        setCouponInput(couponcount[0].discount)
 
     }
 
 
 
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+
+
+    const refelhande = (e) => {
+        e.preventDefault()
+        const refel = e.target.referal.value;
+        const dataRefel = referee?.data?.filter(refalsingle => refalsingle?.code === refel)
+        console.log(dataRefel);
+
+        if (dataRefel.length === 1) {
+            setrefelInput(refel)
+            toast.success('Referee')
+        } else {
+            toast.error("This didn't work.")
+        }
+        
+    }
+
+    // check Coupon and set data
     let totalCopulall = 0
-
     let totalcopons = 0
+    let totalDiscount = 0
 
-    let totalDiscount = 150
-
-    if (couponInput == 150) {
-        const subcopun = discount - 169
-        totalcopons = subcopun
-        totalCopulall = 150 + 169
-
+    // check Coupon
+    if (couponInput) {
+        const subcopun = mainCourse[0]?.price * couponInput
+        const discountpart = subcopun / 100
+        totalcopons = Math.floor(discount - discountpart)
+        totalCopulall = Math.floor(discountpart + 150)
+        totalDiscount = Math.floor(discountpart)
+        toast.success('Coupon Add')
     } else {
         const subcopun = discount
         totalcopons = subcopun
@@ -81,12 +198,18 @@ const AdmissionForm = () => {
         totalCopulall = 150
     }
 
-    console.log(totalCopulall);
+    // set loading
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
 
     return (
         <div>
             <div className="admission-area">
                 <div className="container">
+                    
                     <div className="row">
                         <div className="col-md-7">
                             <div className="admission-from">
@@ -97,28 +220,28 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission ma-btt">
                                                 <p>Full Name</p>
-                                                <input type="text" name="name" placeholder='Enter full name' />
+                                                <input type="text" name="name" defaultValue={user?.displayName} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
 
                                             <div className="single-from-admission ma-btt">
-                                                <p>Full Name</p>
-                                                <input type="text" placeholder='Enter full name' />
+                                                <p>Email Address</p>
+                                                <input type="email" disabled defaultValue={user?.email} name='email' />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
 
                                             <div className="single-from-admission">
-                                                <p>Full Name</p>
-                                                <input type="text" placeholder='Enter full name' />
+                                                <p>Phone Number</p>
+                                                <input type="tel" defaultValue={user?.phoneNumber ? user?.phoneNumber : 'Enter phone number '} name='phone' />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
 
                                             <div className="single-from-admission">
-                                                <p>Full Name</p>
-                                                <input type="text" placeholder='Enter full name' />
+                                                <p>Birth Date</p>
+                                                <input type="date" name='date' placeholder='Enter Birth Date' />
                                             </div>
                                         </div>
                                         <div className="col-md-12">
@@ -127,7 +250,7 @@ const AdmissionForm = () => {
                                                 <span>Gender</span>
                                                 <div className='gander'>
                                                     <div className='single-from'>
-                                                        <input type='radio' name='option' id='gander-1' />
+                                                        <input type="radio" name="options" value="male" onChange={handleOptionChange} />
                                                         <label htmlFor='gander-1' >
                                                             male
                                                         </label>
@@ -135,7 +258,7 @@ const AdmissionForm = () => {
 
 
                                                     <div className='single-from'>
-                                                        <input type='radio' name='option' id='gander-2' />
+                                                        <input type="radio" name="options" value="female" onChange={handleOptionChange} />
                                                         <label htmlFor='gander-2'>
 
                                                             Female
@@ -145,7 +268,7 @@ const AdmissionForm = () => {
 
 
                                                     <div className='single-from'>
-                                                        <input type='radio' name='option' id='gander-3' />
+                                                        <input type="radio" name="options" value="other" onChange={handleOptionChange} />
                                                         <label htmlFor='gander-3' >
 
                                                             prefer not to say
@@ -181,9 +304,9 @@ const AdmissionForm = () => {
                                                 <input type="checkbox" checked />
                                                 <span>Opted for Digital Basta</span>
                                             </div>
-                                            {/* <div className="submit-btu">
+                                            <div className="submit-btu">
                                                 <button type='submit'>Submit</button>
-                                            </div> */}
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
@@ -200,9 +323,9 @@ const AdmissionForm = () => {
                                         <Accordion.Item eventKey="0">
                                             <Accordion.Header>Apply Referal Code</Accordion.Header>
                                             <Accordion.Body>
-                                                <form >
+                                                <form onSubmit={refelhande}>
                                                     <div className="code">
-                                                        <input type="text" placeholder='Referal Code' />
+                                                        <input type="text" placeholder='Referal Code' name='referal' />
                                                         <button>Submit</button>
                                                     </div>
                                                 </form>
@@ -231,7 +354,7 @@ const AdmissionForm = () => {
 
 
                                     </Accordion>
-                                    
+
 
 
 
@@ -277,6 +400,7 @@ const AdmissionForm = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div className="wonder-area">
                     <p>BASTA is India’s Largest Skill Building School enabling students to start their Tech-career and get <br /> placed at upto 40 LPA jobs as Data Analyst, Business Analyst, <br /> Data Scientist, Product Analyst Software Developer, Full Stack Web Developer etc.</p>

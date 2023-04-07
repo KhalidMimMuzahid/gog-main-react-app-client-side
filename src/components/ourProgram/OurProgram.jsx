@@ -133,9 +133,9 @@ const OurProgram = () => {
                     >
                       Know Details
                     </button>
-                    <Link to="signup">
+                    <Link to="/admissionForm">
                       <span>
-                        <button className="solid_button" onClick="openForm()">
+                        <button className="solid_button">
                           Apply Now
                         </button>
                       </span>
@@ -201,9 +201,9 @@ const OurProgram = () => {
                     >
                       Know Details
                     </button>
-                    <Link to="signup">
+                    <Link to="/admissionForm">
                       <span>
-                        <button className="solid_button" onClick="openForm()">
+                        <button className="solid_button">
                           Apply Now
                         </button>
                       </span>
@@ -291,9 +291,9 @@ const OurProgram = () => {
                     >
                       Know Details
                     </button>
-                    <Link to="signup">
+                    <Link to="/admissionForm">
                       <span>
-                        <button className="solid_button" onClick="openForm()">
+                        <button className="solid_button" >
                           Apply Now
                         </button>
                       </span>
@@ -361,9 +361,9 @@ const OurProgram = () => {
                     >
                       Know Details
                     </button>
-                    <Link to="signup">
+                    <Link to="/admissionForm">
                       <span>
-                        <button className="solid_button" onClick="openForm()">
+                        <button className="solid_button" >
                           Apply Now
                         </button>
                       </span>
@@ -451,9 +451,9 @@ const OurProgram = () => {
                     >
                     Know Details
                     </button>
-                    <Link to="signup">
+                    <Link to="/admissionForm">
                       <span>
-                        <button className="solid_button" onClick="openForm()">
+                        <button className="solid_button">
                           Apply Now
                         </button>
                       </span>
@@ -519,9 +519,9 @@ const OurProgram = () => {
                     >
                       Know Details
                     </button>
-                    <Link to="signup">
+                    <Link to="/admissionForm">
                       <span>
-                        <button className="solid_button" onClick="openForm()">
+                        <button className="solid_button">
                           Apply Now
                         </button>
                       </span>

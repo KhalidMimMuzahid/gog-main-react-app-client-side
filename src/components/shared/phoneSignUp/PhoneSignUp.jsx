@@ -44,7 +44,7 @@ const PhoneSignUp = () => {
       await result.confirm(otp);
       toast.success("Verification successful.")
       saveUser(numberUser)
-      console.log("SaveUSER::::::", saveUser);
+      //console.log("SaveUSER::::::", saveUser);
       //navigate("/");
     } catch (err) {
       setError(err.message);

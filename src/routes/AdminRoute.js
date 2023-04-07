@@ -14,7 +14,7 @@ const AdminRoute = ({ children }) => {
 
     // is Admin 
 
-    const url = `http://localhost:5000/users`;
+    const url = `https://geeks-of-gurukul-server-side.vercel.app/users`;
     const { data: adminUser = [], refetch, isLoading } = useQuery({
         queryKey: ['adminUser'],
         queryFn: async () => {

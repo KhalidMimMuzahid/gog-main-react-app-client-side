@@ -53,7 +53,7 @@ const Master = () => {
                                                 <div className="webinar_dates">
                                                     <div className="cover_icon">
                                                         <FaCalendarAlt></FaCalendarAlt>
-                                                        <span> 05-04-23</span>
+                                                        <span> 16-04-23</span>
 
                                                     </div>
                                                     <div className="cover_icon">
@@ -82,7 +82,7 @@ const Master = () => {
                                                 <div className="webinar_dates">
                                                     <div className="cover_icon">
                                                         <FaCalendarAlt></FaCalendarAlt>
-                                                        <span> 05-04-23</span>
+                                                        <span> 16-04-23</span>
 
                                                     </div>
                                                     <div className="cover_icon">

@@ -6,15 +6,19 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./SignUp.css";
 
-import { AiOutlineEyeInvisible, AiOutlineEye, AiFillFacebook, AiFillGithub } from 'react-icons/ai';
+
+import { AiOutlineEyeInvisible, AiOutlineEye, AiFillFacebook, AiFillGithub, AiOutlinePhone } from 'react-icons/ai';
 
 const SignUp = () => {
+
+  
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm(); // ract hook from
-  const { createUser, updateUserProfile, googleSignIn, FaceboolSignin, gitHubSignin, setLoading } =
+  const { createUser, updateUserProfile, googleSignIn, FaceboolSignin, gitHubSignin, setLoading, auth, setUpRecaptha } =
     useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();
@@ -146,6 +150,13 @@ const SignUp = () => {
                     <button className="btn-customize btn-github btn btn-outline" onClick={handlegitHubSignin} style={{ width: "100%", borderRadius: "30px" }}>
                       <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                     </button>
+                  </div>
+                  <div className='button-google-custom'>
+                    <Link to='phone-sign-up'>
+                    <button className="btn-customize btn-phone btn btn-outline"  style={{ width: "100%", borderRadius: "30px" }}>
+                      <AiOutlinePhone /> <span>CONTINUE WITH PHONE</span>
+                    </button>
+                    </Link>
                   </div>
                 </div>
                 <p style={{ marginTop: "-20px", fontSize: "12px" }}>Or use your Email and Mobile Number for registration </p>

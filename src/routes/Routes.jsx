@@ -25,6 +25,7 @@ import Pay from "../pages/Pay/Pay";
 import PrivateRoute from "./PrivateRoute";
 import Admin from "../pages/Admin/Admin";
 import AdminRoute from "./AdminRoute";
+import PhoneSignUp from "../components/shared/phoneSignUp/PhoneSignUp";
 
 
 export const router = createBrowserRouter([
@@ -40,6 +41,14 @@ export const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp/>
+            },
+            {
+                path: '/signup/phone-sign-up',
+                element: <PhoneSignUp/>
+            },
+            {
+                path: '/login/phone-sign-up',
+                element: <PhoneSignUp/>
             },
             {
                 path: '/forget-pass',
@@ -73,10 +82,10 @@ export const router = createBrowserRouter([
                 path: '/conditon',
                 element: <Conditons></Conditons>
             },
-            {
-                path: '/admissionForm',
-                element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute> 
-            },
+            // {
+            //     path: '/admissionForm',
+            //     element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute> 
+            // },
             
             {
                 path: '/pay',

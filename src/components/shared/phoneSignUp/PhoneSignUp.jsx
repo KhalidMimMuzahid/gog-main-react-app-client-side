@@ -42,7 +42,7 @@ const PhoneSignUp = () => {
     if (otp === "" || otp === null) return;
     try {
       await result.confirm(otp);
-      toast.success("Verification successful.")
+      
       saveUser(numberUser)
       //console.log("SaveUSER::::::", saveUser);
       //navigate("/");
@@ -64,6 +64,7 @@ const PhoneSignUp = () => {
       .then((res) => res.json())
       .then((data) => {
         //console.log("save user", data);
+        toast.success("Verification successful.")
         navigate("/");
       });
   };
@@ -72,9 +73,10 @@ const PhoneSignUp = () => {
         <>
       <div className="col-md-12  mb-5 custom-mergin">
       <div className="box  new-login-from-phone">
-        <h2 className="mb-3">Enter your phone number</h2>
+        
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
+        <h2 className="mb-3">Enter your phone number</h2>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <PhoneInput
               defaultCountry="IN"
@@ -96,6 +98,7 @@ const PhoneSignUp = () => {
         </Form>
 
         <Form onSubmit={verifyOtp} style={{ display: flag ? "block" : "none" }}>
+        <h2 className="mb-3">Enter your OTP</h2>
           <Form.Group className="mb-3" controlId="formBasicOtp">
             <Form.Control
               type="otp"

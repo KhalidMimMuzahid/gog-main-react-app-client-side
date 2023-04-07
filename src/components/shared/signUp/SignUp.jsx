@@ -112,7 +112,7 @@ const SignUp = () => {
       .then((res) => res.json())
       .then((data) => {
         //console.log("save user", data);
-        navigate("/");
+        //navigate("/");
       });
   };
 

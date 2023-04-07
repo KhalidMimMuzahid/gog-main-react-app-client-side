@@ -7,7 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import logo from "../../../assets/images/final logo.png";
+import logo from "../../../assets/images/gog logo-0212.png";
 import { AuthContext } from "../../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import Modal from "react-bootstrap/Modal";

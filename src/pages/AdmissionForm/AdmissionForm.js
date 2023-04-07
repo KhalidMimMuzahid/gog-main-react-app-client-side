@@ -6,6 +6,7 @@ import { AuthContext } from '../../context/AuthProvider';
 import { toast } from 'react-hot-toast';
 import Loading from '../../components/shared/Loading/Loading';
 import { useQuery } from '@tanstack/react-query';
+import banner from '../../assets/images/0jpg 1 (1).png'
 const AdmissionForm = () => {
 
 
@@ -56,6 +57,7 @@ const AdmissionForm = () => {
     const handleOptionChange = (event) => {
         selectedOption.current = event.target.value;
     };
+    
 
     // Coupon get
     // react query data fatch
@@ -98,7 +100,7 @@ const AdmissionForm = () => {
     const fromHandler = (e) => {
 
         e.preventDefault()
-        // setLoading(true)
+        setLoading(true)
         const common = e.target
         const name = common.name.value;
         const email = common.email.value;
@@ -126,7 +128,7 @@ const AdmissionForm = () => {
             .then(data => {
                 if (data.success) {
                     toast.success('Successfully sign up')
-                    setLoading(false)
+                    setLoading(true)
                 }
             })
             .catch(error => {
@@ -213,6 +215,7 @@ const AdmissionForm = () => {
                     <div className="row">
                         <div className="col-md-7">
                             <div className="admission-from">
+                                <img src={banner} alt="" />
                                 <h4>Admission Form</h4>
                                 <form onSubmit={fromHandler}>
                                     <div className="row">
@@ -284,7 +287,7 @@ const AdmissionForm = () => {
                                         <div className="col-md-12">
 
                                             <div className="single-from-admission">
-                                                <p>Course</p>
+                                                <p>Select Programme</p>
                                                 <select onChange={(e) => { setSelectprogramme(e.target.value) }}>
                                                     {
                                                         programmes?.map((programme, i) => <option key={i} value={programme}>{programme}</option>)
@@ -292,6 +295,7 @@ const AdmissionForm = () => {
 
 
                                                 </select>
+                                                <p> Select Course</p>
                                                 <select onChange={(e) => { setSelectCourse(e.target.value) }}>
                                                     {
                                                         courses[selectprogramme]?.map((course, i) => <option key={i} value={course}>{course}</option>)

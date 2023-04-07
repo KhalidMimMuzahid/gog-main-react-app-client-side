@@ -1,11 +1,15 @@
 import React from 'react';
-
+import './Loading.css'
 const Loading = () => {
     return (
         <div>
-            <div className="text-center mt-5  loading" style={{padding: '80px 0'}}>
+            <div className="load  loading" >
 
-                <h2>Loading...</h2>
+                <div class='loader'>
+                    <div><div><div><div><div><div><div>
+                    </div></div></div></div></div>
+                    </div></div>
+                </div>
             </div>
         </div>
     );

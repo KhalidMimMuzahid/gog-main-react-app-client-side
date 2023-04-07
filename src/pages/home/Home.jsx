@@ -6,7 +6,7 @@ import Master from '../../components/Master/Master';
 import OurProgram from '../../components/ourProgram/OurProgram';
 import Team from '../../components/Team/Team';
 import ScrollToTop from 'react-scroll-to-top';
-import WhatsAppMessage from '../../components/whatsApp/WhatsAppMessage';
+// import WhatsAppMessage from '../../components/whatsApp/WhatsAppMessage';
 
 const Home = () => {
     return (
@@ -18,7 +18,7 @@ const Home = () => {
             <Team></Team>
             <Accordions></Accordions>
             <ScrollToTop color='#4CA358' style={{borderRadius: "50%", fontWeight:"bold"}}/>
-            <WhatsAppMessage/>
+            {/* <WhatsAppMessage/> */}
         </div>
     );
 };

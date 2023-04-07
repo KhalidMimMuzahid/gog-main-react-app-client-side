@@ -77,10 +77,7 @@ export const router = createBrowserRouter([
                 path: '/admissionForm',
                 element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute> 
             },
-            {
-                path: '/admissionForm2',
-                element: <AdmissionForm></AdmissionForm>
-            },
+            
             {
                 path: '/pay',
                 element: <Pay></Pay>

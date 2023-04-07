@@ -1,5 +1,5 @@
 .admission-area {
-    padding: 100px 0;
+    padding-top: 150px;
 }
 
 .admission-from {
@@ -7,6 +7,12 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 26px 23px;
+    margin-bottom: 80px;
+}
+
+.admission-from>img {
+    width: 100%;
+    height: auto;
 }
 
 .admission-from h4 {
@@ -17,18 +23,21 @@
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    margin-bottom: 0;
+    margin-bottom: 38px;
+    margin-top: 28px;
 }
 
-.single-from-admission p {
-    align-items: center;
-    color: #333333;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 9px;
-}
+
+    .single-from-admission p {
+        align-items: center;
+        color: #03b14a;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 9px;
+    }
+
 
 .single-from-admission > input {
     background: #FFFFFF;
@@ -41,6 +50,7 @@
     font-size: 16px;
     padding: 13px;
     text-align: center;
+    
 }
 
 .single-from-admission span {

@@ -7,18 +7,22 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import logo from "../../../assets/images/latestlogo.jpg";
+import logo from "../../../assets/images/final logo.png";
 import { AuthContext } from "../../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
+import { useQuery } from "@tanstack/react-query";
 // import AdmissionForm from "../../../pages/AdmissionForm/AdmissionForm";
 
 const NavBar = () => {
   // state for the nav items show
   const [showDropdown, setShowDropdown] = useState(false);
   // for the current user and auth log out
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, adminPart, setAdminPart } = useContext(AuthContext);
+  // is Admin 
+
+
 
   // for the apply modal
   const [show, setShow] = useState(false);
@@ -63,6 +67,8 @@ const NavBar = () => {
       .catch((err) => console.log(err));
   };
 
+
+ 
   return (
     <div className='menu-gr'>
       {["sm"].map((expand) => (
@@ -109,6 +115,14 @@ const NavBar = () => {
                       Home
                     </Link>
                   </Nav.Link>
+                  {
+                    adminPart ? <Nav.Link>
+                      <Link className="text-decoration-none text-dark " to="/admin">
+                        Admin
+                      </Link>
+                    </Nav.Link> : ''
+                  }
+
                   <NavDropdown
                     title={<span className="text-dark">Courses</span>}
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -125,8 +139,6 @@ const NavBar = () => {
                         </NavDropdown.Item>
                         <NavDropdown.Item href={'/#school'}> <Link className="menu-color">  Champs of Advance Coding</Link>
                         </NavDropdown.Item>
-
-
                       </div>
                       <div className="single-menu">
                         <p>Code Bees Courses</p>
@@ -145,54 +157,54 @@ const NavBar = () => {
                         <p>Engineering Nerds Courses</p>
                         <NavDropdown.Item href={'/#engineering-program'}>
                           <a className="menu-color" >Electrical
-                          Engineering</a>
+                            Engineering</a>
                         </NavDropdown.Item>
-                       
+
                         <NavDropdown.Item href={'/#engineering-program'}>
                           <a className="menu-color" >Mechanical
-                          Engineering</a>
+                            Engineering</a>
                         </NavDropdown.Item>
                       </div>
                       <div className="single-menu">
-                        <p> 
-                        <Link to={'/courses/python'} className="menu-color" >Industrial
-                      Courses</Link>
-                          
-                          </p>
+                        <p>
+                          <Link to={'/courses/python'} className="menu-color" >Industrial
+                            Courses</Link>
+
+                        </p>
                         <div className="menu-sub">
                           <Link to={'/courses/python'} className="menu-color" >Python</Link>
                         </div>
-                          <div  className="menu-sub">
+                        <div className="menu-sub">
 
                           <Link to={'/courses/sql'} className="menu-color" >SQL</Link>
-                          </div>
-                          <div>
+                        </div>
+                        <div>
 
                           <Link to={'/courses/java'} className="menu-color" >Java Programming</Link>
-                          </div>
-                          <div className="menu-sub">
+                        </div>
+                        <div className="menu-sub">
 
                           <Link to={'/courses/dsa'} className="menu-color" >DSA</Link>
-                          </div>
-                          <div className="menu-sub">
+                        </div>
+                        <div className="menu-sub">
 
                           <Link to={'/courses/cyber'} className="menu-color" >Cyber Security</Link>
-                          </div>
-                          <div className="menu-sub">
+                        </div>
+                        <div className="menu-sub">
 
                           <Link to={'/courses/machineLearning'} className="menu-color" >Data Visualization</Link>
-                          </div>
-                          <div className="menu-sub">
+                        </div>
+                        <div className="menu-sub">
 
                           <Link to={'/courses/machineLearning'} className="menu-color" >Machine Learning</Link>
-                          </div>
-                          <div className="menu-sub">
+                        </div>
+                        <div className="menu-sub">
 
                           <Link to={'/courses/ArtificialIntelligence'} className="menu-color" >Artificial Intelligence</Link>
-                          </div>
-                       
-                       
-                        
+                        </div>
+
+
+
                       </div>
                     </div>
 
@@ -209,9 +221,9 @@ const NavBar = () => {
                 </Nav>
 
                 <span>
-                  <Button
+                  <Button href="/admissionForm"
                     variant="btn btn-danger me-3"
-                    onClick={handleShow}
+
                     className="nav-apply-now"
                   >
                     Apply Now

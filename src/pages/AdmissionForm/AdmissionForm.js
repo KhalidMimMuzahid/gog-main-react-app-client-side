@@ -127,8 +127,8 @@ const AdmissionForm = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    toast.success('Successfully sign up')
-                    setLoading(true)
+                    toast.success('Successfully ')
+                    setLoading(false)
                 }
             })
             .catch(error => {
@@ -223,7 +223,7 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission ma-btt">
                                                 <p>Full Name</p>
-                                                <input type="text" name="name" defaultValue={user?.displayName} />
+                                                <input type="text" required name="name" defaultValue={user?.displayName} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -237,14 +237,14 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission">
                                                 <p>Phone Number</p>
-                                                <input type="tel" defaultValue={user?.phoneNumber ? user?.phoneNumber : 'Enter phone number '} name='phone' />
+                                                <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : 'Enter phone number '} name='phone' />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
 
                                             <div className="single-from-admission">
                                                 <p>Birth Date</p>
-                                                <input type="date" name='date' placeholder='Enter Birth Date' />
+                                                <input type="date" required name='date' placeholder='Enter Birth Date' />
                                             </div>
                                         </div>
                                         <div className="col-md-12">

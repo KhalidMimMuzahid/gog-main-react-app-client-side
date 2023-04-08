@@ -13,10 +13,27 @@ import NavBar from '../../components/shared/navbar/NavBar';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import Footer from '../../components/shared/footer/Footer';
 
+import { Helmet } from "react-helmet";
+
+
 const Courses = () => {
     return (
         <div className='all-course'>
-         
+        {/* this is fro SEO */}
+        <Helmet>
+            <title>Industrial Courses</title>
+            <meta
+            name="keywords"
+            content="Data structures and algorithms,Computer networks and security,Software engineering principles,Database management systems,Web development technologies,Artificial intelligence and machine learning,Internet of things (IoT),Cloud computing and virtualization
+            "
+            />
+            <meta
+            name="description"
+            content="India's Best Gurukul Provides Best Industrial Courses by IIT and IIM Experts. This Program is Specially for students who want to learn new Technologies."
+            />
+            <meta name="robots" content="index, follow"></meta>
+        </Helmet>
+
             <div className='menu-course'>
                 <div className="container-fluid">
                     <div className="row">

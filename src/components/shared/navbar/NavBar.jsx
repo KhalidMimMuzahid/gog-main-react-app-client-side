@@ -7,7 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
-import logo from "../../../assets/images/final logo.png";
+import logo from "../../../assets/images/gog logo-0212.png";
 import { AuthContext } from "../../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import Modal from "react-bootstrap/Modal";
@@ -21,11 +21,11 @@ const NavBar = () => {
   // state for the nav items show
   const [showDropdown, setShowDropdown] = useState(false);
   // for the current user and auth log out
-  const { user, logOut, adminPart, setAdminPart } = useContext(AuthContext);
+  const { user, logOut, adminPart } = useContext(AuthContext);
   // is Admin 
   // const [isAdmin] = useAdmin(user?.email)
 
-
+console.log(adminPart);
 
 
   // for the apply modal
@@ -71,7 +71,7 @@ const NavBar = () => {
       .catch((err) => console.log(err));
   };
 
-  const urlcoupon = `http://localhost:5000/users`;
+  const urlcoupon = `http://localhost:5000/admin/${user?.email}`;
   const { data: coupon = [], refetch, isLoading } = useQuery({
     queryKey: ['coupon'],
     queryFn: async () => {
@@ -86,7 +86,7 @@ const NavBar = () => {
     }
   })
 
-  console.log(coupon);
+  console.log(coupon );
 
   if(isLoading){
     return <Loading></Loading>
@@ -139,11 +139,12 @@ const NavBar = () => {
                     </Link>
                   </Nav.Link>
                   {
+                    user?.email === 'amitpaultl@gmail.com' || adminPart ?
                      <Nav.Link>
                       <Link className="text-decoration-none text-dark " to="/admin">
                         Admin
                       </Link>
-                    </Nav.Link> 
+                    </Nav.Link> :''
                   }
 
                   <NavDropdown

@@ -7,7 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
 import './Login.css'
 
-import { AiFillFacebook, AiFillGithub } from 'react-icons/ai';
+import { AiFillFacebook, AiFillGithub, AiOutlinePhone } from 'react-icons/ai';
 
 const Login = () => {
 
@@ -124,6 +124,13 @@ const Login = () => {
                     <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                   </button>
                 </div>
+                <div className='button-google-custom'>
+                    <Link to='phone-sign-up'>
+                    <button className="btn-customize btn-phone btn btn-outline"  style={{ width: "100%", borderRadius: "30px" }}>
+                      <AiOutlinePhone /> <span>CONTINUE WITH PHONE</span>
+                    </button>
+                    </Link>
+                  </div>
                 <p className='form-text'>Continue with your accout </p>
                 <form onSubmit={handleSubmit(handleSignUp)}>
                   <div className="from-box-sing">

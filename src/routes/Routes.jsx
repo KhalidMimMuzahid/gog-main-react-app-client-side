@@ -24,7 +24,8 @@ import AdmissionForm from "../pages/AdmissionForm/AdmissionForm";
 import Pay from "../pages/Pay/Pay";
 import PrivateRoute from "./PrivateRoute";
 import Admin from "../pages/Admin/Admin";
-// import AdminRoute from "./AdminRoute";
+import AdminRoute from "./AdminRoute";
+import PhoneSignUp from "../components/shared/phoneSignUp/PhoneSignUp";
 
 
 export const router = createBrowserRouter([
@@ -40,6 +41,14 @@ export const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp/>
+            },
+            {
+                path: '/signup/phone-sign-up',
+                element: <PhoneSignUp/>
+            },
+            {
+                path: '/login/phone-sign-up',
+                element: <PhoneSignUp/>
             },
             {
                 path: '/forget-pass',
@@ -84,7 +93,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/admin',
-                element: <Admin></Admin>
+                element:<AdminRoute><Admin></Admin></AdminRoute> 
             },
             
             

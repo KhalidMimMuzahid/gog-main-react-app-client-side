@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { confirmPasswordReset, createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { confirmPasswordReset, createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, RecaptchaVerifier, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPhoneNumber, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.init';
 
 export const AuthContext = createContext();
@@ -9,16 +9,27 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState('user available')
 
     // is admin
-    const [adminPart, setAdminPart] = useState(false)
+    const [adminPart, setadmin] = useState(false)
 
     // loading
     const [loading, setLoading] = useState(true)
-
+    
 
     // Providers 
     const googleProvider = new GoogleAuthProvider();
     const facebookProvide = new FacebookAuthProvider();
     const gitHubProvide = new GithubAuthProvider();
+
+    // OTP login 
+    function setUpRecaptha(number) {
+        const recaptchaVerifier = new RecaptchaVerifier(
+          "recaptcha-container",
+          {},
+          auth
+        );
+        recaptchaVerifier.render();
+        return signInWithPhoneNumber(auth, number, recaptchaVerifier);
+      }
 
     // Gitbub log in 
     const gitHubSignin = () => {
@@ -93,8 +104,10 @@ const AuthProvider = ({ children }) => {
         gitHubSignin,
         loading,
         setLoading,
-        setAdminPart,
-        adminPart
+        setadmin,
+        adminPart,
+        auth,
+        setUpRecaptha
     }
     return (
         <AuthContext.Provider value={authInfo}>

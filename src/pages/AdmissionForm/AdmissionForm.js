@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
 import { AuthContext } from '../../context/AuthProvider';
 import { toast } from 'react-hot-toast';
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 import Loading from '../../components/shared/Loading/Loading';
 import { useQuery } from '@tanstack/react-query';
 import banner from '../../assets/images/0jpg 1 (1).png'
@@ -12,6 +14,9 @@ const AdmissionForm = () => {
 
     // context 
     const { user } = useContext(AuthContext);
+
+    // Example: "+12133734253".
+    const [value, setValue] = useState()
 
     // loading
     const [loading, setLoading] = useState(false)
@@ -57,11 +62,11 @@ const AdmissionForm = () => {
     const handleOptionChange = (event) => {
         selectedOption.current = event.target.value;
     };
-    
+
 
     // Coupon get
     // react query data fatch
-    const urlcoupon = `http://localhost:5000/coupon`;
+    const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/coupon`;
     const { data: coupon = [], refetch, isLoading } = useQuery({
         queryKey: ['coupon'],
         queryFn: async () => {
@@ -78,7 +83,7 @@ const AdmissionForm = () => {
 
     // Coupon get
     // react query data fatch
-    const urlrefel = `http://localhost:5000/referee`;
+    const urlrefel = `https://geeks-of-gurukul-server-side.vercel.app/referee`;
     const { data: referee = [] } = useQuery({
         queryKey: ['referee'],
         queryFn: async () => {
@@ -114,6 +119,7 @@ const AdmissionForm = () => {
             name, email, phone, date, course, refelInput, gander
         }
 
+        console.log(usersInfo);
 
         // fetch user post
         fetch('http://localhost:5000/booking', {
@@ -177,7 +183,7 @@ const AdmissionForm = () => {
         } else {
             toast.error("This didn't work.")
         }
-        
+
     }
 
     // check Coupon and set data
@@ -211,7 +217,7 @@ const AdmissionForm = () => {
         <div>
             <div className="admission-area">
                 <div className="container">
-                   
+
                     <div className="row">
                         <div className="col-lg-7 col-md-12">
                             <div className="admission-from">
@@ -237,7 +243,13 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission">
                                                 <p>Phone Number</p>
-                                                <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone' />
+                                                {/* <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone' /> */}
+                                                <PhoneInput
+
+                                                    required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone'
+                                                    defaultCountry="IN"
+                                                    value={value}
+                                                    onChange={setValue} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">

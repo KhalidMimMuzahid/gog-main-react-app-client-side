@@ -4,10 +4,14 @@ import { useState, useEffect } from 'react';
 import Loading from '../../components/shared/Loading/Loading';
 import { toast } from 'react-hot-toast';
 import { useQuery } from '@tanstack/react-query';
+
+
 import Coupon from '../../components/Coupon/Coupon';
 import CouresPrice from '../../components/CouresPrice/CouresPrice';
 
 const Admin = () => {
+
+
 
     // loading
     const [loading, setLoading] = useState(false)
@@ -18,9 +22,9 @@ const Admin = () => {
     // Select Course
     const courses = {
         'Select Programme': ['Select Course '],
-        'School Champs': ['Select Course','Basic Coding', 'Advance Coding'],
-        'Coding Bees': ['Select Course','Full Stack Data Analytics', 'Full Stack Web Development'],
-        'Engineering Nerds': ['Select Course','Electrical Engineering', 'Mechanical Engineering'],
+        'School Champs': ['Select Course', 'Basic Coding', 'Advance Coding'],
+        'Coding Bees': ['Select Course', 'Full Stack Data Analytics', 'Full Stack Web Development'],
+        'Engineering Nerds': ['Select Course', 'Electrical Engineering', 'Mechanical Engineering'],
     }
 
     // Programme value
@@ -30,11 +34,11 @@ const Admin = () => {
     const [selectCourse, setSelectCourse] = useState('')
 
     console.log(selectprogramme);
-    console.log( selectCourse);
+    console.log(selectCourse);
 
     // referee get
     // react query data fatch
-    const url = `http://localhost:5000/referee`;
+    const url = `https://geeks-of-gurukul-server-side.vercel.app/referee`;
     const { data: referee = [], refetch, isLoading } = useQuery({
         queryKey: ['referee'],
         queryFn: async () => {
@@ -55,7 +59,7 @@ const Admin = () => {
 
     // delete referee
     const deleteProduct = (copuoninfo) => {
-        fetch(`http://localhost:5000/referee/${copuoninfo._id}`, {
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/referee/${copuoninfo._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -84,7 +88,7 @@ const Admin = () => {
             coupon, discount, selectprogramme, selectCourse
         }
         // fetch user post
-        fetch('http://localhost:5000/coupon', {
+        fetch('https://geeks-of-gurukul-server-side.vercel.app/coupon', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -122,7 +126,7 @@ const Admin = () => {
             name, phone, email, code
         }
         // fetch user post
-        fetch('http://localhost:5000/referee', {
+        fetch('https://geeks-of-gurukul-server-side.vercel.app/referee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -160,7 +164,7 @@ const Admin = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <h2 className='admin-title'>
-                                Welcome to Admin 
+                                Welcome to Admin
                             </h2>
                         </div>
                     </div>
@@ -261,7 +265,7 @@ const Admin = () => {
 
                             </div>
                             <div className="coupon-user">
-                            <h2>Referee list</h2>
+                                <h2>Referee list</h2>
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -294,6 +298,7 @@ const Admin = () => {
 
                 </div>
                 <CouresPrice></CouresPrice>
+               
             </div>
         </div>
     );

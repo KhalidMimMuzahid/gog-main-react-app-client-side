@@ -355,6 +355,17 @@ button.btn-github svg{
     font-size: 20px;
 }
 
+button.btn-phone{
+    background-color: #4AA45E;
+    border: #4AA45E;
+    color: white;
+}
+button.btn-phone:hover{
+    background-color: white;
+    color: #4AA45E;
+    border: 1px solid #4AA45E;
+}
+
 button.btn-fabecbook{
     background-color: #405A93;
     border: #405A93;

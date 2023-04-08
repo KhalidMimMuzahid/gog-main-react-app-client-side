@@ -61,6 +61,20 @@
     
 }
 
+.single-from-admission input.PhoneInputInput {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    outline: none;
+    padding: 13px;
+    text-align: center;
+}
+
 .single-from-admission span {
     margin-top: 26px;
     display: block;

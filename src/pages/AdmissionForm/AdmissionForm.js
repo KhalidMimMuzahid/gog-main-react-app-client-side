@@ -211,9 +211,9 @@ const AdmissionForm = () => {
         <div>
             <div className="admission-area">
                 <div className="container">
-                    
+                   
                     <div className="row">
-                        <div className="col-md-7">
+                        <div className="col-lg-7 col-md-12">
                             <div className="admission-from">
                                 <img src={banner} alt="" />
                                 <h4>Admission Form</h4>
@@ -237,7 +237,7 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission">
                                                 <p>Phone Number</p>
-                                                <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : 'Enter phone number '} name='phone' />
+                                                <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone' />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -249,11 +249,11 @@ const AdmissionForm = () => {
                                         </div>
                                         <div className="col-md-12">
 
-                                            <div className="single-from-admission">
-                                                <span>Gender</span>
+                                            <div className="single-from-admission mt-3">
+                                                <p>Gender</p>
                                                 <div className='gander'>
                                                     <div className='single-from'>
-                                                        <input type="radio" name="options" value="male" onChange={handleOptionChange} />
+                                                        <input type="radio" required name="options" value="male" onChange={handleOptionChange} />
                                                         <label htmlFor='gander-1' >
                                                             male
                                                         </label>
@@ -288,7 +288,7 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission">
                                                 <p>Select Programme</p>
-                                                <select onChange={(e) => { setSelectprogramme(e.target.value) }}>
+                                                <select required onChange={(e) => { setSelectprogramme(e.target.value) }}>
                                                     {
                                                         programmes?.map((programme, i) => <option key={i} value={programme}>{programme}</option>)
                                                     }
@@ -296,7 +296,7 @@ const AdmissionForm = () => {
 
                                                 </select>
                                                 <p> Select Course</p>
-                                                <select onChange={(e) => { setSelectCourse(e.target.value) }}>
+                                                <select required onChange={(e) => { setSelectCourse(e.target.value) }}>
                                                     {
                                                         courses[selectprogramme]?.map((course, i) => <option key={i} value={course}>{course}</option>)
                                                     }
@@ -309,14 +309,14 @@ const AdmissionForm = () => {
                                                 <span>Opted for Digital Basta</span>
                                             </div>
                                             <div className="submit-btu">
-                                                <button type='submit'>Submit</button>
+                                                <button type='submit'>Pay</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-lg-5 col-md-12">
                             <div className="admission-right">
                                 <div className="discount-area">
                                     <h2>Apply Discount</h2>
@@ -397,7 +397,7 @@ const AdmissionForm = () => {
                                         </div>
 
                                         <div className="pay">
-                                            <button>Pay</button>
+                                            {/* <button>Pay</button> */}
                                         </div>
                                     </div>
                                 </div>

@@ -5,6 +5,7 @@ import Loading from '../../components/shared/Loading/Loading';
 import { toast } from 'react-hot-toast';
 import { useQuery } from '@tanstack/react-query';
 import Coupon from '../../components/Coupon/Coupon';
+import CouresPrice from '../../components/CouresPrice/CouresPrice';
 
 const Admin = () => {
 
@@ -290,7 +291,9 @@ const Admin = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
+                <CouresPrice></CouresPrice>
             </div>
         </div>
     );

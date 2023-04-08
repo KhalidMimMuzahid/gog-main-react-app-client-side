@@ -1,0 +1,11 @@
+.price-text h2 {
+    margin: 43px 0;
+    text-align: center;
+    padding: 28px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+button.btn.mar-1.btn-success {
+    margin-left: 15px;
+}

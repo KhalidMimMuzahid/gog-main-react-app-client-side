@@ -13,6 +13,8 @@ import { toast } from "react-hot-toast";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import { useQuery } from "@tanstack/react-query";
+// import useAdmin from "../../../UseHook/useAdmin";
+import Loading from "../Loading/Loading";
 // import AdmissionForm from "../../../pages/AdmissionForm/AdmissionForm";
 
 const NavBar = () => {
@@ -21,6 +23,8 @@ const NavBar = () => {
   // for the current user and auth log out
   const { user, logOut, adminPart, setAdminPart } = useContext(AuthContext);
   // is Admin 
+  // const [isAdmin] = useAdmin(user?.email)
+
 
 
 
@@ -67,8 +71,27 @@ const NavBar = () => {
       .catch((err) => console.log(err));
   };
 
+  const urlcoupon = `http://localhost:5000/users`;
+  const { data: coupon = [], refetch, isLoading } = useQuery({
+    queryKey: ['coupon'],
+    queryFn: async () => {
+      const res = await fetch(urlcoupon, {
+        headers: {
+          // authorization: `bearer ${localStorage.getItem('accessToken')}`
+        }
 
- 
+      });
+      const data = await res.json();
+      return data
+    }
+  })
+
+  console.log(coupon);
+
+  if(isLoading){
+    return <Loading></Loading>
+  }
+
   return (
     <div className='menu-gr'>
       {["sm"].map((expand) => (
@@ -116,11 +139,11 @@ const NavBar = () => {
                     </Link>
                   </Nav.Link>
                   {
-                    adminPart ? <Nav.Link>
+                     <Nav.Link>
                       <Link className="text-decoration-none text-dark " to="/admin">
                         Admin
                       </Link>
-                    </Nav.Link> : ''
+                    </Nav.Link> 
                   }
 
                   <NavDropdown

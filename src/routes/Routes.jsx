@@ -24,7 +24,7 @@ import AdmissionForm from "../pages/AdmissionForm/AdmissionForm";
 import Pay from "../pages/Pay/Pay";
 import PrivateRoute from "./PrivateRoute";
 import Admin from "../pages/Admin/Admin";
-import AdminRoute from "./AdminRoute";
+// import AdminRoute from "./AdminRoute";
 
 
 export const router = createBrowserRouter([
@@ -84,7 +84,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/admin',
-                element: <AdminRoute><Admin></Admin></AdminRoute> 
+                element: <Admin></Admin>
             },
             
             

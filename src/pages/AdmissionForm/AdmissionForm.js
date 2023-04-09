@@ -66,7 +66,7 @@ const AdmissionForm = () => {
 
     // Coupon get
     // react query data fatch
-    const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/coupon`;
+    const urlcoupon = `http://localhost:5000/coupon`;
     const { data: coupon = [], refetch, isLoading } = useQuery({
         queryKey: ['coupon'],
         queryFn: async () => {
@@ -83,7 +83,7 @@ const AdmissionForm = () => {
 
     // Coupon get
     // react query data fatch
-    const urlrefel = `https://geeks-of-gurukul-server-side.vercel.app/referee`;
+    const urlrefel = `http://localhost:5000/referee`;
     const { data: referee = [] } = useQuery({
         queryKey: ['referee'],
         queryFn: async () => {

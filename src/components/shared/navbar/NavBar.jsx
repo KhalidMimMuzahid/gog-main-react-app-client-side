@@ -86,11 +86,11 @@ console.log(adminPart);
     }
   })
 
-  console.log(coupon );
+  // console.log(coupon );
 
-  if(isLoading){
-    return <Loading></Loading>
-  }
+  // if(isLoading){
+  //   return <Loading></Loading>
+  // }
 
   return (
     <div className='menu-gr'>

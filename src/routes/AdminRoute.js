@@ -1,20 +1,24 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router';
-import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../context/AuthProvider';
+import Loading from '../components/shared/Loading/Loading';
+import useAdmin from '../UseHook/useAdmin';
+import { useQuery } from '@tanstack/react-query';
 
 const AdminRoute = ({ children }) => {
     // context 
-    const { user, loading, setAdminPart } = useContext(AuthContext);
+    const { user, loading ,setadmin} = useContext(AuthContext);
 
 
+    // admin route
+    // const [isAdmin, isAdminLoading] = useAdmin(user?.email)
 
     // location
     const location = useLocation()
 
     // is Admin 
 
-    const url = `https://geeks-of-gurukul-server-side.vercel.app/users`;
+    const url = `http://localhost:5000/admin/${user?.email}`;
     const { data: adminUser = [], refetch, isLoading } = useQuery({
         queryKey: ['adminUser'],
         queryFn: async () => {
@@ -29,39 +33,25 @@ const AdminRoute = ({ children }) => {
         }
     })
 
+    console.log(adminUser);
+
 
 
     // loding
-    if (loading || isLoading) {
-        return (
-            <div className="text-center mt-5 ">
-
-                <div className="spinner-grow text-center mt-5" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        )
+    if (loading ) {
+        return <Loading></Loading>
     }
 
-   
+    
 
-    const admiral = adminUser?.filter(rollin => rollin?.roll === "admin")
-    const checkEmail = admiral?.filter(emailcheck => emailcheck?.email === user?.email)
-
-    console.log(checkEmail);
-    console.log(admiral, user.email);
-
-    if ( checkEmail.length === 1) {
-        
+    if (user && adminUser) {
+        setadmin(true)
         return children
     }
 
     return (
-        <div>
-            <Navigate to='/login' state={{ from: location }} replace></Navigate>
-
-        </div>
-    );
+        <Navigate to='/login' state={{ from: location }} replace></Navigate>
+    )
 };
 
 export default AdminRoute;

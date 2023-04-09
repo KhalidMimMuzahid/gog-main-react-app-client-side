@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
 import { AuthContext } from '../../context/AuthProvider';
 import { toast } from 'react-hot-toast';
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 import Loading from '../../components/shared/Loading/Loading';
 import { useQuery } from '@tanstack/react-query';
 import banner from '../../assets/images/0jpg 1 (1).png'
@@ -12,6 +14,9 @@ const AdmissionForm = () => {
 
     // context 
     const { user } = useContext(AuthContext);
+
+    // Example: "+12133734253".
+    const [value, setValue] = useState()
 
     // loading
     const [loading, setLoading] = useState(false)
@@ -57,7 +62,7 @@ const AdmissionForm = () => {
     const handleOptionChange = (event) => {
         selectedOption.current = event.target.value;
     };
-    
+
 
     // Coupon get
     // react query data fatch
@@ -114,9 +119,10 @@ const AdmissionForm = () => {
             name, email, phone, date, course, refelInput, gander
         }
 
+        console.log(usersInfo);
 
         // fetch user post
-        fetch('https://geeks-of-gurukul-server-side.vercel.app/booking', {
+        fetch('http://localhost:5000/booking', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -177,7 +183,7 @@ const AdmissionForm = () => {
         } else {
             toast.error("This didn't work.")
         }
-        
+
     }
 
     // check Coupon and set data
@@ -211,9 +217,9 @@ const AdmissionForm = () => {
         <div>
             <div className="admission-area">
                 <div className="container">
-                    
+
                     <div className="row">
-                        <div className="col-md-7">
+                        <div className="col-lg-7 col-md-12">
                             <div className="admission-from">
                                 <img src={banner} alt="" />
                                 <h4>Admission Form</h4>
@@ -237,7 +243,13 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission">
                                                 <p>Phone Number</p>
-                                                <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : 'Enter phone number '} name='phone' />
+                                                {/* <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone' /> */}
+                                                <PhoneInput
+
+                                                    required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone'
+                                                    defaultCountry="IN"
+                                                    value={value}
+                                                    onChange={setValue} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -249,11 +261,11 @@ const AdmissionForm = () => {
                                         </div>
                                         <div className="col-md-12">
 
-                                            <div className="single-from-admission">
-                                                <span>Gender</span>
+                                            <div className="single-from-admission mt-3">
+                                                <p>Gender</p>
                                                 <div className='gander'>
                                                     <div className='single-from'>
-                                                        <input type="radio" name="options" value="male" onChange={handleOptionChange} />
+                                                        <input type="radio" required name="options" value="male" onChange={handleOptionChange} />
                                                         <label htmlFor='gander-1' >
                                                             male
                                                         </label>
@@ -288,7 +300,7 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission">
                                                 <p>Select Programme</p>
-                                                <select onChange={(e) => { setSelectprogramme(e.target.value) }}>
+                                                <select required onChange={(e) => { setSelectprogramme(e.target.value) }}>
                                                     {
                                                         programmes?.map((programme, i) => <option key={i} value={programme}>{programme}</option>)
                                                     }
@@ -296,7 +308,7 @@ const AdmissionForm = () => {
 
                                                 </select>
                                                 <p> Select Course</p>
-                                                <select onChange={(e) => { setSelectCourse(e.target.value) }}>
+                                                <select required onChange={(e) => { setSelectCourse(e.target.value) }}>
                                                     {
                                                         courses[selectprogramme]?.map((course, i) => <option key={i} value={course}>{course}</option>)
                                                     }
@@ -309,14 +321,14 @@ const AdmissionForm = () => {
                                                 <span>Opted for Digital Basta</span>
                                             </div>
                                             <div className="submit-btu">
-                                                <button type='submit'>Submit</button>
+                                                <button type='submit'>Pay</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-lg-5 col-md-12">
                             <div className="admission-right">
                                 <div className="discount-area">
                                     <h2>Apply Discount</h2>
@@ -397,7 +409,7 @@ const AdmissionForm = () => {
                                         </div>
 
                                         <div className="pay">
-                                            <button>Pay</button>
+                                            {/* <button>Pay</button> */}
                                         </div>
                                     </div>
                                 </div>

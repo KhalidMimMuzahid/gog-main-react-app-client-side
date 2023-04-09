@@ -1,5 +1,13 @@
 .admission-area {
     padding-top: 150px;
+    position: relative;
+}
+
+.submit-btu {
+    position: absolute;
+    right: 8%;
+    top: 52%;
+    width: 108px;
 }
 
 .admission-from {
@@ -51,6 +59,20 @@
     padding: 13px;
     text-align: center;
     
+}
+
+.single-from-admission input.PhoneInputInput {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    outline: none;
+    padding: 13px;
+    text-align: center;
 }
 
 .single-from-admission span {
@@ -242,6 +264,7 @@ label.single-from input {display: inline-block;}
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
     padding: 15px;
+    padding-bottom: 70px;
 }
 
 .pricing-details {
@@ -320,4 +343,20 @@ button.border {
     background: transparent;
     color: #fff;
     margin-right: 50px;
+}
+
+
+/* responsive */
+
+@media (min-width: 768px) and (max-width: 1399.98px) { 
+    .submit-btu {
+        right: 13%;
+        
+    }
+}
+@media (min-width: 991px) and (max-width: 1199.98px) { 
+    .submit-btu {
+        top: 53%;
+        
+    }
 }

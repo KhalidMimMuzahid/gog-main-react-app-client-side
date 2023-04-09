@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState('user available')
 
     // is admin
-    const [adminPart, setAdminPart] = useState(false)
+    const [adminPart, setadmin] = useState(false)
 
     // loading
     const [loading, setLoading] = useState(true)
@@ -104,7 +104,7 @@ const AuthProvider = ({ children }) => {
         gitHubSignin,
         loading,
         setLoading,
-        setAdminPart,
+        setadmin,
         adminPart,
         auth,
         setUpRecaptha,

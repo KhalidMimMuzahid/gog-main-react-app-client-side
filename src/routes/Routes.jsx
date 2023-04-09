@@ -82,10 +82,10 @@ export const router = createBrowserRouter([
                 path: '/conditon',
                 element: <Conditons></Conditons>
             },
-            // {
-            //     path: '/admissionForm',
-            //     element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute> 
-            // },
+            {
+                path: '/admissionForm',
+                element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute> 
+            },
             
             {
                 path: '/pay',
@@ -93,7 +93,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/admin',
-                element: <AdminRoute><Admin></Admin></AdminRoute> 
+                element:<AdminRoute><Admin></Admin></AdminRoute> 
             },
             
             

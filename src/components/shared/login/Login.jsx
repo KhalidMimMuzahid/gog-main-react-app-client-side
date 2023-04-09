@@ -42,10 +42,11 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         //console.log(user);
-        saveUser(user.displayName, user.email);
-        toast.success('Successfully logged in');
+        //saveUser(user.displayName, user.email);
+        //toast.success('Successfully logged in');
         setLoading(false)
-        navigate(from, { replace: true });
+        //navigate(from, { replace: true });
+        navigate("/login/phone-sign-up");
       })
       .catch(error => console.error(error));
   }
@@ -55,11 +56,12 @@ const Login = () => {
     FaceboolSignin()
     .then((result) => {
       const user = result.user;
-      console.log("Facebook user: ", user);
-      saveUser(user.displayName, user.email);
+      //console.log("Facebook user: ", user);
+      //saveUser(user.displayName, user.email);
       setLoading(false)
-      toast.success("Successfully logged in");
-      navigate(from, { replace: true });
+      //toast.success("Successfully logged in");
+      //navigate(from, { replace: true });
+      navigate("/login/phone-sign-up");
     })
     .catch((error) => console.error(error));
   }
@@ -69,11 +71,12 @@ const Login = () => {
     gitHubSignin()
     .then((result) => {
       const user = result.user;
-      console.log("GitHub User ", user);
-      saveUser(user.displayName, user.email);
+      //console.log("GitHub User ", user);
+      //saveUser(user.displayName, user.email);
       setLoading(false)
-      toast.success("Successfully logged in");
-      navigate(from, { replace: true });
+      //toast.success("Successfully logged in");
+      //navigate(from, { replace: true });
+      navigate("/login/phone-sign-up");
     })
     .catch((error) => console.error(error));
   }
@@ -124,13 +127,13 @@ const Login = () => {
                     <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                   </button>
                 </div>
-                <div className='button-google-custom'>
+                {/* <div className='button-google-custom'>
                     <Link to='phone-sign-up'>
                     <button className="btn-customize btn-phone btn btn-outline"  style={{ width: "100%", borderRadius: "30px" }}>
                       <AiOutlinePhone /> <span>CONTINUE WITH PHONE</span>
                     </button>
                     </Link>
-                  </div>
+                </div> */}
                 <p className='form-text'>Continue with your accout </p>
                 <form onSubmit={handleSubmit(handleSignUp)}>
                   <div className="from-box-sing">

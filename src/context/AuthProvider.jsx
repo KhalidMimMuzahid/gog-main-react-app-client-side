@@ -107,7 +107,7 @@ const AuthProvider = ({ children }) => {
         setadmin,
         adminPart,
         auth,
-        setUpRecaptha
+        setUpRecaptha,
     }
     return (
         <AuthContext.Provider value={authInfo}>

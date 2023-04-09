@@ -41,8 +41,8 @@ const SignUp = () => {
     createUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        toast.success("User Created Successfully.");
+        //console.log(user);
+        //toast.success("User Created Successfully.");
         const userInfo = {
           displayName: data.name,
           email: data.email,
@@ -50,9 +50,10 @@ const SignUp = () => {
         };
         updateUserProfile(userInfo)
           .then(() => {
-            console.log("Save Use: ", userInfo);
-            saveUser(data.name, data.email, data.phone);
+            //console.log("Save Use: ", userInfo);
+            //saveUser(data.name, data.email, data.phone);
             setLoading(false)
+            navigate("/signup/phone-sign-up");
           })
           .catch((err) => console.log(err));
       })
@@ -68,10 +69,11 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         //console.log(user);
-        saveUser(user.displayName, user.email);
-        toast.success("Successfully logged in");
+        //saveUser(user.displayName, user.email);
+        //toast.success("Google verified");
         setLoading(false)
-        navigate(from, { replace: true });
+        navigate("/signup/phone-sign-up");
+        //navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };
@@ -81,11 +83,12 @@ const SignUp = () => {
     gitHubSignin()
     .then((result) => {
       const user = result.user;
-      console.log("GitHub User ", user);
-      saveUser(user.displayName, user.email);
-      toast.success("Successfully logged in");
+      //console.log("GitHub User ", user);
+      //saveUser(user.displayName, user.email);
+      //toast.success("Successfully logged in");
       setLoading(false)
-      navigate(from, { replace: true });
+      navigate("/signup/phone-sign-up");
+      //navigate(from, { replace: true });
     })
     .catch((error) => console.error(error));
   }
@@ -95,11 +98,12 @@ const SignUp = () => {
     FaceboolSignin()
     .then((result) => {
       const user = result.user;
-      console.log("Facebook user: ", user);
-      saveUser(user.displayName, user.email);
-      toast.success("Successfully logged in");
+      //console.log("Facebook user: ", user);
+      //saveUser(user.displayName, user.email);
+      //toast.success("Successfully logged in");
       setLoading(false)
-      navigate(from, { replace: true });
+      navigate("/signup/phone-sign-up");
+      //navigate(from, { replace: true });
     })
     .catch((error) => console.error(error));
   }
@@ -117,6 +121,7 @@ const SignUp = () => {
       .then((data) => {
         //console.log("save user", data);
         //navigate("/");
+       
       });
   };
 
@@ -151,13 +156,13 @@ const SignUp = () => {
                       <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                     </button>
                   </div>
-                  <div className='button-google-custom'>
+                  {/* <div className='button-google-custom'>
                     <Link to='phone-sign-up'>
                     <button className="btn-customize btn-phone btn btn-outline"  style={{ width: "100%", borderRadius: "30px" }}>
                       <AiOutlinePhone /> <span>CONTINUE WITH PHONE</span>
                     </button>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
                 <p style={{ marginTop: "-20px", fontSize: "12px" }}>Or use your Email and Mobile Number for registration </p>
                 <form onSubmit={handleSubmit(handleSignUp)}>
@@ -190,7 +195,7 @@ const SignUp = () => {
                     {errors.email && (
                       <p className="text-red-500">{errors.email.message}</p>
                     )}
-                    <div className="from-box-input">
+                    {/* <div className="from-box-input">
                       <input
                         type="text"
                         placeholder="Mobile Number"
@@ -203,10 +208,10 @@ const SignUp = () => {
                           },
                         })}
                       />
-                    </div>
-                    {errors.phone && (
+                    </div> */}
+                    {/* {errors.phone && (
                       <p className="text-red-500">{errors.phone.message}</p>
-                    )}
+                    )} */}
                     <div className="from-box-input">
                       <div className="pass-fild">
                         <input

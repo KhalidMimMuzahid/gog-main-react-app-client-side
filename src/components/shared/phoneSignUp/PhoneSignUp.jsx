@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
@@ -10,13 +10,16 @@ import "./PhoneSignUp.css"
 import { toast } from "react-hot-toast";
 
 const PhoneSignUp = () => {
-    const [error, setError] = useState("");
+  const [error, setError] = useState("");
   const [number, setNumber] = useState("");
   const [flag, setFlag] = useState(false);
   const [otp, setOtp] = useState("");
   const [result, setResult] = useState("");
-  const { setUpRecaptha } = useContext(AuthContext);
+  const { setUpRecaptha, setLoading, user } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const [numberUser, setNumberUser] = useState("");
 
@@ -43,16 +46,17 @@ const PhoneSignUp = () => {
     try {
       await result.confirm(otp);
       
-      saveUser(numberUser)
-      //console.log("SaveUSER::::::", saveUser);
+      saveUser(user.displayName, user.email, numberUser)
+      console.log("SaveUSER::::::", saveUser);
+      console.log("USRData.......", user);
       //navigate("/");
     } catch (err) {
       setError(err.message);
     }
   };
 
-  const saveUser = (phone) => {
-    const user = { phone };
+  const saveUser = (name, email, phone) => {
+    const user = { name, email, phone };
 
     fetch("https://geeks-of-gurukul-server-side.vercel.app/users", {
       method: "PUT",
@@ -65,7 +69,8 @@ const PhoneSignUp = () => {
       .then((data) => {
         //console.log("save user", data);
         toast.success("Verification successful.")
-        navigate("/");
+        setLoading(false);
+        navigate(from, { replace: true });
       });
   };
 

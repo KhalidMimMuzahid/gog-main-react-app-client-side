@@ -50,12 +50,12 @@ const PriceTable = ({relod, load, copuoninfo }) => {
         <tr>
 
 
-            {/* <td>{copuoninfo?.program}</td> */}
+            <td>{copuoninfo?.program}</td>
             <td>{copuoninfo?.name}</td>
             <td>{copuoninfo?.price}</td>
 
             <td><form onSubmit={priceSubmit}> <input type="text" placeholder='Price' name='price' /><button className="btn mar-1 btn-success" type='submit' >Submit</button> </form></td>
-            <td></td>
+            {/* <td></td> */}
 
         </tr>
 

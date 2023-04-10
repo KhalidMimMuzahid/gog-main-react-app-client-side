@@ -2,7 +2,6 @@ import React from 'react';
 import Accordions from '../../components/accordion/Accordions';
 import Banner from '../../components/banner/Banner';
 import Brands from '../../components/Brands/Brands';
-import Master from '../../components/Master/Master';
 import OurProgram from '../../components/ourProgram/OurProgram';
 import Team from '../../components/Team/Team';
 import ScrollToTop from 'react-scroll-to-top';
@@ -12,7 +11,7 @@ const Home = () => {
     return (
         <div className='home-page'>
             <Banner/>
-            <Master></Master>
+            
             <OurProgram/>
             <Brands></Brands>
             <Team></Team>

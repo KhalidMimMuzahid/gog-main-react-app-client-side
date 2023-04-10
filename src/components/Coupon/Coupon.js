@@ -42,7 +42,7 @@ const Coupon = () => {
         return <Loading></Loading>
     }
 
-    // console.log(coupon);
+    console.log(coupon);
     return (
         <table class="table">
             <thead>

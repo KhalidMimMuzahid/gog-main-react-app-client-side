@@ -13,6 +13,7 @@ import calassTime from "../../assets/iconsSVG/classTime.svg"
 import hourGlass from "../../assets/iconsSVG/hourglass.png"
 import teamLeads from "../../assets/iconsSVG/teamLeads.svg"
 import timeHerryUp from "../../assets/iconsSVG/timeHerryUp.svg"
+import { Helmet } from "react-helmet";
 
 
 const OurProgram = () => {
@@ -59,6 +60,18 @@ const OurProgram = () => {
 
   return (
     <div className="program-area">
+      <Helmet>
+        <title>OUR PROGRAM</title>
+        <meta
+        name="keywords"
+        content="Coding camps for students,Coding classes for kids,Coding projects for beginners,Full stack web development,Full stack Data analytics,Database management systems,Web development technologies,Artificial intelligence and machine learning
+              "
+        />
+        <meta
+          name="description"
+          content="India’s Best Gurukul Provides Fundamentals of Coding by IIT and IIM Experts. We improve problem-solving and critical thinking skills to stand in our technology world.  " />
+        <meta name="robots" content="index, follow"></meta>
+      </Helmet>
       <div className="container">
         <div className="row">
           <div className="col-md-12">

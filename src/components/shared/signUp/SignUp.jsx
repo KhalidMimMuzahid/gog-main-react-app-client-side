@@ -32,7 +32,7 @@ const SignUp = () => {
   const handleSignUp = (data) => {
     console.log(data);
     setSignUPError("");
-
+ 
     // for the password cheack 
     if (data.password !== data.passwordConfirm) {
       return setSignUPError("Password did not matched!");
@@ -43,17 +43,17 @@ const SignUp = () => {
         const user = result.user;
         //console.log(user);
         //toast.success("User Created Successfully.");
-        const userInfo = {
-          displayName: data.name,
-          email: data.email,
-          phone: data.phone,
-        };
+    const userInfo = {
+      displayName: data.name,
+      email: data.email,
+      phone: data.phone,
+    };
         updateUserProfile(userInfo)
           .then(() => {
             //console.log("Save Use: ", userInfo);
             //saveUser(data.name, data.email, data.phone);
             setLoading(false)
-            navigate("/signup/phone-sign-up");
+    navigate("/signup/phone-sign-up");
           })
           .catch((err) => console.log(err));
       })
@@ -151,11 +151,11 @@ const SignUp = () => {
                       <AiFillFacebook /> <span>CONTINUE WITH FACEBOOK</span>
                     </button>
                   </div>
-                  <div className='button-google-custom'>
+                  {/* <div className='button-google-custom'>
                     <button className="btn-customize btn-github btn btn-outline" onClick={handlegitHubSignin} style={{ width: "100%", borderRadius: "30px" }}>
                       <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                     </button>
-                  </div>
+                  </div> */}
                   {/* <div className='button-google-custom'>
                     <Link to='phone-sign-up'>
                     <button className="btn-customize btn-phone btn btn-outline"  style={{ width: "100%", borderRadius: "30px" }}>

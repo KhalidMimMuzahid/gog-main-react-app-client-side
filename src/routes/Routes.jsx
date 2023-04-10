@@ -51,6 +51,10 @@ export const router = createBrowserRouter([
                 path: '/login/phone-sign-up',
                 element: <PhoneSignUp/>
             },
+            // {
+            //     path: '/signup/auto-name-fill',
+            //     element: <AutoNameFill/>
+            // },
             {
                 path: '/forget-pass',
                 element: <ForgetPassword/>

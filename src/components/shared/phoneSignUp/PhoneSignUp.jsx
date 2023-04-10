@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./PhoneSignUp.css";
 import { toast } from "react-hot-toast";
+import Loading from "../Loading/Loading";
 
 const PhoneSignUp = () => {
   const [error, setError] = useState("");
@@ -22,12 +23,50 @@ const PhoneSignUp = () => {
   const from = location.state?.from?.pathname || "/";
 
   const [numberUser, setNumberUser] = useState("");
+  // loading
+  const [loadingState, setLoadingState] = useState(false)
 
   const getOtp = async (e) => {
     e.preventDefault();
-    console.log(number);
+    const name = e.target.name.value;
+    //console.log(number, name);
     setNumberUser(number);
     setError("");
+
+    // those for the user namae update 
+    const email = user?.email;
+    const usersInfo = {
+      name, email
+    }
+    // fetch user for the upade his name
+    fetch('https://geeks-of-gurukul-server-side.vercel.app/usersname', {
+      method: 'PUT',
+      headers: {
+          'content-type': 'application/json',
+      },
+      body: JSON.stringify(usersInfo)
+      })
+      .then(res => res.json())
+      .then(data => {
+          if (data.success) {
+              //toast.success('Successfully ')
+              setLoadingState(false)
+              //console.log("Data ------", )
+              //navigate("/signup/phone-sign-up");
+          }
+      })
+      .catch(error => {
+          toast.error(error.message)
+          setLoadingState(false)
+      })
+
+      if(loadingState) {
+        return <Loading></Loading>
+      }
+
+
+   
+    
     if (number === "" || number === undefined)
       return setError("Please enter a valid phone number!");
 
@@ -42,8 +81,9 @@ const PhoneSignUp = () => {
       .then((data) => {
         console.log("data: ",data)
         if (data?.user?.phone) {
-          console.log("Phone number: ", data.phone);
-         setError("Phone number is alredy exist, Please go back to log in.");
+          //console.log("Phone number: ", data.phone);
+         toast.success("Verified.");
+         navigate("/admissionForm");
          return 
         } else {
           console.log("else optn opt")
@@ -53,7 +93,7 @@ const PhoneSignUp = () => {
               const response = await setUpRecaptha(number);
               setResult(response);
               setFlag(true);
-              console.log("This is the second of opt");
+              //console.log("This is the second of opt");
             } catch (err) {
               setError(err.message);
             }
@@ -104,7 +144,7 @@ const PhoneSignUp = () => {
         //console.log("save user", data);
         toast.success("Verification successful.");
         setLoading(false);
-        navigate(from, { replace: true });
+        navigate("/admissionForm");
       });
   };
 
@@ -114,7 +154,11 @@ const PhoneSignUp = () => {
         <div className="box  new-login-from-phone">
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
-            <h2 className="mb-3">Enter your phone number</h2>
+            <div className="single-from-admissionPhone ma-btt">
+                <h5 className="mb-3">Full Name</h5>
+                <input type="text" required name="name" defaultValue={user?.displayName} />
+            </div>
+            <h5 className="mb-3">Phone number</h5>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <PhoneInput
                 defaultCountry="IN"
@@ -125,12 +169,12 @@ const PhoneSignUp = () => {
               <div id="recaptcha-container"></div>
             </Form.Group>
             <div className="button-right">
-              <Link to="/signup">
+              {/* <Link to="/signup">
                 <Button variant="secondary">Cancel</Button>
-              </Link>
+              </Link> */}
               &nbsp;
               <Button type="submit" variant="primary">
-                Send Otp
+              Continue
               </Button>
             </div>
           </Form>

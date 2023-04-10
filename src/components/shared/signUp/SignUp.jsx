@@ -151,11 +151,11 @@ const SignUp = () => {
                       <AiFillFacebook /> <span>CONTINUE WITH FACEBOOK</span>
                     </button>
                   </div>
-                  <div className='button-google-custom'>
+                  {/* <div className='button-google-custom'>
                     <button className="btn-customize btn-github btn btn-outline" onClick={handlegitHubSignin} style={{ width: "100%", borderRadius: "30px" }}>
                       <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>
                     </button>
-                  </div>
+                  </div> */}
                   {/* <div className='button-google-custom'>
                     <Link to='phone-sign-up'>
                     <button className="btn-customize btn-phone btn btn-outline"  style={{ width: "100%", borderRadius: "30px" }}>

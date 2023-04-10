@@ -416,13 +416,7 @@ const AdmissionForm = () => {
                     </div>
 
                 </div>
-                <div className="wonder-area">
-                    <p>BASTA is India’s Largest Skill Building School enabling students to start their Tech-career and get <br /> placed at upto 40 LPA jobs as Data Analyst, Business Analyst, <br /> Data Scientist, Product Analyst Software Developer, Full Stack Web Developer etc.</p>
-                    <div className="wonder-btu">
-                        <button className="border">About us</button>
-                        <button>Apply Now</button>
-                    </div>
-                </div>
+   
             </div>
         </div>
     );

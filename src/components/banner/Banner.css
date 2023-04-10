@@ -18,7 +18,8 @@
 
 .hero-Area-Ancor-Fixed {
     font-family: montserrat;
-    margin-top: 180px;
+    padding-top: 180px;
+    background: #fff;
 }
 
 .textColor {
@@ -35,7 +36,7 @@
 }
 
 .hero-h1 h1 {
-    color: #bd2626;
+    color: #000000;
     font-family: Courier New;
     font-size: 24px;
     display: inline-block;
@@ -43,8 +44,9 @@
     animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
     white-space: nowrap;
     font-weight: 600;
-
-
+    border: 1px solid #000000;
+    border-radius: 39px;
+    padding: 3px 12px;
 }
 
 .new_hero {
@@ -81,7 +83,15 @@
     font-family: monospace;
 }
 
+.hero-h1 img {
+    position: absolute;
+    top: 7px;
+    left: -35px;
+}
 
+.hero-h1 {
+    position: relative;
+}
 
 .course {
     padding: 8px;
@@ -307,6 +317,7 @@
     font-weight: 400;
     font-size: 20px;
     margin-top: 48px;
+    border-radius: 5px;
 }
 
 .apply-now-btu img {
@@ -327,7 +338,7 @@
 .new_hero {
     position: absolute;
     right: 63px;
-    top: 0;
+    top: 180px;
     width: 674px;
 }
 
@@ -461,7 +472,12 @@ span.topCotton {
     .hero-Area-Ancor-Fixed {
         margin-bottom: 30px;
         padding-bottom: 11px;
-        margin-top: 100px;
+        padding-top: 100px;
+    }
+
+    .new_hero {
+        
+        top: 12px;
     }
     
     .hero-left {
@@ -549,6 +565,10 @@ span.topCotton {
         display: block;
         text-align: center;
     }
+    .hero-h1 img {
+       
+        left: 16px;
+    }
 }
 
 @media (min-width: 20px) and (max-width: 767.98px) {
@@ -565,6 +585,10 @@ span.topCotton {
         font-size: 14px;
     }
 
+    .hero-h1 img {
+       
+        display: none;
+    }
 
     .equal {
         font-size: 46px;

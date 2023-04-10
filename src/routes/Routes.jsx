@@ -21,12 +21,11 @@ import SQL from "../pages/SQL/SQL";
 import ForgetPassword from "../components/shared/forgotPassword/ForgetPassword";
 import SetPass from "../components/shared/forgotPassword/SetPass";
 import AdmissionForm from "../pages/AdmissionForm/AdmissionForm";
-import Pay from "../pages/Pay/Pay";
 import PrivateRoute from "./PrivateRoute";
 import Admin from "../pages/Admin/Admin";
 import AdminRoute from "./AdminRoute";
 import PhoneSignUp from "../components/shared/phoneSignUp/PhoneSignUp";
-import DasBoard from "../pages/DasBoard/Dasboard";
+import Super from "../pages/DasBoard/Super";
 
 
 export const router = createBrowserRouter([
@@ -93,8 +92,8 @@ export const router = createBrowserRouter([
             },
             
             {
-                path: '/pay',
-                element: <DasBoard></DasBoard>
+                path: '/super',
+                element: <PrivateRoute> <Super></Super></PrivateRoute>
             },
             {
                 path: '/admin',

@@ -6,7 +6,7 @@ import Loading from '../shared/Loading/Loading';
 const Coupon = () => {
     // Coupon get
     // react query data fatch
-    const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/coupon`;
+    const urlcoupon = `http://localhost:5000/coupon`;
     const { data: coupon = [], refetch, isLoading } = useQuery({
         queryKey: ['coupon'],
         queryFn: async () => {
@@ -23,7 +23,7 @@ const Coupon = () => {
 
     // delete copun
     const deletecopun = (copuoninfo) => {
-        fetch(`https://geeks-of-gurukul-server-side.vercel.app/coupon/${copuoninfo._id}`, {
+        fetch(`http://localhost:5000/coupon/${copuoninfo._id}`, {
             method: 'DELETE',
             headers: {
                 // authorization: `bearer ${localStorage.getItem('accessToken')}`

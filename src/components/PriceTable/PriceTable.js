@@ -50,7 +50,7 @@ const PriceTable = ({relod, load, copuoninfo }) => {
         <tr>
 
 
-            <td>{copuoninfo?.program}</td>
+            {/* <td>{copuoninfo?.program}</td> */}
             <td>{copuoninfo?.name}</td>
             <td>{copuoninfo?.price}</td>
 

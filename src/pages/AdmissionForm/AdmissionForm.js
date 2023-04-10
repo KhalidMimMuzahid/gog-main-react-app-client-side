@@ -8,7 +8,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import Loading from '../../components/shared/Loading/Loading';
 import { useQuery } from '@tanstack/react-query';
-import banner from '../../assets/images/0jpg 1 (1).png'
+import banner from '../../assets/images/bannre/0jpg 1 (1).svg'
 const AdmissionForm = () => {
 
 

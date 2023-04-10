@@ -1,11 +1,13 @@
 import React from "react";
 import TypeWriterEffect from 'react-typewriter-effect';
 import "./Banner.css";
-import arrow from '../../assets/images/Arrow 6.png'
+import arrow from '../../assets/images/brand/Vector.svg'
+import { Link } from "react-router-dom";
+import LottieAnimation from "../shared/lottieAnimation/LottieAnimation";
 const Banner = () => {
 
   return (
-    <div id="lift-up" className="hero-Area-Ancor-Fixed">
+    <div  className="hero-Area-Ancor-Fixed">
       <div className="container">
         <div className="row hero-area">
           <div className="col-md-12 col-lg-12 col-xl-7">
@@ -38,6 +40,7 @@ const Banner = () => {
               </div>
 
               <p className="section-text">
+                
                 Get trained for top tech jobs by industry experts and (IIT/IIM
                 Alumni)
               </p>
@@ -52,6 +55,7 @@ const Banner = () => {
               </div>
 
             </div>
+            <LottieAnimation></LottieAnimation>
 
           </div>
         </div>
@@ -59,6 +63,7 @@ const Banner = () => {
       <div className="new_hero">
         <div className="new-text-hero">
           <div className="hero-h1">
+          <img src={arrow} alt="" />
             <TypeWriterEffect
               startDelay={100}
               cursorColor="transparent"
@@ -140,7 +145,7 @@ const Banner = () => {
                 <div className="md-6">
                   <div className="course course4">
                     <div className="course-inner">
-                      <a href="#super-program">
+                      <Link target="_blank" to={'/super'} >
                         <h1 style={{ colo: "black" }}>SUPER 30</h1>
                         <div className="program-content">
                           <p>
@@ -149,7 +154,7 @@ const Banner = () => {
                             Full Stack Web Development
                           </p>
                         </div>
-                      </a>
+                      </Link>
                       <div className="program">
                         <a href="#engineering-program">
                           <button>Program</button>

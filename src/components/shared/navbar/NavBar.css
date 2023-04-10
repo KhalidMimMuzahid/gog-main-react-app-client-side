@@ -13,6 +13,29 @@
   margin: 0;
 }
 
+a.text-dark.text-decoration-none.free {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #4BA25D;
+  border: 1px solid #4BA25D;
+  border-radius: 5px;
+  padding: 6px 11px;
+}
+
+
+a.text-dark.text-decoration-none.supper {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  background: #4BA25D;
+  border-radius: 5px;
+  padding: 6px 11px;
+  color: #fff !important;
+}
+
 .brand {
 
 

@@ -38,7 +38,7 @@ const Admin = () => {
 
     // referee get
     // react query data fatch
-    const url = `http://localhost:5000/referee`;
+    const url = `https://geeks-of-gurukul-server-side.vercel.app/referee`;
     const { data: referee = [], refetch, isLoading } = useQuery({
         queryKey: ['referee'],
         queryFn: async () => {
@@ -59,7 +59,7 @@ const Admin = () => {
 
     // delete referee
     const deleteProduct = (copuoninfo) => {
-        fetch(`http://localhost:5000/referee/${copuoninfo._id}`, {
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/referee/${copuoninfo._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -88,7 +88,7 @@ const Admin = () => {
             coupon, discount, selectprogramme, selectCourse
         }
         // fetch user post
-        fetch('http://localhost:5000/coupon', {
+        fetch('https://geeks-of-gurukul-server-side.vercel.app/coupon', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -126,7 +126,7 @@ const Admin = () => {
             name, phone, email, code
         }
         // fetch user post
-        fetch('http://localhost:5000/referee', {
+        fetch('https://geeks-of-gurukul-server-side.vercel.app/referee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

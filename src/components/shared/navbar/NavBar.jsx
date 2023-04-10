@@ -25,7 +25,7 @@ const NavBar = () => {
   // is Admin 
   // const [isAdmin] = useAdmin(user?.email)
 
-console.log(adminPart);
+// console.log(adminPart);
 
 
   // for the apply modal
@@ -44,7 +44,7 @@ console.log(adminPart);
 
   // getting data form React hook form
   const handleFormData = (applyData) => {
-    console.log(applyData);
+    // console.log(applyData);
 
     fetch("https://geeks-of-gurukul-server-side.vercel.app/apply-data", {
       method: "PUT",
@@ -71,20 +71,7 @@ console.log(adminPart);
       .catch((err) => console.log(err));
   };
 
-  const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/admin/${user?.email}`;
-  const { data: coupon = [], refetch, isLoading } = useQuery({
-    queryKey: ['coupon'],
-    queryFn: async () => {
-      const res = await fetch(urlcoupon, {
-        headers: {
-          // authorization: `bearer ${localStorage.getItem('accessToken')}`
-        }
 
-      });
-      const data = await res.json();
-      return data
-    }
-  })
 
   // console.log(coupon );
 
@@ -139,12 +126,12 @@ console.log(adminPart);
                     </Link>
                   </Nav.Link>
                   {
-                    user?.email === 'amitpaultl@gmail.com' || adminPart ?
+                    user?.email === 'amitpaultl@gmail.com' &&
                      <Nav.Link>
                       <Link className="text-decoration-none text-dark " to="/admin">
                         Admin
                       </Link>
-                    </Nav.Link> :''
+                    </Nav.Link> 
                   }
 
                   <NavDropdown

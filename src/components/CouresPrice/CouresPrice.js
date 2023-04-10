@@ -46,11 +46,11 @@ const CouresPrice = () => {
                                     <thead>
                                         <tr>
 
-                                            {/* <th scope="col">Program</th> */}
+                                            <th scope="col">Program</th>
                                             <th scope="col">Course</th>
                                             <th scope="col">Current Price</th>
                                             <th scope="col">New Price</th>
-                                            <th scope="col">Submit</th>
+                                            {/* <th scope="col">Submit</th> */}
                                         </tr>
                                     </thead>
                                     <tbody>

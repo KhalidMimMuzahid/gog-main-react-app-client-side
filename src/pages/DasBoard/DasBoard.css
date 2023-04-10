@@ -1,0 +1,195 @@
+.super-area {
+    padding: 80px 100px;
+    margin-top: 101px;
+    background: #2DC97E;
+    position: relative;
+}
+
+.eliii-img {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    z-index: 1;
+}
+
+.super-part {
+    padding: 33px 55px;
+    background: #FFFFFF;
+    box-shadow: 3px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    position: relative;
+}
+
+.super-img {
+    position: absolute;
+    bottom: 0;
+    right: 101px;
+}
+
+.super-img img {
+    width: 723px;
+}
+
+.eliii-img {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    z-index: 1;
+}
+
+.super-title {
+    position: relative;
+}
+
+.super-title:after {
+    position: absolute;
+    top: 17px;
+    left: -21px;
+    width: 10px;
+    height: 75%;
+    content: '';
+    background: #2DC97E;
+}
+
+.super-title h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 61px;
+    color: #2DC97E;
+    margin: 0;
+}
+
+.super-title h2 span {
+    color: #000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.super-title p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    margin: 0;
+}
+
+.super-title p span {
+    color: #BD2626;
+    font-weight: 600;
+}
+
+p.update {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 16px;
+    background: #000;
+    color: #fff;
+    margin-bottom: 0;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+p.update img {
+
+    margin-right: 12px;
+}
+
+.super-area ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.super-area ul li {
+    margin-top: 18px;
+}
+
+
+
+.super-area ul li svg {
+    margin-right: 11px;
+    font-size: 22px;
+}
+
+li.green-check svg {
+    color: #2DC97E;
+}
+
+p.note-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    border: 1px solid #000000;
+    border-radius: 29px;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 3px 9px;
+}
+
+h2.subtitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+p.upcomeing {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 23px;
+    margin-bottom: 0;
+}
+
+.course-all span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    background: #E6FFF3;
+    border-radius: 44px;
+    padding: 4px 12px;
+    margin-right: 10px;
+    margin-bottom: 9px;
+    display: inline-block;
+}
+
+.course-all {
+    margin-bottom: 14px;
+    width: 310px;
+    margin-top: 7px;
+}
+
+.apply-free button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: none;
+    background: #BF1515;
+    border-radius: 25px;
+    padding: 2px 19px;
+}
+
+.super-img {
+    position: absolute;
+    bottom: 0;
+    right: 101px;
+}
+
+.super-img img {
+    width: 723px;
+}

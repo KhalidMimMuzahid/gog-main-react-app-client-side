@@ -66,8 +66,8 @@ const AdmissionForm = () => {
 
     // Coupon get
     // react query data fatch
-    const urlcoupon = `http://localhost:5000/coupon`;
-    const { data: coupon = [], refetch, isLoading } = useQuery({
+    const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/coupon`;
+    const { data: coupon = [] } = useQuery({
         queryKey: ['coupon'],
         queryFn: async () => {
             const res = await fetch(urlcoupon, {
@@ -83,7 +83,7 @@ const AdmissionForm = () => {
 
     // Coupon get
     // react query data fatch
-    const urlrefel = `http://localhost:5000/referee`;
+    const urlrefel = `https://geeks-of-gurukul-server-side.vercel.app/referee`;
     const { data: referee = [] } = useQuery({
         queryKey: ['referee'],
         queryFn: async () => {
@@ -165,9 +165,7 @@ const AdmissionForm = () => {
 
 
 
-    if (isLoading) {
-        return <Loading></Loading>
-    }
+  
 
 
 
@@ -236,7 +234,7 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission ma-btt">
                                                 <p>Email Address</p>
-                                                <input type="email" disabled defaultValue={user?.email} name='email' />
+                                                <input type="email"  defaultValue={user?.email} name='email' />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -246,7 +244,7 @@ const AdmissionForm = () => {
                                                 {/* <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone' /> */}
                                                 <PhoneInput
 
-                                                    required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone'
+                                                    required disabled defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone'
                                                     defaultCountry="IN"
                                                     value={value}
                                                     onChange={setValue} />

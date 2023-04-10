@@ -8,7 +8,7 @@ const Banner = () => {
     <div id="lift-up" className="hero-Area-Ancor-Fixed">
       <div className="container">
         <div className="row hero-area">
-          <div className="col-md-12 col-lg-6 col-xl-7">
+          <div className="col-md-12 col-lg-12 col-xl-7">
             <div className="hero-left">
               <div className="heading-div">
 
@@ -42,8 +42,13 @@ const Banner = () => {
                 Alumni)
               </p>
               <div className="apply-now-btu">
-              <button className="apply-now">Apply Now</button>
-<img src={arrow} alt="" />
+                <button className="apply-now">Apply Now</button>
+                <div class="arrow">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
               </div>
 
             </div>
@@ -68,8 +73,8 @@ const Banner = () => {
           <div className="left-part">
             <div className="top-curly-brace">&#123;</div>
             <div className="course-box-container">
-              <div className="row">
-                <div className="col-md-6">
+              <div className="cou">
+                <div className="md-6 md-1">
                   <div className="course course1" >
                     <span className="topCotton">“</span>
                     <div className="course-inner">
@@ -91,7 +96,7 @@ const Banner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="md-6">
                   <div className="course course2">
                     <div className="course-inner">
                       <a href="#bees-program">
@@ -111,7 +116,7 @@ const Banner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
+                <div className="md-6 md-1">
                   <div className="course course3">
                     <div className="course-inner">
                       <a href="#engineering-program">
@@ -132,7 +137,7 @@ const Banner = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6"> 
+                <div className="md-6">
                   <div className="course course4">
                     <div className="course-inner">
                       <a href="#super-program">
@@ -153,7 +158,7 @@ const Banner = () => {
                     </div>
                     <span className="cohesion">“</span>
                   </div>
-                  
+
                 </div>
                 <div className="col-md-12">
                   <div className="retune-area">

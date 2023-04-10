@@ -132,11 +132,3 @@ p.education {
         font-size: 14px;
     }
 }
-@media (min-width: 100px) and (max-width: 472.98px) {
-
-    .hero-h1 h1 {
-       
-        font-size: 14px;
-        
-    }
-}

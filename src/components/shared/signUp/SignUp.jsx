@@ -54,6 +54,7 @@ const SignUp = () => {
             //saveUser(data.name, data.email, data.phone);
             setLoading(false)
     navigate("/signup/phone-sign-up");
+    //navigate("/signup/auto-name-fill");
           })
           .catch((err) => console.log(err));
       })
@@ -73,25 +74,26 @@ const SignUp = () => {
         //toast.success("Google verified");
         setLoading(false)
         navigate("/signup/phone-sign-up");
+        //navigate("/signup/auto-name-fill");
         //navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };
 
-  // for GitHub signin 
-  const handlegitHubSignin = () =>{
-    gitHubSignin()
-    .then((result) => {
-      const user = result.user;
-      //console.log("GitHub User ", user);
-      //saveUser(user.displayName, user.email);
-      //toast.success("Successfully logged in");
-      setLoading(false)
-      navigate("/signup/phone-sign-up");
-      //navigate(from, { replace: true });
-    })
-    .catch((error) => console.error(error));
-  }
+  // // for GitHub signin 
+  // const handlegitHubSignin = () =>{
+  //   gitHubSignin()
+  //   .then((result) => {
+  //     const user = result.user;
+  //     //console.log("GitHub User ", user);
+  //     //saveUser(user.displayName, user.email);
+  //     //toast.success("Successfully logged in");
+  //     setLoading(false)
+  //     navigate("/signup/phone-sign-up");
+  //     //navigate(from, { replace: true });
+  //   })
+  //   .catch((error) => console.error(error));
+  // }
 
   // for facebook signin 
   const handleFaceboolSignin = () =>{
@@ -103,6 +105,7 @@ const SignUp = () => {
       //toast.success("Successfully logged in");
       setLoading(false)
       navigate("/signup/phone-sign-up");
+      //navigate("/signup/auto-name-fill");
       //navigate(from, { replace: true });
     })
     .catch((error) => console.error(error));

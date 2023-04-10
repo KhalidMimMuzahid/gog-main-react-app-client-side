@@ -26,6 +26,7 @@ import PrivateRoute from "./PrivateRoute";
 import Admin from "../pages/Admin/Admin";
 import AdminRoute from "./AdminRoute";
 import PhoneSignUp from "../components/shared/phoneSignUp/PhoneSignUp";
+import AutoNameFill from "../components/shared/autoNameFill/AutoNameFill";
 
 
 export const router = createBrowserRouter([
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login/phone-sign-up',
                 element: <PhoneSignUp/>
+            },
+            {
+                path: '/signup/auto-name-fill',
+                element: <AutoNameFill/>
             },
             {
                 path: '/forget-pass',

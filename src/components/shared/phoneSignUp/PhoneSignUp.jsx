@@ -6,7 +6,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider";
-import "./PhoneSignUp.css"
+import "./PhoneSignUp.css";
 import { toast } from "react-hot-toast";
 
 const PhoneSignUp = () => {
@@ -30,13 +30,47 @@ const PhoneSignUp = () => {
     setError("");
     if (number === "" || number === undefined)
       return setError("Please enter a valid phone number!");
-    try {
-      const response = await setUpRecaptha(number);
-      setResult(response);
-      setFlag(true);
-    } catch (err) {
-      setError(err.message);
-    }
+
+// ------------------------check the phone number in database or not--------------------
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/checkuserindatabase", {
+      headers: {
+        "content-type": "application/json",
+        number: JSON.stringify(number),
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data: ",data)
+        if (data?.user?.phone) {
+          console.log("Phone number: ", data.phone);
+         setError("Phone number is alredy exist, Please go back to log in.");
+         return 
+        } else {
+          console.log("else optn opt")
+          const getCapta = async () => {
+            try {
+              
+              const response = await setUpRecaptha(number);
+              setResult(response);
+              setFlag(true);
+              console.log("This is the second of opt");
+            } catch (err) {
+              setError(err.message);
+            }
+          };
+          getCapta();
+        }
+      });
+// ------------------ End of this ---------------------------//
+ 
+    // try {
+    //   const response = await setUpRecaptha(number);
+    //   setResult(response);
+    //   setFlag(true);
+    // } catch (err) {
+    //   setError(err.message);
+    // }
+
   };
 
   const verifyOtp = async (e) => {
@@ -45,8 +79,8 @@ const PhoneSignUp = () => {
     if (otp === "" || otp === null) return;
     try {
       await result.confirm(otp);
-      
-      saveUser(user.displayName, user.email, numberUser)
+
+      saveUser(user.displayName, user.email, numberUser);
       console.log("SaveUSER::::::", saveUser);
       console.log("USRData.......", user);
       //navigate("/");
@@ -68,60 +102,62 @@ const PhoneSignUp = () => {
       .then((res) => res.json())
       .then((data) => {
         //console.log("save user", data);
-        toast.success("Verification successful.")
+        toast.success("Verification successful.");
         setLoading(false);
         navigate(from, { replace: true });
       });
   };
 
-    return (
-        <>
+  return (
+    <>
       <div className="col-md-12  mb-5 custom-mergin">
-      <div className="box  new-login-from-phone">
-        
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
-        <h2 className="mb-3">Enter your phone number</h2>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <PhoneInput
-              defaultCountry="IN"
-              value={number}
-              onChange={setNumber}
-              placeholder="Enter Phone Number"
-            />
-            <div id="recaptcha-container"></div>
-          </Form.Group>
-          <div className="button-right">
-            <Link to="/signup">
-              <Button variant="secondary">Cancel</Button>
-            </Link>
-            &nbsp;
-            <Button type="submit" variant="primary">
-              Send Otp
-            </Button>
-          </div>
-        </Form>
+        <div className="box  new-login-from-phone">
+          {error && <Alert variant="danger">{error}</Alert>}
+          <Form onSubmit={getOtp} style={{ display: !flag ? "block" : "none" }}>
+            <h2 className="mb-3">Enter your phone number</h2>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <PhoneInput
+                defaultCountry="IN"
+                value={number}
+                onChange={setNumber}
+                placeholder="Enter Phone Number"
+              />
+              <div id="recaptcha-container"></div>
+            </Form.Group>
+            <div className="button-right">
+              <Link to="/signup">
+                <Button variant="secondary">Cancel</Button>
+              </Link>
+              &nbsp;
+              <Button type="submit" variant="primary">
+                Send Otp
+              </Button>
+            </div>
+          </Form>
 
-        <Form onSubmit={verifyOtp} style={{ display: flag ? "block" : "none" }}>
-        <h2 className="mb-3">Enter your OTP</h2>
-          <Form.Group className="mb-3" controlId="formBasicOtp">
-            <Form.Control
-              type="otp"
-              placeholder="Enter OTP"
-              onChange={(e) => setOtp(e.target.value)}
-            />
-          </Form.Group>
-          <div className="button-right">
-            <Link to="/">
-              <Button variant="secondary">Cancel</Button>
-            </Link>
-            &nbsp;
-            <Button type="submit" variant="primary">
-              Verify
-            </Button>
-          </div>
-        </Form>
-      </div>
+          <Form
+            onSubmit={verifyOtp}
+            style={{ display: flag ? "block" : "none" }}
+          >
+            <h2 className="mb-3">Enter your OTP</h2>
+            <Form.Group className="mb-3" controlId="formBasicOtp">
+              <Form.Control
+                type="otp"
+                placeholder="Enter OTP"
+                onChange={(e) => setOtp(e.target.value)}
+              />
+            </Form.Group>
+            <div className="button-right">
+              <Link to="/">
+                <Button variant="secondary">Cancel</Button>
+              </Link>
+              &nbsp;
+              <Button type="submit" variant="primary">
+                Verify
+              </Button>
+            </div>
+          </Form>
+        </div>
       </div>
     </>
   );

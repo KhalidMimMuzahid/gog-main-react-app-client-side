@@ -71,7 +71,7 @@ console.log(adminPart);
       .catch((err) => console.log(err));
   };
 
-  const urlcoupon = `http://localhost:5000/admin/${user?.email}`;
+  const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/admin/${user?.email}`;
   const { data: coupon = [], refetch, isLoading } = useQuery({
     queryKey: ['coupon'],
     queryFn: async () => {
@@ -88,9 +88,9 @@ console.log(adminPart);
 
   console.log(coupon );
 
-  if(isLoading){
-    return <Loading></Loading>
-  }
+  // if(isLoading){
+  //   return <Loading></Loading>
+  // }
 
   return (
     <div className='menu-gr'>

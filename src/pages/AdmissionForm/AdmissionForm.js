@@ -122,7 +122,7 @@ const AdmissionForm = () => {
         console.log(usersInfo);
 
         // fetch user post
-        fetch('http://localhost:5000/booking', {
+        fetch('https://geeks-of-gurukul-server-side.vercel.app/booking', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

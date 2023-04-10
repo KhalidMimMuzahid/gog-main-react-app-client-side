@@ -165,7 +165,7 @@ const AdmissionForm = () => {
 
 
 
-  
+
 
 
 
@@ -220,6 +220,7 @@ const AdmissionForm = () => {
                         <div className="col-lg-7 col-md-12">
                             <div className="admission-from">
                                 <img src={banner} alt="" />
+
                                 <h4>Admission Form</h4>
                                 <form onSubmit={fromHandler}>
                                     <div className="row">
@@ -234,18 +235,17 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission ma-btt">
                                                 <p>Email Address</p>
-                                                <input type="email"  defaultValue={user?.email} name='email' />
+                                                <input type="email" defaultValue={user?.email} name='email' />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
 
                                             <div className="single-from-admission">
                                                 <p>Phone Number</p>
-                                                {/* <input type="tel" required defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone' /> */}
+                                                
                                                 <PhoneInput
-
-                                                    required disabled defaultValue={user?.phoneNumber ? user?.phoneNumber : ''} placeholder='Enter phone number ' name='phone'
                                                     defaultCountry="IN"
+                                                    placeholder="Enter phone number"
                                                     value={value}
                                                     onChange={setValue} />
                                             </div>
@@ -416,13 +416,7 @@ const AdmissionForm = () => {
                     </div>
 
                 </div>
-                <div className="wonder-area">
-                    <p>BASTA is India’s Largest Skill Building School enabling students to start their Tech-career and get <br /> placed at upto 40 LPA jobs as Data Analyst, Business Analyst, <br /> Data Scientist, Product Analyst Software Developer, Full Stack Web Developer etc.</p>
-                    <div className="wonder-btu">
-                        <button className="border">About us</button>
-                        <button>Apply Now</button>
-                    </div>
-                </div>
+   
             </div>
         </div>
     );

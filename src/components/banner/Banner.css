@@ -514,7 +514,11 @@ span.topCotton {
         text-align: center;
         
     }
-
+    .course-box-container {
+        margin: 0;
+        color: #000000;
+        padding-left: 0;
+    }
     .course {
        
         width: 213px;

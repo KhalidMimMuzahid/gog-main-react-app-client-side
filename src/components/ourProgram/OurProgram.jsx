@@ -61,7 +61,7 @@ const OurProgram = () => {
   return (
     <div className="program-area">
       <Helmet>
-        <title>OUR PROGRAM</title>
+        <title>Geeks of Gurukul</title>
         <meta
         name="keywords"
         content="Coding camps for students,Coding classes for kids,Coding projects for beginners,Full stack web development,Full stack Data analytics,Database management systems,Web development technologies,Artificial intelligence and machine learning

@@ -4,10 +4,25 @@ import "./Banner.css";
 import arrow from '../../assets/images/brand/Vector.svg'
 import { Link } from "react-router-dom";
 import LottieAnimation from "../shared/lottieAnimation/LottieAnimation";
+import { Helmet } from "react-helmet";
 const Banner = () => {
 
   return (
     <div  className="hero-Area-Ancor-Fixed">
+      <Helmet>
+        <title>Geeks Of Gurukul</title>
+        
+        <meta
+        name="keywords"
+        content="Coding camps for students,Coding classes for kids,Coding projects for beginners,Full stack web development,Full stack Data Science,Database management systems,Web development technologies,Artificial intelligence and machine learning
+              "
+        />
+        <meta
+          name="description"
+          content="India’s Best Gurukul Provides Fundamentals of Coding by IIT and IIM Experts. We improve problem-solving and critical thinking skills to stand in our technology world.  " />
+        <meta name="robots" content="index, follow"></meta>
+
+      </Helmet>
       <div className="container">
         <div className="row hero-area">
           <div className="col-md-12 col-lg-12 col-xl-7">

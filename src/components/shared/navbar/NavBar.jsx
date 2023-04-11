@@ -80,14 +80,14 @@ const NavBar = () => {
   // }
 
   return (
-      <div className='menu-gr'>
+      <div className='menu-gr shadow-sm'>
       {["xl"].map((expand) => (
           <Navbar
             key={expand}
             bg="white"
             sticky="top"
             expand={expand}
-            className="shadow-sm mb-custom px-5"
+            className=" m-0 mb-custom px-5"
           >
             <div className="container">
               <Navbar.Brand>

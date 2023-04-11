@@ -16,7 +16,7 @@ const Home = () => {
             <Brands></Brands>
             <Team></Team>
             <Accordions></Accordions>
-            <ScrollToTop color='#4CA358' style={{borderRadius: "50%", fontWeight:"bold"}}/>
+            <ScrollToTop color='#4CA358' style={{borderRadius: "50%", fontWeight:"bold", zIndex:"12"}}/>
             {/* <WhatsAppMessage/> */}
         </div>
     );

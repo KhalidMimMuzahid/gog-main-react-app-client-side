@@ -11,7 +11,7 @@
 
 
 .course-inner h1 {
-    color: black;
+    color: #56A661;;
     font-weight: 700;
     font-family: 'Montserrat';
 }
@@ -140,7 +140,7 @@
 
 .program-content p {
     font-size: 12px;
-    color: #6e6e6e;
+    color: #000000;
     margin: 0;
     padding-left: 3px;
     font-family: 'Montserrat';
@@ -160,7 +160,7 @@
     border: 1px solid #4ba25d;
     font-size: 13px;
     font-weight: 500;
-    background-color: #4ba25d;
+    background-color: #000;
 }
 
 .md-6 {
@@ -171,7 +171,7 @@
 }
 
 .course4{
-    background-color: #0DB760;
+    background-color: #56A661;
     color: #fff;
     margin-top: 0;
 }
@@ -320,9 +320,16 @@
     border-radius: 5px;
 }
 
-.apply-now-btu img {
-    margin-left: 41px;
-    width: auto;
+ .arrow-img img {
+    width: 301px;
+}
+
+
+
+.arrow-img {
+    position: absolute;
+    left: 181px;
+    bottom: 10px;
 }
 
 .apply-now:hover,
@@ -376,32 +383,38 @@ span.topCotton {
     position: relative;
 }
 
-.arrow {
+.down-arrow .arrow {
     position: absolute;
-    top: 66%;
-    right: -93px;
+    top: 20%;
+    right: 48%;
     transform: translate(-50%, -50%);
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     cursor: pointer;
 }
 
-.arrow span {
+.down-arrow .arrow span {
     display: block;
-    width: 1.5vw;
-    height: 1.5vw;
-    border-bottom: 5px solid black;
-    border-right: 5px solid black;
-    transform: rotate(45deg);
-    margin: -10px;
+    width: 33px;
+    height: 33px;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    transform: rotate(69deg);
+    margin: -31px;
     animation: animate 2s infinite;
 }
 
-.arrow span:nth-child(2) {
+.down-arrow .arrow span:nth-child(2) {
     animation-delay: -0.2s;
 }
 
-.arrow span:nth-child(3) {
+.down-arrow .arrow span:nth-child(3) {
     animation-delay: -0.4s;
+}
+
+.down-arrow {
+    position: relative;
+    margin-bottom: 52px;
+    display: none;
 }
 
 @keyframes animate {
@@ -456,9 +469,7 @@ span.topCotton {
         font-size: 39px;
     }
 
-.arrow{
-    display: none;
-}
+
 
     .new_hero {
         position: relative;
@@ -660,5 +671,16 @@ span.topCotton {
         margin-left: 54px;
         color: #000000;
         padding-left: 34px;
+    }
+}
+
+@media(min-width: 100px) and (max-width: 1200.98px) {
+    .arrow-img{
+        display: none;
+    }
+
+    .down-arrow {
+        
+        display: block;
     }
 }

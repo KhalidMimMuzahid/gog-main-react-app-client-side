@@ -18,8 +18,8 @@ a.text-dark.text-decoration-none.free {
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  color: #4BA25D;
-  border: 1px solid #4BA25D;
+  color: #4BA25D !important;
+  border: 1px solid #000000;
   border-radius: 5px;
   padding: 6px 11px;
 }
@@ -110,7 +110,7 @@ a.text-dark.text-decoration-none.supper {
   display: flex;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -567px;
   z-index: 1;
   background: #fff;
   box-shadow: 0 0 1px #000;
@@ -167,15 +167,18 @@ a.menu-color:hover {
     right: -300px;
   }
 }
-@media (min-width: 1100px) and (max-width: 1200.98px) {
+@media (min-width: 100px) and (max-width: 1200.98px) {
   .top-menu {
-    right: -197px;
+    right: 0px;
   }
-}
-@media (min-width: 1200px) and (max-width: 1352.98px) {
+
   .top-menu {
-    right: -97px;
-  }
+    display: block;
+    position: relative;
+    
 }
+}
+
+
 
 

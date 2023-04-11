@@ -4,7 +4,7 @@ import "./Banner.css";
 import arrow from '../../assets/images/brand/Vector.svg'
 import { Link } from "react-router-dom";
 import LottieAnimation from "../shared/lottieAnimation/LottieAnimation";
-<<<<<<< HEAD
+import arrowimg from '../../assets/images/Arrow 6 (1).png'
 import { Helmet } from "react-helmet";
 const Banner = () => {
 
@@ -24,13 +24,6 @@ const Banner = () => {
         <meta name="robots" content="index, follow"></meta>
 
       </Helmet>
-=======
-import arrowimg from '../../assets/images/Arrow 6 (1).png'
-const Banner = () => {
-
-  return (
-    <div className="hero-Area-Ancor-Fixed">
->>>>>>> c9cec0983aba1f85dd3d73056bcab7d1052a2a9c
       <div className="container">
         <div className="row hero-area">
           <div className="col-md-12 col-lg-12 col-xl-7">

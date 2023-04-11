@@ -4,6 +4,7 @@ import "./Banner.css";
 import arrow from '../../assets/images/brand/Vector.svg'
 import { Link } from "react-router-dom";
 import LottieAnimation from "../shared/lottieAnimation/LottieAnimation";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
 const Banner = () => {
 
@@ -23,6 +24,13 @@ const Banner = () => {
         <meta name="robots" content="index, follow"></meta>
 
       </Helmet>
+=======
+import arrowimg from '../../assets/images/Arrow 6 (1).png'
+const Banner = () => {
+
+  return (
+    <div className="hero-Area-Ancor-Fixed">
+>>>>>>> c9cec0983aba1f85dd3d73056bcab7d1052a2a9c
       <div className="container">
         <div className="row hero-area">
           <div className="col-md-12 col-lg-12 col-xl-7">
@@ -55,16 +63,16 @@ const Banner = () => {
               </div>
 
               <p className="section-text">
-                
+
                 Get trained for top tech jobs by industry experts and (IIT/IIM
                 Alumni)
               </p>
               <div className="apply-now-btu">
-                <button className="apply-now">Apply Now</button>
-                <div class="arrow">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                <button className="apply-now">Our Courses</button>
+
+
+                <div className="arrow-img">
+                  <img src={arrowimg} alt="" />
                 </div>
 
               </div>
@@ -72,13 +80,23 @@ const Banner = () => {
             </div>
             <LottieAnimation></LottieAnimation>
 
+            <div className="down-arrow">
+              <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+
+
           </div>
         </div>
       </div>
       <div className="new_hero">
         <div className="new-text-hero">
           <div className="hero-h1">
-          <img src={arrow} alt="" />
+            <img src={arrow} alt="" />
             <TypeWriterEffect
               startDelay={100}
               cursorColor="transparent"

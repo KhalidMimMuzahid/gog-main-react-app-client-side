@@ -542,7 +542,8 @@ span.topCotton {
     }
 
     .hero-inner {
-        padding-left: 0px;
+        /* padding-left: 0px; */
+        padding-left: 70px;
     }
 
 

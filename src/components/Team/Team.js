@@ -24,12 +24,21 @@ import education from '../../assets/images/teams/Guwahati.png'
 import education1 from '../../assets/images/teams/Kharagpur.png'
 //import education2 from '../../assets/images/teams/Madras .png'
 import education3 from '../../assets/images/teams/Roorkee .png'
+import { Helmet } from "react-helmet";
 // import education4 from '../../assets/images/teams/sandeep.jpeg'
 // import education5 from '../../assets/images/teams/Thapar.png'
 
 const Team = () => {
     return (
         <div className="slider-area" id="temnn">
+            <Helmet>
+                <title>Our Team</title>
+                <meta name="keywords" content="Curriculum design,Education standards,Learning objectives,Assessment strategies,,Student engagement,Teacher professional development,Instructional technology,Classroom management"/>
+                    <meta
+                    name="description"
+                    content="Get to know our expert curriculum team dedicated to providing top-quality education standards, innovative approaches, and student engagement strategies. " />
+                    <meta name="robots" content="index, follow"></meta>
+            </Helmet>
             <div className="team-title container">
                 <h4>OUR TEAM</h4>
                 <h2>MEET OUR Team</h2>

@@ -6,14 +6,14 @@ import './Super.css'
 import elipimg from '../../assets/images/Ellipse 4.png'
 import image from '../../assets/images/Group 9343su.png'
 import vector from '../../assets/images/Vector.png'
-import bannerSuper from '../../assets/images/bannre/landing.svg'
+import bannerSuper from '../../assets/images/bannre/hurr.svg'
 const Super = () => {
     return (
         <div>
             <div className="banner-super">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-12">
+                        <div className="col-md-5">
                             <div className="super-banner">
                                 <img src={bannerSuper} alt="" />
                             </div>

@@ -29,7 +29,7 @@ const Login = () => {
         toast.success('Successfully logged in')
         setLoading(false)
         // checking the phone is verified or not
-        fetch(`http://localhost:5000/userinfoforphone/${data.email}`)
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${data.email}`)
         .then(res => res.json())
         .then(data =>{
             // setusername(data) ;
@@ -60,7 +60,7 @@ const Login = () => {
         toast.success('Successfully logged in');
         setLoading(false)
         // checking the phone is verified or not
-        fetch(`http://localhost:5000/userinfoforphone/${user.email}`)
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
         .then(res => res.json())
         .then(data =>{
             // setusername(data) ;
@@ -89,7 +89,7 @@ const Login = () => {
       toast.success("Successfully logged in");
       setLoading(false)
       // checking the phone is verified or not
-      fetch(`http://localhost:5000/userinfoforphone/${user.email}`)
+      fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
       .then(res => res.json())
       .then(data =>{
           // setusername(data) ;

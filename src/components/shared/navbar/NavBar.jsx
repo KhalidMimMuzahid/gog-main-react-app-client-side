@@ -260,7 +260,7 @@ const NavBar = () => {
                     </Button>
                   </span>
 
-                  {/* {user?.uid ? (
+                  {user?.uid ? (
                     <>
                       <Button onClick={handleLogOut} variant="outline-dark ">
                         Log Out
@@ -272,7 +272,7 @@ const NavBar = () => {
                         <Button variant="outline-dark ">Sign Up</Button>
                       </span>
                     </Link>
-                  )} */}
+                  )}
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
             </div>

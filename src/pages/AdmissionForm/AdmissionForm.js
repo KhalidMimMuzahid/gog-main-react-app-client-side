@@ -223,9 +223,9 @@ const AdmissionForm = () => {
 
     // set loading
 
-    if (loading) {
-        return <Loading></Loading>
-    }
+    // if (loading) {
+    //     return <Loading></Loading>
+    // }
 
 
     return (

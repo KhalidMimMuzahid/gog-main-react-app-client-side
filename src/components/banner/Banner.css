@@ -74,6 +74,10 @@
 .hero-inner {
     padding-left: 30px;
 }
+.hero-inner {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 .top-curly-brace {
     font-size: 35px;
@@ -552,7 +556,8 @@ span.topCotton {
     }
 
     .hero-inner {
-        padding-left: 0px;
+        /* padding-left: 0px; */
+        padding-left: 70px;
     }
 
 

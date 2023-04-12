@@ -540,6 +540,10 @@ span.topCotton {
         
     }
 
+    span.cohesion, span.topCotton{
+        display: none;
+    }
+
     .md-6.md-1 {
         margin: 0;
     }
@@ -556,8 +560,7 @@ span.topCotton {
     }
 
     .hero-inner {
-        /* padding-left: 0px; */
-        padding-left: 70px;
+        padding-left: 0px;
     }
 
 

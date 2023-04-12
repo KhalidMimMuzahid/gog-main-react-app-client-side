@@ -540,6 +540,20 @@ span.topCotton {
         
     }
 
+    span.cohesion, span.topCotton{
+        display: none;
+    }
+
+    .md-6.md-1 {
+        margin: 0;
+    }
+
+    .cou {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .main-heading h1 {
         
         text-align: center;
@@ -547,7 +561,6 @@ span.topCotton {
 
     .hero-inner {
         padding-left: 0px;
-        /* padding-left: 70px; */
     }
 
 
@@ -625,7 +638,19 @@ span.topCotton {
     }
 }
 
-@media (min-width: 100px) and (max-width: 764.98px) {
+@media (min-width: 100px) and (max-width: 656.98px) {
+    .md-6.md-1 {
+        margin: 0;
+    }
+
+    .cou {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media (min-width: 100px) and (max-width: 657.98px) {
     .hero-Area-Ancor-Fixed .container {
 
         width: auto;

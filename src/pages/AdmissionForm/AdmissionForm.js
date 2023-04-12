@@ -47,13 +47,30 @@ const AdmissionForm = () => {
     // refelhande
     const [refelInput, setrefelInput] = useState(0)
 
+    // refelhande
+    const [username, setusername] = useState([])
+
     // data lode 
     useEffect(() => {
-        fetch('price.json')
+        fetch('http://localhost:5000/program')
             .then(res => res.json())
-            .then(data => setCoursName(data))
+            .then(data => setCoursName(data?.data))
     }, [])
 
+    //user  data lode 
+    useEffect(() => {
+        setLoading(true)
+        fetch(`http://localhost:5000/userinfo/${user?.email}`)
+            .then(res => res.json())
+            .then(data =>{
+                setusername(data) ;
+                setLoading(false)
+            } ) 
+    }, [])
+
+    console.log(username);
+
+  
     //main price filter 
     const mainCourse = courseName?.filter(nameCourse => aselectCourse === nameCourse?.name)
 
@@ -228,25 +245,25 @@ const AdmissionForm = () => {
 
                                             <div className="single-from-admission ma-btt">
                                                 <p>Full Name</p>
-                                                <input type="text" required name="name" defaultValue={user?.displayName} />
+                                                <input type="text" required name="name" defaultValue={username?.name} />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
 
                                             <div className="single-from-admission ma-btt">
                                                 <p>Email Address</p>
-                                                <input type="email" defaultValue={user?.email} name='email' />
+                                                <input type="email" defaultValue={username?.email} name='email' />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
 
                                             <div className="single-from-admission">
                                                 <p>Phone Number</p>
-                                                
+
                                                 <PhoneInput
                                                     defaultCountry="IN"
                                                     placeholder="Enter phone number"
-                                                    value={value}
+                                                    value={username?.phone}
                                                     onChange={setValue} />
                                             </div>
                                         </div>
@@ -416,7 +433,7 @@ const AdmissionForm = () => {
                     </div>
 
                 </div>
-   
+
             </div>
         </div>
     );

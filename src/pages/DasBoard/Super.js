@@ -7,19 +7,30 @@ import elipimg from '../../assets/images/Ellipse 4.png'
 import image from '../../assets/images/Group 9343su.png'
 import vector from '../../assets/images/Vector.png'
 import bannerSuper from '../../assets/images/bannre/hurr.svg'
+import banner from '../../assets/images/bannre/border.svg'
 const Super = () => {
     return (
         <div>
             <div className="banner-super">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-5">
+                    <div className="sloop">
+                        <div className="sm">
                             <div className="super-banner">
                                 <img src={bannerSuper} alt="" />
                             </div>
                         </div>
+                        <div className="sm">
+                            <div className="super-text">
+                                <h1> <span>Enrollment for</span>   SUPER-30 </h1>
+                                <p>Job Guarantee Batch</p>
+                                <button>Reserve Pre Course Seat</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+                <img className='border-img' src={banner} alt="" />
+
             </div>
             <div className='super-area'>
                 <div className="eliii-img">

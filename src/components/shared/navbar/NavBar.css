@@ -24,6 +24,12 @@ a.text-dark.text-decoration-none.free {
   padding: 6px 11px;
 }
 
+.userProfileIcon button#dropdown-basic {
+  background-color: white;
+  color: #585656;
+  border: none;
+}
+
 
 a.text-dark.text-decoration-none.supper {
   font-family: 'Poppins';
@@ -53,7 +59,35 @@ a.text-dark.text-decoration-none.supper {
 .mb-custom {
   margin-bottom: 20px;
 }
-
+.droupdownlogout2 {
+  padding-left: 16px;
+}
+.droupdownlogout button svg {
+  margin-right: 5px;
+}
+.droupdownlogout a{
+  text-decoration: none;
+  color: black;
+  padding-left: 17px;
+}
+.droupdownlogout button{
+  padding-left: 16px;
+  background-color: white;
+  color: black;
+  border: none;
+}
+.droupdownlogout button:hover{
+  background-color: white;
+  color: black;
+  border: none;
+}
+.droupdownlogout button.btn.btn-primary:active {
+  background-color: white;
+  color: black;
+}
+.droupdownlogout a:hover{
+  color: black;
+}
 .mb-custom2 {
   margin-bottom: -20px;
 }

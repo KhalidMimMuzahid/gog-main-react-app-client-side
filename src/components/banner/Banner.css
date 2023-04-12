@@ -546,8 +546,8 @@ span.topCotton {
     }
 
     .hero-inner {
-        /* padding-left: 0px; */
-        padding-left: 70px;
+        padding-left: 0px;
+        /* padding-left: 70px; */
     }
 
 
@@ -599,6 +599,7 @@ span.topCotton {
     .hero-inner {
         justify-content: center;
         align-items: center;
+        padding-left: 70px;
     }
 
     .course h1 {

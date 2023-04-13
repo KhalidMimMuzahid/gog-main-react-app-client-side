@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
@@ -19,8 +19,8 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || '/';
 
+
   const handleSignUp = (data) => {
-    console.log(data);
     setSignUPError('');
     signIn(data.email, data.password)
       .then(result => {
@@ -28,13 +28,27 @@ const Login = () => {
         console.log(user);
         toast.success('Successfully logged in')
         setLoading(false)
-        navigate(from, { replace: true });
+        // checking the phone is verified or not
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${data.email}`)
+        .then(res => res.json())
+        .then(data =>{
+            // setusername(data) ;
+            // setLoading(false)
+            console.log(data);
+            if(data.status === 200) {
+              navigate(from, { replace: true });
+            } else{
+              navigate("/login/phone-sign-up");
+            }
+        } ) 
       })
       .catch(error => {
         console.log(error)
         setSignUPError(error.message)
       });
   }
+
+
 
   // google sign in handle 
   const handleGoogleSignIn = () => {
@@ -43,10 +57,24 @@ const Login = () => {
         const user = result.user;
         //console.log(user);
         //saveUser(user.displayName, user.email);
-        //toast.success('Successfully logged in');
+        toast.success('Successfully logged in');
         setLoading(false)
-        //navigate(from, { replace: true });
-        navigate("/login/phone-sign-up");
+        // checking the phone is verified or not
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
+        .then(res => res.json())
+        .then(data =>{
+            // setusername(data) ;
+            // setLoading(false)
+            console.log(data);
+            if(data.status === 200) {
+              navigate(from, { replace: true });
+            } else{
+              navigate("/login/phone-sign-up");
+            }
+        } )
+
+        // //navigate(from, { replace: true });
+        // navigate("/login/phone-sign-up");
       })
       .catch(error => console.error(error));
   }
@@ -58,10 +86,23 @@ const Login = () => {
       const user = result.user;
       //console.log("Facebook user: ", user);
       //saveUser(user.displayName, user.email);
+      toast.success("Successfully logged in");
       setLoading(false)
-      //toast.success("Successfully logged in");
-      //navigate(from, { replace: true });
-      navigate("/login/phone-sign-up");
+      // checking the phone is verified or not
+      fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
+      .then(res => res.json())
+      .then(data =>{
+          // setusername(data) ;
+          // setLoading(false)
+          console.log(data);
+          if(data.status === 200) {
+            navigate(from, { replace: true });
+          } else{
+            navigate("/login/phone-sign-up");
+          }
+      } )
+      // //navigate(from, { replace: true });
+      // navigate("/login/phone-sign-up");
     })
     .catch((error) => console.error(error));
   }
@@ -141,6 +182,7 @@ const Login = () => {
                     <div className="from-box-input">
                       <input type="email"
                         name="email"
+                        //onChange={(e) => setUser(e.target.value)}
                         placeholder="Email Address"
                         {...register("email", {
 

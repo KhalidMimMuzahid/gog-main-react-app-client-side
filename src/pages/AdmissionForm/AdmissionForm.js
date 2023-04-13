@@ -52,7 +52,7 @@ const AdmissionForm = () => {
 
     // data lode 
     useEffect(() => {
-        fetch('http://localhost:5000/program')
+        fetch('https://geeks-of-gurukul-server-side.vercel.app/program')
             .then(res => res.json())
             .then(data => setCoursName(data?.data))
     }, [])
@@ -60,7 +60,7 @@ const AdmissionForm = () => {
     //user  data lode 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/userinfo/${user?.email}`)
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfo/${user?.email}`)
             .then(res => res.json())
             .then(data =>{
                 setusername(data) ;
@@ -223,9 +223,9 @@ const AdmissionForm = () => {
 
     // set loading
 
-    if (loading) {
-        return <Loading></Loading>
-    }
+    // if (loading) {
+    //     return <Loading></Loading>
+    // }
 
 
     return (

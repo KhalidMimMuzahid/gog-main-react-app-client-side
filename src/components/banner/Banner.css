@@ -612,6 +612,7 @@ span.topCotton {
     .hero-inner {
         justify-content: center;
         align-items: center;
+        padding-left: 70px;
     }
 
     .course h1 {

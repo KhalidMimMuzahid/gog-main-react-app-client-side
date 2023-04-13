@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { confirmPasswordReset, createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, RecaptchaVerifier, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPhoneNumber, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
+import { confirmPasswordReset, createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, RecaptchaVerifier, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPhoneNumber, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.init';
 
 export const AuthContext = createContext();
@@ -82,9 +82,17 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, profile);
     }
 
+    const verifyEmail = () => {
+        return sendEmailVerification(auth.currentUser);
+    }
+
     // authe state chane monitor 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentUser => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            
+            // if(currentUser === null || currentUser.emailVerified) {
+            //     setUser(currentUser);
+            // }
             setUser(currentUser);
             setLoading(false)
         });
@@ -108,6 +116,7 @@ const AuthProvider = ({ children }) => {
         adminPart,
         auth,
         setUpRecaptha,
+        verifyEmail
     }
     return (
         <AuthContext.Provider value={authInfo}>

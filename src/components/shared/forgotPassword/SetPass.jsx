@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, Navigate, useLocation } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthProvider';
 import { toast } from 'react-hot-toast';
 
 const SetPass = () => {
     const {confirmPassword } = useContext(AuthContext);
     const location = useLocation();  
+    const navigate = useNavigate();
 
     //console.log("location::::::", location);
     const { register, handleSubmit, formState: { errors } } = useForm(); // ract hook from
@@ -27,7 +28,7 @@ const SetPass = () => {
             // const user = result.user;
             // console.log(user);
             toast.success('Password reset completed.');
-            //Navigate('./login');
+            navigate('./login');
           })
           .catch(error => {
             console.log(error)

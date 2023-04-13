@@ -142,7 +142,7 @@ const PhoneSignUp = () => {
       .then((res) => res.json())
       .then((data) => {
         //console.log("save user", data);
-        toast.success("Verification successful.");
+        toast.success("Phone verification successful.");
         setLoading(false);
         navigate("/admissionForm");
       });

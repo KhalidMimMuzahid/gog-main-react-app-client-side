@@ -252,7 +252,7 @@ const NavBar = () => {
                   <Nav.Link>
                     <Link
                       className="text-dark text-decoration-none free"
-                      to={"/"}
+                      to={"/super"}
                     >
                       Super 30 Details
                     </Link>

@@ -1,10 +1,12 @@
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
+/* body{
+  background-color: #fff;
+} */
+/*
 
-
-
-/* css copyed form previous code  */
+css copyed form previous code 
     .wrapper_pop.showm {
       visibility: visible;
       opacity: 1;
@@ -13,7 +15,7 @@
 
     
 
-    /* .modal {
+    .modal {
       position: fixed;
       left: 0;
       top: 0;
@@ -24,7 +26,7 @@
       visibility: hidden;
       transform: scale(1.1);
       transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-    } */
+    }
 
     .wrapper_pop {
       position: fixed;
@@ -262,7 +264,7 @@
 
     @media screen and (max-width: 600px) {
       .wrapper_pop{
-        /* display: block; */
+        display: block;
     height: auto;
     width: 90vw;
     position: fixed;
@@ -311,4 +313,4 @@
     flex-direction: column;
     }
 
-  }  
+  }   */

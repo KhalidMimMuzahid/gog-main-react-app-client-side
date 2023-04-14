@@ -7,7 +7,7 @@
 }
 
 .banner-super {
-    padding-top: 180px;
+    padding-top: 130px;
     background: #fff;
 }
 
@@ -242,7 +242,7 @@ p.upcomeing {
 }
 
 .super-banner {
-    width: 367px;
+    width: auto;
 }
 
 .sm {
@@ -252,6 +252,7 @@ p.upcomeing {
 .sloop {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /* road map */
@@ -623,6 +624,12 @@ p.update {
 .super-title h2 span{
     font-size: 18px;
 }
+}
+
+@media (min-width: 768px) and (max-width: 1200.98px){
+    .super-banner {
+        width: 360px;
+    }
 }
 
 @media (min-width: 100px) and (max-width: 421.98px){

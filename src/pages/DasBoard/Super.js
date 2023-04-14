@@ -38,7 +38,6 @@ const Super = () => {
 
                     </div>
                 </div>
-                <img className='border-img' src={banner} alt="" />
 
             </div>
             <div className="super-course-area">
@@ -67,9 +66,9 @@ const Super = () => {
                                             <ul>
                                                 <li className='green-check'><AiFillCheckSquare></AiFillCheckSquare>Attend 5 days Free Pre-Course</li>
                                                 <li className='green-check'>
-                                                    
+
                                                     <AiFillCheckSquare></AiFillCheckSquare>
-                                                     AClear “Super-30 Entrance Exam” after Pre-Course</li>
+                                                    AClear “Super-30 Entrance Exam” after Pre-Course</li>
                                             </ul>
                                             <p className='note-text'>Note : Only Students who clear Super-30 Entrance Exam will get seat   </p>
                                             <h2 className="subtitle">
@@ -78,7 +77,7 @@ const Super = () => {
                                             <ul>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>100% Job Guarantee for Super-30 Graduate Student</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate provided by Geeks of Gurukul</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course completion certificate provided by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course completion certificate power by Skill India</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Latter of recommendation provided by Geeks of Gurukul</li>
                                             </ul>
                                             <p className="upcomeing">
@@ -107,13 +106,13 @@ const Super = () => {
                                         <div className="super-part">
                                             <div className="super-title secant-part">
                                                 <h2>SUPER-30 <span>Job Guarantee Batch</span></h2>
-                                                <p>Get Placed as a  <span>Full Stack Web Developer</span> </p>
+                                                <p>Get Placed as a  <span>Full Stack Data Scientist</span> </p>
                                             </div>
                                             <div className="super-title dis secant-part">
                                                 <h2>SUPER-30 </h2>
                                                 <h2><span>Job Guarantee Batch</span></h2>
                                                 <p>Get Placed as a   </p>
-                                                <p><span>Full Stack Web Developer</span></p>
+                                                <p><span>Full Stack Data Scientist </span></p>
                                             </div>
                                             <p className="update">
                                                 <img src={vector} alt="" />
@@ -130,18 +129,18 @@ const Super = () => {
                                             <ul>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>100% Job Guarantee for Super-30 Graduate Student</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate provided by Geeks-Of-Gurukul</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course Completion Certificate provided by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course Completion Certificate power by Skill India</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Letter Of Recommendation provided by Geeks of Gurukul</li>
                                             </ul>
                                             <p className="upcomeing">
                                                 Upon Course Completion, You’ll Become :
                                             </p>
                                             <div className="course-all secant-part">
-                                                <span>Full stack Developer</span>
-                                                <span>React Developer</span>
-                                                <span>MERN stack Developer</span>
-                                                <span>Frontend Developer</span>
-                                                <span>Backend Developer</span>
+                                                <span>Data Scientist</span>
+                                                <span>Data Analyst</span>
+                                                <span>Data Engineer</span>
+                                                <span>Product Analyst</span>
+                                                <span>Business Analyst</span>
                                             </div>
                                             <div className="apply-free">
                                                 <button>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
@@ -174,7 +173,7 @@ const Super = () => {
                                     <img className='arrowimg' src={arrowroad} alt="" />
                                     <div className="single-btu">
                                         <img src={road1} alt="" />
-                                        <p>AClear Super 30 <br />
+                                        <p> Clear Super 30 <br />
                                             Entrance Exam</p>
                                     </div>
                                     <img className='arrowimg' src={arrowroad} alt="" />
@@ -224,7 +223,7 @@ const Super = () => {
                     <div className="row">
                         <div className="col-md-6">
                             <div className="super-about">
-                                <h2>About the Full stack Data Science Pragram</h2>
+                                <h2>About the Full Stack Data Science Pragram</h2>
                                 <p>A Full Stack Data Science Program is a comprehensive training program that covers all the essential skills and knowledge required for a data scientist to work effectively in a modern data-driven organization. It typically includes training in programming, statistics, data visualization, data engineering, machine learning, and deep learning.
 
                                 </p>
@@ -232,8 +231,9 @@ const Super = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="super-about">
-                                <h2>About the Full stack Data Science Pragram</h2>
-                                <p>A Full Stack Data Science Program is a comprehensive training program that covers all the essential skills and knowledge required for a data scientist to work effectively in a modern data-driven organization. It typically includes training in programming, statistics, data visualization, data engineering, machine learning, and deep learning.
+                                <h2>About Full Stack Web Development Program</h2>
+                                <p>A Full Stack Web Development Program is a comprehensive training program that covers all the essential skills and knowledge required for a web developer to work effectively in a modern web development organization. It typically includes training in both front-end and back-end web development.
+                                    Front-end web development involves creating the user-
 
                                 </p>
                             </div>

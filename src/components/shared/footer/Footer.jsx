@@ -36,7 +36,7 @@ const Footer = () => {
                                 <h4>Geeks of Gurukul</h4>
                                 <ul className='emails'>
                                     
-                                    <li><Link to="mailto:support@geeksofgurulkul.com">support@geeksofgurulkul.com</Link></li>
+                                    <li><Link to="mailto:support@geeksofgurulkul.com">support@geeksofgurukul.com</Link></li>
                                     <li><Link to="mailto:admission@geeksofgurukul.com">admission@geeksofgurukul.com</Link></li>
                                 </ul>
                             </div>

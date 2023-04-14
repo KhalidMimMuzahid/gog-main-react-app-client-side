@@ -14,7 +14,7 @@ const Accordions = () => {
                                 <Accordion.Header>Where is Geeks of Gurukul
                                     Located ?</Accordion.Header>
                                 <Accordion.Body>
-                                    The Head Office of geeks of Gurukuk is located in
+                                    The Head Office of Geeks of Gurukul is located in
                                     Bengaluru, India.
                                     All programs provided by Geeks of Gurukul are held
                                     online in an interactive environment.

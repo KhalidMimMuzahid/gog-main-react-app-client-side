@@ -26,7 +26,8 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         console.log(user);
-        toast.success('Successfully logged in')
+        saveUser(user.displayName, user.email);
+        //toast.success('Successfully logged in')
         setLoading(false)
         // checking the phone is verified or not
         fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${data.email}`)
@@ -36,7 +37,12 @@ const Login = () => {
             // setLoading(false)
             console.log(data);
             if(data.status === 200) {
-              navigate(from, { replace: true });
+              if(user.emailVerified) {
+                navigate(from, { replace: true });
+              } else {
+                toast.success("Check you inbox & Please verify your email address");
+              }
+              
             } else{
               navigate("/login/phone-sign-up");
             }
@@ -56,7 +62,7 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         //console.log(user);
-        //saveUser(user.displayName, user.email);
+        saveUser(user.displayName, user.email);
         toast.success('Successfully logged in');
         setLoading(false)
         // checking the phone is verified or not
@@ -85,7 +91,7 @@ const Login = () => {
     .then((result) => {
       const user = result.user;
       //console.log("Facebook user: ", user);
-      //saveUser(user.displayName, user.email);
+      saveUser(user.displayName, user.email);
       toast.success("Successfully logged in");
       setLoading(false)
       // checking the phone is verified or not
@@ -134,7 +140,7 @@ const Login = () => {
       .then(res => res.json())
       .then(data => {
         //console.log("save user", data);
-        navigate('/');
+        //navigate('/');
       })
   }
 

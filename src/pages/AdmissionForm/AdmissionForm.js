@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import './AdmissionForm.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Accordion from 'react-bootstrap/Accordion';
 import { AuthContext } from '../../context/AuthProvider';
 import { toast } from 'react-hot-toast';
@@ -333,7 +333,7 @@ const AdmissionForm = () => {
                                             </div>
                                             <div className="check-box-btu">
                                                 <input type="checkbox" checked />
-                                                <span>Opted for Digital Basta</span>
+                                                <span>I accept all <Link style={{textDecoration:"none"}} to='/conditon'>Terms & Conditions</Link> </span>
                                             </div>
                                             <div className="submit-btu">
                                                 <button type='submit'>Pay</button>

@@ -26,6 +26,7 @@ import Admin from "../pages/Admin/Admin";
 import AdminRoute from "./AdminRoute";
 import PhoneSignUp from "../components/shared/phoneSignUp/PhoneSignUp";
 import Super from "../pages/DasBoard/Super";
+import ReDirectAcionByFirabase from "../components/shared/forgotPassword/ReDirectAcionByFirabase";
 
 
 export const router = createBrowserRouter([
@@ -59,8 +60,12 @@ export const router = createBrowserRouter([
                 element: <ForgetPassword/>
             },
             {
-                path: '/set-pass',
-                element: <SetPass/>
+                path: '/authentication-access',
+                element: <ReDirectAcionByFirabase/>
+            },
+            {
+                path: '/authentication-access/login',
+                element: <Login/>
             },
             {
                 path: '/login',

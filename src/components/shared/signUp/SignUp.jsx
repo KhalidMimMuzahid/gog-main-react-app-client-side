@@ -18,7 +18,7 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm(); // ract hook from
-  const { createUser, updateUserProfile, googleSignIn, FaceboolSignin, gitHubSignin, setLoading, auth, setUpRecaptha } =
+  const { createUser, updateUserProfile, verifyEmail, googleSignIn, FaceboolSignin, gitHubSignin, setLoading, auth, setUpRecaptha } =
     useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();
@@ -42,21 +42,22 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         //console.log(user);
-        //toast.success("User Created Successfully.");
-    const userInfo = {
-      displayName: data.name,
-      email: data.email,
-      phone: data.phone,
-    };
+        const userInfo = {
+          displayName: data.name,
+          email: data.email,
+          phone: data.phone,
+        }
         updateUserProfile(userInfo)
-          .then(() => {
+        toast.success("Please verify your email address before login.");
+        handleEmailVerification();
+          // .then(() => {
             //console.log("Save Use: ", userInfo);
             //saveUser(data.name, data.email, data.phone);
-            setLoading(false)
-    navigate("/signup/phone-sign-up");
-    //navigate("/signup/auto-name-fill");
-          })
-          .catch((err) => console.log(err));
+        setLoading(false)
+        navigate("/signup/phone-sign-up");
+            //navigate("/signup/auto-name-fill");
+          // })
+          // .catch((err) => console.log(err));
       })
       .catch((error) => {
         console.log(error);
@@ -109,6 +110,13 @@ const SignUp = () => {
       //navigate(from, { replace: true });
     })
     .catch((error) => console.error(error));
+  }
+
+  // email verification send 
+  const handleEmailVerification = () => {
+    verifyEmail()
+    // .than(() => {})
+    // .catch(error => console.error(error));
   }
 
   const saveUser = (name, email, phone) => {

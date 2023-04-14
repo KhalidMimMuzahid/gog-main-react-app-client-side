@@ -1,3 +1,7 @@
+.container-fluid {
+    max-width: 1495px;
+}
+
 .super-banner img {
     width: 100%;
 }
@@ -111,6 +115,7 @@ p.update img {
     font-style: normal;
     font-weight: 300;
     font-size: 11px;
+    display: flex;
 }
 
 .super-course-area {
@@ -121,6 +126,7 @@ p.update img {
 .super-area ul li svg {
     margin-right: 6px;
     font-size: 14px;
+    min-width: 14px;
 }
 
 li.green-check svg {
@@ -352,7 +358,6 @@ img.arrowimg {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    text-align: justify;
     color: #000000;
 }
 
@@ -496,6 +501,10 @@ li.green-check.secant-part svg {
     background: rgba(173, 129, 255, 0.25);
 }
 
+.super-title.dis{
+    display: none;
+}
+
 @media (min-width: 10px) and (max-width: 1430.98px) { 
     .super-img {
         
@@ -542,7 +551,7 @@ li.green-check.secant-part svg {
     .super-text button {
        
         font-size: 18px;
-        padding: 0px;
+        padding: 0px 10px;
         margin-top: 10px;
     }
 
@@ -569,12 +578,14 @@ li.green-check.secant-part svg {
 }
 
 @media (min-width: 100px) and (max-width: 767.98px){
-    .super-banner{
-        display: none;
-    }
-
+    
+.super-banner{
+    width: auto;
+    margin-bottom: 20px;
+}
     .sloop {
-        justify-content: center;
+        display: block;
+        text-align: center;
     }
 
     .super-text {
@@ -593,9 +604,7 @@ li.green-check.secant-part svg {
         width: auto;
     }
 
-    .winner{
-        display: block;
-    }
+
 
     .single-btu.yellow p {
         font-size: 11px;
@@ -614,4 +623,32 @@ p.update {
 .super-title h2 span{
     font-size: 18px;
 }
+}
+
+@media (min-width: 100px) and (max-width: 421.98px){
+
+    .super-title{
+        display: none;
+    }
+
+    .super-title.dis {
+        display: block;
+        text-align: center;
+    }
+
+    p.update img{
+        display: none;
+    }
+
+   .single-btu.yellow img{
+        display: none;
+    }
+
+    .winner {
+        gap: 10px;
+    }
+
+    .right-winer .single-btu.yellow{
+        padding: 10px;
+    }
 }

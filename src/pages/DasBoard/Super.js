@@ -54,13 +54,22 @@ const Super = () => {
                                                 <h2>SUPER-30 <span>Job Guarantee Batch</span></h2>
                                                 <p>Get Placed as a  <span>Full Stack Web Developer</span> </p>
                                             </div>
+                                            <div className="super-title dis">
+                                                <h2>SUPER-30 </h2>
+                                                <h2><span>Job Guarantee Batch</span></h2>
+                                                <p>Get Placed as a   </p>
+                                                <p><span>Full Stack Web Developer</span></p>
+                                            </div>
                                             <p className="update">
                                                 <img src={vector} alt="" />
                                                 To get seat in SUPER-30 batch eligibility are :
                                             </p>
                                             <ul>
                                                 <li className='green-check'><AiFillCheckSquare></AiFillCheckSquare>Attend 5 days Free Pre-Course</li>
-                                                <li className='green-check'><AiFillCheckSquare></AiFillCheckSquare>AClear “Super-30 Entrance Exam” after Pre-Course</li>
+                                                <li className='green-check'>
+                                                    
+                                                    <AiFillCheckSquare></AiFillCheckSquare>
+                                                     AClear “Super-30 Entrance Exam” after Pre-Course</li>
                                             </ul>
                                             <p className='note-text'>Note : Only Students who clear Super-30 Entrance Exam will get seat   </p>
                                             <h2 className="subtitle">
@@ -68,9 +77,9 @@ const Super = () => {
                                             </h2>
                                             <ul>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>100% Job Guarantee for Super-30 Graduate Student</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate powered by Geeks-Of-Gurukul</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course Completion Certificate powered by Geeks of Gurukul</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Letter Of Recommendation powered by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate provided by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course completion certificate provided by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Latter of recommendation provided by Geeks of Gurukul</li>
                                             </ul>
                                             <p className="upcomeing">
                                                 Upon Course Completion, You’ll Become :
@@ -100,6 +109,12 @@ const Super = () => {
                                                 <h2>SUPER-30 <span>Job Guarantee Batch</span></h2>
                                                 <p>Get Placed as a  <span>Full Stack Web Developer</span> </p>
                                             </div>
+                                            <div className="super-title dis secant-part">
+                                                <h2>SUPER-30 </h2>
+                                                <h2><span>Job Guarantee Batch</span></h2>
+                                                <p>Get Placed as a   </p>
+                                                <p><span>Full Stack Web Developer</span></p>
+                                            </div>
                                             <p className="update">
                                                 <img src={vector} alt="" />
                                                 To get seat in SUPER-30 batch eligibility are :
@@ -114,9 +129,9 @@ const Super = () => {
                                             </h2>
                                             <ul>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>100% Job Guarantee for Super-30 Graduate Student</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate powered by Geeks-Of-Gurukul</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course Completion Certificate powered by Geeks of Gurukul</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Letter Of Recommendation powered by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate provided by Geeks-Of-Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course Completion Certificate provided by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Letter Of Recommendation provided by Geeks of Gurukul</li>
                                             </ul>
                                             <p className="upcomeing">
                                                 Upon Course Completion, You’ll Become :
@@ -192,7 +207,7 @@ const Super = () => {
                                             <div className="single-btu yellow">
                                                 <img src={road6} alt="" />
                                                 <p>If not Placed, <br />
- 100% Fee Refund*</p>
+                                                    100% Fee Refund*</p>
                                             </div>
                                         </div>
                                     </div>

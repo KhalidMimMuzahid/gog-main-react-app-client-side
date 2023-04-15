@@ -169,15 +169,25 @@ const Super = () => {
                         </div>
                         <div className="col-xl-4 col-lg-12">
                             <div>
-                                <h2 className='next-batch'>Nex Batch start soon</h2>
-                                <div className="question-area">
-                                    <h1>Have Question </h1>
+                                    
+                                <div>
+                                    <h2  className='question-area text-center'> 
+                                    <div className='road-title'>
+                                        <h1>DOWNLOAD</h1>
+                                    </div>
+                                        <button className='super-text Super30Brochere'>Super 30 Brochure</button> 
+                                    </h2>
+                                </div>
+                                <div className="question-area ">
+                                    <div className='road-title'>
+                                        <h1 style={{textShadow:"2px 2px 4px #969696"}}>ANY QUESTION ?</h1>
+                                    </div>
                                     <button>Request callback</button>
                                 </div>
                             </div>
                             <div className="road-map">
 
-                                <div className="road-title">
+                                <div className="road-title road-map-paddeing-bottom">
                                     <h1>ROAD MAP</h1>
                                 </div>
                                 <p className='free-apply'>

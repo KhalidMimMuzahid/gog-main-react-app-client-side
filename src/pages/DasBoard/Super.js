@@ -80,7 +80,7 @@ const Super = () => {
                                                 <li className='green-check'>
 
                                                     <AiFillCheckSquare></AiFillCheckSquare>
-                                                    AClear “Super-30 Entrance Exam” after Pre-Course</li>
+                                                    Clear “Super-30 Entrance Exam” after Pre-Course</li>
                                             </ul>
                                             <p className='note-text'>Note : Only Students who clear Super-30 Entrance Exam will get seat   </p>
                                             <h2 className="subtitle">
@@ -132,7 +132,7 @@ const Super = () => {
                                             </p>
                                             <ul>
                                                 <li className='green-check secant-part'><AiFillCheckSquare></AiFillCheckSquare>Attend 5 days Free Pre-Course</li>
-                                                <li className='green-check secant-part'><AiFillCheckSquare></AiFillCheckSquare>AClear “Super-30 Entrance Exam” after Pre-Course</li>
+                                                <li className='green-check secant-part'><AiFillCheckSquare></AiFillCheckSquare>Clear “Super-30 Entrance Exam” after Pre-Course</li>
                                             </ul>
                                             <p className='note-text'>Note : Only Students who clear Super-30 Entrance Exam will get seat   </p>
                                             <h2 className="subtitle">
@@ -141,7 +141,7 @@ const Super = () => {
                                             <ul>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>100% Job Guarantee for Super-30 Graduate Student</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate provided by Geeks-Of-Gurukul</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course Completion Certificate power by Skill India</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course Completion Certificate powered by Skill India</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Letter Of Recommendation provided by Geeks of Gurukul</li>
                                             </ul>
                                             <p className="upcomeing">

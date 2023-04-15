@@ -49,7 +49,7 @@ const Super = () => {
                                         </div>
                                         <div className="sm">
                                             <div className="super-text">
-                                                <h1> <span>Enrollment for</span>   SUPER-30 </h1>
+                                                <h1 style={{fontSize:"40px", fontFamily: "Inter", fontWeight: "600"}}> <span>Enrollment for</span>   SUPER-30 </h1>
                                                 <p>Job Guarantee Batch</p>
                                                 <button>Reserve Pre Course Seat</button>
                                             </div>
@@ -180,7 +180,7 @@ const Super = () => {
                                 </div>
                                 <div className="question-area ">
                                     <div className='road-title'>
-                                        <h1 style={{textShadow:"2px 2px 4px #969696"}}>ANY QUESTION ?</h1>
+                                        <h1 >ANY QUESTION ?</h1>
                                     </div>
                                     <button>Request callback</button>
                                 </div>

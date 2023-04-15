@@ -182,9 +182,9 @@ const Banner = () => {
                         </div>
                       </Link>
                       <div className="program">
-                        <a href="#engineering-program">
+                        <Link to='/super'>
                           <button>Program</button>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <span className="cohesion">“</span>

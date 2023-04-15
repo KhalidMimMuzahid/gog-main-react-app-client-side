@@ -235,6 +235,7 @@ p.upcomeing {
     padding: 11px 18px;
     border-radius: 5px;
     margin-top: 45px;
+    cursor: none !important;
 }
 
 .super-text {
@@ -582,6 +583,8 @@ li.green-check.secant-part svg {
 
 .pay-area {
     text-align: center;
+    padding-bottom: 30px;
+    padding-top: 23px;
 }
 
 .fade.modal-pay.modal.show .modal-dialog {

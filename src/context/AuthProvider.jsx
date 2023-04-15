@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState('user available')
+    const [user, setUser] = useState(null)
 
     // is admin
     const [adminPart, setadmin] = useState(false)
@@ -93,6 +93,7 @@ const AuthProvider = ({ children }) => {
             // if(currentUser === null || currentUser.emailVerified) {
             //     setUser(currentUser);
             // }
+            console.log("currentUser: ", currentUser)
             setUser(currentUser);
             setLoading(false)
         });

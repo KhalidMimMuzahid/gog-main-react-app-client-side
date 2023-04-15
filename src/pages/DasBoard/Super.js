@@ -34,7 +34,7 @@ const Super = () => {
                     <div className="sloop">
                         <div className="sm">
                             <div className="super-banner">
-                                <img src={bannerSuper} alt="" />
+                                <img src={bannerSuper} alt="Banner tmage " />
                             </div>
                         </div>
                         <div className="sm">

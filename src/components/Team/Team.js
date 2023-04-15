@@ -32,7 +32,7 @@ const Team = () => {
     return (
         <div className="slider-area" id="temnn">
             <Helmet>
-                <title>Our Team</title>
+                <title>Geeks of Gurukul</title>
                 <meta name="keywords" content="Curriculum design,Education standards,Learning objectives,Assessment strategies,,Student engagement,Teacher professional development,Instructional technology,Classroom management"/>
                     <meta
                     name="description"

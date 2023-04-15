@@ -375,6 +375,7 @@ img.arrowimg {
 .single-btu p span {
     color: #BD2626;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .single-btu p span.yellow {
@@ -502,17 +503,133 @@ li.green-check.secant-part svg {
     background: rgba(173, 129, 255, 0.25);
 }
 
-.super-title.dis{
+.super-title.dis {
     display: none;
 }
 
-@media (min-width: 10px) and (max-width: 1430.98px) { 
+/* modal */
+
+.single-list span {
+    padding: 9px;
+}
+
+.list-option {
+    border: 1px solid #000000;
+    border-radius: 12px;
+    text-align: left;
+    max-width: 542px;
+    margin: auto;
+}
+
+.single-list span {
+    width: 50%;
+    display: inline-block;
+    border: 1px solid #000000;
+}
+
+.modal-title.h4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    background: #000000;
+    border-radius: 39px;
+    text-align: center;
+    color: #fff;
+    padding: 11px 30px;
+}
+
+.pay-area h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 16px;
+    margin-top: 15px;
+}
+
+.pay-area h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.pay-area p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.pay-area p span {
+    color: #BD2626;
+    font-weight: 400;
+}
+
+.modal-title.h4 span.green {
+    color: #56A661;
+}
+
+.modal-title.h4 span.red {
+    color: #F22D2D;
+}
+
+.pay-area .modal-content {
+    max-width: 715px;
+}
+
+
+.pay-area {
+    text-align: center;
+}
+
+.fade.modal-pay.modal.show .modal-dialog {
+    max-width: 770px;
+}
+
+
+.pay-area span.red {
+    color: #F22D2D;
+}
+
+h4.modal-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    color: #fff;
+    padding: 5px 8px;
+    background: #000000;
+    border-radius: 39px;
+    margin-bottom: 17px;
+}
+
+.pay-area span.green {
+    color: #56A661;
+}
+
+span.rede1 {border-top-left-radius: 10px;}
+
+span.right.rede2 {
+    border-top-right-radius: 10px;
+}
+
+span.lest1 {
+    border-bottom-left-radius: 10px;
+}
+
+span.right.lest2 {
+    border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 10px) and (max-width: 1430.98px) {
     .super-img {
-        
+
         right: 0;
     }
 
-    .super-img img{
+    .super-img img {
         width: auto;
     }
 
@@ -521,36 +638,36 @@ li.green-check.secant-part svg {
     }
 }
 
-@media (min-width: 100px) and (max-width: 1200.98px)  {
-    .super-text h1{
+@media (min-width: 100px) and (max-width: 1200.98px) {
+    .super-text h1 {
         font-size: 50px;
     }
 
-    .super-text p{
+    .super-text p {
         font-size: 30px;
     }
 
     .road-map {
-       
+
         text-align: center;
     }
 
-    .road-title h1:after{
+    .road-title h1:after {
         background-color: transparent;
     }
 
-    p.free-apply{
+    p.free-apply {
         display: inline-block;
     }
 }
 
-@media (min-width: 100px) and (max-width: 790.98px){
-    .super-img{
+@media (min-width: 100px) and (max-width: 790.98px) {
+    .super-img {
         display: none;
     }
 
     .super-text button {
-       
+
         font-size: 18px;
         padding: 0px 10px;
         margin-top: 10px;
@@ -579,12 +696,13 @@ li.green-check.secant-part svg {
     }
 }
 
-@media (min-width: 100px) and (max-width: 767.98px){
-    
-.super-banner{
-    width: auto;
-    margin-bottom: 20px;
-}
+@media (min-width: 100px) and (max-width: 767.98px) {
+
+    .super-banner {
+        width: auto;
+        margin-bottom: 20px;
+    }
+
     .sloop {
         display: block;
         text-align: center;
@@ -594,7 +712,7 @@ li.green-check.secant-part svg {
         text-align: center;
     }
 
-    .course-all{
+    .course-all {
         width: auto;
     }
 
@@ -602,7 +720,7 @@ li.green-check.secant-part svg {
         width: auto;
     }
 
-    .single-btu{
+    .single-btu {
         width: auto;
     }
 
@@ -613,29 +731,29 @@ li.green-check.secant-part svg {
     }
 
     .single-btu.yellow p span {
-        
+
         font-size: 13px;
     }
 
-p.update {
+    p.update {
 
-    padding: 10px 18px;
+        padding: 10px 18px;
+    }
+
+    .super-title h2 span {
+        font-size: 18px;
+    }
 }
 
-.super-title h2 span{
-    font-size: 18px;
-}
-}
-
-@media (min-width: 768px) and (max-width: 1200.98px){
+@media (min-width: 768px) and (max-width: 1200.98px) {
     .super-banner {
         width: 360px;
     }
 }
 
-@media (min-width: 100px) and (max-width: 421.98px){
+@media (min-width: 100px) and (max-width: 421.98px) {
 
-    .super-title{
+    .super-title {
         display: none;
     }
 
@@ -644,11 +762,11 @@ p.update {
         text-align: center;
     }
 
-    p.update img{
+    p.update img {
         display: none;
     }
 
-   .single-btu.yellow img{
+    .single-btu.yellow img {
         display: none;
     }
 
@@ -656,7 +774,16 @@ p.update {
         gap: 10px;
     }
 
-    .right-winer .single-btu.yellow{
+    .right-winer .single-btu.yellow {
         padding: 10px;
+    }
+
+    h4.modal-title {
+ 
+        font-size: 15px;
+    }
+
+    .single-list {
+        font-size: 10px;
     }
 }

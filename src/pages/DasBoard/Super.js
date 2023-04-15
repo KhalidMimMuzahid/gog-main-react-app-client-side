@@ -17,7 +17,16 @@ import road4 from '../../assets/images/bannre/road4.svg'
 import road5 from '../../assets/images/bannre/road5.svg'
 import road6 from '../../assets/images/bannre/road6.svg'
 import arrowroad from '../../assets/images/bannre/arrowroad.svg'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
+import { useState } from 'react';
 const Super = () => {
+    const [show, setShow] = useState(false);
+
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
     return (
         <div>
             <div className="banner-super">
@@ -185,7 +194,7 @@ const Super = () => {
                                     <img className='arrowimg' src={arrowroad} alt="" />
                                     <div className="single-btu">
                                         <img src={road3} alt="" />
-                                        <p>Pay Fees <br /> <span>Know Details</span></p>
+                                        <p>Pay Fees <br /> <span onClick={handleShow}>Know Details</span></p>
                                     </div>
                                     <img className='arrowimg' src={arrowroad} alt="" />
                                     <div className="single-btu yellow">
@@ -241,6 +250,53 @@ const Super = () => {
                     </div>
                 </div>
             </div>
+
+            {/* modal */}
+            <div>
+                <Modal className="modal-pay" show={show} onHide={handleClose}>
+                    
+                    <Modal.Body>
+                        <div className="pay-area">
+                            <h4 className="modal-title">
+                                <span className='green'>SUPER-30</span>  Job Guarantee Batch <span className='red'>Payment Structure</span>
+                            </h4>
+                            <p>Pay in One time  :  <span className='green'> 60,000</span> </p>
+                            <h1>OR</h1>
+                            <h2>EMI option/Month:</h2>
+                            <div className="list-option">
+                                <div className="single-list rede">
+                                    <span className='rede1'>1. First Month </span>
+                                    <span className='right rede2'>₹ 11000</span>
+                                </div>
+                                <div className="single-list">
+                                    <span>2. Second Month  </span>
+                                    <span className='right'>₹ 11000</span>
+                                </div>
+                                <div className="single-list">
+                                    <span>3. Third Month </span>
+                                    <span className='right'>₹ 11000</span>
+                                </div>
+                                <div className="single-list">
+                                    <span>4. Fourth Month  </span>
+                                    <span className='right'>₹ 11000</span>
+                                </div>
+                                <div className="single-list">
+                                    <span>5. Fifth Month </span>
+                                    <span className='right'>₹ 11000</span>
+                                </div>
+                                <div className="single-list ">
+                                    <span className='lest1'>6.Sixth Month </span>
+                                    <span className='right lest2'>₹ 11000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Modal.Body>
+
+                </Modal>
+            </div>
+
+
+
         </div>
     );
 };

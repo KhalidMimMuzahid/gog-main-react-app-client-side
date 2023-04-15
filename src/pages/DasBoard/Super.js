@@ -31,21 +31,7 @@ const Super = () => {
         <div>
             <div className="banner-super">
                 <div className="container">
-                    <div className="sloop">
-                        <div className="sm">
-                            <div className="super-banner">
-                                <img src={bannerSuper} alt="Banner tmage " />
-                            </div>
-                        </div>
-                        <div className="sm">
-                            <div className="super-text">
-                                <h1> <span>Enrollment for</span>   SUPER-30 </h1>
-                                <p>Job Guarantee Batch</p>
-                                <button>Reserve Pre Course Seat</button>
-                            </div>
-                        </div>
 
-                    </div>
                 </div>
 
             </div>
@@ -54,6 +40,23 @@ const Super = () => {
                     <div className="row">
                         <div className="col-xl-8 col-lg-12">
                             <div className="row">
+                                <div className="col-md-12">
+                                    <div className="sloop">
+                                        <div className="sm">
+                                            <div className="super-banner">
+                                                <img src={bannerSuper} alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="sm">
+                                            <div className="super-text">
+                                                <h1> <span>Enrollment for</span>   SUPER-30 </h1>
+                                                <p>Job Guarantee Batch</p>
+                                                <button>Reserve Pre Course Seat</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                                 <div className="col-md-12">
                                     <div className='super-area'>
 
@@ -165,7 +168,15 @@ const Super = () => {
 
                         </div>
                         <div className="col-xl-4 col-lg-12">
+                            <div>
+                                <h2 className='next-batch'>Nex Batch start soon</h2>
+                                <div className="question-area">
+                                    <h1>Have Question </h1>
+                                    <button>Request callback</button>
+                                </div>
+                            </div>
                             <div className="road-map">
+
                                 <div className="road-title">
                                     <h1>ROAD MAP</h1>
                                 </div>
@@ -223,6 +234,8 @@ const Super = () => {
 
                             </div>
                         </div>
+
+
                     </div>
 
                 </div>
@@ -254,7 +267,7 @@ const Super = () => {
             {/* modal */}
             <div>
                 <Modal className="modal-pay" show={show} onHide={handleClose}>
-                    
+
                     <Modal.Body>
                         <div className="pay-area">
                             <h4 className="modal-title">

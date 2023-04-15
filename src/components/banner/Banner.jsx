@@ -175,7 +175,7 @@ const Banner = () => {
                         <h1 style={{ colo: "black" }}>SUPER 30</h1>
                         <div className="program-content">
                           <p>
-                            Full Stack Data Analysis
+                            Full Stack Data science
                             <br />
                             Full Stack Web Development
                           </p>

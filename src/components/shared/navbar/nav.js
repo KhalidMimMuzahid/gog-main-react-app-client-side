@@ -153,7 +153,7 @@
                 className="text-dark text-decoration-none free"
                 to={"/hire"}
               >
-                Free Assessment Test
+                Assessment Test
               </Link>
             </Nav.Link>
 
@@ -272,14 +272,14 @@
     {signUpError && <p className="text-red-600">{signUpError}</p>}
   </form>
 </div> */}
-      {/* <AdmissionForm></AdmissionForm> */}
+      <AdmissionForm></AdmissionForm>
 
       {/* //-------------------- end form  --------------------------------------------- */}
     </Modal.Body>
     <Modal.Footer>
-      {/* <Button variant="outline-secondary" onClick={handleClose}>
+      <Button variant="outline-secondary" onClick={handleClose}>
 Close
-</Button> */}
+</Button>
     </Modal.Footer>
   </Modal>
 </div>

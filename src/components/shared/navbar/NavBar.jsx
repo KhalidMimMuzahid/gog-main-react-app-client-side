@@ -263,7 +263,7 @@ const NavBar = () => {
                       className="text-dark text-decoration-none supper"
                       to={"/super"}
                     >
-                      Free Assesment Test
+                      Assesment Test
                     </Link>
                   </Nav.Link>
                 </Nav>

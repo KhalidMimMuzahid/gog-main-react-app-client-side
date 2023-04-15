@@ -7,8 +7,7 @@
 }
 
 .banner-super {
-    padding-top: 130px;
-    background: #fff;
+    padding-top: 70px;
 }
 
 img.border-img {
@@ -206,7 +205,7 @@ p.upcomeing {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 70px;
+    font-size: 30px;
     color: #2DC97E;
     margin: 0;
 }
@@ -220,7 +219,7 @@ p.upcomeing {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 51px;
+    font-size: 30px;
     margin: 0;
     color: #000000;
 }
@@ -229,12 +228,12 @@ p.upcomeing {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     color: #FFFFFF;
     background: #000;
-    padding: 11px 18px;
+    padding: 10px 18px;
     border-radius: 5px;
-    margin-top: 45px;
+    margin-top: 15px;
     cursor: none !important;
 }
 
@@ -243,7 +242,8 @@ p.upcomeing {
 }
 
 .super-banner {
-    width: auto;
+    max-width: 215px;
+
 }
 
 .sm {
@@ -254,15 +254,64 @@ p.upcomeing {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 33px 55px;
+    border-radius: 13px;
 }
 
+/* hero area */
+
+h2.next-batch {
+    background: #fff;
+    padding: 14px 22px;
+    border-radius: 13px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.question-area {
+    background: #fff;
+    margin-bottom: 30px;
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 13px;
+}
+
+.question-area h1 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: left;
+}
+
+.question-area button {
+    text-align: center;
+    color: #2DC97E;
+    font-size: 20px;
+    border-radius: 13px;
+    font-weight: bold;
+    padding: 7px 17px;
+    margin: 11px;
+    border: 1px solid #2DC97E;
+    background: #fff;
+}
+
+.right-area{
+    background: #FFFFFF;
+    border-radius: 12px;
+    height: 100%;
+}
 /* road map */
 
 .road-map {
     padding: 25px;
     background: #FFFFFF;
     border-radius: 12px;
-    height: 100%;
+  
 }
 
 .road-title h1:after {
@@ -662,6 +711,10 @@ span.right.lest2 {
     p.free-apply {
         display: inline-block;
     }
+
+    h2.next-batch{
+        margin-top: 30px;
+    }
 }
 
 @media (min-width: 100px) and (max-width: 790.98px) {
@@ -685,7 +738,7 @@ span.right.lest2 {
     }
 
     .banner-super {
-        padding-top: 132px;
+        padding-top: 43px;
         padding-bottom: 30px;
     }
 

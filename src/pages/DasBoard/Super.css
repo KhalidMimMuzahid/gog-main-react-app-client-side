@@ -229,7 +229,7 @@ p.upcomeing {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    color: #4BA25D;
+    /* color: #4BA25D; */
     background: white;
     padding: 10px 18px;
     border-radius: 5px;
@@ -240,15 +240,36 @@ p.upcomeing {
 .super-text {
     text-align: end;
 }
+.reserve_pre_cources_button button {
+    width: 300px;
+    position: relative;
+}
+
 
 .super-banner {
     max-width: 225px;
 
 }
+.reserve_pre_cources_button{
+    /* display: flex; */
+    flex-direction: column;
 
-/* .Super30Brochere {
-    color: black !important;
-} */
+}
+.reserve_pre_cources_button button:after {
+    position: absolute;
+    content: "";
+    background: #4BA25D;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    left: -30px;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.Super30Brochere {
+    margin-top: 1px !important;
+}
 
 .sm {
     display: inline-block;
@@ -282,6 +303,7 @@ h2.next-batch {
     padding: 15px 30px;
     text-align: center;
     border-radius: 13px;
+    height: 97px;
 }
 
 .question-area h1 {
@@ -295,11 +317,11 @@ h2.next-batch {
 .question-area button {
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 10px;
     /* font-weight: bold; */
     padding: 7px 17px;
-    margin: 11px;
+    margin: 0px;
     border: 1px solid black;
     background: black;
 }
@@ -363,7 +385,7 @@ p.free-apply {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    background: #BD2626;
+    background: #2DC97E;
     border-radius: 46px;
     padding: 9px 20px;
     margin-bottom: 1px;
@@ -836,6 +858,9 @@ span.right.lest2 {
 
 @media (min-width: 100px) and (max-width: 421.98px) {
 
+    .top-div{
+        margin-top: 30px;
+    }
     .super-title {
         display: none;
     }

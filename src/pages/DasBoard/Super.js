@@ -51,7 +51,10 @@ const Super = () => {
                                             <div className="super-text">
                                                 <h1 style={{fontSize:"40px", fontFamily: "Inter", fontWeight: "600"}}> <span>Enrollment for</span>   SUPER-30 </h1>
                                                 <p>Job Guarantee Batch</p>
-                                                <button>Reserve Pre Course Seat</button>
+                                                <div className="reserve_pre_cources_button">
+                                                     <button>Full Stack Web Development</button>
+                                                    <button>Full Stack Data Science</button>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -168,15 +171,13 @@ const Super = () => {
 
                         </div>
                         <div className="col-xl-4 col-lg-12">
-                            <div>
+                            <div className='top-div'>
                                     
-                                <div>
-                                    <h2  className='question-area text-center'> 
+                                <div className='question-area text-center '>
                                     <div className='road-title'>
                                         <h1>DOWNLOAD</h1>
                                     </div>
-                                        <button className='super-text Super30Brochere'>Super 30 Brochure</button> 
-                                    </h2>
+                                    <button className='super-text Super30Brochere'>SUPER 30 Brochure</button> 
                                 </div>
                                 <div className="question-area ">
                                     <div className='road-title'>
@@ -190,9 +191,14 @@ const Super = () => {
                                 <div className="road-title road-map-paddeing-bottom">
                                     <h1>ROAD MAP</h1>
                                 </div>
-                                <p className='free-apply'>
+                                {/* <p className='free-apply'>
                                     Apply for free Pre-course
-                                </p>
+                                </p> */}
+                                <div className="single-btu">
+                                        <img src={road} alt="" />
+                                        <p>Apply for free<br />
+                                        Pre-course</p>
+                                    </div>
                                 <div className="road-btu">
                                     <img className='arrowimg' src={arrowroad} alt="" />
                                     <div className="single-btu">

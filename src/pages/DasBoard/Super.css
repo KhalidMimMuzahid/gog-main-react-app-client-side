@@ -869,6 +869,15 @@ span.right.lest2 {
 }
 
 @media (min-width: 100px) and (max-width: 421.98px) {
+
+    .reserve_pre_cources_button button:after{
+        content: none;
+    }
+
+    .reserve_pre_cources_button button{
+        width: auto;
+    }
+
     .sloop {
        
         padding: 33px 0px;

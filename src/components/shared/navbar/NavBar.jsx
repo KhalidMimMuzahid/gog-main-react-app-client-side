@@ -95,7 +95,6 @@ const NavBar = () => {
               <Link to={"/"}>
                 <img
                   className="brand"
-                  style={{ width: "9rem" }}
                   src={logo}
                   alt="logo"
                 />

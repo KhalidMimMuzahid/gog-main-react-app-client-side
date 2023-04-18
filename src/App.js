@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div>
-        {/* <Chat/> */}
+        <Chat/>
         <RouterProvider router={router}></RouterProvider>
         <Toaster />
       </div>

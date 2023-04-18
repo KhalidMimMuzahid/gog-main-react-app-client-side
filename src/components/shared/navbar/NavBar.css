@@ -44,7 +44,7 @@ a.text-dark.text-decoration-none.supper {
 
 .brand {
 
-
+  width: 144px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
@@ -213,6 +213,11 @@ a.menu-color:hover {
 }
 }
 
+@media (min-width: 100px) and (max-width: 335.98px) {
+  .brand{
+    width: 90px;
 
+  }
+}
 
 

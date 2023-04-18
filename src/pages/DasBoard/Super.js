@@ -52,8 +52,12 @@ const Super = () => {
                                                 <h1 style={{fontSize:"40px", fontFamily: "Inter", fontWeight: "600"}}> <span>Enrollment for</span>   SUPER-30 </h1>
                                                 <p>Job Guarantee Batch</p>
                                                 <div className="reserve_pre_cources_button">
-                                                     <button>Full Stack Web Development</button>
-                                                    <button>Full Stack Data Science</button>
+                                                    <div>
+                                                        <button>Full Stack Web Development</button>
+                                                    </div>
+                                                    <div>
+                                                        <button>Full Stack Data Science</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

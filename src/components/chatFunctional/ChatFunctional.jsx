@@ -1,7 +1,6 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
-function KommunicateChat () {
+const ChatFunctional = () => {
   useEffect(() => {
     (function(d, m) {
       var kommunicateSettings = {
@@ -23,4 +22,4 @@ function KommunicateChat () {
   return <div></div>;
 };
 
-export default KommunicateChat;
+export default ChatFunctional;

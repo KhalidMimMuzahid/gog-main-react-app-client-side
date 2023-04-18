@@ -3,15 +3,20 @@ import './App.css';
 import { router } from './routes/Routes';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Toaster } from 'react-hot-toast';
-import KommunicateChat from './components/chat/Chat';
+import Chat from './components/chat/Chat';
+import ChatFunctional from './components/chatFunctional/ChatFunctional';
+
 
 function App() {
   return (
-    <div>
-      <RouterProvider router={router}></RouterProvider>
-      <Toaster />
-      {/* <KommunicateChat/> */}
-    </div>
+    <>
+      <div>
+        {/* <Chat/> */}
+        <RouterProvider router={router}></RouterProvider>
+        <Toaster />
+      </div>
+      {/* <ChatFunctional/> */}
+    </>
   );
 }
 

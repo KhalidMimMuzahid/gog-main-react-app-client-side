@@ -857,6 +857,11 @@ span.right.lest2 {
 }
 
 @media (min-width: 100px) and (max-width: 421.98px) {
+    .sloop {
+       
+        padding: 33px 0px;
+       
+    }
 
     .top-div{
         margin-top: 30px;

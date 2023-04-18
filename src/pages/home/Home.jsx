@@ -5,6 +5,7 @@ import Brands from '../../components/Brands/Brands';
 import OurProgram from '../../components/ourProgram/OurProgram';
 import Team from '../../components/Team/Team';
 import ScrollToTop from 'react-scroll-to-top';
+import ChatFunctional from '../../components/chatFunctional/ChatFunctional';
 
 
 // import WhatsAppMessage from '../../components/whatsApp/WhatsAppMessage';
@@ -22,6 +23,7 @@ const Home = () => {
             {/* <WhatsAppMessage/> */}
             {/* <ChatBot/> */}
 
+            {/* <ChatFunctional/> */}
             {/* <iframe height="430" width="350" src="https://bot.dialogflow.com/8820470b-f252-4b4a-a811-0b82340c12d9"></iframe> */}
            
         </div>

@@ -46,7 +46,8 @@ img.border-img {
     width: 10px;
     height: 100%;
     content: '';
-    background: #2DC97E;
+    background: #4BA25D
+;
 }
 
 .super-title h2 {
@@ -54,7 +55,8 @@ img.border-img {
     font-style: normal;
     font-weight: 600;
     font-size: 34px;
-    color: #2DC97E;
+    color: #4BA25D
+;
     margin: 0;
 }
 
@@ -129,7 +131,8 @@ p.update img {
 }
 
 li.green-check svg {
-    color: #2DC97E;
+    color: #4BA25D
+;
 }
 
 p.note-text {
@@ -206,7 +209,8 @@ p.upcomeing {
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
-    color: #2DC97E;
+    color: #4BA25D
+;
     margin: 0;
 }
 
@@ -228,7 +232,7 @@ p.upcomeing {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 13px;
     /* color: #4BA25D; */
     background: white;
     padding: 10px 18px;
@@ -236,18 +240,23 @@ p.upcomeing {
     margin-top: 15px;
     /* cursor: none !important; */
 }
+.super-text button:hover {
+    
+    background-color: #000;
+    color: white;
+}
 
 .super-text {
     text-align: end;
 }
 .reserve_pre_cources_button button {
-    width: 300px;
     position: relative;
+    width: 227px;
 }
 
 
 .super-banner {
-    max-width: 225px;
+    max-width: 276px;
 
 }
 .reserve_pre_cources_button{
@@ -315,6 +324,7 @@ h2.next-batch {
 }
 
 .question-area button {
+    min-width: 178px;
     text-align: center;
     color: white;
     font-size: 15px;
@@ -385,7 +395,8 @@ p.free-apply {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    background: #2DC97E;
+    background: #4BA25D
+;
     border-radius: 46px;
     padding: 9px 20px;
     margin-bottom: 1px;
@@ -402,7 +413,8 @@ img.arrowimg {
 .single-btu {
     display: flex;
     justify-content: center;
-    background: #2DC97E;
+    background: #4BA25D
+;
     border-radius: 67.5px;
     gap: 15px;
     width: 244px;

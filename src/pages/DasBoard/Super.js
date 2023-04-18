@@ -53,10 +53,10 @@ const Super = () => {
                                                 <p>Job Guarantee Batch</p>
                                                 <div className="reserve_pre_cources_button">
                                                     <div>
-                                                        <button>Full Stack Web Development</button>
+                                                        <a href="#full-stack-web"><span><button>Full Stack Web Development</button></span></a>
                                                     </div>
                                                     <div>
-                                                        <button>Full Stack Data Science</button>
+                                                        <a href="#full-stack-data"><span><button>Full Stack Data Science</button></span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,7 +64,7 @@ const Super = () => {
 
                                     </div>
                                 </div>
-                                <div className="col-md-12">
+                                <div id='full-stack-web' className="col-md-12">
                                     <div className='super-area'>
 
                                         <div className="super-part">
@@ -80,16 +80,16 @@ const Super = () => {
                                             </div>
                                             <p className="update">
                                                 <img src={vector} alt="" />
-                                                To get seat in SUPER-30 batch eligibility are :
+                                                <span className='update-text'>To get seat in SUPER-30 batch eligibility are :</span>
                                             </p>
                                             <ul>
                                                 <li className='green-check'><AiFillCheckSquare></AiFillCheckSquare>Attend 5 days Free Pre-Course</li>
                                                 <li className='green-check'>
 
                                                     <AiFillCheckSquare></AiFillCheckSquare>
-                                                    Clear “Super-30 Entrance Exam” after Pre-Course</li>
+                                                    Clear “Super-30 Job Entrance Exam (S-30 JEE)” after Pre-Course</li>
                                             </ul>
-                                            <p className='note-text'>Note : Only Students who clear Super-30 Entrance Exam will get seat   </p>
+                                            <p className='note-text'>Note : Only Students who clear Super-30 Job Entrance Exam will get seat   </p>
                                             <h2 className="subtitle">
                                                 Benefits of SUPER-30 students
                                             </h2>
@@ -119,7 +119,7 @@ const Super = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-md-12">
+                                <div id='full-stack-data' className="col-md-12">
                                     <div className='super-area secant-part'>
 
                                         <div className="super-part">
@@ -139,9 +139,9 @@ const Super = () => {
                                             </p>
                                             <ul>
                                                 <li className='green-check secant-part'><AiFillCheckSquare></AiFillCheckSquare>Attend 5 days Free Pre-Course</li>
-                                                <li className='green-check secant-part'><AiFillCheckSquare></AiFillCheckSquare>Clear “Super-30 Entrance Exam” after Pre-Course</li>
+                                                <li className='green-check secant-part'><AiFillCheckSquare></AiFillCheckSquare>Clear “Super-30 Job Entrance Exam (S-30 JEE)” after Pre-Course</li>
                                             </ul>
-                                            <p className='note-text'>Note : Only Students who clear Super-30 Entrance Exam will get seat   </p>
+                                            <p className='note-text'>Note : Only Students who clear Super-30 Job Entrance Exam will get seat   </p>
                                             <h2 className="subtitle">
                                                 Benefits of SUPER-30 students
                                             </h2>
@@ -187,7 +187,7 @@ const Super = () => {
                                     <div className='road-title'>
                                         <h1 >ANY QUESTION ?</h1>
                                     </div>
-                                    <button>Request callback</button>
+                                    <button>Request Callback</button>
                                 </div>
                             </div>
                             <div className="road-map">

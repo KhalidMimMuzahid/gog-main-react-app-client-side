@@ -97,7 +97,7 @@ const Super = () => {
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>100% Job Guarantee for Super-30 Graduate Student</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Internship Certificate provided by Geeks of Gurukul</li>
                                                 <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Course completion certificate power by Skill India</li>
-                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Latter of recommendation provided by Geeks of Gurukul</li>
+                                                <li className='black-check'><AiFillCheckSquare></AiFillCheckSquare>Letter of Recommendation provided by Geeks of Gurukul</li>
                                             </ul>
                                             <p className="upcomeing">
                                                 Upon Course Completion, You’ll Become :

@@ -234,7 +234,8 @@ p.upcomeing {
     font-weight: 500;
     font-size: 13px;
     /* color: #4BA25D; */
-    background: white;
+    color: white;
+    background: black;
     padding: 10px 18px;
     border-radius: 5px;
     margin-top: 15px;
@@ -242,8 +243,8 @@ p.upcomeing {
 }
 .super-text button:hover {
     
-    background-color: #000;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 .super-text {
@@ -326,14 +327,14 @@ h2.next-batch {
 .question-area button {
     min-width: 178px;
     text-align: center;
-    color: white;
+    color: #4BA25D;
     font-size: 15px;
-    border-radius: 10px;
-    /* font-weight: bold; */
+    border-radius: 5px;
+    font-weight: bold;
     padding: 7px 17px;
     margin: 0px;
-    border: 1px solid black;
-    background: black;
+    border: 1px solid #4BA25D;
+    background: white;
 }
 
 .right-area{

@@ -120,7 +120,7 @@ const Banner = () => {
                         </div>
                       </a>
                       <div className="program">
-                        <a href="/">
+                        <a href="#school">
                           <button>Program</button>
                         </a>
                       </div>

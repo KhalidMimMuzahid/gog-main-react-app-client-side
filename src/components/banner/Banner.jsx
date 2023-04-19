@@ -193,7 +193,7 @@ const Banner = () => {
                 </div>
                 <div className="col-md-12">
                   <div className="retune-area">
-                    <h2>return 0;</h2>
+                    <h2>return 1;</h2>
                   </div>
                 </div>
               </div>

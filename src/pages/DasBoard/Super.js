@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { GrAnnounce } from "react-icons/gr";
 import { AiFillCheckSquare } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
@@ -21,11 +21,96 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 import { useState } from 'react';
+import { AuthContext } from '../../context/AuthProvider';
+import { toast } from 'react-hot-toast';
 const Super = () => {
+
+    const { user } = useContext(AuthContext);
+
     const [show, setShow] = useState(false);
 
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
+
+
+
+    // SMTL config
+    const config = {
+        
+        SecureToken : '21941a48-e4f2-4ec6-8661-19ee4dbc37e4',
+        To : 'them@website.com',
+        From : "you@isp.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    };
+
+    const emailSendHandler = () => {
+        const config = {
+            SecureToken : '21941a48-e4f2-4ec6-8661-19ee4dbc37e4',
+            To : user?.email,
+            From : "marketing@geeksofgurukul.com",
+            Subject : `Hello ${user?.displayName}, Invitation to Attend Pre-Course for Super 30`,
+            Body : `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach full-stack web development. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
+            </p>
+        
+            <p>
+            To be eligible for the Super 30 batch, you need to attend the 5-day free Pre-Course and clear the "Super-30 Job Entrance Exam (S-30 JEE)" after completing it. The Pre-Course will provide you with the foundation you need to be successful in the program.
+
+            </p>
+        
+            <p>As a Super 30 student, you'll enjoy a range of benefits, including a 100% job guarantee for Super-30 graduate students, an internship certificate provided by Geeks of Gurukul, a course completion certificate powered by Skill India, and a letter of recommendation provided by Geeks of Gurukul.
+            </p>
+        
+            <p>
+            To apply for the Pre-Course, click the button below [insert the button/link], and provide us with your details. We will get back to you with further instructions on how to proceed.
+
+            </p>
+        
+            <p>We are looking forward to seeing you at the Pre-Course.
+            </p>
+        
+            <p>Best regards,
+            </p>
+        
+            <p>Geeks of Gurukul.</p>
+            `
+        };
+        if(window.Email){
+            window.Email.send(config);
+            alert("Successfully applied, Please check your mail, to join Full Stack Web Developer Pre-Course for Super 30 whatsApp group!");
+        }
+    }
+    const emailSendHandler2 = () => {
+        const config = {
+            SecureToken : '21941a48-e4f2-4ec6-8661-19ee4dbc37e4',
+            To : user?.email,
+            From : "marketing@geeksofgurukul.com",
+            Subject : `Hello ${user?.displayName}, Invitation to Attend Pre-Course for Super 30`,
+            Body : `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach Full Stack Data Scientist. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
+            </p>
+            <p>
+            To be eligible for the Super 30 batch, you need to attend the 5-day free Pre-Course and clear the "Super-30 Job Entrance Exam (S-30 JEE)" after completing it. The Pre-Course will provide you with the foundation you need to be successful in the program.
+
+            </p>
+            <p>As a Super 30 student, you'll enjoy a range of benefits, including a 100% job guarantee for Super-30 graduate students, an internship certificate provided by Geeks of Gurukul, a course completion certificate powered by Skill India, and a letter of recommendation provided by Geeks of Gurukul.
+            </p>
+            <p>
+            To apply for the Pre-Course, click the button below [insert the button/link], and provide us with your details. We will get back to you with further instructions on how to proceed.
+            </p>
+            <p>We are looking forward to seeing you at the Pre-Course.
+            </p>
+        
+            <p>Best regards,
+            </p>
+        
+            <p>Geeks of Gurukul.</p>
+            `
+        };
+        if(window.Email){
+            window.Email.send(config);
+            alert("Successfully applied, Please check your mail, to join Full Stack Data Scientist Pre-Course for Super 30 whatsApp group!");
+        }
+    }
 
     return (
         <div>
@@ -110,7 +195,7 @@ const Super = () => {
                                                 <span>Backend Developer</span>
                                             </div>
                                             <div className="apply-free">
-                                                <button>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
+                                                <button onClick={emailSendHandler}>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
 
                                             </div>
                                             <div className="super-img">
@@ -162,7 +247,7 @@ const Super = () => {
                                                 <span>Business Analyst</span>
                                             </div>
                                             <div className="apply-free">
-                                                <button>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
+                                                <button onClick={emailSendHandler2}>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
 
                                             </div>
                                             <div className="super-img img-2">
@@ -214,7 +299,7 @@ const Super = () => {
                                     <div className="single-btu">
                                         <img src={road1} alt="" />
                                         <p> Clear Super 30 <br />
-                                            Entrance Exam</p>
+                                            Job Entrance Exam</p>
                                     </div>
                                     <img className='arrowimg' src={arrowroad} alt="" />
                                     <div className="single-btu">

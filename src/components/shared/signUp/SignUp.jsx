@@ -27,7 +27,22 @@ const SignUp = () => {
   // for hide and show pass
   const [showPassword, setShowPassword] = useState(false);
 
+
+   // receving the desiger location
+   const pathName= location?.pathname
+   console.log("location: ", location)
+ const search =  location?.search
+   console.log("search: ", search);
+ 
+ // set the destination into from 
+
   const from = location.state?.from?.pathname || "/";
+
+
+
+
+  console.log("Fommmmmmmmmmmmmmmmmm", from);
+
 
   const handleSignUp = (data) => {
     console.log(data);
@@ -54,7 +69,7 @@ const SignUp = () => {
             //console.log("Save Use: ", userInfo);
             //saveUser(data.name, data.email, data.phone);
         setLoading(false)
-        navigate("/signup/phone-sign-up");
+        navigate(`/signup/phone-sign-up?targetPath=${from}`);
             //navigate("/signup/auto-name-fill");
           // })
           // .catch((err) => console.log(err));
@@ -74,7 +89,7 @@ const SignUp = () => {
         //saveUser(user.displayName, user.email);
         //toast.success("Google verified");
         setLoading(false)
-        navigate("/signup/phone-sign-up");
+        navigate(`/signup/phone-sign-up?targetPath=${from}`);
         //navigate("/signup/auto-name-fill");
         //navigate(from, { replace: true });
       })
@@ -105,7 +120,7 @@ const SignUp = () => {
       //saveUser(user.displayName, user.email);
       //toast.success("Successfully logged in");
       setLoading(false)
-      navigate("/signup/phone-sign-up");
+      navigate(`/signup/phone-sign-up?targetPath=${from}`);
       //navigate("/signup/auto-name-fill");
       //navigate(from, { replace: true });
     })

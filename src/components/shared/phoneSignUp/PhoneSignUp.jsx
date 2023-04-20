@@ -20,7 +20,16 @@ const PhoneSignUp = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.from?.pathname || "/";
+  // receving the desiger location
+  const pathName= location?.pathname
+    //console.log("location: ", location)
+  const search =  location?.search
+    //console.log("search: ", search);
+  
+  // set the destination into from 
+  const from = search?.slice(12) || "/";
+
+  //console.log("Frommmmmmmmmmmmmmmm", from);
 
   const [numberUser, setNumberUser] = useState("");
   // loading
@@ -83,8 +92,7 @@ const PhoneSignUp = () => {
         if (data?.user?.phone) {
           //console.log("Phone number: ", data.phone);
          toast.success("Verified.");
-         navigate("/admissionForm");
-         return 
+         navigate(from, { replace: true });
         } else {
           console.log("else optn opt")
           const getCapta = async () => {
@@ -95,7 +103,7 @@ const PhoneSignUp = () => {
               setFlag(true);
               //console.log("This is the second of opt");
             } catch (err) {
-              setError(err.message);
+              setError("Please, input a valid phone number");
             }
           };
           getCapta();
@@ -121,11 +129,12 @@ const PhoneSignUp = () => {
       await result.confirm(otp);
 
       saveUser(user.displayName, user.email, numberUser);
-      console.log("SaveUSER::::::", saveUser);
-      console.log("USRData.......", user);
+      //console.log("SaveUSER::::::", saveUser);
+      //console.log("USRData.......", user);
       //navigate("/");
+      navigate(from, { replace: true });
     } catch (err) {
-      setError(err.message);
+      setError("Plase, give correct OTP");
     }
   };
 
@@ -144,7 +153,7 @@ const PhoneSignUp = () => {
         //console.log("save user", data);
         toast.success("Phone verification successful.");
         setLoading(false);
-        navigate("/admissionForm");
+        //navigate(from, { replace: true });
       });
   };
 

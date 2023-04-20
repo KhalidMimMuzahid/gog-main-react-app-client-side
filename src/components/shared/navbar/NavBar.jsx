@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.css";
 import logo from "../../../assets/images/logo (1).png";
 import { AuthContext } from "../../../context/AuthProvider";
@@ -35,6 +35,7 @@ const NavBar = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const navigate = useNavigate();
 
   // for modal submit fuction
   const {
@@ -269,7 +270,7 @@ const NavBar = () => {
 
                 <span>
                   <Button
-                    href="/admissionForm"
+                    onClick={()=>navigate("/admissionForm")}
                     variant="btn btn-danger me-3"
                     className="nav-apply-now"
                   >

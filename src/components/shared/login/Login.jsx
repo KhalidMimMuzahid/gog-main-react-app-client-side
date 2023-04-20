@@ -44,7 +44,7 @@ const Login = () => {
               }
               
             } else{
-              navigate("/login/phone-sign-up");
+              navigate(`/login/phone-sign-up?targetPath=${from}`);
             }
         } ) 
       })
@@ -75,7 +75,7 @@ const Login = () => {
             if(data.status === 200) {
               navigate(from, { replace: true });
             } else{
-              navigate("/login/phone-sign-up");
+              navigate(`/login/phone-sign-up?targetPath=${from}`);
             }
         } )
 
@@ -104,7 +104,7 @@ const Login = () => {
           if(data.status === 200) {
             navigate(from, { replace: true });
           } else{
-            navigate("/login/phone-sign-up");
+            navigate(`/login/phone-sign-up?targetPath=${from}`);
           }
       } )
       // //navigate(from, { replace: true });

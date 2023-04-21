@@ -19,6 +19,7 @@ import road6 from '../../assets/images/bannre/road6.svg'
 import arrowroad from '../../assets/images/bannre/arrowroad.svg'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import superPDF from '../../assets/pdfdocs/Super 30 Program (2).pdf'
 
 import { useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
@@ -37,18 +38,18 @@ const Super = () => {
     // SMTL config
     const config = {
         
-        SecureToken : '21941a48-e4f2-4ec6-8661-19ee4dbc37e4',
+        SecureToken : '3fc2ed9a-48ea-4440-a61e-f4daa1ac735e',
         To : 'them@website.com',
-        From : "you@isp.com",
+        From : "mdsojibmandol@gmail.com",
         Subject : "This is the subject",
         Body : "And this is the body"
     };
 
     const emailSendHandler = () => {
         const config = {
-            SecureToken : '21941a48-e4f2-4ec6-8661-19ee4dbc37e4',
+            SecureToken : '3fc2ed9a-48ea-4440-a61e-f4daa1ac735e',
             To : user?.email,
-            From : "marketing@geeksofgurukul.com",
+            From : "mdsojibmandol@gmail.com",
             Subject : `Hello ${user?.displayName}, Invitation to Attend Pre-Course for Super 30`,
             Body : `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach full-stack web development. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>
@@ -82,9 +83,9 @@ const Super = () => {
     }
     const emailSendHandler2 = () => {
         const config = {
-            SecureToken : '21941a48-e4f2-4ec6-8661-19ee4dbc37e4',
+            SecureToken : '3fc2ed9a-48ea-4440-a61e-f4daa1ac735e',
             To : user?.email,
-            From : "marketing@geeksofgurukul.com",
+            From : "mdsojibmandol@gmail.com",
             Subject : `Hello ${user?.displayName}, Invitation to Attend Pre-Course for Super 30`,
             Body : `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach Full Stack Data Scientist. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>
@@ -266,7 +267,7 @@ const Super = () => {
                                     <div className='road-title'>
                                         <h1>DOWNLOAD</h1>
                                     </div>
-                                    <button className='super-text Super30Brochere'>SUPER 30 Brochure</button> 
+                                    <button onClick={() => window.open(superPDF, '_blank')} className='super-text Super30Brochere'>SUPER 30 Brochure</button> 
                                 </div>
                                 <div className="question-area ">
                                     <div className='road-title'>

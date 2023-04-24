@@ -115,7 +115,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet ">
                 <img src={hourGlass} alt="" />
-                  Duration-36 weeks
+                  Duration- 24 weeks
                 </li>
                 <li className="course-contnet">
                 <img src={Vector} alt="" />
@@ -180,7 +180,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                 <img src={hourGlass} alt="" />
-                  Duration-36 weeks
+                  Duration- 24 weeks
                 </li>
                 <li className="course-contnet">
                 <img src={Vector} alt="" />
@@ -272,7 +272,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                 <img src={hourGlass} alt="" />
-                  Duration - 35weeks
+                  Duration - 24 weeks
                 </li>
                 <li className="course-contnet">
                 <img src={Vector} alt="" />
@@ -340,7 +340,7 @@ const OurProgram = () => {
 
                 <li className="course-contnet">
                 <img src={hourGlass} alt="" />
-                  Duration - 35weeks
+                  Duration - 24 weeks
                 </li>
                 <li className="course-contnet">
                 <img src={Vector} alt="" />
@@ -437,7 +437,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                 <img src={hourGlass} alt="" />
-                  Duration - 45weeks
+                  Duration - 36 weeks
                 </li>
                 <li className="course-contnet">
                 <img src={teamLeads} alt="" />
@@ -502,7 +502,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                 <img src={hourGlass} alt="" />
-                  Duration - 45weeks
+                  Duration - 36 weeks
                 </li>
                 <li className="course-contnet">
                 <img src={teamLeads} alt="" />

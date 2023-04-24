@@ -7,7 +7,7 @@ import Messages from './Messages';
 const ChatBot = () => {
 
     // const textQuery = async(text) => {
-    //     const response = await axios.post("http://localhost:5000/chat-bot-mesages", {
+    //     const response = await axios.post("https://geeks-of-gurukul-server-side.vercel.app/chat-bot-mesages", {
     //         "text":"hi"
     //     })
     //     console.log("response form dialogflow", response);

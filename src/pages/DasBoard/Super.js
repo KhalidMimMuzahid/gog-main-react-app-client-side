@@ -37,6 +37,11 @@ const Super = () => {
     const handleClose = () => setShow(false);
 
 
+    // call backhandler functiion 
+    const callbackHandler = () => {
+        alert("Your record was saved someone will get in touch with you in 24 hours.");
+    }
+
     // to join the whatsApp group 
     const joinGroup = () => {
         window.open('https://chat.whatsapp.com/GFt9rGJaUSe1AqgS4K8soF', '_blank');
@@ -128,7 +133,7 @@ const Super = () => {
     // add super 30 tag  user?.email
     const addSupe30tag = ( email ) => {
         const user = { email };
-        fetch('http://localhost:5000/users-s30', {
+        fetch('https://geeks-of-gurukul-server-side.vercel.app/users-s30', {
           method: 'PUT',
           headers: {
             'content-type': 'application/json'
@@ -193,6 +198,10 @@ const Super = () => {
                                                 <p>Get Placed as a   </p>
                                                 <p><span>Full Stack Web Developer</span></p>
                                             </div>
+                                            <div className="apply-free">
+                                                <button onClick={emailSendHandler}>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
+
+                                            </div>
                                             <p className="update">
                                                 <img src={vector} alt="" />
                                                 <span className='update-text'>To get seat in SUPER-30 batch eligibility are :</span>
@@ -224,10 +233,7 @@ const Super = () => {
                                                 <span>Frontend Developer</span>
                                                 <span>Backend Developer</span>
                                             </div>
-                                            <div className="apply-free">
-                                                <button onClick={emailSendHandler}>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
-
-                                            </div>
+                                            
                                             <div className="super-img">
                                                     <img src={image} alt="" />
                                             </div>
@@ -247,6 +253,10 @@ const Super = () => {
                                                 <h2><span>Job Guarantee Batch</span></h2>
                                                 <p>Get Placed as a   </p>
                                                 <p><span>Full Stack Data Scientist </span></p>
+                                            </div>
+                                            <div className="apply-free">
+                                                <button onClick={emailSendHandler2}>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
+
                                             </div>
                                             <p className="update">
                                                 <img src={vector} alt="" />
@@ -276,10 +286,7 @@ const Super = () => {
                                                 <span>Product Analyst</span>
                                                 <span>Business Analyst</span>
                                             </div>
-                                            <div className="apply-free">
-                                                <button onClick={emailSendHandler2}>Apply for Free Pre-Course <BsArrowRight></BsArrowRight></button>
-
-                                            </div>
+                                           
                                             <div className="super-img img-2">
                                                 <img src={image2} alt="" />
                                             </div>
@@ -302,7 +309,7 @@ const Super = () => {
                                     <div className='road-title'>
                                         <h1 >ANY QUESTION ?</h1>
                                     </div>
-                                    <button> <img src={callback} style={{color: "#4BA25D", marginRight: "10px", width: "23px"}} alt="phone" /> Request Callback</button>
+                                    <button onClick={callbackHandler}> <img src={callback} style={{color: "#4BA25D", marginRight: "10px", width: "23px"}} alt="phone" /> Request Callback</button>
                                 </div>
                             </div>
                             <div className="road-map">

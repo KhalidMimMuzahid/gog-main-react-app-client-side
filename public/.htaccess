@@ -1,5 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.geeksofgurukul\.com$
+RewriteRule (.*) https://www.geeksofgurukul.com/$1 [R=301,L]
 RewriteBase /subdirectory
 RewriteRule ^index\.html$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f

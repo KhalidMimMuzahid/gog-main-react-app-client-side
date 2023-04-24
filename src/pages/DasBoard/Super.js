@@ -16,6 +16,9 @@ import road3 from '../../assets/images/bannre/road3.svg'
 import road4 from '../../assets/images/bannre/road4.svg'
 import road5 from '../../assets/images/bannre/road5.svg'
 import road6 from '../../assets/images/bannre/road6.svg'
+import applyfreeSvg from '../../assets/images/bannre/applyfree.svg'
+import callback from '../../assets/images/bannre/callback.svg'
+import download from '../../assets/images/bannre/download.svg'
 import arrowroad from '../../assets/images/bannre/arrowroad.svg'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -34,6 +37,10 @@ const Super = () => {
     const handleClose = () => setShow(false);
 
 
+    // to join the whatsApp group 
+    const joinGroup = () => {
+        window.open('https://chat.whatsapp.com/GFt9rGJaUSe1AqgS4K8soF', '_blank');
+    };
 
     // SMTL config
     const config = {
@@ -78,7 +85,9 @@ const Super = () => {
         };
         if(window.Email){
             window.Email.send(config);
-            alert("Successfully applied, Please check your mail, to join Full Stack Web Developer Pre-Course for Super 30 whatsApp group!");
+            alert("Successfully applied, Please check your mail, to join Full Stack Web Developer Pre-Course for Super 30 whatsApp group! And join the Whats'App group");
+            addSupe30tag(user?.email);
+            joinGroup();
         }
     }
     const emailSendHandler2 = () => {
@@ -109,9 +118,29 @@ const Super = () => {
         };
         if(window.Email){
             window.Email.send(config);
-            alert("Successfully applied, Please check your mail, to join Full Stack Data Scientist Pre-Course for Super 30 whatsApp group!");
+            alert("Successfully applied, Please check your mail, to join Full Stack Data Scientist Pre-Course for Super 30 whatsApp group! And join the Whats'App group");
+            addSupe30tag(user?.email);
+            joinGroup();
+
         }
     }
+
+    // add super 30 tag  user?.email
+    const addSupe30tag = ( email ) => {
+        const user = { email };
+        fetch('http://localhost:5000/users-s30', {
+          method: 'PUT',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(user)
+        })
+          .then(res => res.json())
+          .then(data => {
+            //console.log("save user", data);
+            //navigate('/');
+          })
+      }
 
     return (
         <div>
@@ -200,7 +229,7 @@ const Super = () => {
 
                                             </div>
                                             <div className="super-img">
-                                                <img src={image} alt="" />
+                                                    <img src={image} alt="" />
                                             </div>
                                         </div>
                                     </div>
@@ -267,13 +296,13 @@ const Super = () => {
                                     <div className='road-title'>
                                         <h1>DOWNLOAD</h1>
                                     </div>
-                                    <button onClick={() => window.open(superPDF, '_blank')} className='super-text Super30Brochere'>SUPER 30 Brochure</button> 
+                                    <button onClick={() => window.open(superPDF, '_blank')} className='super-text Super30Brochere'> <img src={download} style={{color: "#4BA25D", marginRight: "10px", width: "23px"}} alt="phone" />   SUPER 30 Brochure</button> 
                                 </div>
                                 <div className="question-area ">
                                     <div className='road-title'>
                                         <h1 >ANY QUESTION ?</h1>
                                     </div>
-                                    <button>Request Callback</button>
+                                    <button> <img src={callback} style={{color: "#4BA25D", marginRight: "10px", width: "23px"}} alt="phone" /> Request Callback</button>
                                 </div>
                             </div>
                             <div className="road-map">
@@ -285,7 +314,7 @@ const Super = () => {
                                     Apply for free Pre-course
                                 </p> */}
                                 <div className="single-btu">
-                                        <img src={road} alt="" />
+                                        <img style={{color: "white", width: "32px"}} src={applyfreeSvg} alt="" />
                                         <p>Apply for free<br />
                                         Pre-course</p>
                                     </div>

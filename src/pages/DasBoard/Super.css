@@ -96,8 +96,8 @@ p.update {
 }
 
 p.update img {
-
-    margin-right: 12px;
+    margin: 5px;
+    width: 18px;
 }
 
 .super-area ul {
@@ -197,7 +197,9 @@ p.upcomeing {
 .super-img {
     position: absolute;
     bottom: 0;
-    right: 101px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .super-img img {
@@ -234,17 +236,19 @@ p.upcomeing {
     font-weight: 500;
     font-size: 13px;
     /* color: #4BA25D; */
-    color: white;
-    background: black;
+    color: #4BA25D;
+    background: white;
     padding: 10px 18px;
     border-radius: 5px;
     margin-top: 15px;
+    border-color: #4BA25D;
     /* cursor: none !important; */
 }
 .super-text button:hover {
     
-    background-color: white;
-    color: black;
+    background-color: #4BA25D;
+    color: white;
+    
 }
 
 .super-text {
@@ -278,7 +282,7 @@ p.upcomeing {
 }
 
 .Super30Brochere {
-    margin-top: 1px !important;
+    margin-top: 5px !important;
 }
 
 .sm {
@@ -313,7 +317,7 @@ h2.next-batch {
     padding: 15px 30px;
     text-align: center;
     border-radius: 13px;
-    height: 97px;
+    height: 105px;
 }
 
 .question-area h1 {
@@ -332,7 +336,7 @@ h2.next-batch {
     border-radius: 5px;
     font-weight: bold;
     padding: 7px 17px;
-    margin: 0px;
+    margin: 5px;
     border: 1px solid #4BA25D;
     background: white;
 }

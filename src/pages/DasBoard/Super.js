@@ -25,6 +25,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import superPDF from '../../assets/pdfdocs/Super 30 Program (2).pdf'
 import callBackSent from '../../assets/images/bannre/callBackSent.svg'
+import heroImgLogo from '../../assets/images/bannre/hero.png'
 
 import { useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
@@ -175,7 +176,7 @@ const Super = () => {
                                     <div className="sloop">
                                         <div className="sm">
                                             <div className="super-banner">
-                                                <img src={bannerSuper2} alt="" />
+                                                <img src={heroImgLogo} alt="" />
                                             </div>
                                         </div>
                                         <div className="sm">

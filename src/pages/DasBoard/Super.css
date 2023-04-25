@@ -95,9 +95,9 @@ p.update {
     border-radius: 50px;
 }
 
-p.update img {
-    margin: 5px;
-    width: 18px;
+p.update svg {
+    width: 24px;
+    height: 24px;
 }
 
 .super-area ul {
@@ -228,7 +228,7 @@ p.upcomeing {
     font-weight: 600;
     font-size: 30px;
     margin: 0;
-    color: #000000;
+    color: #3C4852;
 }
 
 .super-text button {
@@ -263,7 +263,7 @@ p.upcomeing {
 
 
 .super-banner {
-    max-width: 276px;
+    min-width: 300px;
 
 }
 .reserve_pre_cources_button{
@@ -363,7 +363,7 @@ h2.next-batch {
     left: -15px;
     width: 9px;
     height: 77%;
-    background: #000;
+    background: #3C4852;
     content: '';
 }
 .road-title1 h1:after {
@@ -383,7 +383,7 @@ h2.next-batch {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    color: #000000;
+    color: #3C4852;
     margin-left: 17px;
     margin-bottom: 7px;
     position: relative;

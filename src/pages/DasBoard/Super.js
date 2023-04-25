@@ -8,6 +8,7 @@ import image from '../../assets/images/bannre/Group 9384WebDevelopment.svg'
 import image2 from '../../assets/images/bannre/Group 9383DataAnalyst.png'
 import vector from '../../assets/images/Vector.png'
 import bannerSuper from '../../assets/images/bannre/hurr.svg'
+import bannerSuper2 from '../../assets/images/bannre/harryupSVG 1.svg'
 import banner from '../../assets/images/bannre/border.svg'
 import road from '../../assets/images/bannre/road.svg'
 import road1 from '../../assets/images/bannre/road1.svg'
@@ -23,10 +24,12 @@ import arrowroad from '../../assets/images/bannre/arrowroad.svg'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import superPDF from '../../assets/pdfdocs/Super 30 Program (2).pdf'
+import callBackSent from '../../assets/images/bannre/callBackSent.svg'
 
 import { useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider';
 import { toast } from 'react-hot-toast';
+import { Icon } from '@iconify/react';
 const Super = () => {
 
     const { user } = useContext(AuthContext);
@@ -37,14 +40,22 @@ const Super = () => {
     const handleClose = () => setShow(false);
 
 
+    const [showbtn, setShowbtn] = useState(true);
+
+
     // call backhandler functiion 
     const callbackHandler = () => {
-        alert("Your record was saved someone will get in touch with you in 24 hours.");
+        alert("We have received your message and one of our representatives will get back to you.");
+        setShowbtn(false);
     }
 
-    // to join the whatsApp group 
+    // to join the whatsApp group FSWD
     const joinGroup = () => {
-        window.open('https://chat.whatsapp.com/GFt9rGJaUSe1AqgS4K8soF', '_blank');
+        window.open('https://chat.whatsapp.com/CmDnBtPhXMBAMYJZtEIsJg', '_blank');
+    };
+    // to join the whatsApp group FSDA
+    const joinGroup2 = () => {
+        window.open('https://chat.whatsapp.com/Fkc6v6bvvrxBB3p9W3Gs8q', '_blank');
     };
 
     // SMTL config
@@ -125,7 +136,7 @@ const Super = () => {
             window.Email.send(config);
             alert("Successfully applied, Please check your mail, to join Full Stack Data Scientist Pre-Course for Super 30 whatsApp group! And join the Whats'App group");
             addSupe30tag(user?.email);
-            joinGroup();
+            joinGroup2();
 
         }
     }
@@ -164,7 +175,7 @@ const Super = () => {
                                     <div className="sloop">
                                         <div className="sm">
                                             <div className="super-banner">
-                                                <img src={bannerSuper} alt="" />
+                                                <img src={bannerSuper2} alt="" />
                                             </div>
                                         </div>
                                         <div className="sm">
@@ -203,9 +214,14 @@ const Super = () => {
 
                                             </div>
                                             <p className="update">
-                                                <img src={vector} alt="" />
-                                                <span className='update-text'>To get seat in SUPER-30 batch eligibility are :</span>
+                                                {/* <img src={vector} alt="" />
+                                                <GrAnnounce/> */}
+                                                <Icon icon="mingcute:announcement-line" color="white" />
+                                                <span style={{marginTop: "100px"}} className='update-text'> To get seat in SUPER-30 batch eligibility are :</span>
                                             </p>
+                                            {/* <div className="update">
+                                                <p> <GrAnnounce/> To get seat in SUPER-30 batch eligibility are </p>
+                                            </div> */}
                                             <ul>
                                                 <li className='green-check'><AiFillCheckSquare></AiFillCheckSquare>Attend 5 days Free Pre-Course</li>
                                                 <li className='green-check'>
@@ -259,7 +275,7 @@ const Super = () => {
 
                                             </div>
                                             <p className="update">
-                                                <img src={vector} alt="" />
+                                                <Icon icon="mingcute:announcement-line" color="white" />
                                                 To get seat in SUPER-30 batch eligibility are :
                                             </p>
                                             <ul>
@@ -309,7 +325,8 @@ const Super = () => {
                                     <div className='road-title'>
                                         <h1 >ANY QUESTION ?</h1>
                                     </div>
-                                    <button onClick={callbackHandler}> <img src={callback} style={{color: "#4BA25D", marginRight: "10px", width: "23px"}} alt="phone" /> Request Callback</button>
+                                    <button style={{display: showbtn ? 'inline-block': 'none'}} onClick={callbackHandler}> <img src={callback} style={{color: "#4BA25D", marginRight: "10px", width: "23px"}} alt="phone" /> Request Callback</button>
+                                    {!showbtn && <button style={{cursor: "none"}}> <img src={callBackSent} style={{color: "#4BA25D", marginRight: "10px", width: "23px"}} alt="phone" /> Request Sent</button>}
                                 </div>
                             </div>
                             <div className="road-map">

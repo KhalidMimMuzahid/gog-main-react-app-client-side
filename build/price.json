@@ -1,0 +1,31 @@
+[
+    {   "program":"School Champs",
+        "name":"Basic Coding",
+        "price":"3000"
+    },
+    {
+        "program":"School Champs",
+        "name":"Advance Coding",
+        "price":"5000"
+    },
+    {
+        "program":"Coding Bees",
+        "name":"Full Stack Data Analytics",
+        "price":"6000"
+    },
+    {
+        "program":"Coding Bees",
+        "name":"Full Stack Web Development",
+        "price":"1100"
+    },
+    {
+        "program":"Engineering Nerds",
+        "name":"Electrical Engineering",
+        "price":"17007"
+    },
+    {
+        "program":"Engineering Nerds",
+        "name":"Mechanical Engineering",
+        "price":"9000"
+    }
+]

@@ -19,7 +19,7 @@ const Home = () => {
             <Brands></Brands>
             <Team></Team>
             <Accordions></Accordions>
-            <ScrollToTop color='#4CA358' style={{borderRadius: "50%", left:"40px", fontWeight:"bold", zIndex:"12", marginTop: "15vh"}}/>
+            <ScrollToTop color='#4CA358' style={{borderRadius: "50%", left:"40px", marginBottom: "-20px", fontWeight:"bold", zIndex:"12", marginTop: "15vh"}}/>
             {/* <WhatsAppMessage/> */}
             {/* <ChatBot/> */}
 

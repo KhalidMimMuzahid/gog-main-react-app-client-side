@@ -10,7 +10,6 @@ import awsConfig from './aws-exports'
 //TanStack query--------
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-// aws config 
 Amplify.configure(awsConfig);
 
 

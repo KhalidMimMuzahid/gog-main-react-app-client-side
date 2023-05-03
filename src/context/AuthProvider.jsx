@@ -8,6 +8,9 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
 
+    // for the auth user verify
+    const [tempUser, setTempUser] = useState(null);
+
     // is admin
     const [adminPart, setadmin] = useState(false)
 
@@ -28,10 +31,10 @@ const AuthProvider = ({ children }) => {
           auth
         );
         recaptchaVerifier.render();
-        return signInWithPhoneNumber(auth, number, recaptchaVerifier);
+        return signInWithPhoneNumber(auth.currentUser, number, recaptchaVerifier);
       }
 
-    // Gitbub log in 
+    // Gitbub log in            
     const gitHubSignin = () => {
         setLoading(true)
         return signInWithPopup(auth, gitHubProvide);
@@ -78,7 +81,11 @@ const AuthProvider = ({ children }) => {
 
     // for update the auth
     const updateUserProfile = (profile) => {
-        setLoading(true)
+        
+        // setLoading(true)
+        // console.log("auth.currentUser: ", auth.currentUser)
+        // console.log("temp usr: ", tempUser); // not phone 
+        console.log("profileeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", profile); // not eamil 
         return updateProfile(auth.currentUser, profile);
     }
 
@@ -89,16 +96,37 @@ const AuthProvider = ({ children }) => {
     // authe state chane monitor 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            
+            console.log("hitreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed")
+          
+            // setTempUser(null);
+           
+            //     setUser(null);
             // if(currentUser === null || currentUser.emailVerified) {
             //     setUser(currentUser);
             // }
+            // console.log("auth.currentUser: ", auth.currentUser)
             console.log("currentUser: ", currentUser)
-            setUser(currentUser);
+           
+            // console.log("currentUser?.phoneNumber:  & currentUser?.emailVerified", currentUser?.phoneNumber, currentUser?.emailVerified);
+            // currentUser?.phoneNumber &&
+            if(  currentUser?.emailVerified && currentUser?.email){
+
+                console.log("Current user: ", currentUser);
+                setUser(currentUser);
+                // setLoading(false)
+                
+            }
+            else{
+                setUser(null)
+            }
+            // if(currentUser?.email){
+            //     setTempUser(currentUser);
+            // }
             setLoading(false)
+        
         });
         return () => unsubscribe()
-    }, [])
+    })
 
     const authInfo = {
         user,
@@ -117,7 +145,8 @@ const AuthProvider = ({ children }) => {
         adminPart,
         auth,
         setUpRecaptha,
-        verifyEmail
+        verifyEmail,
+        tempUser
     }
     return (
         <AuthContext.Provider value={authInfo}>

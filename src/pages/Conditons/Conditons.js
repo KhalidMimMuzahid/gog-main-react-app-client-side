@@ -10,85 +10,43 @@ const Conditons = () => {
                         
                             <div className="conditions">
                                 <h1>Terms &amp; Conditions</h1> <br />
-                                <p>THESE TERMS OF USE ARE AN ELECTRONIC RECORD IN THE NATURE OF AN
-                                    ELECTRONIC CONTRACT FORMED PURSUANT TO THE INFORMATION
-                                    TECHNOLOGY ACT, 2000, AND THE RULES MADE THEREUNDER, AS WELL AS
-                                    THE AMENDED PROVISIONS RELATING TO ELECTRONIC DOCUMENTS /
-                                    RECORDS IN VARIOUS STATUTES AS AMENDED BY THE INFORMATION THESE
-                                    TERMS OF USE DO NOT NEED TO BE SIGNED IN PERSON, VIA ELECTRONIC
-                                    MEANS, OR VIA DIGITAL MEANS.</p> <br />
+                                <p>THESE TERMS OF USE ARE AN ELECTRONIC RECORD IN THE NATURE OF AN ELECTRONIC CONTRACT FORMED PURSUANT TO THE INFORMATION TECHNOLOGY ACT, 2000, AND THE RULES MADE THERE UNDER, AS WELL AS THE AMENDED PROVISIONS RELATING TO ELECTRONIC DOCUMENTS / RECORDS IN VARIOUS STATUTES AS AMENDED BY THE INFORMATION.
+</p> <br />
                                 <p>
-                                    THE INFORMATION TECHNOLOGY (INTERMEDIARIES GUIDELINES) RULES,
-                                    2011, PRESCRIBED UNDER THE INFORMATION TECHNOLOGY ACT, 2000,
-                                    REQUIRE THE PUBLISHING OF THE RULES AND REGULATIONS, PRIVACY
-                                    POLICY, AND USER AGREEMENT FOR ACCESS OR USAGE OF THE WEBSITE,
-                                    REQUIRE THE PUBLICATION OF THE RULES AND REGULATIONS, PRIVACY
-                                    POLICY
+                                THE INFORMATION TECHNOLOGY (INTERMEDIARIES GUIDELINES) RULES, 2011, REQUIRE THE PUBLISHING OF THE RULES AND REGULATIONS, PRIVACY POLICY, AND USER AGREEMENT FOR ACCESS OR USAGE OF THE WEBSITE, REQUIRE THE PUBLICATION OF THE RULES AND REGULATIONS, PRIVACY POLICY, AND USER AGREEMENT FOR ACCESS OR USAGE OF THE WEBSITE.
+
                                 </p> <br />
                                 <p>
-                                    A LEGALLY BINDING DOCUMENT BETWEEN THE USER AND THE GEEKS OF
-                                    GURUKUL
-                                    WEBSITE, THESE TERMS OF USE (BOTH TERMS DEFINED BELOW). THESE
-                                    TERMS OF USE WILL GOVERN THE RELATIONSHIP BETWEEN THE BASTA
-                                    WEBSITE AND USER FOR THE USE OF THE WEBSITE AND WILL TAKE EFFECT
-                                    UPON YOUR ACCEPTANCE OF THE SAME (DIRECTLY OR INDIRECTLY IN
-                                    ELECTRONIC FORM OR BY MEANS OF AN ELECTRONIC RECORD) (DEFINED
-                                    BELOW).
+                                THESE TERMS OF USE (BOTH TERMS DEFINED BELOW) ARE A LEGALLY BINDING DOCUMENT BETWEEN THE USER AND THE GEEKS OF THE GURUKUL WEBSITE. THESE TERMS OF USE WILL GOVERN THE RELATIONSHIP BETWEEN THE GEEKS OF GURUKUL WEBSITE AND THE USER FOR THE USE OF THE WEBSITE AND WILL TAKE EFFECT UPON YOUR ACCEPTANCE (DIRECTLY OR INDIRECTLY IN ELECTRONIC FORM OR BY MEANS OF AN ELECTRONIC RECORD). 
+
                                 </p> <br />
                                 <p>
-                                    PLEASE CAREFULLY READ THESE TERMS OF USE. YOU ACKNOWLEDGE THAT
-                                    YOU UNDERSTAND, AGREE WITH, AND CONSENT TO THESE TERMS OF USE BY
-                                    USING THE WEBSITE. PLEASE DO NOT USE THIS WEBSITE IF YOU DO NOT
-                                    AGREE TO THE TERMS OF THESE TERMS OF USE.
+                                PLEASE READ THESE TERMS OF USE CAREFULLY. BY USING THE WEBSITE, YOU ACKNOWLEDGE THAT YOU UNDERSTAND, AGREE WITH, AND CONSENT TO THESE TERMS OF USE. PLEASE DO NOT USE THIS WEBSITE IF YOU DO NOT ACCEPT THESE TERMS OF USE.
+PLEASE READ THESE TERMS OF USE CAREFULLY. BY USING THE WEBSITE, YOU ACKNOWLEDGE THAT YOU UNDERSTAND, AGREE WITH, AND CONSENT TO THESE TERMS OF USE. PLEASE DO NOT USE THIS WEBSITE IF YOU DO NOT ACCEPT THESE TERMS OF USE.
+
                                 </p> <br />
                                 <p>
-                                    In accordance with Sections 43A and 72A of the Information
-                                    Technology Act of 2000 and the Information Technology
-                                    (Intermediary Guidelines) Rules of 2011, YOU HEREBY GIVE YOUR
-                                    UNCONDITIONAL CONSENT OR AGREEMENTS TO THE NEWTON SCHOOL
-                                    WEBSITE.
+                                YOU HEREBY GIVE YOUR UNCONDITIONAL CONSENT OR AGREEMENTS TO THE GEEKS OF GURUKUL IN ACCORDANCE WITH SECTIONS 43A AND 72A OF THE INFORMATION TECHNOLOGY ACT OF 2000 AND THE INFORMATION TECHNOLOGY (INTERMEDIARY GUIDELINES) RULES OF 2011.
                                 </p> <br />
                                 <p>
-                                    The Geeks of Gurukul Website (“Geeks of Gurukul Website” or “We”
-                                    or “Us” or
-                                    “Our”), a
-                                    company with its registered office at 394/1, 1st B Cross,
-                                    Koramangala -7 Block, Bengaluru – 560030, and the guest users or
-                                    registered users of the Website (“You” or “Your” or “Yourself”
-                                    or “User”) have agreed to these terms of use that outline the
-                                    conditions under which the Geeks of Gurukul Website grants You
-                                    access to
-                                    the (“Services”).
+                                The Geeks of Gurukul Website (“Geeks of Gurukul Website” or “We” or “Us” or “Our”), a company with its registered office at 394/1, 1st B Cross, Koramangala -7 Block, Bengaluru – 560030, and the guest users or registered users of the Website (“You” or “Your” or “Yourself” or “User”) have agreed to these terms of use that outline the conditions under which the Geeks of Gurukul Website grants You access to the (“Services”).
                                 </p> <br />
 
                                 <h1>Accounts</h1><br />
                                 <h2>Account Creation</h2><br />
                                 <p>
-                                    You must create an account on the Site and fill out personal
-                                    information before you can use it.
-                                    You guarantee that (a) any necessary registration information
-                                    you provide is truthful, current, and accurate; and (b) you’ll
-                                    keep the information’s accuracy up to date.
-                                    By following the instructions on the site, you can delete your
-                                    Account at any time.
-                                    According to Section, the Company may suspend or terminate your
-                                    Account.
+                                Before you may use the Site, you must first register an account and fill out personal information. You guarantee that (a) any required registration information you give is true, current, and accurate; and (b) the information's accuracy will be kept up to date. You can delete your Account at any moment by following the instructions on the site. The Company may suspend or terminate your Account in accordance with Section.
+
                                 </p><br />
                                 <h2>Account Responsibility</h2><br />
                                 <p>
-                                    Your login credentials for your Account must be kept private,
-                                    and you are solely responsible for any actions taken using your
-                                    Account.
-                                    You agree to report any suspected or actual unauthorised use of
-                                    your Account to the Company right away.
-                                    You agree that failing to adhere to the aforementioned standards
-                                    will result in loss or damage for which Company is not and
-                                    cannot be held responsible.
+                                Your Account login credentials must be kept confidential, and you are solely responsible for any acts made using your Account. You agree to immediately notify the Company of any suspected or actual unauthorised use of your Account. You acknowledge that failure to comply with the aforementioned requirements will result in loss or harm for which the Company is not and cannot be held liable.
+
                                 </p><br />
                                 <h1>USE OF THE WEBSITE / SERVICES</h1><br />
                                 <p>
-                                    You acknowledge and agree that when using a Website or Service,
-                                    You will not:
+                                You acknowledge and agree that when using a Website or Service, You will not:
+
                                 </p><br />
                                 <li>a) Defame, abuse, harass, stalk, threaten, or otherwise infringe
                                     upon the legal rights of others;</li>
@@ -108,32 +66,13 @@ const Conditons = () => {
                                     any portion of website</li><br />
                                 <h1>Termination and Term</h1><br />
                                 <p>
-                                    While you use the Site, these Terms will continue to be in full
-                                    force and effect, subject to this Section. Your ability to use
-                                    the Site may be suspended or terminated at any time for any
-                                    reason at our sole discretion, including any usage that violates
-                                    these Terms. Your Account and the right to access and use the
-                                    Site shall end immediately if your rights under these Terms are
-                                    terminated. You are aware that any termination of your Account
-                                    may result in the removal of any linked User Content from our
-                                    active databases. You have no recourse against Company if your
-                                    rights under these Terms are terminated, under any
-                                    circumstances.
+                                Subject to this Section, these Terms will remain in full force and effect while you use the Site. Your ability to use the Site may be suspended or revoked at any time for any reason, including any violation of these Terms, at our sole discretion. If your rights under these Terms are terminated, your Account and the right to access and use the Site will be terminated immediately. You understand that if your Account is terminated, any connected User Content will be removed from our active databases. If your rights under these Terms are terminated for any reason, you have no recourse against Company.
+
                                 </p><br />
                                 <h2>Refund Policy</h2><br />
                                 <p>
-                                    Learners will initially get classroom instruction (either
-                                    physically or virtually). Through Live Classes, Assessments,
-                                    Hands on Projects, and other means, they will receive training
-                                    on numerous modules. Through our Progress Board, we at Geeks of
-                                    Gurukul
-                                    continuously monitor the learner’s progress throughout the whole
-                                    training session. By evaluating their participation in the
-                                    program (attendance of the sessions, both live and recorded),
-                                    submissions, and performance on quizzes, exams, assignments, and
-                                    projects, we can monitor their progress. To qualify for the
-                                    placement training and career services, the students must
-                                    maintain a program score of 70 percent.
+                                Learners will initially get classroom instruction (either physically or virtually). Through Live Classes, Assessments, Hands on Projects, and other means, they will receive training on numerous modules. Through our Progress Board, we at Geeks of Gurukul continuously monitor the learner’s progress throughout the whole training session. By evaluating their participation in the program (attendance of the sessions, both live and recorded), submissions, and performance on quizzes, exams, assignments, and projects, we can monitor their progress. To qualify for the placement training and career services, the students must maintain a program score of 70 percent.
+
                                 </p><br />
                                 <p>
                                     The rationale for eligibility requirements for placement is that

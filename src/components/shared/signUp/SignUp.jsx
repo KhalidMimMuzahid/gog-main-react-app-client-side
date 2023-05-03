@@ -6,20 +6,33 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./SignUp.css";
 
-
-import { AiOutlineEyeInvisible, AiOutlineEye, AiFillFacebook, AiFillGithub, AiOutlinePhone } from 'react-icons/ai';
+import {
+  AiOutlineEyeInvisible,
+  AiOutlineEye,
+  AiFillFacebook,
+  AiFillGithub,
+  AiOutlinePhone,
+} from "react-icons/ai";
+import moment from "moment";
+import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
 
 const SignUp = () => {
-
-  
-
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm(); // ract hook from
-  const { createUser, updateUserProfile, verifyEmail, googleSignIn, FaceboolSignin, gitHubSignin, setLoading, auth, setUpRecaptha } =
-    useContext(AuthContext);
+  const {
+    createUser,
+    updateUserProfile,
+    verifyEmail,
+    googleSignIn,
+    FaceboolSignin,
+    gitHubSignin,
+    setLoading,
+    auth,
+    setUpRecaptha,
+  } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -27,28 +40,23 @@ const SignUp = () => {
   // for hide and show pass
   const [showPassword, setShowPassword] = useState(false);
 
+  // receving the desiger location
+  const pathName = location?.pathname;
+  //console.log("location: ", location);
+  const search = location?.search;
+  //console.log("search: ", search);
 
-   // receving the desiger location
-   const pathName= location?.pathname
-   console.log("location: ", location)
- const search =  location?.search
-   console.log("search: ", search);
- 
- // set the destination into from 
+  // set the destination into from
 
-  const from = location.state?.from?.pathname || "/";
+  const from = location.state?.from?.pathname || "/login";
 
-
-
-
-  console.log("Fommmmmmmmmmmmmmmmmm", from);
-
+  //console.log("Fommmmmmmmmmmmmmmmmm", from);
 
   const handleSignUp = (data) => {
     console.log(data);
     setSignUPError("");
- 
-    // for the password cheack 
+
+    // for the password cheack
     if (data.password !== data.passwordConfirm) {
       return setSignUPError("Password did not matched!");
     }
@@ -56,23 +64,52 @@ const SignUp = () => {
     createUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
-        //console.log(user);
+        //console.log("USRr friom sign uppppppppppppppppppppp",user);
         const userInfo = {
           displayName: data.name,
-          email: data.email,
-          phone: data.phone,
-        }
+          phoneNumber: data.phone,
+        };
+       // console.log("USer info0000000000000000000", userInfo);
         updateUserProfile(userInfo)
-        toast.success("Please verify your email address before login.");
-        handleEmailVerification();
-          // .then(() => {
-            //console.log("Save Use: ", userInfo);
-            //saveUser(data.name, data.email, data.phone);
-        setLoading(false)
-        navigate(`/signup/phone-sign-up?targetPath=${from}`);
-            //navigate("/signup/auto-name-fill");
-          // })
-          // .catch((err) => console.log(err));
+          .then(() => {
+            // to do user info updated into firebase
+            // toast.success("Please verify your email address before login.");
+            //console.log("USer updatedddddddddddddddddddddddddddddd")
+            verifyEmail()
+              .then(() => {
+                const justNow = moment().format();
+                const userBasicDetails = {
+                  justCreated: true,
+                  name: user?.displayName,
+                  email: user?.email,
+                  phoneNumber: "",
+                  createdAt: justNow,
+                  updatedAt: justNow,
+                  emailVaifiedAt: justNow,
+                  photoURL: user?.photoURL,
+                  role: "student",
+                };
+                //console.log("User basic detailsssssssssssssssssssssss",userBasicDetails)
+                
+                saveUser(userBasicDetails);
+                alert("Please, check your mail and verify & log in.");
+
+              })
+              .catch((error) => console.error(error));
+            setLoading(false);
+            // navigate(`/signup/phone-sign-up?targetPath=${from}`);
+          })
+          .catch((error) => {
+            console.log("error: ", error);
+          });
+
+        // .then(() => {
+        //console.log("Save Use: ", userInfo);
+        //saveUser(data.name, data.email, data.phone);
+
+        //navigate("/signup/auto-name-fill");
+        // })
+        // .catch((err) => console.log(err));
       })
       .catch((error) => {
         console.log(error);
@@ -82,21 +119,74 @@ const SignUp = () => {
 
   // google sign in handle
   const handleGoogleSignIn = () => {
+    setLoading(true);
     googleSignIn()
       .then((result) => {
         const user = result.user;
-        //console.log(user);
-        //saveUser(user.displayName, user.email);
-        //toast.success("Google verified");
-        setLoading(false)
-        navigate(`/signup/phone-sign-up?targetPath=${from}`);
-        //navigate("/signup/auto-name-fill");
+
+        //console.log("Facebook user: ", user);
+        checkAlreadyUser(user?.email)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data?.isUserAlreadyExists) {
+              // to do : user is alrady reistered
+              //console.log("old user");
+              toast.success("Successfully logged in");
+              navigate(from, { replace: true });
+            } else {
+              // to do : this is the new user
+              //console.log("new user");
+              const justNow = moment().format();
+              const userBasicDetails = {
+                justCreated: true,
+                name: user?.displayName,
+                email: user?.email,
+                phoneNumber: "",
+                createdAt: justNow,
+                updatedAt: justNow,
+                emailVaifiedAt: justNow,
+                photoURL: user?.photoURL,
+                role: "student",
+              };
+              toast.success("Successfully registered.");
+              saveUser(userBasicDetails);
+            }
+          });
+        // saveUser(user.displayName, user.email);
         //navigate(from, { replace: true });
+
+        // if (user?.phoneNumber) {
+        //   navigate(from, { replace: true });
+        // } else {
+        //   console.log("before")
+        //   // setLoading(true)
+        //   navigate(`/login/phone-sign-up?targetPath=${from}`);
+        // }
+        //console.log(user);
+        // saveUser(user.displayName, user.email);
+        // toast.success('Successfully logged in');
+        // setLoading(false)
+        // // checking the phone is verified or not
+        // fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
+        // .then(res => res.json())
+        // .then(data =>{
+        //     // setusername(data) ;
+        //     // setLoading(false)
+        //     console.log(data);
+        //     if(data.status === 200) {
+        //       navigate(from, { replace: true });
+        //     } else{
+        //       navigate(`/login/phone-sign-up?targetPath=${from}`);
+        //     }
+        // } )
+
+        // //navigate(from, { replace: true });
+        // navigate("/login/phone-sign-up");
       })
       .catch((error) => console.error(error));
   };
 
-  // // for GitHub signin 
+  // // for GitHub signin
   // const handlegitHubSignin = () =>{
   //   gitHubSignin()
   //   .then((result) => {
@@ -111,49 +201,48 @@ const SignUp = () => {
   //   .catch((error) => console.error(error));
   // }
 
-  // for facebook signin 
-  const handleFaceboolSignin = () =>{
+  // for facebook signin
+  const handleFaceboolSignin = () => {
     FaceboolSignin()
-    .then((result) => {
-      const user = result.user;
-      //console.log("Facebook user: ", user);
-      //saveUser(user.displayName, user.email);
-      //toast.success("Successfully logged in");
-      setLoading(false)
-      navigate(`/signup/phone-sign-up?targetPath=${from}`);
-      //navigate("/signup/auto-name-fill");
-      //navigate(from, { replace: true });
-    })
-    .catch((error) => console.error(error));
-  }
+      .then((result) => {
+        const user = result.user;
+        //console.log("Facebook user: ", user);
+        //saveUser(user.displayName, user.email);
+        //toast.success("Successfully logged in");
+        setLoading(false);
+        navigate(`/signup/phone-sign-up?targetPath=${from}`);
+        //navigate("/signup/auto-name-fill");
+        //navigate(from, { replace: true });
+      })
+      .catch((error) => console.error(error));
+  };
 
-  // email verification send 
+  // email verification send
   const handleEmailVerification = () => {
-    verifyEmail()
+    verifyEmail();
     // .than(() => {})
     // .catch(error => console.error(error));
-  }
+  };
 
-  const saveUser = (name, email, phone) => {
-    const user = { name, email, phone };
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/users", {
-      method: "PUT",
+  const saveUser = (userBasicDetails) => {
+    fetch("http://localhost:5000/usersbasics", {
+      method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(userBasicDetails),
     })
       .then((res) => res.json())
       .then((data) => {
         //console.log("save user", data);
-        //navigate("/");
-       
+        //navigate('/');
+        
+        navigate(from, { replace: true });
       });
   };
 
   return (
-
-    <div className='sing-up'>
+    <div className="sing-up">
       <div className="mt-4 mb-5 ">
         <div className="form-class ">
           {/* ----------------------------start resgistration from  =-----------------------------*/}
@@ -167,13 +256,21 @@ const SignUp = () => {
               </div>
               <div className="google-sing-in">
                 <div className="text-center googelIcon">
-                  <div className='button-google-custom'>
-                    <button className="btn-customize btn btn-outline-dark" onClick={handleGoogleSignIn} style={{ width: "100%", borderRadius: "30px" }}>
+                  <div className="button-google-custom">
+                    <button
+                      className="btn-customize btn btn-outline-dark"
+                      onClick={handleGoogleSignIn}
+                      style={{ width: "100%", borderRadius: "30px" }}
+                    >
                       <FcGoogle /> <span>CONTINUE WITH GOOGLE</span>
                     </button>
                   </div>
-                  <div className='button-google-custom'>
-                    <button className="btn-customize btn-fabecbook btn btn-outline" onClick={handleFaceboolSignin} style={{ width: "100%", borderRadius: "30px" }}>
+                  <div className="button-google-custom">
+                    <button
+                      className="btn-customize btn-fabecbook btn btn-outline"
+                      onClick={handleFaceboolSignin}
+                      style={{ width: "100%", borderRadius: "30px" }}
+                    >
                       <AiFillFacebook /> <span>CONTINUE WITH FACEBOOK</span>
                     </button>
                   </div>
@@ -190,7 +287,9 @@ const SignUp = () => {
                     </Link>
                   </div> */}
                 </div>
-                <p style={{ marginTop: "-20px", fontSize: "12px" }}>Or use your Email and Mobile Number for registration </p>
+                <p style={{ marginTop: "-20px", fontSize: "12px" }}>
+                  Or use your Email and Mobile Number for registration{" "}
+                </p>
                 <form onSubmit={handleSubmit(handleSignUp)}>
                   <div className="from-box-sing">
                     <div className="from-box-input">
@@ -202,7 +301,6 @@ const SignUp = () => {
                           required: "Name is Required",
                         })}
                       />
-
                     </div>
                     {errors.name && (
                       <p className="text-red-500">{errors.name.message}</p>
@@ -216,7 +314,6 @@ const SignUp = () => {
                           required: "Email is Requried",
                         })}
                       />
-
                     </div>
                     {errors.email && (
                       <p className="text-red-500">{errors.email.message}</p>
@@ -261,11 +358,13 @@ const SignUp = () => {
                           type="button"
                           onClick={() => setShowPassword(!showPassword)}
                         >
-                          {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+                          {showPassword ? (
+                            <AiOutlineEyeInvisible />
+                          ) : (
+                            <AiOutlineEye />
+                          )}
                         </button>
                       </div>
-
-
                     </div>
                     {errors.password && (
                       <p className="text-red-500">{errors.password.message}</p>
@@ -284,10 +383,13 @@ const SignUp = () => {
                           type="button"
                           onClick={() => setShowPassword(!showPassword)}
                         >
-                          {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+                          {showPassword ? (
+                            <AiOutlineEyeInvisible />
+                          ) : (
+                            <AiOutlineEye />
+                          )}
                         </button>
                       </div>
-
                     </div>
                     {errors.passwordConfirm && (
                       <p className="text-red-500">
@@ -297,7 +399,9 @@ const SignUp = () => {
                     <div className="sing-up-submit">
                       <button type="submit">SIGN UP</button>
                     </div>
-                    {signUpError && <p className="text-red-500-pass">{signUpError}</p>}
+                    {signUpError && (
+                      <p className="text-red-500-pass">{signUpError}</p>
+                    )}
                   </div>
                 </form>
               </div>
@@ -307,7 +411,6 @@ const SignUp = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

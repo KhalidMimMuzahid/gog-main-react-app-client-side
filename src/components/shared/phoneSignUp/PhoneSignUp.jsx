@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
@@ -24,11 +24,12 @@ const PhoneSignUp = () => {
     loading,
     tempUser,
     updateUserProfile,
+    auth,
   } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log("Temp userrrrrrrrrrrrrrrrrrrr", tempUser);
+  //console.log("Temp userrrrrrrrrrrrrrrrrrrr", tempUser);
 
   // receving the desiger location
   const pathName = location?.pathname;
@@ -38,8 +39,8 @@ const PhoneSignUp = () => {
 
   // set the destination into from
   const from = search?.slice(12) || "/";
-
-  //console.log("Frommmmmmmmmmmmmmmm", from);
+ 
+  console.log("Frommmmmmmmmmmmmmmm", from);
 
   const [numberUser, setNumberUser] = useState("");
   // loading
@@ -48,8 +49,9 @@ const PhoneSignUp = () => {
   const getOtp = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
-    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", number, name);
+    //console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", number, name);
     setNumberUser(number);
+    console.log("number: ", number);
     setError("");
 
     // those for the user namae update
@@ -62,7 +64,8 @@ const PhoneSignUp = () => {
     setUpdateUserInfo(usersInfo);
     if (number === "" || number === undefined)
       return setError("Please enter a valid phone number!");
-    if (!tempUser?.phoneNumber) {
+    // if (!tempUser?.phoneNumber) {
+    if (true) {
       // const getCapta = async () => {
       try {
         console.log("numberrrrrrrrrrrrrrrrrrrrrrrr", number);
@@ -72,10 +75,13 @@ const PhoneSignUp = () => {
           response
         );
         setResult(response);
+        console.log("auth: ", auth);
         setFlag(true);
         //console.log("This is the second of opt");
       } catch (err) {
-        setError("Please, input a valid phone number");
+        setError(err);
+        console.log("ERRorrrrrrrrrrrrrrrrrr", err);
+        // setError("Please, input a valid phone number");
       }
       // };
       // getCapta();
@@ -157,22 +163,36 @@ const PhoneSignUp = () => {
 
     const displayName = updateUserInfo?.name;
     const phoneNumber = updateUserInfo?.phoneNumber;
-    const email =  updateUserInfo?.email;
-    if (displayName && phoneNumber) {
-      updateUserProfile({ displayName, phoneNumber , email })
-        .then(() => {
-          // Profile updated!
-          // ...
-          const { name, email, phoneNumber } = updateUserInfo;
-          saveUser(name, email, phoneNumber);
-        })
-        .catch((error) => {
-          // An error occurred
-          // user need to re verify again
-          // ...
+    const email = updateUserInfo?.email;
+    console.log("it should be the next step");
+
+    if (email && phoneNumber) {
+      // xxxxxxxxxxxxxxxxxxxxxxx
+      fetch("http://localhost:5000/update-phone", {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ email, phoneNumber, displayName }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("data: ", data);
+          if (data?.modifiedCount) {
+              
+            // navigate("/login");
+            // navigate(`/login?targetPath=${from}`);
+            alert("you are successfully verified, login again.")
+          //  return  <Navigate to='/login' state={{ from }} replace></Navigate>
+            navigate(`/login?targetPath=${from}`);
+            
+          } else {
+            alert("something went wrong, please login again");
+          }
         });
     } else {
       // user need to re verify again
+      alert("something went wrong, please login again");
     }
   };
   const verifyOtp = async (e) => {
@@ -185,6 +205,7 @@ const PhoneSignUp = () => {
       //console.log("USRData.......", user);
       //navigate("/");
       updateUser();
+      // console.log("auth: ", auth)
     } catch (err) {
       setError("Plase, give correct OTP");
     }
@@ -203,21 +224,19 @@ const PhoneSignUp = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("data: ", data);
-        if(data?.acknowledged){
+        if (data?.acknowledged) {
           toast.success("Phone verification successful.");
           // setLoading(false);
           navigate(from, { replace: true });
-        }
-        else{
+        } else {
           toast.error("Please verify you phone");
         }
         //console.log("save user", data);
-    
       });
   };
 
-  if(loading){
-    return <div>loading</div>
+  if (loading) {
+    return <div>loading</div>;
   }
   return (
     <>

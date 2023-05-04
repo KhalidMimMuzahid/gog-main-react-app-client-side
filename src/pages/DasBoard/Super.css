@@ -3,7 +3,7 @@
 }
 
 .super-banner img {
-    width: 60%;
+    width: 100%;;
 }
 
 .banner-super {
@@ -226,7 +226,7 @@ p.upcomeing {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 30px;
     margin: 0;
     color: #3C4852;
 }
@@ -760,7 +760,7 @@ span.right.lest2 {
 
 @media (min-width: 100px) and (max-width: 1200.98px) {
     .super-text h1 {
-        /* font-size: 50px; */
+        font-size: 50px;
     }
 
     .super-text p {
@@ -798,7 +798,7 @@ span.right.lest2 {
     }
 
     .super-text h1 span {
-        font-size: 15px;
+        font-size: 28px;
     }
 
     .super-text h1 {

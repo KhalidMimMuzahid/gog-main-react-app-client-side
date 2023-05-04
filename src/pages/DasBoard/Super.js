@@ -179,7 +179,8 @@ const Super = () => {
                     </div>
                     <div className="sm col-md-6">
                       <div className="super-text">
-                      <h1 style={{fontSize: "40px", fontWeight: "600"}}> <span>Enrollment for</span> <br />  SUPER-30 </h1>
+                      {/* <h1 style={{fontSize: "40px", fontWeight: "600"}}> <span>Enrollment for</span> <br />  SUPER-30 </h1> */}
+                      <h1><span>Enrollment for</span> SUPER-30 </h1>
                         <p>Job Guarantee Batch</p>
                         <div className="reserve_pre_cources_button">
                           <div>

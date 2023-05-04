@@ -15,6 +15,7 @@ import {
 } from "react-icons/ai";
 import moment from "moment";
 import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
+import isPhoneVerified from "../../../utilities/isPhoneVerified/isPhoneVerified";
 
 const SignUp = () => {
   const {
@@ -48,9 +49,9 @@ const SignUp = () => {
 
   // set the destination into from
 
-  const from = location.state?.from?.pathname || "/login";
+  const from = location.state?.from?.pathname || search?.slice(12) || "/login";
 
-  //console.log("Fommmmmmmmmmmmmmmmmm", from);
+  // console.log("Fommmmmmmmmmmmmmmmmm", from);
 
   const handleSignUp = (data) => {
     console.log(data);
@@ -65,43 +66,46 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         //console.log("USRr friom sign uppppppppppppppppppppp",user);
-        const userInfo = {
-          displayName: data.name,
-          phoneNumber: data.phone,
-        };
-       // console.log("USer info0000000000000000000", userInfo);
-        updateUserProfile(userInfo)
+        // const userInfo = {
+        //   displayName: data.name,
+        //   phoneNumber: data.phone,
+        // };
+        // console.log("USer info0000000000000000000", userInfo);
+
+        // to do user info updated into firebase
+        // toast.success("Please verify your email address before login.");
+        //console.log("USer updatedddddddddddddddddddddddddddddd")
+        updateUserProfile({ displayName: data.name })
           .then(() => {
-            // to do user info updated into firebase
-            // toast.success("Please verify your email address before login.");
-            //console.log("USer updatedddddddddddddddddddddddddddddd")
+            // Profile updated!
+            // ...
             verifyEmail()
               .then(() => {
                 const justNow = moment().format();
                 const userBasicDetails = {
                   justCreated: true,
-                  name: user?.displayName,
+                  name: data.name,
                   email: user?.email,
                   phoneNumber: "",
                   createdAt: justNow,
                   updatedAt: justNow,
-                  emailVaifiedAt: justNow,
                   photoURL: user?.photoURL,
                   role: "student",
                 };
                 //console.log("User basic detailsssssssssssssssssssssss",userBasicDetails)
-                
+
                 saveUser(userBasicDetails);
                 alert("Please, check your mail and verify & log in.");
-
               })
               .catch((error) => console.error(error));
-            setLoading(false);
-            // navigate(`/signup/phone-sign-up?targetPath=${from}`);
           })
           .catch((error) => {
-            console.log("error: ", error);
+            // An error occurred
+            // ...
           });
+
+        setLoading(false);
+        // navigate(`/signup/phone-sign-up?targetPath=${from}`);
 
         // .then(() => {
         //console.log("Save Use: ", userInfo);
@@ -130,12 +134,21 @@ const SignUp = () => {
           .then((data) => {
             if (data?.isUserAlreadyExists) {
               // to do : user is alrady reistered
-              //console.log("old user");
-              toast.success("Successfully logged in");
-              navigate(from, { replace: true });
+              //console.log("old user")
+              toast.success("Successfully logged in.");
+
+              isPhoneVerified(user?.email)
+                .then((res) => res.json())
+                .then((data) => {
+                  if (data?.isPhoneVerified) {
+                    navigate(from, { replace: true });
+                  } else {
+                    navigate(`/phone-sign-up?targetPath=${from}`);
+                  }
+                });
             } else {
               // to do : this is the new user
-              //console.log("new user");
+              //console.log("new user")
               const justNow = moment().format();
               const userBasicDetails = {
                 justCreated: true,
@@ -210,7 +223,7 @@ const SignUp = () => {
         //saveUser(user.displayName, user.email);
         //toast.success("Successfully logged in");
         setLoading(false);
-        navigate(`/signup/phone-sign-up?targetPath=${from}`);
+        navigate(`/phone-sign-up?targetPath=${from}`);
         //navigate("/signup/auto-name-fill");
         //navigate(from, { replace: true });
       })
@@ -236,8 +249,9 @@ const SignUp = () => {
       .then((data) => {
         //console.log("save user", data);
         //navigate('/');
-        
-        navigate(from, { replace: true });
+
+        // navigate(from, { replace: true });
+        navigate(`/phone-sign-up?targetPath=${from}`);
       });
   };
 
@@ -250,9 +264,9 @@ const SignUp = () => {
             <div className="new-login-from">
               <div className="title-sing">
                 <h2>
-                  <Link to="/signup">Sign Up</Link>
+                  <Link to={`/signup?targetPath=${from}`}>Sign Up</Link>
                 </h2>
-                <Link to="/login">Sign in</Link>
+                <Link to={`/login?targetPath=${from}`}>Sign in</Link>
               </div>
               <div className="google-sing-in">
                 <div className="text-center googelIcon">

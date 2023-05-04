@@ -15,6 +15,7 @@ import {
 } from "react-icons/ai";
 import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
 import moment from "moment/moment";
+import isPhoneVerified from "../../../utilities/isPhoneVerified/isPhoneVerified";
 
 const Login = () => {
   const {
@@ -28,58 +29,64 @@ const Login = () => {
     FaceboolSignin,
     gitHubSignin,
     setLoading,
-    user
+    user,
+    verifyEmail,
   } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
-  const from = location.state?.from?.pathname || "/";
+  //console.log("Temp userrrrrrrrrrrrrrrrrrrr", tempUser);
 
-  useEffect(()=>{
+  // receving the desiger location
+  const pathName = location?.pathname;
+  //console.log("location: ", location)
+  const search = location?.search;
+  //console.log("search: ", search);
+
+  // set the destination into from
+  // const from = search?.slice(12) || "/";
+  const from = location.state?.from?.pathname || search?.slice(12) || "/";
+  //console.log("formmmmmmmmmmmmmmmmmmmmmmmmmmmm:", from)
+
+  useEffect(() => {
     //console.log("userrrrrrrrrrrrrrrr", user);
-    if(user?.email){
+    if (user?.email) {
       toast.success("Successfully logged in.");
       navigate(from, { replace: true });
     }
-   
-  },[user])
+  }, [user]);
   const handleSignUp = (data) => {
     //console.log("Handle sign in");
     setSignUPError("");
     signIn(data.email, data.password)
       .then((result) => {
         const user = result.user;
-        //setLoading(false)
-        // navigate(from, { replace: true });
-        // console.log("user", user);
-        // if (user?.phoneNumber) {
-        //   navigate(from, { replace: true });
-        // } else {
-        //   navigate(`/login/phone-sign-up?targetPath=${from}`);
-        // }
-        // saveUser(user.displayName, user.email);
-        //toast.success('Successfully logged in')
 
-        // checking the phone is verified or not
-        // fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${data.email}`)
-        // .then(res => res.json())
-        // .then(data =>{
-        //     // setusername(data) ;
-        //     // setLoading(false)
-        //     console.log(data);
-        //     if(data.status === 200) {
-        //       if(user.emailVerified) {
-        //         navigate(from, { replace: true });
-        //       } else {
-        //         toast.success("Check you inbox & Please verify your email address");
-        //       }
-
-        //     } else{
-        //       navigate(`/login/phone-sign-up?targetPath=${from}`);
-        //     }
-        // } )
+        if (user?.emailVerified) {
+          isPhoneVerified(user?.email)
+            .then((res) => res.json())
+            .then((data) => {
+              if (data?.isPhoneVerified) {
+                if (user?.email) {
+                  navigate(from, { replace: true });
+                } else {
+                  verifyEmail()
+                    .then(() => {
+                      navigate(`/login?targetPath=${from}`);
+                      alert("Please, check your mail and verify & log in.");
+                    })
+                    .catch((error) => console.error(error));
+                }
+              } else {
+                navigate(`/phone-sign-up?targetPath=${from}`);
+              }
+            });
+        } else {
+          alert("Please, verify your mail and login again ");
+        }
       })
+
       .catch((error) => {
         console.log(error);
         setSignUPError(error.message);
@@ -100,8 +107,17 @@ const Login = () => {
             if (data?.isUserAlreadyExists) {
               // to do : user is alrady reistered
               //console.log("old user")
-              toast.success("Successfully logged in.");
-              navigate(from, { replace: true });
+              //toast.success("Successfully logged in.");
+
+              isPhoneVerified(user?.email)
+                .then((res) => res.json())
+                .then((data) => {
+                  if (data?.isPhoneVerified) {
+                    navigate(from, { replace: true });
+                  } else {
+                    navigate(`/phone-sign-up?targetPath=${from}`);
+                  }
+                });
             } else {
               // to do : this is the new user
               //console.log("new user")
@@ -176,7 +192,7 @@ const Login = () => {
             if (data.status === 200) {
               navigate(from, { replace: true });
             } else {
-              navigate(`/login/phone-sign-up?targetPath=${from}`);
+              navigate(`/phone-sign-up?targetPath=${from}`);
             }
           });
         // //navigate(from, { replace: true });
@@ -212,8 +228,9 @@ const Login = () => {
       .then((data) => {
         //console.log("save user", data);
         //navigate('/');
-        
-        navigate(from, { replace: true });
+
+        // navigate(from, { replace: true });
+        navigate(`/phone-sign-up?targetPath=${from}`);
       });
   };
 
@@ -224,9 +241,9 @@ const Login = () => {
           <div className="col-md-12">
             <div className="new-login-from">
               <div className="title-sing">
-                <Link to="/signup">Sign Up</Link>
+                <Link to={`/signup?targetPath=${from}`}>Sign Up</Link>
                 <h2>
-                  <Link to="/login">Sign in</Link>
+                  <Link to={`/login?targetPath=${from}`}>Sign in</Link>
                 </h2>
               </div>
               <div className="google-sing-in">

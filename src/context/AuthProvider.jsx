@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { confirmPasswordReset, createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, RecaptchaVerifier, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPhoneNumber, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.init';
+import isPhoneVerified from '../utilities/isPhoneVerified/isPhoneVerified';
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -25,13 +26,14 @@ const AuthProvider = ({ children }) => {
 
     // OTP login 
     function setUpRecaptha(number) {
+        console.log("number frrom auth: ", number)
         const recaptchaVerifier = new RecaptchaVerifier(
           "recaptcha-container",
           {},
           auth
         );
         recaptchaVerifier.render();
-        return signInWithPhoneNumber(auth.currentUser, number, recaptchaVerifier);
+        return signInWithPhoneNumber(auth, number, recaptchaVerifier);
       }
 
     // Gitbub log in            
@@ -104,24 +106,32 @@ const AuthProvider = ({ children }) => {
             // if(currentUser === null || currentUser.emailVerified) {
             //     setUser(currentUser);
             // }
-            // console.log("auth.currentUser: ", auth.currentUser)
+            console.log("auth.currentUser: ", auth.currentUser)
             console.log("currentUser: ", currentUser)
+        
            
             // console.log("currentUser?.phoneNumber:  & currentUser?.emailVerified", currentUser?.phoneNumber, currentUser?.emailVerified);
             // currentUser?.phoneNumber &&
             if(  currentUser?.emailVerified && currentUser?.email){
 
                 console.log("Current user: ", currentUser);
-                setUser(currentUser);
+                isPhoneVerified(currentUser?.email)
+                .then((res) => res.json())
+                .then((data) => {
+                  if (data?.isPhoneVerified) {
+                    setUser(currentUser)
+                  } 
+                });
+                ;
                 // setLoading(false)
                 
             }
             else{
                 setUser(null)
             }
-            // if(currentUser?.email){
-            //     setTempUser(currentUser);
-            // }
+            if(currentUser?.email){
+                setTempUser(currentUser);
+            }
             setLoading(false)
         
         });

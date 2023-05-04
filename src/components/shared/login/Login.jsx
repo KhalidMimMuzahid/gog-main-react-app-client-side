@@ -52,7 +52,7 @@ const Login = () => {
   useEffect(() => {
     //console.log("userrrrrrrrrrrrrrrr", user);
     if (user?.email) {
-      toast.success("Successfully logged in.");
+      //toast.success("Successfully logged in. 0000000000000000000");
       navigate(from, { replace: true });
     }
   }, [user]);
@@ -217,7 +217,7 @@ const Login = () => {
   };
 
   const saveUser = (userBasicDetails) => {
-    fetch("http://localhost:5000/usersbasics", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersbasics", {
       method: "POST",
       headers: {
         "content-type": "application/json",

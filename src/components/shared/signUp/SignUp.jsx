@@ -238,7 +238,7 @@ const SignUp = () => {
   };
 
   const saveUser = (userBasicDetails) => {
-    fetch("http://localhost:5000/usersbasics", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersbasics", {
       method: "POST",
       headers: {
         "content-type": "application/json",

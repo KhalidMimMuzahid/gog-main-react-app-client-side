@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 const isPhoneVerified = (email) => {
     console.log("email: ", email)
   return fetch(
-    `http://localhost:5000/checkuserphoneverified?email=${email}`
+    `https://geeks-of-gurukul-server-side.vercel.app/checkuserphoneverified?email=${email}`
   );
 };
 

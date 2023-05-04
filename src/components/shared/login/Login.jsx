@@ -79,7 +79,7 @@ const Login = () => {
                     .catch((error) => console.error(error));
                 }
               } else {
-                navigate(`/phone-sign-up?targetPath=${from}`);
+                navigate(`/login/phone-sign-up?targetPath=${from}`);
               }
             });
         } else {
@@ -115,7 +115,7 @@ const Login = () => {
                   if (data?.isPhoneVerified) {
                     navigate(from, { replace: true });
                   } else {
-                    navigate(`/phone-sign-up?targetPath=${from}`);
+                    navigate(`/login/phone-sign-up?targetPath=${from}`);
                   }
                 });
             } else {
@@ -192,7 +192,7 @@ const Login = () => {
             if (data.status === 200) {
               navigate(from, { replace: true });
             } else {
-              navigate(`/phone-sign-up?targetPath=${from}`);
+              navigate(`login/phone-sign-up?targetPath=${from}`);
             }
           });
         // //navigate(from, { replace: true });
@@ -230,7 +230,7 @@ const Login = () => {
         //navigate('/');
 
         // navigate(from, { replace: true });
-        navigate(`/phone-sign-up?targetPath=${from}`);
+        navigate(`login/phone-sign-up?targetPath=${from}`);
       });
   };
 

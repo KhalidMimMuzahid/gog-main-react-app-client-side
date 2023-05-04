@@ -65,7 +65,7 @@ const PhoneSignUp = () => {
     if (number === "" || number === undefined)
       return setError("Please enter a valid phone number!");
     // if (!tempUser?.phoneNumber) {
-    if (true) {
+    // if (true) {
       // const getCapta = async () => {
       try {
         console.log("numberrrrrrrrrrrrrrrrrrrrrrrr", number);
@@ -85,7 +85,7 @@ const PhoneSignUp = () => {
       }
       // };
       // getCapta();
-    }
+    // }
 
     return;
 

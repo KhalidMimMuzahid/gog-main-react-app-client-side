@@ -143,7 +143,7 @@ const SignUp = () => {
                   if (data?.isPhoneVerified) {
                     navigate(from, { replace: true });
                   } else {
-                    navigate(`/phone-sign-up?targetPath=${from}`);
+                    navigate(`/signup/phone-sign-up?targetPath=${from}`);
                   }
                 });
             } else {
@@ -223,7 +223,7 @@ const SignUp = () => {
         //saveUser(user.displayName, user.email);
         //toast.success("Successfully logged in");
         setLoading(false);
-        navigate(`/phone-sign-up?targetPath=${from}`);
+        navigate(`/signup/phone-sign-up?targetPath=${from}`);
         //navigate("/signup/auto-name-fill");
         //navigate(from, { replace: true });
       })
@@ -251,7 +251,7 @@ const SignUp = () => {
         //navigate('/');
 
         // navigate(from, { replace: true });
-        navigate(`/phone-sign-up?targetPath=${from}`);
+        navigate(`/signup/phone-sign-up?targetPath=${from}`);
       });
   };
 

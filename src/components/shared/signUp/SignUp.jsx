@@ -49,7 +49,7 @@ const SignUp = () => {
 
   // set the destination into from
 
-  const from = location.state?.from?.pathname || search?.slice(12) || "/login";
+  const from = location.state?.from?.pathname || search?.slice(12) || "/";
 
   // console.log("Fommmmmmmmmmmmmmmmmm", from);
 
@@ -143,7 +143,7 @@ const SignUp = () => {
                   if (data?.isPhoneVerified) {
                     navigate(from, { replace: true });
                   } else {
-                    navigate(`/signup/phone-sign-up?targetPath=${from}`);
+                    navigate(`/phone-sign-up?targetPath=${from}`);
                   }
                 });
             } else {
@@ -223,7 +223,7 @@ const SignUp = () => {
         //saveUser(user.displayName, user.email);
         //toast.success("Successfully logged in");
         setLoading(false);
-        navigate(`/signup/phone-sign-up?targetPath=${from}`);
+        navigate(`/phone-sign-up?targetPath=${from}`);
         //navigate("/signup/auto-name-fill");
         //navigate(from, { replace: true });
       })
@@ -251,7 +251,7 @@ const SignUp = () => {
         //navigate('/');
 
         // navigate(from, { replace: true });
-        navigate(`/signup/phone-sign-up?targetPath=${from}`);
+        navigate(`/phone-sign-up?targetPath=${from}`);
       });
   };
 

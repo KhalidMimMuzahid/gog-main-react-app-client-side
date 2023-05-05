@@ -73,13 +73,13 @@ const Login = () => {
                 } else {
                   verifyEmail()
                     .then(() => {
-                      navigate(`/login?targetPath=${from}`);
+                      navigate(`/?targetPath=${from}`);
                       alert("Please, check your mail and verify & log in.");
                     })
                     .catch((error) => console.error(error));
                 }
               } else {
-                navigate(`/login/phone-sign-up?targetPath=${from}`);
+                navigate(`/phone-sign-up?targetPath=${from}`);
               }
             });
         } else {
@@ -115,7 +115,7 @@ const Login = () => {
                   if (data?.isPhoneVerified) {
                     navigate(from, { replace: true });
                   } else {
-                    navigate(`/login/phone-sign-up?targetPath=${from}`);
+                    navigate(`/phone-sign-up?targetPath=${from}`);
                   }
                 });
             } else {
@@ -192,7 +192,7 @@ const Login = () => {
             if (data.status === 200) {
               navigate(from, { replace: true });
             } else {
-              navigate(`login/phone-sign-up?targetPath=${from}`);
+              navigate(`/phone-sign-up?targetPath=${from}`);
             }
           });
         // //navigate(from, { replace: true });
@@ -230,7 +230,7 @@ const Login = () => {
         //navigate('/');
 
         // navigate(from, { replace: true });
-        navigate(`login/phone-sign-up?targetPath=${from}`);
+        navigate(`/phone-sign-up?targetPath=${from}`);
       });
   };
 

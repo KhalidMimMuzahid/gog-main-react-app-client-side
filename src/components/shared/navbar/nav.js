@@ -47,7 +47,7 @@
               user?.email === 'amitpaultl@gmail.com' &&
               <Nav.Link>
                 <Link className="text-decoration-none text-dark " to="/admin">
-                  Admin
+                  Adminx
                 </Link>
               </Nav.Link>
             }

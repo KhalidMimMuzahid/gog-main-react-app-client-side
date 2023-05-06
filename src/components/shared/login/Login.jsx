@@ -13,8 +13,8 @@ import {
   AiOutlinePhone,
   tempUser,
 } from "react-icons/ai";
-import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
 import moment from "moment/moment";
+import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
 import isPhoneVerified from "../../../utilities/isPhoneVerified/isPhoneVerified";
 
 const Login = () => {
@@ -286,7 +286,7 @@ const Login = () => {
                     onClick={handleGoogleSignIn}
                     style={{ width: "100%", borderRadius: "30px" }}
                   >
-                    <FcGoogle /> <span>CONTINUE WITH GOOGLE</span>
+                    <FcGoogle /> <span>CONTINUE WITH GOOGLExxxxxxxxxxxxxxxxxxxxxxx</span>
                   </button>
                 </div>
                 <div className="button-google-custom">

@@ -87,6 +87,10 @@ const Login = () => {
         }
       })
 
+
+      // this is the eerror cathch
+
+
       .catch((error) => {
         console.log(error);
         console.log("error message", error.message);
@@ -101,7 +105,7 @@ const Login = () => {
       });
   };
 
-  
+
 
   // google sign in handle
   const handleGoogleSignIn = () => {

@@ -49,7 +49,7 @@ const SignUp = () => {
 
   // set the destination into from
 
-  const from = location.state?.from?.pathname || search?.slice(12) || "/login";
+  const from = location.state?.from?.pathname || search?.slice(12) || "/";
 
   // console.log("Fommmmmmmmmmmmmmmmmm", from);
 
@@ -116,13 +116,19 @@ const SignUp = () => {
         // .catch((err) => console.log(err));
       })
       .catch((error) => {
-        console.log(error);
-        setSignUPError(error.message);
+        // console.log(error);
+        // console.log("error.messageeeeee", error.message);
+        setSignUPError(
+          error.message === "Firebase: Error (auth/email-already-in-use)."
+            ? "This Email is already in use"
+            : error.message 
+        );
       });
   };
 
   // google sign in handle
   const handleGoogleSignIn = () => {
+    setSignUPError("");
     setLoading(true);
     googleSignIn()
       .then((result) => {
@@ -196,7 +202,15 @@ const SignUp = () => {
         // //navigate(from, { replace: true });
         // navigate("/login/phone-sign-up");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        // console.error(error);
+        // console.log("error.messagessssssssss", error.message);
+        setSignUPError(
+          error.message === "Firebase: Error (auth/popup-closed-by-user)."
+            ? "Auth/Popup has been closed by you"
+            : error.message 
+        );
+      });
   };
 
   // // for GitHub signin
@@ -216,6 +230,7 @@ const SignUp = () => {
 
   // for facebook signin
   const handleFaceboolSignin = () => {
+    setSignUPError("");
     FaceboolSignin()
       .then((result) => {
         const user = result.user;
@@ -227,7 +242,15 @@ const SignUp = () => {
         //navigate("/signup/auto-name-fill");
         //navigate(from, { replace: true });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        // console.error(error);
+        // console.log("error.messagessssssssss", error.message);
+        setSignUPError(
+          error.message === "Firebase: Error (auth/popup-closed-by-user)."
+            ? "Auth/Popup has been closed by you"
+            : error.message 
+        );
+      });
   };
 
   // email verification send

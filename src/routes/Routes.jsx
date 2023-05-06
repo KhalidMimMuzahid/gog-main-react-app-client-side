@@ -48,6 +48,14 @@ export const router = createBrowserRouter([
                 path: '/phone-sign-up',
                 element: <PhoneSignUp/>
             },
+            {
+                path: '/login/phone-sign-up',
+                element: <PhoneSignUp/>
+            },
+            // {
+            //     path: '/signup/phone-sign-up',
+            //     element: <PhoneSignUp/>
+            // },
             // {
             //     path: '/signup/auto-name-fill',
             //     element: <AutoNameFill/>

@@ -23,7 +23,17 @@ const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
     const facebookProvide = new FacebookAuthProvider();
     const gitHubProvide = new GithubAuthProvider();
-
+    const [updateUser, setUpdateUser] = useState(null);
+    useEffect(() => {
+      fetch(`http://localhost:5000/userinfo/${updateUser?.email}`)
+        .then((res) => res.json())
+        .then((user) => {
+          if (user?.email) {
+            setUser(user);
+          }
+          setLoading(false);
+        });
+    }, [updateUser]);
     // OTP login 
     function setUpRecaptha(number) {
         console.log("number frrom auth: ", number)
@@ -98,45 +108,26 @@ const AuthProvider = ({ children }) => {
     // authe state chane monitor 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            console.log("hitreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed")
+          if (currentUser?.emailVerified && currentUser?.email) {
+            isPhoneVerified(currentUser?.email)
+              .then((res) => res.json())
+              .then((data) => {
+                if (data?.isPhoneVerified) {
+                  setUpdateUser(currentUser);
+                }
+              });
+            // setLoading(false)
+          } else {
+              setUser(null);
+            setLoading(false);
+          }
+          if (currentUser?.email) {
+            setTempUser(currentUser);
+          }
           
-            // setTempUser(null);
-           
-            //     setUser(null);
-            // if(currentUser === null || currentUser.emailVerified) {
-            //     setUser(currentUser);
-            // }
-            console.log("auth.currentUser: ", auth.currentUser)
-            console.log("currentUser: ", currentUser)
-        
-           
-            // console.log("currentUser?.phoneNumber:  & currentUser?.emailVerified", currentUser?.phoneNumber, currentUser?.emailVerified);
-            // currentUser?.phoneNumber &&
-            if(  currentUser?.emailVerified && currentUser?.email){
-
-                console.log("Current user: ", currentUser);
-                isPhoneVerified(currentUser?.email)
-                .then((res) => res.json())
-                .then((data) => {
-                  if (data?.isPhoneVerified) {
-                    setUser(currentUser)
-                  } 
-                });
-                ;
-                // setLoading(false)
-                
-            }
-            else{
-                setUser(null)
-            }
-            if(currentUser?.email){
-                setTempUser(currentUser);
-            }
-            setLoading(false)
-        
         });
-        return () => unsubscribe()
-    })
+        return () => unsubscribe();
+      });
 
     const authInfo = {
         user,

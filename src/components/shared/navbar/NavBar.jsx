@@ -280,7 +280,7 @@ const NavBar = () => {
                   
                  {/* Progfile icon start  */}
                 
-                { user?.uid &&
+                { user?.email &&
                   <Dropdown className="userProfileIcon">
                     <Dropdown.Toggle  id="dropdown-basic">
                       {/* <FaUser/> */}
@@ -293,7 +293,7 @@ const NavBar = () => {
                       </Dropdown>
                       <Dropdown.Divider />
                       <Dropdown className="droupdownlogout">
-                        {user?.uid ? (
+                        {user?.email ? (
                           <>
                             <Button
                               onClick={handleLogOut}

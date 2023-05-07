@@ -10,6 +10,7 @@ import "./PhoneSignUp.css";
 import { toast } from "react-hot-toast";
 import Loading from "../Loading/Loading";
 import ModalForAlert from "../modalForAlert/ModalForAlert";
+import checkPhoneAlreadyInUsed from "../../../utilities/checkPhoneAlreadyInUsed/checkPhoneAlreadyInUsed";
 
 const PhoneSignUp = () => {
   const [error, setError] = useState("");
@@ -53,7 +54,7 @@ const PhoneSignUp = () => {
 
   // set the destination into from
   const from = search?.slice(12) || "/";
- 
+
   console.log("Frommmmmmmmmmmmmmmm", from);
 
   const [numberUser, setNumberUser] = useState("");
@@ -63,113 +64,52 @@ const PhoneSignUp = () => {
   const getOtp = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+
     //console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", number, name);
     setNumberUser(number);
-    console.log("number: ", number);
     setError("");
-
-    // those for the user namae update
-    const email = tempUser?.email;
-    const usersInfo = {
-      name,
-      email,
-      phoneNumber: number,
-    };
-    setUpdateUserInfo(usersInfo);
-    if (number === "" || number === undefined)
-      return setError("Please enter a valid phone number!");
-    // if (!tempUser?.phoneNumber) {
-    // if (true) {
-      // const getCapta = async () => {
-      try {
-        console.log("numberrrrrrrrrrrrrrrrrrrrrrrr", number);
-        const response = await setUpRecaptha(number);
-        console.log(
-          "responsesssssssssssssssssssssssssssssssssssssssssssss",
-          response
-        );
-        setResult(response);
-        console.log("auth: ", auth);
-        setFlag(true);
-        //console.log("This is the second of opt");
-      } catch (err) {
-        setError(err);
-        console.log("ERRorrrrrrrrrrrrrrrrrr", err);
-        // setError("Please, input a valid phone number");
-      }
-      // };
-      // getCapta();
-    // }
-
-    return;
-
-    // fetch user for the upade his name
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersname", {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(usersInfo),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          //toast.success('Successfully ')
-          setLoadingState(false);
-          //console.log("Data ------", )
-          //navigate("/signup/phone-sign-up");
-        }
-      })
-      .catch((error) => {
-        toast.error(error.message);
-        setLoadingState(false);
-      });
-
-    if (loadingState) {
-      return <Loading></Loading>;
-    }
-
-    // ------------------------check the phone number in database or not--------------------
-    fetch(
-      "https://geeks-of-gurukul-server-side.vercel.app/checkuserindatabase",
-      {
-        headers: {
-          "content-type": "application/json",
-          number: JSON.stringify(number),
-        },
-      }
-    )
+    console.log("numberxx: ", number);
+    checkPhoneAlreadyInUsed(number)
       .then((res) => res.json())
       .then((data) => {
         console.log("data: ", data);
-        if (data?.user?.phone) {
-          //console.log("Phone number: ", data.phone);
-          toast.success("Verified.");
-          navigate(from, { replace: true });
-        } else {
-          console.log("else optn opt");
-          const getCapta = async () => {
-            try {
-              const response = await setUpRecaptha(number);
-              setResult(response);
-              setFlag(true);
-              //console.log("This is the second of opt");
-            } catch (err) {
-              setError("Please, input a valid phone number");
-            }
+        if (!data?.isNumberAlreadyExists) {
+          // those for the user namae update
+          const email = tempUser?.email;
+          const usersInfo = {
+            name,
+            email,
+            phoneNumber: number,
           };
-          getCapta();
+          setUpdateUserInfo(usersInfo);
+          if (number === "" || number === undefined)
+            return setError("Please enter a valid phone number!");
+          // if (!tempUser?.phoneNumber) {
+          // if (true) {
+
+          try {
+            const reCall = async () => {
+              console.log("numberrrrrrrrrrrrrrrrrrrrrrrr", number);
+              const response = await setUpRecaptha(number);
+              console.log(
+                "responsesssssssssssssssssssssssssssssssssssssssssssss",
+                response
+              );
+              setResult(response);
+              console.log("auth: ", auth);
+              setFlag(true);
+            };
+            reCall();
+            //console.log("This is the second of opt");
+          } catch (err) {
+            setError(err);
+            console.log("ERRorrrrrrrrrrrrrrrrrr", err);
+            // setError("Please, input a valid phone number");
+          }
+        } else {
+          setError(`${number} is already in used`);
         }
       });
-    // ------------------ End of this ---------------------------//
-
-    // try {
-    //   const response = await setUpRecaptha(number);
-    //   setResult(response);
-    //   setFlag(true);
-    // } catch (err) {
-    //   setError(err.message);
-    // }
   };
 
   const updateUser = () => {
@@ -193,14 +133,12 @@ const PhoneSignUp = () => {
         .then((data) => {
           console.log("data: ", data);
           if (data?.modifiedCount) {
-              
             // navigate("/login");
             // navigate(`/login?targetPath=${from}`);
             // alert("you are successfully verified, login again.")
-            loginAgain(`/login?targetPath=${from}`)
-          //  return  <Navigate to='/login' state={{ from }} replace></Navigate>
+            loginAgain(`/login?targetPath=${from}`);
+            //  return  <Navigate to='/login' state={{ from }} replace></Navigate>
             // navigate(`/login?targetPath=${from}`);
-            
           } else {
             toast.error("something went wrong, please login again");
           }

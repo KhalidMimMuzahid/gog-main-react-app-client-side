@@ -25,7 +25,7 @@ const Footer = () => {
                             <div className="footer-col">
                                 <h4>Geeks of Gurukul</h4>
                                 <ul>
-                                    <li><Link to="/#faq">FAQ</Link></li>
+                                    <li><Link to="/faq" target='_blank'>FAQ</Link></li>
                                     <li><Link to="/privacy" target='_blank'>Privacy Policy</Link></li>
                                     <li><Link to="/conditon" target='_blank'>Terms & Conditons</Link></li>
                                 </ul>

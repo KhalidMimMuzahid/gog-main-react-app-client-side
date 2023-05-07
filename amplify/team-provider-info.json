@@ -30,6 +30,9 @@
           "appId": "dvc1vp3dksgn4",
           "type": "manual"
         }
+      },
+      "auth": {
+        "geeksofgurukulclientc9bd2a08": {}
       }
     }
   }

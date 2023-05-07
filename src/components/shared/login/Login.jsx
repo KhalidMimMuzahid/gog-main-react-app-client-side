@@ -286,7 +286,7 @@ const Login = () => {
                     onClick={handleGoogleSignIn}
                     style={{ width: "100%", borderRadius: "30px" }}
                   >
-                    <FcGoogle /> <span>CONTINUE WITH GOOGLExxxxxxxxxxxxxxxxxxxxxxx</span>
+                    <FcGoogle /> <span>CONTINUE WITH GOOGLE</span>
                   </button>
                 </div>
                 <div className="button-google-custom">

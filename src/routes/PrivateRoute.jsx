@@ -12,9 +12,9 @@ const PrivateRoute = ({ children }) => {
     // loding
     if (loading) {
         return (
-            <div className="text-center mt-5 ">
+            <div style={{marginTop: "800px"}} className="text-center ">
 
-                <div className="spinner-grow text-center mt-5" role="status">
+                <div className="spinner-grow text-center " role="status">
                     <span className="visually-hidden">Loading...</span>
                 </div>
             </div>

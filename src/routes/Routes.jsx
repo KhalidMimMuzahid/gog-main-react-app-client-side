@@ -27,6 +27,8 @@ import AdminRoute from "./AdminRoute";
 import PhoneSignUp from "../components/shared/phoneSignUp/PhoneSignUp";
 import Super from "../pages/DasBoard/Super";
 import ReDirectAcionByFirabase from "../components/shared/forgotPassword/ReDirectAcionByFirabase";
+import { element } from "prop-types";
+import FaqContents from "../pages/fawContent/FaqContents";
 
 
 export const router = createBrowserRouter([
@@ -43,14 +45,23 @@ export const router = createBrowserRouter([
                 path: '/signup',
                 element: <SignUp/>
             },
+         
             {
-                path: '/signup/phone-sign-up',
+                path: '/phone-sign-up',
                 element: <PhoneSignUp/>
             },
             {
                 path: '/login/phone-sign-up',
                 element: <PhoneSignUp/>
             },
+            {
+                path:"/faq",
+                element: <FaqContents/>
+            },
+            // {
+            //     path: '/signup/phone-sign-up',
+            //     element: <PhoneSignUp/>
+            // },
             // {
             //     path: '/signup/auto-name-fill',
             //     element: <AutoNameFill/>

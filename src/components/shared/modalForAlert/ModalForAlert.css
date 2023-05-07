@@ -1,0 +1,17 @@
+.emailVerificaionAlertMessageBoxCSS {
+    padding: 4px 16px;
+    margin-top : 8px;
+    border-radius: 20px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #4cb461
+}
+.emailVerificaionAlertMessageBoxCSS:hover{
+    background-color: #4ba15c ;
+    cursor: pointer;
+}
+
+  
+    /* :hover={{}} */
+

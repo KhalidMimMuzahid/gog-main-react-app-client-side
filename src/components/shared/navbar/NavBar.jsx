@@ -91,7 +91,7 @@ const NavBar = () => {
           expand={expand}
           className=" m-0 mb-custom px-5"
         >
-          <div className="container">
+          <div className="container" >
             <Navbar.Brand>
               <Link to={"/"}>
                 <img
@@ -283,7 +283,9 @@ const NavBar = () => {
                 { user?.uid &&
                   <Dropdown className="userProfileIcon">
                     <Dropdown.Toggle  id="dropdown-basic">
-                      <FaUser/>
+                      {/* <FaUser/> */}
+                    
+                      <img style={{borderRadius: "50%", width:"30px"}} src={  user?.photoURL ? user?.photoURL  :  "https://i.ibb.co/jkbWws1/blank-profile-picture-973460-340.png"} alt="" />
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                       <Dropdown className="droupdownlogout2">

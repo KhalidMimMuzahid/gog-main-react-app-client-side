@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AuthProvider from './context/AuthProvider';
-// importing AWS amplify
-import { Amplify } from 'aws-amplify';
-import awsConfig from './aws-exports'
+// // importing AWS amplify
+// import { Amplify } from 'aws-amplify';
+// import awsConfig from './aws-exports'
 //TanStack query--------
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 Amplify.configure(awsConfig);
+
 
 
 const queryClient = new QueryClient();

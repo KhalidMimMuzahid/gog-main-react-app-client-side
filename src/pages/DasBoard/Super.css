@@ -3,7 +3,7 @@
 }
 
 .super-banner img {
-    width: 100%;
+    width: 70%;
 }
 
 .banner-super {
@@ -219,7 +219,7 @@ p.upcomeing {
 
 .super-text h1 span {
     color: #8B8B8B;
-    font-size: 34px;
+    /* font-size: 34px; */
 }
 
 .super-text p {
@@ -263,7 +263,7 @@ p.upcomeing {
 
 
 .super-banner {
-    min-width: 300px;
+    
 
 }
 .reserve_pre_cources_button{
@@ -274,7 +274,7 @@ p.upcomeing {
 .reserve_pre_cources_button button:after {
     position: absolute;
     content: "";
-    background: #4BA25D;
+    background: red;
     /* width: 16px;
     height: 16px; */
     border-radius: 50%;
@@ -798,7 +798,7 @@ span.right.lest2 {
     }
 
     .super-text h1 span {
-        font-size: 15px;
+        font-size: 28px;
     }
 
     .super-text h1 {

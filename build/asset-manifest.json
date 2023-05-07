@@ -1,7 +1,9 @@
 {
   "files": {
+
     "main.css": "/static/css/main.046f3fc2.css",
     "main.js": "/static/js/main.38dcb63c.js",
+
     "static/js/787.6675d423.chunk.js": "/static/js/787.6675d423.chunk.js",
     "static/media/Engineering nerds program.pdf": "/static/media/Engineering nerds program.5dc20922ca8094b2d009.pdf",
     "static/media/Coding-Bees-Program.pdf": "/static/media/Coding-Bees-Program.3a9fcb6b96a5db9fe4fc.pdf",
@@ -33,9 +35,9 @@
     "static/media/exl.png": "/static/media/exl.b8fa188db7500d1fb188.png",
     "static/media/HUL.jpg": "/static/media/HUL.2bc8bc5768442aa24eb9.jpg",
     "static/media/callBackSent.svg": "/static/media/callBackSent.1e65499b9da164d6d59d24755147c702.svg",
-    "index.html": "/index.html",
     "static/media/callback.svg": "/static/media/callback.f1e044f2f7beb7c3a9d8a9f214a7a2eb.svg",
     "static/media/applyfree.svg": "/static/media/applyfree.eca2289c2ce7ab6ad240416294627eff.svg",
+    "index.html": "/index.html",
     "static/media/Group 9115.svg": "/static/media/Group 9115.1605e257247474245400a508bafe6e74.svg",
     "static/media/teamLeads.svg": "/static/media/teamLeads.2e2993051626feed004b4de77479543b.svg",
     "static/media/road4.svg": "/static/media/road4.c56802f69d1c3589bfb9ba16d9c7f95f.svg",
@@ -53,6 +55,7 @@
     "static/media/Vector (3).svg": "/static/media/Vector (3).a1922f4deecc58d40c1b08debc3ec721.svg",
     "static/media/classTime.svg": "/static/media/classTime.ab070024bb99f67f22b12a7ff14705dd.svg",
     "static/media/Vector (2).svg": "/static/media/Vector (2).f1e93f38c93a2067d5c034e41aa6807f.svg",
+
     "main.046f3fc2.css.map": "/static/css/main.046f3fc2.css.map",
     "main.38dcb63c.js.map": "/static/js/main.38dcb63c.js.map",
     "787.6675d423.chunk.js.map": "/static/js/787.6675d423.chunk.js.map"
@@ -60,5 +63,6 @@
   "entrypoints": [
     "static/css/main.046f3fc2.css",
     "static/js/main.38dcb63c.js"
+
   ]
 }

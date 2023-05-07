@@ -1,12 +1,16 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { confirmPasswordReset, createUserWithEmailAndPassword, FacebookAuthProvider, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, RecaptchaVerifier, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPhoneNumber, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.init';
+import isPhoneVerified from '../utilities/isPhoneVerified/isPhoneVerified';
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
+
+    // for the auth user verify
+    const [tempUser, setTempUser] = useState(null);
 
     // is admin
     const [adminPart, setadmin] = useState(false)
@@ -22,6 +26,7 @@ const AuthProvider = ({ children }) => {
 
     // OTP login 
     function setUpRecaptha(number) {
+        console.log("number frrom auth: ", number)
         const recaptchaVerifier = new RecaptchaVerifier(
           "recaptcha-container",
           {},
@@ -31,7 +36,7 @@ const AuthProvider = ({ children }) => {
         return signInWithPhoneNumber(auth, number, recaptchaVerifier);
       }
 
-    // Gitbub log in 
+    // Gitbub log in            
     const gitHubSignin = () => {
         setLoading(true)
         return signInWithPopup(auth, gitHubProvide);
@@ -78,7 +83,11 @@ const AuthProvider = ({ children }) => {
 
     // for update the auth
     const updateUserProfile = (profile) => {
-        setLoading(true)
+        
+        // setLoading(true)
+        // console.log("auth.currentUser: ", auth.currentUser)
+        // console.log("temp usr: ", tempUser); // not phone 
+        console.log("profileeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", profile); // not eamil 
         return updateProfile(auth.currentUser, profile);
     }
 
@@ -89,16 +98,45 @@ const AuthProvider = ({ children }) => {
     // authe state chane monitor 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            
+            console.log("hitreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeed")
+          
+            // setTempUser(null);
+           
+            //     setUser(null);
             // if(currentUser === null || currentUser.emailVerified) {
             //     setUser(currentUser);
             // }
+            console.log("auth.currentUser: ", auth.currentUser)
             console.log("currentUser: ", currentUser)
-            setUser(currentUser);
+        
+           
+            // console.log("currentUser?.phoneNumber:  & currentUser?.emailVerified", currentUser?.phoneNumber, currentUser?.emailVerified);
+            // currentUser?.phoneNumber &&
+            if(  currentUser?.emailVerified && currentUser?.email){
+
+                console.log("Current user: ", currentUser);
+                isPhoneVerified(currentUser?.email)
+                .then((res) => res.json())
+                .then((data) => {
+                  if (data?.isPhoneVerified) {
+                    setUser(currentUser)
+                  } 
+                });
+                ;
+                // setLoading(false)
+                
+            }
+            else{
+                setUser(null)
+            }
+            if(currentUser?.email){
+                setTempUser(currentUser);
+            }
             setLoading(false)
+        
         });
         return () => unsubscribe()
-    }, [])
+    })
 
     const authInfo = {
         user,
@@ -117,7 +155,8 @@ const AuthProvider = ({ children }) => {
         adminPart,
         auth,
         setUpRecaptha,
-        verifyEmail
+        verifyEmail,
+        tempUser
     }
     return (
         <AuthContext.Provider value={authInfo}>

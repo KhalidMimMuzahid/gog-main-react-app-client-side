@@ -72,7 +72,7 @@ const Super = () => {
       SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
       To: user?.email,
       From: "mdsojibmandol@gmail.com",
-      Subject: `Hello ${user?.displayName}, Invitation to Attend Pre-Course for Super 30`,
+      Subject: `Hello ${user?.name}, Invitation to Attend Pre-Course for Super 30`,
       Body: `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach full-stack web development. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>
         
@@ -112,7 +112,7 @@ const Super = () => {
       SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
       To: user?.email,
       From: "mdsojibmandol@gmail.com",
-      Subject: `Hello ${user?.displayName}, Invitation to Attend Pre-Course for Super 30`,
+      Subject: `Hello ${user?.name}, Invitation to Attend Pre-Course for Super 30`,
       Body: `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach Full Stack Data Scientist. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>
             <p>

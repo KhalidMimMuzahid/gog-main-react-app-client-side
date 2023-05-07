@@ -86,7 +86,7 @@ const AutoNameFill = () => {
                     <div className="from-box-input">
                       <input type="text"
                       name="name"
-                      defaultValue={user?.displayName}
+                      defaultValue={user?.name}
                       {...register("name", {
                         
                       })}

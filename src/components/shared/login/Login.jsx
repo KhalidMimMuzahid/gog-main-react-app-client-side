@@ -16,6 +16,7 @@ import {
 import moment from "moment/moment";
 import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
 import isPhoneVerified from "../../../utilities/isPhoneVerified/isPhoneVerified";
+import ModalForAlert from "../modalForAlert/ModalForAlert";
 
 const Login = () => {
   const {
@@ -35,6 +36,17 @@ const Login = () => {
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
+  const [ModalForAlertCom, setModalForAlertCom] = useState(null);
+  const verifyYourEmail = () => {
+    setModalForAlertCom(
+      <ModalForAlert
+        alertMessage={"Please, check your mail and verify & log in."}
+        modalIsOpenTemp={true}
+        isForEmailVerification={true}
+        setModalForAlertCom={setModalForAlertCom}
+      />
+    );
+  };
 
   //console.log("Temp userrrrrrrrrrrrrrrrrrrr", tempUser);
 
@@ -68,28 +80,38 @@ const Login = () => {
             .then((res) => res.json())
             .then((data) => {
               if (data?.isPhoneVerified) {
-                if (user?.email) {
-                  navigate(from, { replace: true });
-                } else {
-                  verifyEmail()
-                    .then(() => {
-                      navigate(`/?targetPath=${from}`);
-                      alert("Please, check your mail and verify & log in.");
-                    })
-                    .catch((error) => console.error(error));
-                }
+                navigate(from, { replace: true });
+
+                // if (user?.email) {
+                //   navigate(from, { replace: true });
+                // } else {
+                //   verifyEmail()
+                //     .then(() => {
+                //       navigate(`/?targetPath=${from}`);
+                //       // alert("Please, check your mail and verify & log in.");
+                //       verifyYourEmail()
+                //     })
+                //     .catch((error) => console.error(error));
+                // }
               } else {
                 navigate(`/phone-sign-up?targetPath=${from}`);
               }
             });
         } else {
-          alert("Please, verify your mail and login again ");
+          // alert("Please, verify your mail and login again ");
+
+          verifyEmail()
+            .then(() => {
+              // alert("Please, check your mail and verify & log in.");
+              verifyYourEmail();
+            })
+            .catch((error) => console.error(error));
+
+          // verifyYourEmail()
         }
       })
 
-
       // this is the eerror cathch more check
-
 
       .catch((error) => {
         console.log(error);
@@ -104,8 +126,6 @@ const Login = () => {
         );
       });
   };
-
-
 
   // google sign in handle
   const handleGoogleSignIn = () => {
@@ -189,10 +209,9 @@ const Login = () => {
         setSignUPError(
           error.message === "Firebase: Error (auth/popup-closed-by-user)."
             ? "Auth/Popup has been closed by you"
-            : error.message 
+            : error.message
         );
       });
-      
   };
 
   // for facebook signin
@@ -229,7 +248,7 @@ const Login = () => {
         setSignUPError(
           error.message === "Firebase: Error (auth/popup-closed-by-user)."
             ? "Auth/Popup has been closed by you"
-            : error.message 
+            : error.message
         );
       });
   };
@@ -355,6 +374,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      {ModalForAlertCom}
     </div>
   );
 };

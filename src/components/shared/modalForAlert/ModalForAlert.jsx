@@ -1,6 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Modal from "react-modal";
+import './ModalForAlert.css'
+import { Link, useNavigate } from "react-router-dom";
 
 const customStyles = {
   content: {
@@ -12,46 +13,70 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
   },
 };
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement("#yourAppElement");
 
-const ModalForAlert = () => {
+const ModalForAlert = ({
+  alertMessage = "",
+  modalIsOpenTemp = false,
+  isForEmailVerification = false,
+  setModalForAlertCom,
+  link= ""
+}) => {
   let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-
-  function openModal() {
-    setIsOpen(true);
-  }
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#f00";
   }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
+const navigate= useNavigate()
   return (
     <div>
-      <button onClick={openModal}>Open Modal</button>
       <Modal
-        isOpen={modalIsOpen}
+        isOpen={modalIsOpenTemp}
         onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+        <div className=" ">
+          <h2 style={{display:"none"}} className="hidden" ref={(_subtitle) => (subtitle = _subtitle)}>
+            Hello
+          </h2>
+          <h1 className="fs-5 font-semibold">{alertMessage}</h1>
+          {isForEmailVerification ? (
+            <div className="justify-content-end w-100">
+              <button
+              style={{textDecoration: "none", border:"none", background: "white"}}
+                className=" w-100 d-flex justify-content-end"
+                onClick={() => {
+                  setModalForAlertCom(null);
+                }}
+              >
+                <a style={{textDecoration: "none", color: "white"}}
+                onClick={()=>{
+                  link && navigate(link)
+                }}
+                
+                  className="emailVerificaionAlertMessageBoxCSS  "
+                  href="https://mail.google.com/mail/u/0/#inbox"
+                  target="_blank"
+                >
+                  Open Email
+                </a>
+              </button>
+            </div>
+          ) : (
+            <div className="fs-5 d-flex justify-content-end w-100">
+              <Link style={{textDecoration: "none", color: "white"}}
+              to={link}
+                className="emailVerificaionAlertMessageBoxCSS"
+                onClick={() => {
+                  setModalForAlertCom(null);
+                }}
+              >
+                Ok
+              </Link>
+            </div>
+          )}
+        </div>
       </Modal>
     </div>
   );

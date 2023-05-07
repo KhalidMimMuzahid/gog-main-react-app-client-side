@@ -16,6 +16,7 @@ import {
 import moment from "moment";
 import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
 import isPhoneVerified from "../../../utilities/isPhoneVerified/isPhoneVerified";
+import ModalForAlert from "../modalForAlert/ModalForAlert";
 
 const SignUp = () => {
   const {
@@ -48,6 +49,18 @@ const SignUp = () => {
   //console.log("search: ", search);
 
   // set the destination into from
+  const [ModalForAlertCom, setModalForAlertCom] = useState(null);
+  const verifyYourEmail = (link) => {
+    setModalForAlertCom(
+      <ModalForAlert
+        alertMessage={"Please, check your mail and verify & log in."}
+        modalIsOpenTemp={true}
+        isForEmailVerification={true}
+        setModalForAlertCom={setModalForAlertCom}
+        link={link}
+      />
+    );
+  };
 
   const from = location.state?.from?.pathname || search?.slice(12) || "/";
 
@@ -95,7 +108,8 @@ const SignUp = () => {
                 //console.log("User basic detailsssssssssssssssssssssss",userBasicDetails)
 
                 saveUser(userBasicDetails);
-                alert("Please, check your mail and verify & log in.");
+                // alert("Please, check your mail and verify & log in.");
+                // verifyYourEmail()
               })
               .catch((error) => console.error(error));
           })
@@ -274,7 +288,10 @@ const SignUp = () => {
         //navigate('/');
 
         // navigate(from, { replace: true });
-        navigate(`/phone-sign-up?targetPath=${from}`);
+
+        verifyYourEmail(`/phone-sign-up?targetPath=${from}`)
+
+        // navigate(`/phone-sign-up?targetPath=${from}`);
       });
   };
 
@@ -447,6 +464,7 @@ const SignUp = () => {
           {/* --------------------------end rgitration from---------------------  */}
         </div>
       </div>
+      {ModalForAlertCom}
     </div>
   );
 };

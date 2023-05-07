@@ -9,6 +9,7 @@ import { AuthContext } from "../../../context/AuthProvider";
 import "./PhoneSignUp.css";
 import { toast } from "react-hot-toast";
 import Loading from "../Loading/Loading";
+import ModalForAlert from "../modalForAlert/ModalForAlert";
 
 const PhoneSignUp = () => {
   const [error, setError] = useState("");
@@ -17,6 +18,19 @@ const PhoneSignUp = () => {
   const [otp, setOtp] = useState("");
   const [result, setResult] = useState("");
   const [updateUserInfo, setUpdateUserInfo] = useState(null);
+  const [ModalForAlertCom, setModalForAlertCom] = useState(null);
+
+  const loginAgain = (link) => {
+    setModalForAlertCom(
+      <ModalForAlert
+        alertMessage={"You are successfully phone verified, login again."}
+        modalIsOpenTemp={true}
+        isForEmailVerification={false}
+        setModalForAlertCom={setModalForAlertCom}
+        link={link}
+      />
+    );
+  };
   const {
     setUpRecaptha,
     setLoading,
@@ -182,17 +196,18 @@ const PhoneSignUp = () => {
               
             // navigate("/login");
             // navigate(`/login?targetPath=${from}`);
-            alert("you are successfully verified, login again.")
+            // alert("you are successfully verified, login again.")
+            loginAgain(`/login?targetPath=${from}`)
           //  return  <Navigate to='/login' state={{ from }} replace></Navigate>
-            navigate(`/login?targetPath=${from}`);
+            // navigate(`/login?targetPath=${from}`);
             
           } else {
-            alert("something went wrong, please login again");
+            toast.error("something went wrong, please login again");
           }
         });
     } else {
       // user need to re verify again
-      alert("something went wrong, please login again");
+      toast.error("something went wrong, please login again");
     }
   };
   const verifyOtp = async (e) => {
@@ -297,6 +312,7 @@ const PhoneSignUp = () => {
             </div>
           </Form>
         </div>
+        {ModalForAlertCom}
       </div>
     </>
   );

@@ -219,7 +219,10 @@ p.upcomeing {
 
 .super-text h1 span {
     color: #8B8B8B;
-    /* font-size: 34px; */
+    font-size: 21px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
 }
 
 .super-text p {

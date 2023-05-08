@@ -182,7 +182,7 @@ const SignUp = () => {
                 role: "student",
               };
               toast.success("Successfully registered.");
-              saveUser(userBasicDetails);
+              saveUserForGoogleSignUp(userBasicDetails);
             }
           });
         // saveUser(user.displayName, user.email);
@@ -243,29 +243,29 @@ const SignUp = () => {
   // }
 
   // for facebook signin
-  const handleFaceboolSignin = () => {
-    setSignUPError("");
-    FaceboolSignin()
-      .then((result) => {
-        const user = result.user;
-        //console.log("Facebook user: ", user);
-        //saveUser(user.displayName, user.email);
-        //toast.success("Successfully logged in");
-        setLoading(false);
-        navigate(`/phone-sign-up?targetPath=${from}`);
-        //navigate("/signup/auto-name-fill");
-        //navigate(from, { replace: true });
-      })
-      .catch((error) => {
-        // console.error(error);
-        // console.log("error.messagessssssssss", error.message);
-        setSignUPError(
-          error.message === "Firebase: Error (auth/popup-closed-by-user)."
-            ? "Auth/Popup has been closed by you"
-            : error.message 
-        );
-      });
-  };
+  // const handleFaceboolSignin = () => {
+  //   setSignUPError("");
+  //   FaceboolSignin()
+  //     .then((result) => {
+  //       const user = result.user;
+  //       //console.log("Facebook user: ", user);
+  //       //saveUser(user.displayName, user.email);
+  //       //toast.success("Successfully logged in");
+  //       setLoading(false);
+  //       navigate(`/phone-sign-up?targetPath=${from}`);
+  //       //navigate("/signup/auto-name-fill");
+  //       //navigate(from, { replace: true });
+  //     })
+  //     .catch((error) => {
+  //       // console.error(error);
+  //       // console.log("error.messagessssssssss", error.message);
+  //       setSignUPError(
+  //         error.message === "Firebase: Error (auth/popup-closed-by-user)."
+  //           ? "Auth/Popup has been closed by you"
+  //           : error.message 
+  //       );
+  //     });
+  // };
 
   // email verification send
   const handleEmailVerification = () => {
@@ -294,6 +294,25 @@ const SignUp = () => {
         // navigate(`/phone-sign-up?targetPath=${from}`);
       });
   };
+  const saveUserForGoogleSignUp = (userBasicDetails) => {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersbasics", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userBasicDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        //console.log("save user", data);
+        //navigate('/');
+
+        // navigate(from, { replace: true });
+
+
+        navigate(`/phone-sign-up?targetPath=${from}`);
+      });
+  };
 
   return (
     <div className="sing-up">
@@ -319,7 +338,7 @@ const SignUp = () => {
                       <FcGoogle /> <span>CONTINUE WITH GOOGLE</span>
                     </button>
                   </div>
-                  <div className="button-google-custom">
+                  {/* <div className="button-google-custom">
                     <button
                       className="btn-customize btn-fabecbook btn btn-outline"
                       onClick={handleFaceboolSignin}
@@ -327,7 +346,7 @@ const SignUp = () => {
                     >
                       <AiFillFacebook /> <span>CONTINUE WITH FACEBOOK</span>
                     </button>
-                  </div>
+                  </div> */}
                   {/* <div className='button-google-custom'>
                     <button className="btn-customize btn-github btn btn-outline" onClick={handlegitHubSignin} style={{ width: "100%", borderRadius: "30px" }}>
                       <AiFillGithub /> <span>CONTINUE WITH GITHUB</span>

@@ -258,10 +258,10 @@ const NavBar = () => {
                     </Link>
                   </Nav.Link>
 
-                  <Nav.Link>
+                  <Nav.Link href="https://gog-lms.netlify.app/dashboard/assessment" target='_blank'>
                     <Link
                       className="text-dark text-decoration-none supper"
-                      to={"/super"}
+                      to="https://gog-lms.netlify.app/dashboard/assessment" target='_blank'
                     >
                       Assesment Test
                     </Link>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const ChatFunctional = () => {
+function KommunicateChat() {
   useEffect(() => {
     (function(d, m) {
       var kommunicateSettings = {
@@ -22,4 +22,4 @@ const ChatFunctional = () => {
   return <div></div>;
 };
 
-export default ChatFunctional;
+export default KommunicateChat;

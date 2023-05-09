@@ -189,7 +189,7 @@ const PhoneSignUp = () => {
   };
 
   if (loading) {
-    return <div>loading</div>;
+    return <div style={{marginTop: "200px"}}>loading</div>;
   }
   return (
     <>

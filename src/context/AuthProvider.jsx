@@ -41,17 +41,17 @@ const AuthProvider = ({ children }) => {
   const [updateUser, setUpdateUser] = useState(null);
   useEffect(() => {
     if (updateUser?.email) {
-      fetch(
-        `https://geeks-of-gurukul-server-side.vercel.app/userinfo/${updateUser?.email}`
-      )
+      fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfo/${updateUser?.email}`)
         .then((res) => res.json())
         .then((user) => {
           if (user?.email) {
             setUser(user);
+            setLoading(false);
+          } else {
+            setLoading(false);
           }
         });
     }
-    setLoading(false);
   }, [updateUser]);
   // OTP login
   function setUpRecaptha(number) {
@@ -126,21 +126,20 @@ const AuthProvider = ({ children }) => {
     return sendEmailVerification(auth.currentUser);
   };
 
-  // authe state chane monitor
-  useEffect(() => {
+   // authe state chane monitor
+   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log("current:", currentUser);
       if (currentUser?.emailVerified && currentUser?.email) {
         isPhoneVerified(currentUser?.email)
           .then((res) => res.json())
           .then((data) => {
             if (data?.isPhoneVerified) {
               setUpdateUser(currentUser);
-            }
-            else{
+            } else {
               setLoading(false);
             }
           });
-        // setLoading(false)
       } else {
         setUser(null);
         setLoading(false);

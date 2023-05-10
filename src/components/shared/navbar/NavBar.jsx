@@ -251,19 +251,21 @@ const NavBar = () => {
 
                   <Nav.Link>
                     <Link
-                      className="text-dark text-decoration-none free"
+                      className="text-dark text-decoration-none free "
                       to={"/super"}
                     >
                       SUPER 30 Details
+                      
                     </Link>
                   </Nav.Link>
 
                   <Nav.Link href="https://gog-lms.netlify.app/dashboard/assessment" target='_blank'>
                     <Link
-                      className="text-dark text-decoration-none supper"
+                      className="text-dark text-decoration-none supper position-relative"
                       to="https://gog-lms.netlify.app/dashboard/assessment" target='_blank'
                     >
                       Assesment Test
+                      <span style={{top: "0px", right: "-30px"}} class="position-absolute translate-middle badge rounded-pill bg-danger">Free</span>
                     </Link>
                   </Nav.Link>
                 </Nav>

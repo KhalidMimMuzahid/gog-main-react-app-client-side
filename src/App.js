@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Toaster } from "react-hot-toast";
 //import Chat from './components/chat/Chat';
 // import ChatFunctional from './components/chatFunctional/ChatFunctional';
-import KommunicateChat from "./chatbot";
+//import KommunicateChat from "./chatbot";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 
         <Toaster />
       </div>
-      <KommunicateChat />
+      {/* <KommunicateChat /> */}
     </>
   );
 }

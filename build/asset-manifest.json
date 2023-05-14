@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.875406c7.css",
-    "main.js": "/static/js/main.e4bc0747.js",
+    "main.js": "/static/js/main.d7b1aba0.js",
     "static/js/787.6675d423.chunk.js": "/static/js/787.6675d423.chunk.js",
     "static/media/Engineering nerds program.pdf": "/static/media/Engineering nerds program.5dc20922ca8094b2d009.pdf",
     "static/media/Coding-Bees-Program.pdf": "/static/media/Coding-Bees-Program.3a9fcb6b96a5db9fe4fc.pdf",
@@ -54,11 +54,11 @@
     "static/media/classTime.svg": "/static/media/classTime.ab070024bb99f67f22b12a7ff14705dd.svg",
     "static/media/Vector (2).svg": "/static/media/Vector (2).f1e93f38c93a2067d5c034e41aa6807f.svg",
     "main.875406c7.css.map": "/static/css/main.875406c7.css.map",
-    "main.e4bc0747.js.map": "/static/js/main.e4bc0747.js.map",
+    "main.d7b1aba0.js.map": "/static/js/main.d7b1aba0.js.map",
     "787.6675d423.chunk.js.map": "/static/js/787.6675d423.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.875406c7.css",
-    "static/js/main.e4bc0747.js"
+    "static/js/main.d7b1aba0.js"
   ]
 }

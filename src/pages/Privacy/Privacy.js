@@ -2,7 +2,7 @@ import React from "react";
 import "./Privacy.css";
 const Privacy = () => {
   return (
-    <div>
+    
       <div className="privacy-area">
         <div className="container">
           <div className="row">
@@ -229,7 +229,6 @@ const Privacy = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

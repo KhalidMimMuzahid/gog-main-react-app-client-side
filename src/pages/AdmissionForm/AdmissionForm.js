@@ -376,7 +376,7 @@ const AdmissionForm = () => {
                         </span>
                       </div>
                       <div className="submit-btu">
-                        <button type="submit">Pay</button>
+                      <Link to='/pay' style={{textDecoration:"none", color:"white"}}><button type="submit"><span>Payy</span></button></Link>
                       </div>
                     </div>
                   </div>

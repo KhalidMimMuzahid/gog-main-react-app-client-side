@@ -41,19 +41,16 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      //   {
-      //     path: "/view-pdf/:fileName",
-      //     loader: ({ params }) => params?.fileName,
-      //     element: (
-      //       <PrivateRoute>
-      //         <ViewPdf />
-      //       </PrivateRoute>
-      //     ),
-      //   },
       {
-        path: "/view-pdf",
-        element: <ViewPdf />,
+        path: "/view-pdf/:fileName",
+        loader: ({ params }) => params?.fileName,
+        element: (
+          <PrivateRoute>
+            <ViewPdf />
+          </PrivateRoute>
+        ),
       },
+
       {
         path: "/signup",
         element: <SignUp />,

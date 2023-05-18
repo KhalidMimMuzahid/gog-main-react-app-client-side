@@ -122,15 +122,13 @@ const OurProgram = () => {
                   </div>
 
                   <div className="upcoming_footer_buttons">
-                    <Link
-                      // onClick={() => knowDetails("SchoolChamps")}
-                      to="/view-pdf"
+                    <button
+                      onClick={() => knowDetails("SchoolChamps")}
                       className="stroke_button"
                       id="get-school-brochure-1"
-                      target="_blank"
                     >
-                      Know Details test
-                    </Link>
+                      Know Details
+                    </button>
                     <Link to="/admissionForm">
                       <span>
                         <button className="solid_button">Apply Now</button>

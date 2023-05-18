@@ -29,7 +29,11 @@ import Super from "../pages/DasBoard/Super";
 import ReDirectAcionByFirabase from "../components/shared/forgotPassword/ReDirectAcionByFirabase";
 import { element } from "prop-types";
 import FaqContents from "../pages/fawContent/FaqContents";
+
+import PaymentGetwayPage from "../pages/paymentGetwayPage/PaymentGetwayPage";
+
 import ViewPdf from "../components/ourProgram/ViewPdf/ViewPdf";
+
 
 export const router = createBrowserRouter([
   {
@@ -50,7 +54,6 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-
       {
         path: "/signup",
         element: <SignUp />,
@@ -67,6 +70,10 @@ export const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FaqContents />,
+      },
+      {
+        path: "/pay",
+        element: <PaymentGetwayPage />,
       },
       // {
       //     path: '/signup/phone-sign-up',

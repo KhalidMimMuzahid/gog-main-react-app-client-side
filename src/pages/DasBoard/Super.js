@@ -60,18 +60,24 @@ const Super = () => {
 
   // SMTL config
   const config = {
-    SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
-    To: "them@website.com",
-    From: "mdsojibmandol@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
+    // Username :"geeksofgurukul@yopmail.com",
+    // Password : "C4C307243D1F4902E38EDFE2BB3550A40E57",
+    // Host : "smtp.elasticemail.com",
+    // Port: 2525,
+    SecureToken: "1feb8904-e306-4435-be61-cbd512f916c1",
+
+    // SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
+    To: "",
+    From: "",
+    Subject: "",
+    Body: "",
   };
 
   const emailSendHandler = () => {
     const config = {
-      SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
+      SecureToken: "1feb8904-e306-4435-be61-cbd512f916c1",
       To: user?.email,
-      From: "mdsojibmandol@gmail.com",
+      From: "marketing@geeksofgurukul.com",
       Subject: `Hello ${user?.name}, Invitation to Attend Pre-Course for Super 30`,
       Body: `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach full-stack web development. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>
@@ -109,9 +115,9 @@ const Super = () => {
   };
   const emailSendHandler2 = () => {
     const config = {
-      SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
+      SecureToken: "1feb8904-e306-4435-be61-cbd512f916c1",
       To: user?.email,
-      From: "mdsojibmandol@gmail.com",
+      From: "marketing@geeksofgurukul.com",
       Subject: `Hello ${user?.name}, Invitation to Attend Pre-Course for Super 30`,
       Body: `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach Full Stack Data Scientist. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>

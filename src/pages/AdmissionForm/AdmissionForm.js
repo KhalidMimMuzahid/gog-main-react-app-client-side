@@ -62,7 +62,7 @@ const AdmissionForm = () => {
 
   // data lode
   useEffect(() => {
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/program")
+    fetch("http://localhost:5000/program")
       .then((res) => res.json())
       .then((data) => setCoursName(data?.data));
   }, []);
@@ -70,9 +70,7 @@ const AdmissionForm = () => {
   //user  data lode
   useEffect(() => {
     setLoading(true);
-    fetch(
-      `https://geeks-of-gurukul-server-side.vercel.app/userinfo/${user?.email}`
-    )
+    fetch(`http://localhost:5000/userinfo/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setusername(data);
@@ -95,7 +93,7 @@ const AdmissionForm = () => {
 
   // Coupon get
   // react query data fatch
-  const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/coupon`;
+  const urlcoupon = `http://localhost:5000/coupon`;
   const { data: coupon = [] } = useQuery({
     queryKey: ["coupon"],
     queryFn: async () => {
@@ -111,7 +109,7 @@ const AdmissionForm = () => {
 
   // Coupon get
   // react query data fatch
-  const urlrefel = `https://geeks-of-gurukul-server-side.vercel.app/referee`;
+  const urlrefel = `http://localhost:5000/referee`;
   const { data: referee = [] } = useQuery({
     queryKey: ["referee"],
     queryFn: async () => {
@@ -152,7 +150,7 @@ const AdmissionForm = () => {
     console.log(usersInfo);
 
     // fetch user post
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/booking", {
+    fetch("http://localhost:5000/booking", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -152,7 +152,7 @@ const Super = () => {
   // add super 30 tag  user?.email
   const addSupe30tag = (email) => {
     const user = { email };
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/users-s30", {
+    fetch("http://localhost:5000/users-s30", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -175,7 +175,7 @@ const Super = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-8 col-lg-12">
-              <div className="row">   
+              <div className="row">
                 <div className="col-md-12">
                   <div className="sloop">
                     <div className="sm col-md-6">
@@ -185,8 +185,10 @@ const Super = () => {
                     </div>
                     <div className="sm col-md-6">
                       <div className="super-text">
-                      {/* <h1 style={{fontSize: "40px", fontWeight: "600"}}> <span>Enrollment for</span> <br />  SUPER-30 </h1> */}
-                      <h1><span>Enrollment for</span> SUPER-30 </h1>
+                        {/* <h1 style={{fontSize: "40px", fontWeight: "600"}}> <span>Enrollment for</span> <br />  SUPER-30 </h1> */}
+                        <h1>
+                          <span>Enrollment for</span> SUPER-30{" "}
+                        </h1>
                         <p>Job Guarantee Batch</p>
                         <div className="reserve_pre_cources_button">
                           <div>

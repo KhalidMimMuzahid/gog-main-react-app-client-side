@@ -29,7 +29,11 @@ import Super from "../pages/DasBoard/Super";
 import ReDirectAcionByFirabase from "../components/shared/forgotPassword/ReDirectAcionByFirabase";
 import { element } from "prop-types";
 import FaqContents from "../pages/fawContent/FaqContents";
+
 import PaymentGetwayPage from "../pages/paymentGetwayPage/PaymentGetwayPage";
+
+import ViewPdf from "../components/ourProgram/ViewPdf/ViewPdf";
+
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +44,15 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/view-pdf/:fileName",
+        loader: ({ params }) => params?.fileName,
+        element: (
+          <PrivateRoute>
+            <ViewPdf />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/signup",

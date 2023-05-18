@@ -18,8 +18,8 @@ import Loading from "../Loading/Loading";
 import { Dropdown, DropdownButton, NavItem } from "react-bootstrap";
 // import AdmissionForm from "../../../pages/AdmissionForm/AdmissionForm";
 
-import { FaUser } from 'react-icons/fa';
-import { FiLogIn, FiLogOut } from 'react-icons/fi';
+import { FaUser } from "react-icons/fa";
+import { FiLogIn, FiLogOut } from "react-icons/fi";
 
 const NavBar = () => {
   // state for the nav items show
@@ -50,7 +50,7 @@ const NavBar = () => {
   const handleFormData = (applyData) => {
     // console.log(applyData);
 
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/apply-data", {
+    fetch("http://localhost:5000/apply-data", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -91,14 +91,10 @@ const NavBar = () => {
           expand={expand}
           className=" m-0 mb-custom px-5"
         >
-          <div className="container" >
+          <div className="container">
             <Navbar.Brand>
               <Link to={"/"}>
-                <img
-                  className="brand"
-                  src={logo}
-                  alt="logo"
-                />
+                <img className="brand" src={logo} alt="logo" />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -255,66 +251,85 @@ const NavBar = () => {
                       to={"/super"}
                     >
                       SUPER 30 Details
-                      
                     </Link>
                   </Nav.Link>
 
-                  <Nav.Link href="https://gog-lms.netlify.app/dashboard/assessment" target='_blank'>
+                  <Nav.Link
+                    href="https://gog-lms.netlify.app/dashboard/assessment"
+                    target="_blank"
+                  >
                     <Link
                       className="text-dark text-decoration-none supper position-relative"
-                      to="https://gog-lms.netlify.app/dashboard/assessment" target='_blank'
+                      to="https://gog-lms.netlify.app/dashboard/assessment"
+                      target="_blank"
                     >
                       Assesment Test
-                      <span style={{top: "0px", right: "-30px"}} class="position-absolute translate-middle badge rounded-pill bg-danger">Free</span>
+                      <span
+                        style={{ top: "0px", right: "-30px" }}
+                        class="position-absolute translate-middle badge rounded-pill bg-danger"
+                      >
+                        Free
+                      </span>
                     </Link>
                   </Nav.Link>
                 </Nav>
 
                 <span>
                   <Button
-                    onClick={()=>navigate("/admissionForm")}
+                    onClick={() => navigate("/admissionForm")}
                     variant="btn btn-danger me-3"
                     className="nav-apply-now"
                   >
                     Apply Now
                   </Button>
                 </span>
-                  
-                 {/* Progfile icon start  */}
-                
-                { user?.email &&
+
+                {/* Progfile icon start  */}
+
+                {user?.email && (
                   <Dropdown className="userProfileIcon">
-                    <Dropdown.Toggle  id="dropdown-basic">
+                    <Dropdown.Toggle id="dropdown-basic">
                       {/* <FaUser/> */}
-                    
-                      <img style={{borderRadius: "50%", width:"30px"}} src={  user?.photoURL ? user?.photoURL  :  "https://i.ibb.co/jkbWws1/blank-profile-picture-973460-340.png"} alt="" />
+
+                      <img
+                        style={{ borderRadius: "50%", width: "30px" }}
+                        src={
+                          user?.photoURL
+                            ? user?.photoURL
+                            : "https://i.ibb.co/jkbWws1/blank-profile-picture-973460-340.png"
+                        }
+                        alt=""
+                      />
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                       <Dropdown className="droupdownlogout2">
-                      <FaUser/> User Profile
+                        <FaUser /> User Profile
                       </Dropdown>
                       <Dropdown.Divider />
                       <Dropdown className="droupdownlogout">
                         {user?.email ? (
                           <>
-                            <Button
-                              onClick={handleLogOut}
-                            >
-                              <FiLogOut/>
+                            <Button onClick={handleLogOut}>
+                              <FiLogOut />
                               Log Out
                             </Button>
                           </>
                         ) : (
-                          <Link  to="signup">
-                            <span >
-                              <span className={{style: "text-decoration-none"}}> <FiLogIn/> Sign Up</span>
+                          <Link to="signup">
+                            <span>
+                              <span
+                                className={{ style: "text-decoration-none" }}
+                              >
+                                {" "}
+                                <FiLogIn /> Sign Up
+                              </span>
                             </span>
                           </Link>
                         )}
                       </Dropdown>
                     </Dropdown.Menu>
                   </Dropdown>
-                }
+                )}
 
                 {/* {user?.uid ? (
                   <>

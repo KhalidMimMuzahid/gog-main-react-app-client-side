@@ -41,7 +41,7 @@ const AuthProvider = ({ children }) => {
   const [updateUser, setUpdateUser] = useState(null);
   useEffect(() => {
     if (updateUser?.email) {
-      fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfo/${updateUser?.email}`)
+      fetch(`http://localhost:5000/userinfo/${updateUser?.email}`)
         .then((res) => res.json())
         .then((user) => {
           if (user?.email) {
@@ -126,8 +126,8 @@ const AuthProvider = ({ children }) => {
     return sendEmailVerification(auth.currentUser);
   };
 
-   // authe state chane monitor
-   useEffect(() => {
+  // authe state chane monitor
+  useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("current:", currentUser);
       if (currentUser?.emailVerified && currentUser?.email) {

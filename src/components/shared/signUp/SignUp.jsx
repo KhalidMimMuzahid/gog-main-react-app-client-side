@@ -135,7 +135,7 @@ const SignUp = () => {
         setSignUPError(
           error.message === "Firebase: Error (auth/email-already-in-use)."
             ? "This Email is already in use"
-            : error.message 
+            : error.message
         );
       });
   };
@@ -200,7 +200,7 @@ const SignUp = () => {
         // toast.success('Successfully logged in');
         // setLoading(false)
         // // checking the phone is verified or not
-        // fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
+        // fetch(`http://localhost:5000/userinfoforphone/${user.email}`)
         // .then(res => res.json())
         // .then(data =>{
         //     // setusername(data) ;
@@ -222,7 +222,7 @@ const SignUp = () => {
         setSignUPError(
           error.message === "Firebase: Error (auth/popup-closed-by-user)."
             ? "Auth/Popup has been closed by you"
-            : error.message 
+            : error.message
         );
       });
   };
@@ -262,7 +262,7 @@ const SignUp = () => {
   //       setSignUPError(
   //         error.message === "Firebase: Error (auth/popup-closed-by-user)."
   //           ? "Auth/Popup has been closed by you"
-  //           : error.message 
+  //           : error.message
   //       );
   //     });
   // };
@@ -275,7 +275,7 @@ const SignUp = () => {
   };
 
   const saveUser = (userBasicDetails) => {
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersbasics", {
+    fetch("http://localhost:5000/usersbasics", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -289,13 +289,13 @@ const SignUp = () => {
 
         // navigate(from, { replace: true });
 
-        verifyYourEmail(`/phone-sign-up?targetPath=${from}`)
+        verifyYourEmail(`/phone-sign-up?targetPath=${from}`);
 
         // navigate(`/phone-sign-up?targetPath=${from}`);
       });
   };
   const saveUserForGoogleSignUp = (userBasicDetails) => {
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersbasics", {
+    fetch("http://localhost:5000/usersbasics", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -308,7 +308,6 @@ const SignUp = () => {
         //navigate('/');
 
         // navigate(from, { replace: true });
-
 
         navigate(`/phone-sign-up?targetPath=${from}`);
       });

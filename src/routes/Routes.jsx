@@ -31,139 +31,147 @@ import { element } from "prop-types";
 import FaqContents from "../pages/fawContent/FaqContents";
 import PaymentGetwayPage from "../pages/paymentGetwayPage/PaymentGetwayPage";
 
-
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main/>,
-        errorElement: <NotFoundPage/>,
-        children: [
-            {
-                path: '/',
-                element: <Home/>
-            },
-            {
-                path: '/signup',
-                element: <SignUp/>
-            },
-         
-            {
-                path: '/phone-sign-up',
-                element: <PhoneSignUp/>
-            },
-            {
-                path: '/login/phone-sign-up',
-                element: <PhoneSignUp/>
-            },
-            {
-                path:"/faq",
-                element: <FaqContents/>
-            },
-            {
-                path:"/pay",
-                element: <PaymentGetwayPage/>
-            },
-            // {
-            //     path: '/signup/phone-sign-up',
-            //     element: <PhoneSignUp/>
-            // },
-            // {
-            //     path: '/signup/auto-name-fill',
-            //     element: <AutoNameFill/>
-            // },
-            {
-                path: '/forget-pass',
-                element: <ForgetPassword/>
-            },
-            {
-                path: '/authentication-access',
-                element: <ReDirectAcionByFirabase/>
-            },
-            {
-                path: '/authentication-access/login',
-                element: <Login/>
-            },
-            {
-                path: '/login',
-                element: <Login/>
-            },
-            {
-                path: '/apply',
-                element: <Apply/>
-            },
-            {
-                path: '/about',
-                element: <About></About>
-            },
-            {
-                path: '/hire',
-                element: <Hire></Hire>
-            },
-            {
-                path: '/privacy',
-                element: <Privacy></Privacy>
-            },
-            {
-                path: '/conditon',
-                element: <Conditons></Conditons>
-            },
-            {
-                path: '/admissionForm',
-                element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute> 
-            },
-            
-            {
-                path: '/super',
-                element: <PrivateRoute> <Super></Super></PrivateRoute>
-            },
-            {
-                path: '/admin',
-                element:<AdminRoute><Admin></Admin></AdminRoute> 
-            },
-            
-            
-            
-            {
-                path: '/courses',
-                element: <Courses></Courses>,
-                children:[
-                    {
-                        path: '/courses/python',
-                        element: <Python></Python>
-                    },
-                    {
-                        path: '/courses/sql',
-                        element: <SQL></SQL>
-                    },
-                    {
-                        path: '/courses/java',
-                        element: <Java></Java>
-                    },
-                    {
-                        path: '/courses/dsa',
-                        element: <DSA></DSA>
-                    },
-                    {
-                        path: '/courses/cyber',
-                        element: <Cyber></Cyber>
-                    },
-                    
-                    {
-                        path: '/courses/dataVisualization',
-                        element: <DataVisualization></DataVisualization>
-                    },
-                    {
-                        path: '/courses/machineLearning',
-                        element: <MachineLearning></MachineLearning>
-                    },
-                    {
-                        path: '/courses/ArtificialIntelligence',
-                        element: <ArtificialIntelligence></ArtificialIntelligence>
-                    },
-                ]
-            }
-            
-        ]
-    },
+  {
+    path: "/",
+    element: <Main />,
+    errorElement: <NotFoundPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
+      },
 
-])
+      {
+        path: "/phone-sign-up",
+        element: <PhoneSignUp />,
+      },
+      {
+        path: "/login/phone-sign-up",
+        element: <PhoneSignUp />,
+      },
+      {
+        path: "/faq",
+        element: <FaqContents />,
+      },
+      {
+        path: "/pay",
+        element: <PaymentGetwayPage />,
+      },
+      // {
+      //     path: '/signup/phone-sign-up',
+      //     element: <PhoneSignUp/>
+      // },
+      // {
+      //     path: '/signup/auto-name-fill',
+      //     element: <AutoNameFill/>
+      // },
+      {
+        path: "/forget-pass",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "/authentication-access",
+        element: <ReDirectAcionByFirabase />,
+      },
+      {
+        path: "/authentication-access/login",
+        element: <Login />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/apply",
+        element: <Apply />,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "/hire",
+        element: <Hire></Hire>,
+      },
+      {
+        path: "/privacy",
+        element: <Privacy></Privacy>,
+      },
+      {
+        path: "/conditon",
+        element: <Conditons></Conditons>,
+      },
+      {
+        path: "/admissionForm",
+        element: (
+          <PrivateRoute>
+            <AdmissionForm></AdmissionForm>
+          </PrivateRoute>
+        ),
+      },
+
+      {
+        path: "/super",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Super></Super>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/admin",
+        element: (
+          <AdminRoute>
+            <Admin></Admin>
+          </AdminRoute>
+        ),
+      },
+
+      {
+        path: "/courses",
+        element: <Courses></Courses>,
+        children: [
+          {
+            path: "/courses/python",
+            element: <Python></Python>,
+          },
+          {
+            path: "/courses/sql",
+            element: <SQL></SQL>,
+          },
+          {
+            path: "/courses/java",
+            element: <Java></Java>,
+          },
+          {
+            path: "/courses/dsa",
+            element: <DSA></DSA>,
+          },
+          {
+            path: "/courses/cyber",
+            element: <Cyber></Cyber>,
+          },
+
+          {
+            path: "/courses/dataVisualization",
+            element: <DataVisualization></DataVisualization>,
+          },
+          {
+            path: "/courses/machineLearning",
+            element: <MachineLearning></MachineLearning>,
+          },
+          {
+            path: "/courses/ArtificialIntelligence",
+            element: <ArtificialIntelligence></ArtificialIntelligence>,
+          },
+        ],
+      },
+    ],
+  },
+]);

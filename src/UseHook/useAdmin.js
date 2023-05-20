@@ -10,7 +10,7 @@ const useAdmin = (email) => {
     if (email) {
       console.log(email, "emai;");
 
-      fetch(`http://localhost:5000/admin/admin/${email}`, {
+      fetch(`https://geeks-of-gurukul-server-side.vercel.app/admin/admin/${email}`, {
         headers: {
           // authorization: `bearer ${localStorage.getItem('accessToken')}`
         },

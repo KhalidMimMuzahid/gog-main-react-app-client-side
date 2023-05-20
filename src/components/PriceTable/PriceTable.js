@@ -16,7 +16,7 @@ const PriceTable = ({ relod, load, copuoninfo }) => {
     };
 
     // fetch user post
-    fetch("http://localhost:5000/newprice", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/newprice", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -152,7 +152,7 @@ const Super = () => {
   // add super 30 tag  user?.email
   const addSupe30tag = (email) => {
     const user = { email };
-    fetch("http://localhost:5000/users-s30", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/users-s30", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

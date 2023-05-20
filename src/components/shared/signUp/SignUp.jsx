@@ -200,7 +200,7 @@ const SignUp = () => {
         // toast.success('Successfully logged in');
         // setLoading(false)
         // // checking the phone is verified or not
-        // fetch(`http://localhost:5000/userinfoforphone/${user.email}`)
+        // fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
         // .then(res => res.json())
         // .then(data =>{
         //     // setusername(data) ;
@@ -275,7 +275,7 @@ const SignUp = () => {
   };
 
   const saveUser = (userBasicDetails) => {
-    fetch("http://localhost:5000/usersbasics", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersbasics", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -295,7 +295,7 @@ const SignUp = () => {
       });
   };
   const saveUserForGoogleSignUp = (userBasicDetails) => {
-    fetch("http://localhost:5000/usersbasics", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersbasics", {
       method: "POST",
       headers: {
         "content-type": "application/json",

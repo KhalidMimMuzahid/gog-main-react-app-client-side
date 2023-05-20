@@ -10,7 +10,7 @@ const CouresPrice = () => {
   const [loading, setLoading] = useState(false);
 
   // react query data fatch
-  const url = `http://localhost:5000/program`;
+  const url = `https://geeks-of-gurukul-server-side.vercel.app/program`;
   const {
     data: price = [],
     refetch,

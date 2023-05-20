@@ -40,7 +40,7 @@ const AutoNameFill = () => {
     };
 
     // fetch user post
-    fetch("http://localhost:5000/usersname", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/usersname", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

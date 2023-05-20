@@ -17,7 +17,7 @@ const AdminRoute = ({ children }) => {
 
   // is Admin
 
-  const url = `http://localhost:5000/admin/${user?.email}`;
+  const url = `https://geeks-of-gurukul-server-side.vercel.app/admin/${user?.email}`;
   const {
     data: adminUser = [],
     refetch,

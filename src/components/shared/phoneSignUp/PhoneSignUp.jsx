@@ -122,7 +122,7 @@ const PhoneSignUp = () => {
 
     if (email && phoneNumber) {
       // xxxxxxxxxxxxxxxxxxxxxxx
-      fetch("http://localhost:5000/update-phone", {
+      fetch("https://geeks-of-gurukul-server-side.vercel.app/update-phone", {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -167,7 +167,7 @@ const PhoneSignUp = () => {
   const saveUser = (name, email, phone) => {
     const user = { name, email, phone };
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/users", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

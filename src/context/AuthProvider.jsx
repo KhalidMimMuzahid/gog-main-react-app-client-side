@@ -41,7 +41,7 @@ const AuthProvider = ({ children }) => {
   const [updateUser, setUpdateUser] = useState(null);
   useEffect(() => {
     if (updateUser?.email) {
-      fetch(`http://localhost:5000/userinfo/${updateUser?.email}`)
+      fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfo/${updateUser?.email}`)
         .then((res) => res.json())
         .then((user) => {
           if (user?.email) {

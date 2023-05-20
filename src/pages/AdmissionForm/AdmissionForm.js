@@ -40,7 +40,7 @@ const AdmissionForm = () => {
   const [course, setCourse] = useState({});
   const [batchName, setBatchName] = useState("");
   useEffect(() => {
-    fetch("http://localhost:5000/all-program")
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/all-program")
       .then((response) => response.json())
       .then((data) => {
         // console.log("data", data?.data);
@@ -82,7 +82,7 @@ const AdmissionForm = () => {
     if (program?.program_id) {
       setCourses([]);
       fetch(
-        `http://localhost:5000/all-courses-by-program?_id=${program?.program_id}`
+        `https://geeks-of-gurukul-server-side.vercel.app/all-courses-by-program?_id=${program?.program_id}`
       )
         .then((response) => response.json())
         .then((data) => {

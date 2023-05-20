@@ -81,7 +81,11 @@ const OurProgram = () => {
             <div className="up-card up-card-a">
               <div id="FSDA" className="up-card-head up-card-head-1">
                 <div className="up-card-rigth">
-                  <h3>Champs of Basic Coding</h3>
+                  <h3>
+                    Champs of Basic Coding
+                    <p className="text-black fw-semibold">₹1999/month</p>
+                  </h3>
+
                   <p>
                     BASIC (Beginners' All-purpose Symbolic Instruction Code) is
                     a family of general-purpose, high-level programming
@@ -144,7 +148,10 @@ const OurProgram = () => {
             <div className="up-card up-card-b">
               <div id="FWD-school" className="up-card-head up-card-head-2">
                 <div className="up-card-rigth">
-                  <h3>Champs of Advance Coding</h3>
+                  <h3>
+                    Champs of Advance Coding
+                    <p className="text-black fw-semibold">₹1999/month</p>
+                  </h3>
                   <p>
                     Students learn the fundamentals of programming through
                     creating interactive stories, designing animations, and
@@ -233,7 +240,10 @@ const OurProgram = () => {
             <div className="up-card up-card-a">
               <div id="FSDA" className="up-card-head up-card-head-1">
                 <div className="up-card-rigth">
-                  <h3>Full Stack Data Analytics</h3>
+                  <h3>
+                    Full Stack Data Analytics
+                    <p className="text-black fw-semibold">₹3999/month</p>
+                  </h3>
                   <p>
                     Data analytics is the process of examining, interpreting,
                     and transforming data into useful insights and information
@@ -298,7 +308,10 @@ const OurProgram = () => {
             <div className="up-card up-card-b">
               <div id="FWD-school" className="up-card-head up-card-head-2">
                 <div className="up-card-rigth">
-                  <h3>Full Stack Web Development</h3>
+                  <h3>
+                    Full Stack Web Development
+                    <p className="text-black fw-semibold">₹3999/month</p>
+                  </h3>
                   <p>
                     Full stack web development refers to the process of
                     designing, developing, and deploying a complete web
@@ -390,7 +403,10 @@ const OurProgram = () => {
             <div className="up-card up-card-a">
               <div id="FSDA" className="up-card-head up-card-head-1">
                 <div className="up-card-rigth">
-                  <h3>Electrical Engineering</h3>
+                  <h3>
+                    Electrical Engineering
+                    <p className="text-black fw-semibold">₹3999/month</p>
+                  </h3>
                   <p>
                     Electrical engineering is a field of engineering that deals
                     with the study and application of electricity,
@@ -454,7 +470,10 @@ const OurProgram = () => {
             <div className="up-card up-card-b">
               <div id="FWD-school" className="up-card-head up-card-head-2">
                 <div className="up-card-rigth">
-                  <h3>Mechanical Engineering</h3>
+                  <h3>
+                    Mechanical Engineering
+                    <p className="text-black fw-semibold">₹3999/month</p>
+                  </h3>
                   <p>
                     Mechanical engineering is a branch of engineering that deals
                     with the design, manufacturing, and maintenance of

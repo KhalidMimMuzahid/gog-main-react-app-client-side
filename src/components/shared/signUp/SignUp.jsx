@@ -135,7 +135,7 @@ const SignUp = () => {
         setSignUPError(
           error.message === "Firebase: Error (auth/email-already-in-use)."
             ? "This Email is already in use"
-            : error.message 
+            : error.message
         );
       });
   };
@@ -222,7 +222,7 @@ const SignUp = () => {
         setSignUPError(
           error.message === "Firebase: Error (auth/popup-closed-by-user)."
             ? "Auth/Popup has been closed by you"
-            : error.message 
+            : error.message
         );
       });
   };
@@ -262,7 +262,7 @@ const SignUp = () => {
   //       setSignUPError(
   //         error.message === "Firebase: Error (auth/popup-closed-by-user)."
   //           ? "Auth/Popup has been closed by you"
-  //           : error.message 
+  //           : error.message
   //       );
   //     });
   // };
@@ -289,7 +289,7 @@ const SignUp = () => {
 
         // navigate(from, { replace: true });
 
-        verifyYourEmail(`/phone-sign-up?targetPath=${from}`)
+        verifyYourEmail(`/phone-sign-up?targetPath=${from}`);
 
         // navigate(`/phone-sign-up?targetPath=${from}`);
       });
@@ -308,7 +308,6 @@ const SignUp = () => {
         //navigate('/');
 
         // navigate(from, { replace: true });
-
 
         navigate(`/phone-sign-up?targetPath=${from}`);
       });

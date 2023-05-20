@@ -60,18 +60,24 @@ const Super = () => {
 
   // SMTL config
   const config = {
-    SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
-    To: "them@website.com",
-    From: "mdsojibmandol@gmail.com",
-    Subject: "This is the subject",
-    Body: "And this is the body",
+    // Username :"geeksofgurukul@yopmail.com",
+    // Password : "C4C307243D1F4902E38EDFE2BB3550A40E57",
+    // Host : "smtp.elasticemail.com",
+    // Port: 2525,
+    SecureToken: "1feb8904-e306-4435-be61-cbd512f916c1",
+
+    // SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
+    To: "",
+    From: "",
+    Subject: "",
+    Body: "",
   };
 
   const emailSendHandler = () => {
     const config = {
-      SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
+      SecureToken: "1feb8904-e306-4435-be61-cbd512f916c1",
       To: user?.email,
-      From: "mdsojibmandol@gmail.com",
+      From: "marketing@geeksofgurukul.com",
       Subject: `Hello ${user?.name}, Invitation to Attend Pre-Course for Super 30`,
       Body: `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach full-stack web development. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>
@@ -109,9 +115,9 @@ const Super = () => {
   };
   const emailSendHandler2 = () => {
     const config = {
-      SecureToken: "3fc2ed9a-48ea-4440-a61e-f4daa1ac735e",
+      SecureToken: "1feb8904-e306-4435-be61-cbd512f916c1",
       To: user?.email,
-      From: "mdsojibmandol@gmail.com",
+      From: "marketing@geeksofgurukul.com",
       Subject: `Hello ${user?.name}, Invitation to Attend Pre-Course for Super 30`,
       Body: `<p> We are excited to announce the launch of Super 30 - a comprehensive program designed to teach Full Stack Data Scientist. We invite you to attend the free Pre-Course to get a seat in the upcoming Super 30 batch.
             </p>
@@ -169,7 +175,7 @@ const Super = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-8 col-lg-12">
-              <div className="row">   
+              <div className="row">
                 <div className="col-md-12">
                   <div className="sloop">
                     <div className="sm col-md-6">
@@ -179,8 +185,10 @@ const Super = () => {
                     </div>
                     <div className="sm col-md-6">
                       <div className="super-text">
-                      {/* <h1 style={{fontSize: "40px", fontWeight: "600"}}> <span>Enrollment for</span> <br />  SUPER-30 </h1> */}
-                      <h1><span>Enrollment for</span> SUPER-30 </h1>
+                        {/* <h1 style={{fontSize: "40px", fontWeight: "600"}}> <span>Enrollment for</span> <br />  SUPER-30 </h1> */}
+                        <h1>
+                          <span>Enrollment for</span> SUPER-30{" "}
+                        </h1>
                         <p>Job Guarantee Batch</p>
                         <div className="reserve_pre_cources_button">
                           <div>

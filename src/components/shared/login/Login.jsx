@@ -225,9 +225,7 @@ const Login = () => {
         toast.success("Successfully logged in");
         setLoading(false);
         // checking the phone is verified or not
-        fetch(
-          `https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`
-        )
+        fetch(`https://geeks-of-gurukul-server-side.vercel.app/userinfoforphone/${user.email}`)
           .then((res) => res.json())
           .then((data) => {
             // setusername(data) ;

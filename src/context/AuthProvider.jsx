@@ -126,8 +126,8 @@ const AuthProvider = ({ children }) => {
     return sendEmailVerification(auth.currentUser);
   };
 
-   // authe state chane monitor
-   useEffect(() => {
+  // authe state chane monitor
+  useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("current:", currentUser);
       if (currentUser?.emailVerified && currentUser?.email) {

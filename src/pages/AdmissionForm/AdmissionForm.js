@@ -9,7 +9,18 @@ import PhoneInput from "react-phone-number-input";
 import Loading from "../../components/shared/Loading/Loading";
 import { useQuery } from "@tanstack/react-query";
 import banner from "../../assets/images/bannre/0jpg 1 (1).svg";
+import { useForm } from "react-hook-form";
+import moment from "moment";
+
 const AdmissionForm = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset,
+  } = useForm();
+
   // context
   const { user } = useContext(AuthContext);
 
@@ -22,215 +33,95 @@ const AdmissionForm = () => {
   // navigate
   const navigate = useNavigate();
 
-  // Select Programme
-  const programmes = [
-    "Select Programme",
-    "School Champs",
-    "Coding Bees",
-    "Engineering Nerds",
-  ];
+  const [data, setData] = useState([]);
 
-  // Select Course
-  const courses = {
-    "Select Programme": ["Select Course "],
-    "School Champs": ["Select Course", "Basic Coding", "Advance Coding"],
-    "Coding Bees": [
-      "Select Course",
-      "Full Stack Data Analytics",
-      "Full Stack Web Development",
-    ],
-    "Engineering Nerds": [
-      "Select Course",
-      "Electrical Engineering",
-      "Mechanical Engineering",
-    ],
-  };
-  // Programme value
-  const [selectprogramme, setSelectprogramme] = useState("Select Programme");
-
-  // Course value
-  const [aselectCourse, setSelectCourse] = useState("");
-
-  // course state
-  const [courseName, setCoursName] = useState([]);
-
-  // refelhande
-  const [refelInput, setrefelInput] = useState(0);
-
-  // refelhande
-  const [username, setusername] = useState([]);
-
-  // data lode
+  const [courses, setCourses] = useState([]);
+  const [program, setProgram] = useState({});
+  const [course, setCourse] = useState({});
+  const [batchName, setBatchName] = useState("");
   useEffect(() => {
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/program")
-      .then((res) => res.json())
-      .then((data) => setCoursName(data?.data));
-  }, []);
-
-  //user  data lode
-  useEffect(() => {
-    setLoading(true);
-    fetch(
-      `https://geeks-of-gurukul-server-side.vercel.app/userinfo/${user?.email}`
-    )
-      .then((res) => res.json())
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/all-program")
+      .then((response) => response.json())
       .then((data) => {
-        setusername(data);
-        setLoading(false);
+        // console.log("data", data?.data);
+        setData(data?.data);
       });
   }, []);
 
-  console.log(username);
-
-  //main price filter
-  const mainCourse = courseName?.filter(
-    (nameCourse) => aselectCourse === nameCourse?.name
-  );
-
-  const selectedOption = useRef("");
-
-  const handleOptionChange = (event) => {
-    selectedOption.current = event.target.value;
-  };
-
-  // Coupon get
-  // react query data fatch
-  const urlcoupon = `https://geeks-of-gurukul-server-side.vercel.app/coupon`;
-  const { data: coupon = [] } = useQuery({
-    queryKey: ["coupon"],
-    queryFn: async () => {
-      const res = await fetch(urlcoupon, {
-        headers: {
-          // authorization: `bearer ${localStorage.getItem('accessToken')}`
-        },
-      });
-      const data = await res.json();
-      return data;
-    },
+  useEffect(() => {
+    const subscription = watch((value, { name, type }) => {
+      if (name === "programName") {
+        setBatchName("");
+        data?.forEach((each) => {
+          if (each?._id === value?.programName) {
+            setProgram({
+              program_id: each?._id,
+              programName: each?.programName,
+            });
+            return;
+          }
+        });
+      }
+      if (name === "courseName") {
+        courses?.forEach((each) => {
+          if (each?._id === value?.courseName) {
+            // console.log("coursexxxxxxxxxxxx: ", each)
+            setBatchName(each?.currentBatch);
+            setCourse({
+              course_id: each?._id,
+              courseName: each?.courseName,
+            });
+            return;
+          }
+        });
+      }
+    });
+    return () => subscription.unsubscribe();
   });
-
-  // Coupon get
-  // react query data fatch
-  const urlrefel = `https://geeks-of-gurukul-server-side.vercel.app/referee`;
-  const { data: referee = [] } = useQuery({
-    queryKey: ["referee"],
-    queryFn: async () => {
-      const res = await fetch(urlrefel, {
-        headers: {
-          // authorization: `bearer ${localStorage.getItem('accessToken')}`
-        },
-      });
-      const data = await res.json();
-      return data;
-    },
-  });
-
-  console.log(referee.data);
-
-  // fromHandler
-  const fromHandler = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const common = e.target;
-    const name = common.name.value;
-    const email = common.email.value;
-    const phone = common.phone.value;
-    const date = common.date.value;
-    const course = aselectCourse;
-    const gander = selectedOption.current;
-
-    const usersInfo = {
-      name,
-      email,
-      phone,
-      date,
-      course,
-      refelInput,
-      gander,
-    };
-
-    console.log(usersInfo);
-
-    // fetch user post
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/booking", {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(usersInfo),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          toast.success("Successfully ");
-          setLoading(false);
-        }
-      })
-      .catch((error) => {
-        toast.error(error.message);
-        setLoading(false);
-      });
-
-    // console.log(usersInfo);
-    // navigate('/pay/')
-  };
-
-  // payment system count
-  const discount = mainCourse[0]?.price - 150;
-
-  // Coupon Code
-  const [couponInput, setCouponInput] = useState(0);
-  const couponHandler = (e) => {
-    e.preventDefault();
-    const coupon1s = e.target.coupon.value;
-
-    const couponcount = coupon?.data?.filter(
-      (couponcheck) =>
-        coupon1s === couponcheck?.coupon &&
-        couponcheck?.selectCourse == aselectCourse &&
-        couponcheck?.selectprogramme === selectprogramme
-    );
-
-    setCouponInput(couponcount[0].discount);
-  };
-
-  const refelhande = (e) => {
-    e.preventDefault();
-    const refel = e.target.referal.value;
-    const dataRefel = referee?.data?.filter(
-      (refalsingle) => refalsingle?.code === refel
-    );
-    console.log(dataRefel);
-
-    if (dataRefel.length === 1) {
-      setrefelInput(refel);
-      toast.success("Referee");
-    } else {
-      toast.error("This didn't work.");
+  useEffect(() => {
+    if (program?.program_id) {
+      setCourses([]);
+      fetch(
+        `https://geeks-of-gurukul-server-side.vercel.app/all-courses-by-program?_id=${program?.program_id}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log("data", data?.data);
+          setCourses(data?.data);
+        });
     }
+  }, [program?.program_id]);
+
+  const purchaseCourse = (data) => {
+    if (!batchName) {
+      toast.error("This course is not ready for sale");
+      return;
+    }
+    const justNow = moment().format();
+    const coursePurchaseDetails = {
+      program,
+      course,
+      batch: batchName,
+     
+      actionsDetails: {
+        isDeleted: false,
+        creation: {
+          createdAt: justNow,
+          creatorEmail: user.email,
+        },
+        updation: {
+          updatedAt: justNow,
+          updaterEmail: user.email,
+        },
+      },
+    };
+    console.log(coursePurchaseDetails);
   };
 
   // check Coupon and set data
   let totalCopulall = 0;
   let totalcopons = 0;
   let totalDiscount = 0;
-
-  // check Coupon
-  if (couponInput) {
-    const subcopun = mainCourse[0]?.price * couponInput;
-    const discountpart = subcopun / 100;
-    totalcopons = Math.floor(discount - discountpart);
-    totalCopulall = Math.floor(discountpart + 150);
-    totalDiscount = Math.floor(discountpart);
-    toast.success("Coupon Add");
-  } else {
-    const subcopun = discount;
-    totalcopons = subcopun;
-    totalCopulall = 0;
-    totalCopulall = 150;
-  }
-
-  console.log("USERrrrrrrrrrrr", user);
 
   // set loading
 
@@ -248,120 +139,60 @@ const AdmissionForm = () => {
                 <img src={banner} alt="" />
 
                 <h4>Admission Form</h4>
-                <form onSubmit={fromHandler}>
+                <form onSubmit={handleSubmit(purchaseCourse)}>
                   <div className="row">
-                    <div className="col-md-6">
-                      <div className="single-from-admission ma-btt">
-                        <p>Full Name</p>
-                        <input
-                          type="text"
-                          required
-                          readOnly
-                          name="name"
-                          defaultValue={user?.name}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="single-from-admission ma-btt">
-                        <p>Email Address</p>
-                        <input
-                          type="email"
-                          readOnly
-                          defaultValue={user?.email}
-                          name="email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="single-from-admission">
-                        <p>Phone Number</p>
-
-                        <PhoneInput
-                          defaultCountry="IN"
-                          placeholder="Enter phone number"
-                          value={user?.phoneNumber}
-                          readOnly
-                          onChange={setValue}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="single-from-admission">
-                        <p>Birth Date</p>
-                        <input
-                          type="date"
-                          required
-                          name="date"
-                          placeholder="Enter Birth Date"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="single-from-admission mt-3">
-                        <p>Gender</p>
-                        <div className="gander">
-                          <div className="single-from">
-                            <input
-                              type="radio"
-                              required
-                              name="options"
-                              value="male"
-                              onChange={handleOptionChange}
-                            />
-                            <label htmlFor="gander-1">male</label>
-                          </div>
-
-                          <div className="single-from">
-                            <input
-                              type="radio"
-                              name="options"
-                              value="female"
-                              onChange={handleOptionChange}
-                            />
-                            <label htmlFor="gander-2">Female</label>
-                          </div>
-
-                          <div className="single-from">
-                            <input
-                              type="radio"
-                              name="options"
-                              value="other"
-                              onChange={handleOptionChange}
-                            />
-                            <label htmlFor="gander-3">prefer not to say</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                     <div className="col-md-12">
                       <div className="single-from-admission">
                         <p>Select Programme</p>
                         <select
-                          required
-                          onChange={(e) => {
-                            setSelectprogramme(e.target.value);
-                          }}
+                          name="programName"
+                          {...register("programName", {
+                            required: "Program Name is required",
+                          })}
                         >
-                          {programmes?.map((programme, i) => (
-                            <option key={i} value={programme}>
-                              {programme}
-                            </option>
-                          ))}
+                          <option disabled selected value="">
+                            Choose a Program
+                          </option>
+                          {data?.length > 0 &&
+                            data?.map((each) => (
+                              <option key={each?._id} value={each?._id}>
+                                {each?.programName}
+                              </option>
+                            ))}
                         </select>
+                        {errors.programName && (
+                          <p
+                            className="text-red-500 font-poppins font-medium"
+                            role="alert"
+                          >
+                            {errors.programName?.message}
+                          </p>
+                        )}
                         <p> Select Course</p>
                         <select
-                          required
-                          onChange={(e) => {
-                            setSelectCourse(e.target.value);
-                          }}
+                          name="courseName"
+                          {...register("courseName", {
+                            required: "Course Name is required",
+                          })}
                         >
-                          {courses[selectprogramme]?.map((course, i) => (
-                            <option key={i} value={course}>
-                              {course}
-                            </option>
-                          ))}
+                          <option disabled selected value="">
+                            Choose a Course
+                          </option>
+                          {courses?.length > 0 &&
+                            courses?.map((each) => (
+                              <option key={each?._id} value={each?._id}>
+                                {each?.courseName}
+                              </option>
+                            ))}
                         </select>
+                        {errors.courseName && (
+                          <p
+                            className="text-red-500 font-poppins font-medium"
+                            role="alert"
+                          >
+                            {errors.courseName?.message}
+                          </p>
+                        )}
                       </div>
                       <div className="check-box-btu">
                         <input type="checkbox" checked />
@@ -376,7 +207,11 @@ const AdmissionForm = () => {
                         </span>
                       </div>
                       <div className="submit-btu">
-                        <button type="submit">Pay</button>
+                        
+                          <button type="submit">
+                            <span>Pay</span>
+                          </button>
+                        
                       </div>
                     </div>
                   </div>
@@ -394,7 +229,7 @@ const AdmissionForm = () => {
                     <Accordion.Item eventKey="0">
                       <Accordion.Header>Apply Referal Code</Accordion.Header>
                       <Accordion.Body>
-                        <form onSubmit={refelhande}>
+                        <form>
                           <div className="code">
                             <input
                               type="text"
@@ -402,25 +237,6 @@ const AdmissionForm = () => {
                               name="referal"
                             />
                             <button>Submit</button>
-                          </div>
-                        </form>
-                      </Accordion.Body>
-                    </Accordion.Item>
-                  </Accordion>
-                </div>
-                <div className="discount-area">
-                  <Accordion>
-                    <Accordion.Item eventKey="0">
-                      <Accordion.Header>Apply Coupon Code</Accordion.Header>
-                      <Accordion.Body>
-                        <form onSubmit={couponHandler}>
-                          <div className="code">
-                            <input
-                              type="text"
-                              name="coupon"
-                              placeholder="Coupon Code"
-                            />
-                            <button type="submit">Submit</button>
                           </div>
                         </form>
                       </Accordion.Body>
@@ -436,7 +252,7 @@ const AdmissionForm = () => {
                       <p>
                         {" "}
                         <strong>
-                          ₹{mainCourse[0]?.price ? mainCourse[0]?.price : 0}
+                          {/* ₹{mainCourse[0]?.price ? mainCourse[0]?.price : 0} */}
                         </strong>{" "}
                       </p>
                     </div>
@@ -448,7 +264,7 @@ const AdmissionForm = () => {
                       <p className="red">Total</p>
                       <p>
                         {" "}
-                        <strong>₹{discount ? discount : 0}</strong>{" "}
+                        {/* <strong>₹{discount ? discount : 0}</strong>{" "} */}
                       </p>
                     </div>
                     <div className="pricing-details">

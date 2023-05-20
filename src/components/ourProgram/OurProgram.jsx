@@ -83,7 +83,7 @@ const OurProgram = () => {
                 <div className="up-card-rigth">
                   <h3>
                     Champs of Basic Coding
-                    <p className="text-black fw-semibold">₹1999/month</p>
+                    <p className="text-black fw-semibold">₹1199/month</p>
                   </h3>
 
                   <p>

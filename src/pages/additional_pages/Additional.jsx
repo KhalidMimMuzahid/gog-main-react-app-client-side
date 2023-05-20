@@ -4,7 +4,7 @@ import { BsPatchCheckFill, BsClock, BsCalendar4 } from "react-icons/bs";
 function Additional() {
   return (
     <div style={{ marginTop: "70px", background: "black" }} className="pb-5">
-      <div className="m-5 pt-5 px-5 text-center">
+      <div className="m-5 pt-5 px-5 text-center fw-light">
         {/* Headings */}
         <div>
           <h3 style={{ color: "#F8E163" }}>The Next gen AI tools</h3>
@@ -36,10 +36,23 @@ function Additional() {
         </div>
         {/* Timings */}
         {/* Pictures */}
-        <div className="d-flex justify-content-between align-items-center pt-5">
-          <img src="../../assets/images/additional_images/chatgptLogo.png" />
-          <img src="../../assests/images/additional_images/card.png" />
-          <img src="../../assests/images/additional_images/chatgptLogo.png" />
+        <div className="d-flex justify-content-between align-items-center mt-5 mx-5 px-5">
+          <img
+            src={require("../../assets/images/additional_images/chatgptLogo.png")}
+            alt="chatGPT logo"
+            height={150}
+          />
+
+          <img
+            src={require("../../assets/images/additional_images/card.png")}
+            alt="speaker image"
+            height={250}
+          />
+          <img
+            src={require("../../assets/images/additional_images/chatgptLogo.png")}
+            alt="chatGPT logo"
+            height={150}
+          />
         </div>
         {/* Pictures */}
       </div>

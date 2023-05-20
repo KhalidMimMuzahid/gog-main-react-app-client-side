@@ -2,13 +2,14 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import React from "react";
 import CheckoutForm from "./CheckoutForm";
+import { useLoaderData } from "react-router-dom";
 
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
 //console.log("Striprrrrrrrrrreeeeeeeeeeeeeeeee", stripePromise);
 
 const PaymentGetwayPage = () => {
-  // I assume
+  const coursePurchaseDetails= useLoaderData()
   const price = 199;
   const course = "Full-stack Web development";
 

@@ -33,6 +33,7 @@ import FaqContents from "../pages/fawContent/FaqContents";
 import PaymentGetwayPage from "../pages/paymentGetwayPage/PaymentGetwayPage";
 
 import ViewPdf from "../components/ourProgram/ViewPdf/ViewPdf";
+import Additional from "../pages/additional_pages/Additional";
 
 
 export const router = createBrowserRouter([
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/additionals",
+        element: <Additional />
       },
       {
         path: "/view-pdf/:fileName",

@@ -40,6 +40,9 @@
 .certificate-section{
   width: 80%;
 }
+.mentor-section {
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   .dt-box p {
@@ -77,6 +80,9 @@
     width: 100%;
   }
   .certificate-section{
+    width: 100%;
+  }
+  .mentor-section {
     width: 100%;
   }
 }

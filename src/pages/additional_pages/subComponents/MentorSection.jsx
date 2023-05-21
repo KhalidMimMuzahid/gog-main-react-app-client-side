@@ -2,7 +2,7 @@ import React from "react";
 
 function MentorSection() {
   return (
-    <div style={{width: "80%"}} className="mx-auto">
+    <div className="mentor-section mx-auto">
       <div className="row align-items-center gap-md-5 gap-lg-0">
         <div className="col-lg-5 col-sm-12">
           <img

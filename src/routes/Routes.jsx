@@ -34,6 +34,7 @@ import PaymentGetwayPage from "../pages/paymentGetwayPage/PaymentGetwayPage";
 
 import ViewPdf from "../components/ourProgram/ViewPdf/ViewPdf";
 import Additional from "../pages/additional_pages/Additional";
+import ContactPage from "../pages/ContactUs/ContactPage";
 
 
 export const router = createBrowserRouter([
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
       {
         path: "/additionals",
         element: <Additional />
+      },
+      {
+        path: "/contactus",
+        element: <ContactPage />
       },
       {
         path: "/view-pdf/:fileName",

@@ -283,6 +283,15 @@ const NavBar = () => {
                     Apply Now
                   </Button>
                 </span>
+                <span>
+                  <Button
+                    onClick={() => navigate("/contactus")}
+                    variant="btn me-3"
+                    className="border border-dark text-black"
+                  >
+                    Contact us
+                  </Button>
+                </span>
 
                 {/* Progfile icon start  */}
 

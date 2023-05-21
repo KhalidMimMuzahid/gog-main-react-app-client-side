@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const TopBanner = ({ setShouldShowBanner }) => {
     const navigate = useNavigate()
   return (
-    <div onClick={()=>navigate('/')} className={`${style.bannerBody}`}>
+    <div onClick={()=>navigate('/additionals')} className={`${style.bannerBody}`}>
           <div className="d-flex align-items-center justify-content-around p-2">
               {/* content */}
               <img src={chatGPT} alt="" />

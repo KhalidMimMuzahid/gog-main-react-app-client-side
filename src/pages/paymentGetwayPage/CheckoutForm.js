@@ -1,21 +1,50 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
+import { AuthContext } from "../../context/AuthProvider";
+import { toast } from "react-hot-toast";
 
-const CheckoutForm = ({ course, price }) => {
-  const [cardError, setCardError] = useState("");
+const CheckoutForm = ({ price, coursePurchaseDetails }) => {
+  // context
+  const { user } = useContext(AuthContext);
+
+  //console.log("course price", price,  course)
+  const [paymentError, setPaymentError] = useState("");
+  const [isPaying, setIsPaying] = useState(false);
+  const [clientSecret, setClientSecret] = useState("");
+  const [paymentId, setPaymentId] = useState(null);
+  const [payingStatus, setPayingStatus] = useState("");
   const stripe = useStripe();
   const elements = useElements();
 
+  useEffect(() => {
+    // Create PaymentIntent as soon as the page loads
+    fetch("http://localhost:5000/create-payment-intent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ price }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log("ready to pay:  ", data);
+        setClientSecret(data.clientSecret);
+      });
+  }, [price]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setPayingStatus("");
+    setPaymentError("");
+    setIsPaying(true)
     if (!stripe || !elements) {
+      console.log("xxxxxxxxxxxxxxxxxxxxxxxx");
       return;
     }
 
     const card = elements.getElement(CardElement);
 
     if (card === null) {
+      console.log("xxxxxxxxxxxxxxxxxxxxxxxx");
       return;
     }
 
@@ -25,10 +54,56 @@ const CheckoutForm = ({ course, price }) => {
     });
 
     if (error) {
-      console.log(error);
-      setCardError(error.message);
+      setPaymentError(error.message);
+      return;
     } else {
-      setCardError("");
+      console.log("xxxxxxxxxxxxxxxxxxxxxxxx2");
+      setPaymentError("");
+    }
+
+    const {
+      paymentIntent,
+      error: confirmError,
+    } = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: card,
+        billing_details: {
+          email: user.email,
+        },
+      },
+    });
+
+    if (confirmError) {
+      setIsPaying(false);
+      setPaymentError(confirmError.message);
+      return;
+    }
+    if (paymentIntent?.status === "succeeded") {
+      setPaymentId(paymentIntent?.id);
+      console.log("successfully paid: intent Id: ", paymentIntent);
+      // TODO: update database for change payment status  post_id paymentIntent?.id
+      // course
+
+      fetch(
+        `http://localhost:5000/setpaymentstatus?_id=${coursePurchaseDetails?._id}&paymentId=${paymentIntent?.id}`,
+        { method: "POST" }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("data: ", data);
+
+          if (data?.success) {
+            toast.success(data?.success?.message);
+            setPayingStatus("success");
+          } else {
+            toast.error(data?.success?.error);
+            setPayingStatus("danger");
+            setPaymentError(data?.success?.error);
+          }
+          setIsPaying(false);
+
+          // setPaymentError("something went wrong, please try again");
+        });
     }
   };
 
@@ -54,12 +129,26 @@ const CheckoutForm = ({ course, price }) => {
         <button
           className="mt-3 btn btn-primary"
           type="submit"
-          disabled={!stripe}
+          disabled={!stripe || !clientSecret || isPaying || payingStatus==="success"}
         >
-          Pay
+          {isPaying ? "Paying" : payingStatus==="success" ? "Paid" : "Pay"}
         </button>
       </form>
-      <p style={{ color: "red" }}>{cardError}</p>
+      {/* <p style={{ color: "red" }}>{paymentError}</p> */}
+      {payingStatus === "success" && (
+        <div>
+          <h6>You have successfully paid for this course</h6>
+          <h6>PaymentId: <input readOnly value={paymentId} type="text"></input> </h6>
+        </div>
+      )}
+      {paymentError && (
+        <div>
+          <h6 style={{ color: "red" }}>{paymentError}</h6>
+          {payingStatus === "danger" && paymentId && (
+            <h6> PaymentId: <input readOnly value={paymentId} type="text"> </input> </h6>
+          )}
+        </div>
+      )}
     </>
   );
 };

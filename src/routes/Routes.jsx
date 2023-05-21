@@ -77,7 +77,7 @@ export const router = createBrowserRouter([
         element: <FaqContents />,
       },
       {
-        path: "pay:_id",
+        path: "pay/:_id",
         loader: async ({params})=> fetch(`http://localhost:5000/enroll-course-info?_id=${params?._id}`),
         element: <PaymentGetwayPage />,
       },

@@ -141,7 +141,16 @@ const AdmissionForm = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("enrolledInfo: ",data);
+        //console.log("enrolledInfo: ",data);
+        if(data.success) {
+          //console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',data?.data);
+          const _id = data?.data?.insertedId || data?.data?._id;
+          //console.log("Idddddddddddddddddddd",_id)
+          navigate(`/pay/${_id}`)
+        }
+        else{
+          toast.error(data.error);
+        }
       });
   };
 

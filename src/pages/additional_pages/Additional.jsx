@@ -8,6 +8,7 @@ import WhySection from "./subComponents/whyGOGSection/WhySection";
 import MentorSection from "./subComponents/MentorSection";
 import PricingSection from "./subComponents/PricingSection";
 import Faq from "./subComponents/Faq";
+import CertificationSection from "./subComponents/CertificationSection";
 
 // console.log("styles: ", styles);
 
@@ -143,15 +144,17 @@ function Additional() {
         {/* Mentor description section */}
         <MentorSection />
         {/* Mentor description section */}
-        <h2 className="fw-semibold my-5 py-5">
-          Enroll Now
+        <h2 className="fw-semibold my-5 py-5" style={{ color: "#4BA25D" }}>
+          Certification
         </h2>
+        {/* Certification section */}
+        <CertificationSection />
+        {/* Certification section */}
+        <h2 className="fw-semibold my-5 py-5">Enroll Now</h2>
         {/* Pricing section */}
         <PricingSection />
         {/* Pricing section */}
-        <h2 className="fw-semibold my-5 py-5">
-          Frequently Asked Questions
-        </h2>
+        <h2 className="fw-semibold my-5 py-5">Frequently Asked Questions</h2>
         {/* FAQ section */}
         <Faq />
         {/* FAQ section */}

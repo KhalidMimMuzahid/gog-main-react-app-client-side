@@ -20,6 +20,7 @@ import { Dropdown, DropdownButton, NavItem } from "react-bootstrap";
 
 import { FaUser } from "react-icons/fa";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
+import TopBanner from "../../TopBanner/TopBanner";
 
 const NavBar = () => {
   // state for the nav items show
@@ -45,6 +46,7 @@ const NavBar = () => {
   } = useForm(); // ract hook from
   //const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
+  const [shouldShowBanner, setShouldShowBanner] = useState(true);
 
   // getting data form React hook form
   const handleFormData = (applyData) => {
@@ -83,6 +85,8 @@ const NavBar = () => {
 
   return (
     <div className="menu-gr shadow-sm">
+      {shouldShowBanner &&
+        <TopBanner setShouldShowBanner ={setShouldShowBanner} />}
       {["xl"].map((expand) => (
         <Navbar
           key={expand}
@@ -92,6 +96,7 @@ const NavBar = () => {
           className=" m-0 mb-custom px-5"
         >
           <div className="container">
+          
             <Navbar.Brand>
               <Link to={"/"}>
                 <img className="brand" src={logo} alt="logo" />
@@ -281,6 +286,15 @@ const NavBar = () => {
                     className="nav-apply-now"
                   >
                     Apply Now
+                  </Button>
+                </span>
+                <span>
+                  <Button
+                    onClick={() => navigate("/contactus")}
+                    variant="btn me-3"
+                    className="border border-dark text-black"
+                  >
+                    Contact us
                   </Button>
                 </span>
 

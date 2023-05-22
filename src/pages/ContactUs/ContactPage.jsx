@@ -30,7 +30,7 @@ function ContactPage() {
             ))}
           </div>
         </div>
-        <div className="col-md-12 col-lg-6 border">
+        <div className="col-md-12 col-lg-6 bg-white rounded-2 border">
           <div className="p-3">
             <p>
               <strong>

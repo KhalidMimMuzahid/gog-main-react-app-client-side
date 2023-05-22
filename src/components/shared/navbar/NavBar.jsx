@@ -288,7 +288,7 @@ const NavBar = () => {
                     Apply Now
                   </Button>
                 </span>
-                <span>
+                {/* <span>
                   <Button
                     onClick={() => navigate("/contactus")}
                     variant="btn me-3"
@@ -296,7 +296,7 @@ const NavBar = () => {
                   >
                     Contact us
                   </Button>
-                </span>
+                </span> */}
 
                 {/* Progfile icon start  */}
 

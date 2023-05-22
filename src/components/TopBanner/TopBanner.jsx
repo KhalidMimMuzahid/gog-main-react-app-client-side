@@ -6,14 +6,19 @@ import { useNavigate } from "react-router-dom";
 
 const TopBanner = ({ setShouldShowBanner }) => {
   const navigate = useNavigate();
+
+  const handleBannerClick = () => {
+    setShouldShowBanner(false);
+    navigate("/additionals");
+  };
+
+  const handleButtonCloseClick = (event) => {
+    event.stopPropagation();
+    setShouldShowBanner(false);
+  };
+
   return (
-    <div
-      onClick={() => {
-        setShouldShowBanner(false);
-        navigate("/additionals");
-      }}
-      className={`${style.bannerBody}`}
-    >
+    <div onClick={handleBannerClick} className={`${style.bannerBody}`}>
       <div className="d-flex align-items-center justify-content-around p-2">
         {/* content */}
         <img src={chatGPT} alt="" />
@@ -25,10 +30,7 @@ const TopBanner = ({ setShouldShowBanner }) => {
       </div>
       <div>
         {/* Button */}
-        <button
-          onClick={() => setShouldShowBanner(false)}
-          className={`${style?.bannerClose}`}
-        >
+        <button onClick={handleButtonCloseClick} className={`${style?.bannerClose}`}>
           X
         </button>
         {/* Button */}

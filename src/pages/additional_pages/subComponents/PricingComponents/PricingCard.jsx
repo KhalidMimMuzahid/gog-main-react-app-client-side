@@ -16,7 +16,7 @@ function PricingCard() {
           Take advantage of the discounted price of INR 99 and save a total of
           INR 900
         </p>
-        <p>The launch offer expires on midnight of: May 26, 2023</p>
+        <p>The launch offer expires on midnight of: May 25, 2023</p>
         <Link target="_blank" to="https://forms.gle/y7uqvSjpy7fS8P9g9">
           <button
             type="button"

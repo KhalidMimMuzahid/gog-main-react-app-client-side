@@ -103,13 +103,13 @@ const AdmissionForm = () => {
       return;
     }
     const justNow = moment().format();
-    // fetch(`http://localhost:5000/batch?batchName=${batchName}`)
+    // fetch(`https://geeks-of-gurukul-server-side.vercel.app/batch?batchName=${batchName}`)
     // .then((res) => res.json())
     // .then((data) => {
     //   console.log("batchhhhhhhhhhhhhhhh",data);
     // })
     const res = await fetch(
-      `http://localhost:5000/batch?batchName=${batchName}`
+      `https://geeks-of-gurukul-server-side.vercel.app/batch?batchName=${batchName}`
     );
     const batchDetails = await res.json();
     const coursePurchaseDetails = {
@@ -132,7 +132,7 @@ const AdmissionForm = () => {
       },
     };
     // console.log(coursePurchaseDetails);
-    fetch("http://localhost:5000/enroll-course",{
+    fetch("https://geeks-of-gurukul-server-side.vercel.app/enroll-course",{
       method: "POST",
       headers: {
         "content-type": "application/json",

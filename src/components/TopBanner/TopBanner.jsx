@@ -12,6 +12,11 @@ const TopBanner = ({ setShouldShowBanner }) => {
     navigate("/additionals");
   };
 
+  const handleButtonCloseClick = (event) => {
+    event.stopPropagation();
+    setShouldShowBanner(false);
+  };
+
  
 
   return (
@@ -26,9 +31,13 @@ const TopBanner = ({ setShouldShowBanner }) => {
         {/* <img src={chatGPT} alt="" /> */}
         {/* content */}
         </div>
-        </Marquee>
+      </Marquee>
+      <button onClick={handleButtonCloseClick} className={`${style?.bannerClose}`}>
+          X
+        </button>
       <div>
       </div>
+      
     </div>
   );
 };

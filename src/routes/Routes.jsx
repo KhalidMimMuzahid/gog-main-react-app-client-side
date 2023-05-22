@@ -83,7 +83,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "pay/:_id",
-        loader: async ({params})=> fetch(`http://localhost:5000/enroll-course-info?_id=${params?._id}`),
+        loader: async ({params})=> fetch(`https://geeks-of-gurukul-server-side.vercel.app/enroll-course-info?_id=${params?._id}`),
         element: <PaymentGetwayPage />,
       },
       // {

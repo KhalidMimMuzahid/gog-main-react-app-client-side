@@ -10,6 +10,7 @@ import PricingSection from "./subComponents/PricingSection";
 import Faq from "./subComponents/Faq";
 import CertificationSection from "./subComponents/CertificationSection";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 // console.log("styles: ", styles);
 
@@ -55,17 +56,20 @@ function Additional() {
               ₹99 <s className="fs-5">₹999</s>
             </p>
             <p className="mb-0">
-              Offer Ends in <strong className="fs-5">{remainingTimeMobile}</strong>
+              Offer Ends in{" "}
+              <strong className="fs-5">{remainingTimeMobile}</strong>
             </p>
           </div>
           <div>
-            <button
-              type="button"
-              className="text-dark px-3 py-2 border-0 rounded fw-semibold"
-              style={{ backgroundColor: "#A6EF67" }}
-            >
-              Register now!
-            </button>
+            <Link target="_blank" to="https://forms.gle/y7uqvSjpy7fS8P9g9">
+              <button
+                type="button"
+                className="text-dark px-3 py-2 border-0 rounded fw-semibold"
+                style={{ backgroundColor: "#A6EF67" }}
+              >
+                Register now!
+              </button>
+            </Link>
           </div>
         </div>
       </div>

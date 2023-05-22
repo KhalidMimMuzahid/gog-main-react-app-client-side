@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.webinar-for{
+.webinar-for {
   width: 80%;
 }
 
@@ -33,18 +33,48 @@
   width: 90%;
 }
 
-.pricing-benifits-container{
+.pricing-benifits-container {
   padding: 2rem;
 }
 
-.certificate-section{
+.certificate-section {
   width: 80%;
 }
 .mentor-section {
   width: 80%;
 }
 
+.mobile-price-box {
+  position: fixed;
+  z-index: 10000000000;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  background-color: #101323;
+  display: none;
+}
+
+.animated-text {
+  color: white;
+  animation: colorAnimation 1s infinite;
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: white;
+  }
+  50% {
+    color: #00c374;
+  }
+  100% {
+    color: white;
+  }
+}
+
 @media (max-width: 768px) {
+  .mobile-price-box {
+    display: block;
+  }
   .dt-box p {
     font-size: x-small !important;
   }
@@ -72,14 +102,14 @@
   .pricing-section {
     width: 100%;
   }
-  .pricing-benifits-container{
+  .pricing-benifits-container {
     padding: 1rem;
     margin-top: 2rem;
   }
-  .webinar-for{
+  .webinar-for {
     width: 100%;
   }
-  .certificate-section{
+  .certificate-section {
     width: 100%;
   }
   .mentor-section {

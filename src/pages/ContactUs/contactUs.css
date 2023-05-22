@@ -1,6 +1,18 @@
-.top-section{
-    width: 80%;
+.top-section {
+  width: 80%;
 }
-.contact-row{
-    width: 80%;
+.contact-row {
+  width: 80%;
+}
+
+.submit-btn {
+  width: 100%;
+  border: 0;
+  background-color: #0db760;
+}
+
+@media (max-width: 768px) {
+  .contact-row {
+    width: 95%;
+  }
 }

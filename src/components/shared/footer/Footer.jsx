@@ -16,13 +16,9 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-6 col-lg-3">
               <div className="footer-col">
-                <h4>Geeks of Gurukul</h4>
+                <h4>Geeks of Gurukul </h4>
                 <ul>
-                  <li>
-                    <Link to="/about" target="_blank">
-                      About Us
-                    </Link>
-                  </li>
+                 
                   <li>
                     <Link to="/courses/python" target="_blank">
                       Our Courses
@@ -48,7 +44,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-3">
               <div className="footer-col">
-                <h4>Geeks of Gurukul</h4>
+                <h4>Legal</h4>
                 <ul>
                   <li>
                     <Link to="/faq" target="_blank">
@@ -70,9 +66,19 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-3">
               <div className="footer-col">
-                <h4>Geeks of Gurukul</h4>
-                <ul className="emails">
-                  <li>
+                <h4>About Us</h4>
+                <ul className="">
+                <li>
+                    <Link to="/about" target="_blank">
+                      About Us
+                    </Link>
+                  </li>
+                <li>
+                    <Link to="/contactus" target="_blank">
+                      Contact Us
+                    </Link>
+                  </li>
+                  {/* <li>
                     <Link to="tel:+918822791391">
                       +91 8822791391
                     </Link>
@@ -92,7 +98,7 @@ const Footer = () => {
                       394/1,1st B Cross Road,7th
                       Block,Koramangla,Bengaluru-560030
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

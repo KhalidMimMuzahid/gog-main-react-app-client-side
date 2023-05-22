@@ -12,28 +12,22 @@ const TopBanner = ({ setShouldShowBanner }) => {
     navigate("/additionals");
   };
 
-  const handleButtonCloseClick = (event) => {
-    event.stopPropagation();
-    setShouldShowBanner(false);
-  };
+ 
 
   return (
     <div onClick={handleBannerClick} className={`${style.bannerBody}`}>
+      <Marquee speed={50} autoFill={true}>
       <div className="d-flex align-items-center justify-content-around p-2">
         {/* content */}
         <img src={chatGPT} alt="" />
-        <Marquee>
+        
           <h3>The Next gen Artificial Intelligence ChatGPT & AI Bard</h3>
-        </Marquee>
-        <img src={chatGPT} alt="" />
+        
+        {/* <img src={chatGPT} alt="" /> */}
         {/* content */}
-      </div>
+        </div>
+        </Marquee>
       <div>
-        {/* Button */}
-        <button onClick={handleButtonCloseClick} className={`${style?.bannerClose}`}>
-          X
-        </button>
-        {/* Button */}
       </div>
     </div>
   );

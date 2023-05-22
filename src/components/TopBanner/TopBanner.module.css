@@ -4,12 +4,18 @@
     background: #56A661;
     color: #F8E163;
     cursor: pointer;
+    font-family: poppins;
+    font-size: 36px;
+    font-weight: 600;
+    padding: 10px, 80px, 10px, 0px;
     
 }
 
 .bannerBody img{
     height: 60px;
     width: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
     
 }
 .bannerClose{

@@ -33,6 +33,8 @@ import FaqContents from "../pages/fawContent/FaqContents";
 import PaymentGetwayPage from "../pages/paymentGetwayPage/PaymentGetwayPage";
 
 import ViewPdf from "../components/ourProgram/ViewPdf/ViewPdf";
+import Additional from "../pages/additional_pages/Additional";
+import ContactPage from "../pages/ContactUs/ContactPage";
 
 
 export const router = createBrowserRouter([
@@ -44,6 +46,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/additionals",
+        element: <Additional />
+      },
+      {
+        path: "/contactus",
+        element: <ContactPage />
       },
       {
         path: "/view-pdf/:fileName",
@@ -72,7 +82,8 @@ export const router = createBrowserRouter([
         element: <FaqContents />,
       },
       {
-        path: "/pay",
+        path: "pay/:_id",
+        loader: async ({params})=> fetch(`http://localhost:5000/enroll-course-info?_id=${params?._id}`),
         element: <PaymentGetwayPage />,
       },
       // {

@@ -39,6 +39,7 @@ const AdmissionForm = () => {
   const [program, setProgram] = useState({});
   const [course, setCourse] = useState({});
   const [batchName, setBatchName] = useState("");
+  const [selectedCoursesDetails, setSelectedCoursesDetails] = useState({});
   useEffect(() => {
     fetch("https://geeks-of-gurukul-server-side.vercel.app/all-program")
       .then((response) => response.json())
@@ -52,6 +53,7 @@ const AdmissionForm = () => {
     const subscription = watch((value, { name, type }) => {
       if (name === "programName") {
         setBatchName("");
+        setSelectedCoursesDetails({});
         data?.forEach((each) => {
           if (each?._id === value?.programName) {
             setProgram({
@@ -63,14 +65,17 @@ const AdmissionForm = () => {
         });
       }
       if (name === "courseName") {
+        setBatchName("");
+        setSelectedCoursesDetails({});
         courses?.forEach((each) => {
           if (each?._id === value?.courseName) {
-            // console.log("coursexxxxxxxxxxxx: ", each)
+            //console.log("coursexxxxxxxxxxxx: ", each)
             setBatchName(each?.currentBatch);
             setCourse({
               course_id: each?._id,
               courseName: each?.courseName,
             });
+            setSelectedCoursesDetails(each);
             return;
           }
         });
@@ -92,30 +97,61 @@ const AdmissionForm = () => {
     }
   }, [program?.program_id]);
 
-  const purchaseCourse = (data) => {
+  const purchaseCourse = async (data) => {
     if (!batchName) {
       toast.error("This course is not ready for sale");
       return;
     }
     const justNow = moment().format();
+    // fetch(`http://localhost:5000/batch?batchName=${batchName}`)
+    // .then((res) => res.json())
+    // .then((data) => {
+    //   console.log("batchhhhhhhhhhhhhhhh",data);
+    // })
+    const res = await fetch(
+      `http://localhost:5000/batch?batchName=${batchName}`
+    );
+    const batchDetails = await res.json();
     const coursePurchaseDetails = {
       program,
       course,
-      batch: batchName,
-     
-      actionsDetails: {
-        isDeleted: false,
-        creation: {
-          createdAt: justNow,
-          creatorEmail: user.email,
-        },
-        updation: {
-          updatedAt: justNow,
-          updaterEmail: user.email,
-        },
+      batch: {
+        batch_id: batchDetails?._id,
+        batchName,
+      },
+      isPaid: false,
+      regularPrice: selectedCoursesDetails?.regularPrice,
+      discount: 0,
+      couponCode: "",
+      appliedPrice: Math.floor(selectedCoursesDetails?.regularPrice - 0 * 100),
+      purchaseInfo: {
+        purchaseByEmail: user.email,
+        purchaseByName: user.name,
+        enrolledAt: justNow,
+        paidAt: "",
       },
     };
-    console.log(coursePurchaseDetails);
+    // console.log(coursePurchaseDetails);
+    fetch("http://localhost:5000/enroll-course",{
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(coursePurchaseDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        //console.log("enrolledInfo: ",data);
+        if(data.success) {
+          //console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',data?.data);
+          const _id = data?.data?.insertedId || data?.data?._id;
+          //console.log("Idddddddddddddddddddd",_id)
+          navigate(`/pay/${_id}`)
+        }
+        else{
+          toast.error(data.error);
+        }
+      });
   };
 
   // check Coupon and set data
@@ -207,11 +243,9 @@ const AdmissionForm = () => {
                         </span>
                       </div>
                       <div className="submit-btu">
-                        
-                          <button type="submit">
-                            <span>Pay</span>
-                          </button>
-                        
+                        <button type="submit">
+                          <span>Pay</span>
+                        </button>
                       </div>
                     </div>
                   </div>

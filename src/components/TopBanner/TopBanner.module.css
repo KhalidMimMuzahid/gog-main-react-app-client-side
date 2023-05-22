@@ -1,0 +1,25 @@
+.bannerBody{
+    height: 80px;
+    position: relative;
+    background: #56A661;
+    color: #F8E163;
+    cursor: pointer;
+    
+}
+
+.bannerBody img{
+    height: 60px;
+    width: 60px;
+    
+}
+.bannerClose{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #ff2525;
+    color: #ffffff;
+}

@@ -2,15 +2,21 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import React from "react";
 import CheckoutForm from "./CheckoutForm";
+import { useLoaderData } from "react-router-dom";
 
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
-//console.log("Striprrrrrrrrrreeeeeeeeeeeeeeeee", stripePromise);
+console.log("Striprrrrrrrrrreeeeeeeeeeeeeeeee", process.env.REACT_APP_STRIPE_PK);
 
 const PaymentGetwayPage = () => {
-  // I assume
-  const price = 199;
-  const course = "Full-stack Web development";
+
+  const coursePurchaseDetails= useLoaderData()
+  console.log("coserpersepsdetailsssssssssss", coursePurchaseDetails);
+
+  const price = coursePurchaseDetails?.appliedPrice;
+  const courseName = coursePurchaseDetails?.course?.courseName;
+  const batch = coursePurchaseDetails?.batch?.batchName;
+  
 
   return (
     <div className="privacy-area mt-5">
@@ -18,7 +24,7 @@ const PaymentGetwayPage = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="privacy-policy">
-              <h3>Payment for {course}</h3>
+              <h3>Payment for {courseName}<br/> <span style={{fontSize: "20px"}}>Batch {batch}</span> </h3>
               <h6>
                 Please pay <strong>${price}</strong> for Enrole the courses
               </h6>
@@ -27,7 +33,7 @@ const PaymentGetwayPage = () => {
               <Elements stripe={stripePromise}>
                 <CheckoutForm 
                     price={price}
-                    course={course}
+                    coursePurchaseDetails={coursePurchaseDetails}
                 />
               </Elements>
             </div>

@@ -9,64 +9,94 @@ const Conditons = () => {
             <div className="col-md-12">
               <div className="conditions">
                 <h1>Terms &amp; Conditions</h1> <br />
+                <h4>Contact Information: </h4>
                 <p>
-                  THESE TERMS OF USE ARE AN ELECTRONIC RECORD IN THE NATURE OF
-                  AN ELECTRONIC CONTRACT FORMED PURSUANT TO THE INFORMATION
-                  TECHNOLOGY ACT, 2000, AND THE RULES MADE THERE UNDER, AS WELL
-                  AS THE AMENDED PROVISIONS RELATING TO ELECTRONIC DOCUMENTS /
-                  RECORDS IN VARIOUS STATUTES AS AMENDED BY THE INFORMATION.
-                </p>{" "}
-                <br />
+                  Geeks of Gurukul <br />
+                  Address: 394/1, 1st B Cross Rd, 7th Block, Koramangala, <br />{" "}
+                  Bengaluru, Karnataka 560030 <br />
+                  Phone: +91 8822791391 <br />
+                  Email:{" "}
+                  <a target="_blank" href="mailto:support@geeksofgurukul.com">
+                    support@geeksofgurukul.com
+                  </a>{" "}
+                  <br />
+                  <a target="_blank" href="mailto:admission@geeksofgurukul.com">
+                    admission@geeksofgurukul.com
+                  </a>
+                </p>
+                <h4>Effective Date for Policy:</h4>
                 <p>
-                  THE INFORMATION TECHNOLOGY (INTERMEDIARIES GUIDELINES) RULES,
-                  2011, REQUIRE THE PUBLISHING OF THE RULES AND REGULATIONS,
-                  PRIVACY POLICY, AND USER AGREEMENT FOR ACCESS OR USAGE OF THE
-                  WEBSITE, REQUIRE THE PUBLICATION OF THE RULES AND REGULATIONS,
-                  PRIVACY POLICY, AND USER AGREEMENT FOR ACCESS OR USAGE OF THE
-                  WEBSITE.
-                </p>{" "}
-                <br />
+                  These Terms and Conditions are effective. By accessing or
+                  using our website, you acknowledge that you have read,
+                  understood, and agreed to be bound by these terms.
+                </p>
+                <h4>Limitation of Liability and Disclaimer of Warranties:</h4>
                 <p>
-                  THESE TERMS OF USE (BOTH TERMS DEFINED BELOW) ARE A LEGALLY
-                  BINDING DOCUMENT BETWEEN THE USER AND THE GEEKS OF THE GURUKUL
-                  WEBSITE. THESE TERMS OF USE WILL GOVERN THE RELATIONSHIP
-                  BETWEEN THE GEEKS OF GURUKUL WEBSITE AND THE USER FOR THE USE
-                  OF THE WEBSITE AND WILL TAKE EFFECT UPON YOUR ACCEPTANCE
-                  (DIRECTLY OR INDIRECTLY IN ELECTRONIC FORM OR BY MEANS OF AN
-                  ELECTRONIC RECORD).
-                </p>{" "}
-                <br />
+                  Geeks of Gurukul strives to provide accurate and up-to-date
+                  information on our website. However, we make no
+                  representations or warranties of any kind, express or implied,
+                  regarding the completeness, accuracy, reliability,
+                  suitability, or availability of the information, products,
+                  services, or related graphics on our website. Your use of the
+                  website and reliance on any information is at your own risk.
+                </p>
                 <p>
-                  PLEASE READ THESE TERMS OF USE CAREFULLY. BY USING THE
-                  WEBSITE, YOU ACKNOWLEDGE THAT YOU UNDERSTAND, AGREE WITH, AND
-                  CONSENT TO THESE TERMS OF USE. PLEASE DO NOT USE THIS WEBSITE
-                  IF YOU DO NOT ACCEPT THESE TERMS OF USE. PLEASE READ THESE
-                  TERMS OF USE CAREFULLY. BY USING THE WEBSITE, YOU ACKNOWLEDGE
-                  THAT YOU UNDERSTAND, AGREE WITH, AND CONSENT TO THESE TERMS OF
-                  USE. PLEASE DO NOT USE THIS WEBSITE IF YOU DO NOT ACCEPT THESE
-                  TERMS OF USE.
-                </p>{" "}
-                <br />
+                  In no event shall Geeks of Gurukul be liable for any direct,
+                  indirect, incidental, consequential, or punitive damages
+                  arising out of or in connection with your use of the website
+                  or the information provided. We disclaim any warranties or
+                  representations, express or implied, including but not limited
+                  to warranties of merchantability, fitness for a particular
+                  purpose, or non-infringement.
+                </p>
+                <h4>Rules of Conduct:</h4>
                 <p>
-                  YOU HEREBY GIVE YOUR UNCONDITIONAL CONSENT OR AGREEMENTS TO
-                  THE GEEKS OF GURUKUL IN ACCORDANCE WITH SECTIONS 43A AND 72A
-                  OF THE INFORMATION TECHNOLOGY ACT OF 2000 AND THE INFORMATION
-                  TECHNOLOGY (INTERMEDIARY GUIDELINES) RULES OF 2011.
-                </p>{" "}
-                <br />
+                  When using our website, you agree to abide by the following
+                  rules of conduct:
+                </p>
+                <ul>
+                  <li>
+                    You shall not engage in any unlawful or fraudulent
+                    activities.
+                  </li>
+                  <li>
+                    You shall not post or transmit any content that is
+                    offensive, defamatory, or violates the rights of others.
+                  </li>
+                  <li>
+                    You shall not disrupt or interfere with the functioning of
+                    the website or its associated services.
+                  </li>
+                  <li>
+                    You shall not attempt to gain unauthorized access to any
+                    part of the website or its servers.
+                  </li>
+                  <li>
+                    You shall not use the website for any commercial purposes
+                    without our prior written consent.
+                  </li>
+                </ul>
+                <h4>User Restrictions:</h4>
                 <p>
-                  The Geeks of Gurukul Website (“Geeks of Gurukul Website” or
-                  “We” or “Us” or “Our”), a company with its registered office
-                  at 394/1, 1st B Cross, Koramangala -7 Block, Bengaluru –
-                  560030, and the guest users or registered users of the Website
-                  (“You” or “Your” or “Yourself” or “User”) have agreed to these
-                  terms of use that outline the conditions under which the Geeks
-                  of Gurukul Website grants You access to the (“Services”).
-                </p>{" "}
-                <br />
-                <h1>Accounts</h1>
-                <br />
-                <h2>Account Creation</h2>
+                  By using our website, you represent and warrant that you are
+                  at least 18 years of age or have obtained parental consent to
+                  use the website. You agree not to use the website if you have
+                  been previously suspended or prohibited from accessing it.
+                </p>
+                <p>
+                  Geeks of Gurukul reserves the right to suspend or terminate
+                  your access to the website at any time, without notice, for
+                  any reason, including but not limited to violation of these
+                  Terms and Conditions.
+                </p>
+                <p>
+                  These Terms and Conditions constitute the entire agreement
+                  between you and Geeks of Gurukul regarding your use of the
+                  website and supersede any prior agreements or understandings.
+                </p>
+                
+                
+                <h4>Account Creation</h4>
                 <br />
                 <p>
                   Before you may use the Site, you must first register an
@@ -78,7 +108,7 @@ const Conditons = () => {
                   suspend or terminate your Account in accordance with Section.
                 </p>
                 <br />
-                <h2>Account Responsibility</h2>
+                <h4>Account Responsibility</h4>
                 <br />
                 <p>
                   Your Account login credentials must be kept confidential, and
@@ -90,7 +120,7 @@ const Conditons = () => {
                   is not and cannot be held liable.
                 </p>
                 <br />
-                <h1>USE OF THE WEBSITE / SERVICES</h1>
+                <h4>USE OF THE WEBSITE / SERVICES</h4>
                 <br />
                 <p>
                   You acknowledge and agree that when using a Website or
@@ -126,7 +156,7 @@ const Conditons = () => {
                   copy, or monitor any portion of website
                 </li>
                 <br />
-                <h1>Termination and Term</h1>
+                <h4>Termination and Term</h4>
                 <br />
                 <p>
                   Subject to this Section, these Terms will remain in full force
@@ -142,7 +172,7 @@ const Conditons = () => {
                   Company.
                 </p>
                 <br />
-                <h1>Refund Policy</h1>
+                <h4>Refund Policy</h4>
                 <br />
                 <p>
                   Thank you for purchasing one of our courses. We make certain

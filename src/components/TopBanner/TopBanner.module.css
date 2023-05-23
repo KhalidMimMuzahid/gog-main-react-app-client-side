@@ -4,7 +4,7 @@
     background: #56A661;
     color: #ffffff;
     cursor: pointer;
-    padding: 10px, 80px, 10px, 0px;
+    /* padding: 10px, 80px, 10px, 0px; */
     
 }
 .content{
@@ -17,8 +17,8 @@
 .bannerBody img{
     height: 40px;
     width: 40px;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
     
 }
 .bannerClose{

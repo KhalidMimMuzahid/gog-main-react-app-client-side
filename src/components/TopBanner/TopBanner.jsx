@@ -22,11 +22,11 @@ const TopBanner = ({ setShouldShowBanner }) => {
   return (
     <div onClick={handleBannerClick} className={`${style.bannerBody}`}>
       <Marquee speed={50} autoFill={true}>
-      <div className="d-flex align-items-center justify-content-around p-2">
+      <div className="d-flex align-items-center justify-content-center p-2">
         {/* content */}
         <img src={chatGPT} alt="" />
         
-          <h3>The Next gen Artificial Intelligence ChatGPT & AI Bard</h3>
+          <h3 className={`${style?.content}`}>The Next gen Artificial Intelligence ChatGPT & AI Bard</h3>
         
         {/* <img src={chatGPT} alt="" /> */}
         {/* content */}

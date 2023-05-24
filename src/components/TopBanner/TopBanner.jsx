@@ -1,8 +1,10 @@
 import React from "react";
-import chatGPT from "../../assets/iconsSVG/chatGPT.svg";
+
 import style from "./TopBanner.module.css";
 import Marquee from "react-fast-marquee";
 import { useNavigate } from "react-router-dom";
+
+const chatGPT = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/iconsSVG/chatGPT.svg";
 
 const TopBanner = ({ setShouldShowBanner }) => {
   const navigate = useNavigate();

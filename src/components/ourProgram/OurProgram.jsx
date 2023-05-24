@@ -5,13 +5,15 @@ import { toast } from "react-hot-toast";
 import { Modal } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 // svg icon for cards componsts
-import Vector from "../../assets/iconsSVG/Vector.svg";
-import calassTime from "../../assets/iconsSVG/classTime.svg";
-import hourGlass from "../../assets/iconsSVG/hourglass.png";
-import teamLeads from "../../assets/iconsSVG/teamLeads.svg";
-import timeHerryUp from "../../assets/iconsSVG/timeHerryUp.svg";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../../context/AuthProvider";
+
+
+const Vector = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/iconsSVG/Vector.svg';
+const calassTime = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/iconsSVG/classTime.svg";
+const hourGlass = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/iconsSVG/hourglass.png";
+const teamLeads = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/iconsSVG/teamLeads.svg";
+const timeHerryUp = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/iconsSVG/timeHerryUp.svg";
 
 const OurProgram = () => {
   const { user } = useContext(AuthContext);

@@ -1,8 +1,8 @@
 import React from "react";
-// import defaultLooader from "../../assets/gif/Gj7X.gif";
-// import defaultLooader2 from "../../assets/gif/HDoX.gif";
-// import defaultLooader3 from "../../assets/gif/IVvP.gif";
-// import defaultLooader4 from "../../assets/gif/JM9R.gif";
+// import defaultLooader = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/gif/Gj7X.gif";
+// import defaultLooader2 = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/gif/HDoX.gif";
+// import defaultLooader3 = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/gif/IVvP.gif";
+// import defaultLooader4 = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/gif/JM9R.gif";
 import defaultLooader5 from "../../../assets/gif/giphy (1).gif";
 const Loader = ({ type = "default" }) => {
   return (

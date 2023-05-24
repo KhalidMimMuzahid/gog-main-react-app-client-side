@@ -260,7 +260,7 @@ const NavBar = () => {
                   </Nav.Link>
 
                   <Nav.Link
-                    href="https://gog-lms.netlify.app/dashboard/assessment"
+                    href="https://www.courses.geeksofgurukul.com/dashboard/assessment"
                     target="_blank"
                   >
                     <Link

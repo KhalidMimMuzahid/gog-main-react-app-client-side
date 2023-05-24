@@ -1,19 +1,20 @@
 import React from 'react';
 import './Courses.css'
 
-import python from '../../assets/images/Crouse/python.jpg'
-import SQL from '../../assets/images/Crouse/sql.jpg'
-import Java  from '../../assets/images/Crouse/Java (1).png'
-import DSA from '../../assets/images/Crouse/DSA.png'
-import Cyber  from '../../assets/images/Crouse/Cyber Security.png'
-import Data  from '../../assets/images/Crouse/tableau.jpg'
-import Learning from '../../assets/images/Crouse/machine learning.jpg'
-import Artificial from '../../assets/images/Crouse/AI.jpg'
 import NavBar from '../../components/shared/navbar/NavBar';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import Footer from '../../components/shared/footer/Footer';
 
 import { Helmet } from "react-helmet";
+
+const python = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/python.jpg'
+const SQL = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/sql.jpg'
+const Java  = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/Java (1).png'
+const DSA = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/DSA.png'
+const Cyber  = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/Cyber Security.png'
+const Data  = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/tableau.jpg'
+const Learning = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/machine learning.jpg'
+const Artificial = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/AI.jpg'
 
 
 const Courses = () => {

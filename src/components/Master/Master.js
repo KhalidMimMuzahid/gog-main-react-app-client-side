@@ -8,11 +8,11 @@ import { Navigation,Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
-import python from '../../assets/images/Crouse/py1.png'
-import machine from '../../assets/images/Crouse/machine learning.jpg'
-import microsoft from '../../assets/images/microsoft.png'
-import Analyst from '../../assets/images/cognizant.png'
-import arrowimg from '../../assets/images/Crouse/white-arrow.png'
+import python = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/py1.png'
+import machine = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/machine learning.jpg'
+import microsoft = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/microsoft.png'
+import Analyst = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/cognizant.png'
+import arrowimg = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/white-arrow.png'
 
 const Master = () => {
 

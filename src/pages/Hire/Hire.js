@@ -1,9 +1,10 @@
 import React from "react";
-import Hireimg from "../../assets/images/people.png";
 import Acquire from "../../components/Acquire/Acquire";
 import Brands from "../../components/Brands/Brands";
 import "./Hire.css";
 import { Helmet } from "react-helmet";
+
+const Hireimg = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/people.png";
 
 const Hire = () => {
   return (

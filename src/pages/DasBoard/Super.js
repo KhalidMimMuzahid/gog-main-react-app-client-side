@@ -3,34 +3,39 @@ import { GrAnnounce } from "react-icons/gr";
 import { AiFillCheckSquare } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 import "./Super.css";
-import elipimg from "../../assets/images/Ellipse 4.png";
-import image from "../../assets/images/bannre/Group 9384WebDevelopment.svg";
-import image2 from "../../assets/images/bannre/Group 9383DataAnalyst.png";
-import vector from "../../assets/images/Vector.png";
-import bannerSuper from "../../assets/images/bannre/hurr.svg";
-import bannerSuper2 from "../../assets/images/bannre/harryupSVG 1.svg";
-import banner from "../../assets/images/bannre/border.svg";
-import road from "../../assets/images/bannre/road.svg";
-import road1 from "../../assets/images/bannre/road1.svg";
-import road2 from "../../assets/images/bannre/road2.svg";
-import road3 from "../../assets/images/bannre/road3.svg";
-import road4 from "../../assets/images/bannre/road4.svg";
-import road5 from "../../assets/images/bannre/road5.svg";
-import road6 from "../../assets/images/bannre/road6.svg";
-import applyfreeSvg from "../../assets/images/bannre/applyfree.svg";
-import callback from "../../assets/images/bannre/callback.svg";
-import download from "../../assets/images/bannre/download.svg";
-import arrowroad from "../../assets/images/bannre/arrowroad.svg";
+
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import superPDF from "../../assets/pdfdocs/Super 30 Program (2).pdf";
-import callBackSent from "../../assets/images/bannre/callBackSent.svg";
-import heroImgLogo from "../../assets/images/bannre/hero.png";
+
 
 import { useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import { Icon } from "@iconify/react";
+
+const elipimg = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Ellipse 4.png'
+const image = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/Group 9384WebDevelopment.svg'
+const image2 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/Group 9383DataAnalyst.png'
+const vector = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Vector.png'
+const bannerSuper = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/hurr.svg'
+const bannerSuper2 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/harryupSVG 1.svg'
+const banner = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/border.svg'
+const road = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/road.svg'
+const road1 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/road1.svg'
+const road2 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/road2.svg'
+const road3 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/road3.svg'
+const road4 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/road4.svg'
+const road5 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/road5.svg'
+const road6 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/road6.svg'
+const applyfreeSvg = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/applyfree.svg'
+const callback = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/callback.svg'
+const download = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/download.svg'
+const arrowroad = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/arrowroad.svg'
+const superPDF = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/pdfdocs/Super 30 Program (2).pdf'
+const callBackSent = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/callBackSent.svg'
+const heroImgLogo = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/hero.png'
+
+
 const Super = () => {
   const { user } = useContext(AuthContext);
 

@@ -10,23 +10,27 @@ import './Team.css'
 // import required modules
 //import { EffectCoverflow, Autoplay } from "swiper";
 
-// import team1 from '../../assets/images/teams/1-removebg-preview.png'
-// import team2 from '../../assets/images/teams/2-removebg-preview.png'
-import team3 from '../../assets/images/teams/sandeep-removebg-preview.png'
-import team4 from '../../assets/images/teams/4-removebg-preview.png'
-import team5 from '../../assets/images/teams/5-removebg-preview.png'
-import team6 from '../../assets/images/teams/6-removebg-preview.png'
-import team7 from '../../assets/images/teams/7-removebg-preview.png'
-import team8 from '../../assets/images/teams/8-removebg-preview.png'
-import team9 from '../../assets/images/teams/9-removebg-preview.png'
-import team10 from '../../assets/images/teams/10-removebg-preview.png'
-import education from '../../assets/images/teams/Guwahati.png'
-import education1 from '../../assets/images/teams/Kharagpur.png'
-//import education2 from '../../assets/images/teams/Madras .png'
-import education3 from '../../assets/images/teams/Roorkee .png'
+// import team1 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/1-removebg-preview.png'
+// import team2 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/2-removebg-preview.png'
+
 import { Helmet } from "react-helmet";
-// import education4 from '../../assets/images/teams/sandeep.jpeg'
-// import education5 from '../../assets/images/teams/Thapar.png'
+
+
+// import education4 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/sandeep.jpeg'
+// import education5 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/Thapar.png'
+
+const team3 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/sandeep-removebg-preview.png'
+const team4 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/4-removebg-preview.png'
+const team5 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/5-removebg-preview.png'
+const team6 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/6-removebg-preview.png'
+const team7 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/7-removebg-preview.png'
+const team8 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/8-removebg-preview.png'
+const team9 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/9-removebg-preview.png'
+const team10 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/10-removebg-preview.png'
+const education = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/Guwahati.png'
+const education1 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/Kharagpur.png'
+//const education2 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/Madras .png'
+const education3 = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/teams/Roorkee .png'
 
 const Team = () => {
     return (

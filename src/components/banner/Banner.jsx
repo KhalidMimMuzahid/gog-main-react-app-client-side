@@ -1,11 +1,15 @@
 import React from "react";
 import TypeWriterEffect from 'react-typewriter-effect';
 import "./Banner.css";
-import arrow from '../../assets/images/brand/Vector.svg'
+
 import { Link } from "react-router-dom";
 import LottieAnimation from "../shared/lottieAnimation/LottieAnimation";
-import arrowimg from '../../assets/images/Arrow 6 (1).png'
+
 import { Helmet } from "react-helmet";
+
+const arrowimg = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Arrow 6 (1).png'
+const arrow = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/brand/Vector.svg'
+
 const Banner = () => {
 
   return (

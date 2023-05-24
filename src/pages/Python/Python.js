@@ -3,9 +3,9 @@ import { BsCheckLg, BsClock, BsClockFill, BsHourglass, BsPatchCheckFill } from "
 import { MdComputer } from "react-icons/md";
 import { FaCertificate, FaProjectDiagram } from "react-icons/fa";
 
-import Hourglass from '../../assets/images/icon/Group 9115.svg'
-import Computer from '../../assets/images/icon/Vector (2).svg'
-import Certificate from '../../assets/images/icon/Vector (3).svg'
+const Hourglass = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/icon/Group 9115.svg'
+const Computer = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/icon/Vector (2).svg'
+const Certificate = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/icon/Vector (3).svg'
 
 const Python = () => {
     return (

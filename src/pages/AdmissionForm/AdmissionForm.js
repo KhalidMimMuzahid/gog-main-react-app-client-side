@@ -8,9 +8,11 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import Loading from "../../components/shared/Loading/Loading";
 import { useQuery } from "@tanstack/react-query";
-import banner from "../../assets/images/bannre/0jpg 1 (1).svg";
+
 import { useForm } from "react-hook-form";
 import moment from "moment";
+
+const banner = "https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/bannre/0jpg 1 (1).svg";
 
 const AdmissionForm = () => {
   const {
@@ -146,12 +148,15 @@ const AdmissionForm = () => {
           //console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',data?.data);
           const _id = data?.data?.insertedId || data?.data?._id;
           //console.log("Idddddddddddddddddddd",_id)
-          navigate(`/pay/${_id}`)
+          // 1st for stop navigation 
+          //navigate(`/pay/${_id}`)
         }
         else{
           toast.error(data.error);
         }
       });
+
+      console.log("selectedCoursesDetails iiiiiiiiiiiiiiiiii", selectedCoursesDetails.regularPrice);
   };
 
   // check Coupon and set data
@@ -285,6 +290,7 @@ const AdmissionForm = () => {
                       <p>Total</p>
                       <p>
                         {" "}
+                        <strong>₹{selectedCoursesDetails?.regularPrice || "0"}</strong>{" "}
                         <strong>
                           {/* ₹{mainCourse[0]?.price ? mainCourse[0]?.price : 0} */}
                         </strong>{" "}
@@ -292,13 +298,13 @@ const AdmissionForm = () => {
                     </div>
                     <div className="pricing-details">
                       <p>Discount</p>
-                      <p> -₹150 </p>
+                      <p> -₹0 </p>
                     </div>
                     <div className="pricing-details">
                       <p className="red">Total</p>
                       <p>
                         {" "}
-                        {/* <strong>₹{discount ? discount : 0}</strong>{" "} */}
+                        <strong>₹{selectedCoursesDetails?.regularPrice || "0"}</strong>{" "}
                       </p>
                     </div>
                     <div className="pricing-details">
@@ -319,14 +325,14 @@ const AdmissionForm = () => {
                       <p>To Pay</p>
                       <p>
                         {" "}
-                        <strong>₹{totalcopons ? totalcopons : 0}</strong>{" "}
+                        <strong>₹{selectedCoursesDetails?.regularPrice || "0"}</strong>{" "}
                       </p>
                     </div>
                     <div className="pricing-details green">
                       <p>Total Discount</p>
                       <p>
                         {" "}
-                        <strong>₹{totalCopulall}</strong>{" "}
+                        <strong>₹0</strong>{" "}
                       </p>
                     </div>
 

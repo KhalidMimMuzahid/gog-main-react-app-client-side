@@ -22,7 +22,7 @@ import { FaUser } from "react-icons/fa";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
 import TopBanner from "../../TopBanner/TopBanner";
 
-const NavBar = () => {
+const NavBar = ({shouldShowBanner, setShouldShowBanner}) => {
   // state for the nav items show
   const [showDropdown, setShowDropdown] = useState(false);
   // for the current user and auth log out
@@ -46,7 +46,7 @@ const NavBar = () => {
   } = useForm(); // ract hook from
   //const { createUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
-  const [shouldShowBanner, setShouldShowBanner] = useState(true);
+  // const [shouldShowBanner, setShouldShowBanner] = useState(true);
 
   // getting data form React hook form
   const handleFormData = (applyData) => {

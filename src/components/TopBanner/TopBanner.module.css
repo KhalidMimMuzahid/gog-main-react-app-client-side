@@ -1,36 +1,31 @@
 .bannerBody{
-    height: 60px;
+    height: auto;
     position: relative;
-    background: #56A661;
-    color: #ffffff;
-    cursor: pointer;
+    background: #E0FFEB;
+    color: black;
+    font-family: poppins;
     /* padding: 10px, 80px, 10px, 0px; */
     
 }
-.content{
-    font-family: poppins;
-    font-size: 24px;
-    font-weight: 400;
-    margin-top: 5px;
+
+.bannerBtn{
+    background-color: #27DC69;
+    border: none;
+    color: white;
 }
 
-.bannerBody img{
-    height: 40px;
-    width: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    
+.bannerBtn:hover{
+    background-color: #00ca4a;
 }
-.bannerClose{
+
+.bannerClosebtn{
     position: absolute;
-    width: 25px;
-    height: 25px;
-    top: 0px;
-    right: 0px;
-    border: none;
-    border-radius: 50% 10% 50% 50%;
-    background: #ff2525;
-    color: #ffffff;
-    font-size: 15px;
-    z-index: 100000;
+    right: 10px;
+    cursor: pointer;
+}
+@media (max-width: 760px) {
+    .bannerClosebtn{
+        right: 12px;
+        top: 20px;
+    }
 }

@@ -8,9 +8,9 @@ function RegisterBtn({remainingTime}) {
         <span>
           <button
             type="button"
-            className="registerBtn mt-5 rounded border-0 bg-success py-2 px-3"
+            className="registerBtn mt-5 rounded border-0 py-2 px-3"
           >
-            Register now for ₹99 <s>₹999</s>
+            Register now for <span style={{color: "#FF0000"}} className="fs-4">₹99</span> <s>₹999</s>
           </button>
         </span>
       </Link>

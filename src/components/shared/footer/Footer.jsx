@@ -18,7 +18,6 @@ const Footer = () => {
               <div className="footer-col">
                 <h4>Geeks of Gurukul </h4>
                 <ul>
-                 
                   <li>
                     <Link to="/courses/python" target="_blank">
                       Our Courses
@@ -68,37 +67,16 @@ const Footer = () => {
               <div className="footer-col">
                 <h4>About Us</h4>
                 <ul className="">
-                <li>
+                  <li>
                     <Link to="/about" target="_blank">
                       About Us
                     </Link>
                   </li>
-                <li>
+                  <li>
                     <Link to="/contactus" target="_blank">
                       Contact Us
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link to="tel:+918822791391">
-                      +91 8822791391
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="mailto:support@geeksofgurulkul.com">
-                      support@geeksofgurukul.com
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="mailto:admission@geeksofgurukul.com">
-                      admission@geeksofgurukul.com
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="https://goo.gl/maps/agBCEHEkwoZXGAvd8">
-                      394/1,1st B Cross Road,7th
-                      Block,Koramangla,Bengaluru-560030
-                    </Link>
-                  </li> */}
                 </ul>
               </div>
             </div>
@@ -109,21 +87,28 @@ const Footer = () => {
                   <Link
                     to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"
                     target="_blank"
+                    aria-label="Facebook"
                   >
                     <FaFacebookF></FaFacebookF>
                   </Link>
-                  <Link to="https://twitter.com/geeksofgurukul" target="_blank">
+                  <Link
+                    to="https://twitter.com/geeksofgurukul"
+                    target="_blank"
+                    aria-label="Twitter"
+                  >
                     <FaTwitter></FaTwitter>
                   </Link>
                   <Link
                     to="https://www.instagram.com/geeks_of_gurukul/"
                     target="_blank"
+                    aria-label="Instagram"
                   >
                     <FaInstagram></FaInstagram>
                   </Link>
                   <Link
                     to="https://www.linkedin.com/company/geeks-of-gurukul/"
                     target="_blank"
+                    aria-label="Linkedin"
                   >
                     <FaLinkedinIn></FaLinkedinIn>
                   </Link>

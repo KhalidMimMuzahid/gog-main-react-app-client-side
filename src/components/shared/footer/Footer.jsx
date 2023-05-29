@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-6 col-lg-3">
               <div className="footer-col">
-                <h4>Geeks of Gurukul </h4>
+                <h3>Geeks of Gurukul </h3>
                 <ul>
                   <li>
                     <Link to="/courses/python" target="_blank">
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-3">
               <div className="footer-col">
-                <h4>Legal</h4>
+                <h3>Legal</h3>
                 <ul>
                   <li>
                     <Link to="/faq" target="_blank">
@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-3">
               <div className="footer-col">
-                <h4>About Us</h4>
+                <h3>About Us</h3>
                 <ul className="">
                   <li>
                     <Link to="/about" target="_blank">
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-3">
               <div className="footer-col">
-                <h4>follow us</h4>
+                <h3>follow us</h3>
                 <div className="social-links">
                   <Link
                     to="https://www.facebook.com/people/Geeks-of-Gurukul/100090832062663/"

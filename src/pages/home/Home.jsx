@@ -39,7 +39,7 @@ const Home = () => {
       {/* <ChatBot/> */}
       {/* for google dialog flow */}
       {/* <ChatFunctional/>    */}
-      {/* <iframe height="430" width="350" src="https://bot.dialogflow.com/8820470b-f252-4b4a-a811-0b82340c12d9"></iframe> */}
+      {/* <iframe title="GOGChatbot" height="430" width="350" src="https://bot.dialogflow.com/8820470b-f252-4b4a-a811-0b82340c12d9"></iframe> */}
     </div>
   );
 };

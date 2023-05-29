@@ -9,14 +9,14 @@ function PricingCard() {
         className="px-3 py-5 rounded-2"
       >
         <h4>ChatGPT Workshop Launch Offer {"(Save 900)"}</h4>
-        <h1 className="my-4">
-          ₹99 <s className="fs-4">₹999</s>
+        <h1 className="my-4" style={{color: "#37ED81"}}>
+          ₹99 <s className="fs-4 text-white">₹999</s>
         </h1>
         <p>
           Take advantage of the discounted price of INR 99 and save a total of
           INR 900
         </p>
-        <p>The launch offer expires on midnight of: May 25, 2023</p>
+        <p>The launch offer expires on midnight of: <span className="animated-text">June 04, 2023</span></p>
         <Link target="_blank" to="https://forms.gle/y7uqvSjpy7fS8P9g9">
           <button
             type="button"

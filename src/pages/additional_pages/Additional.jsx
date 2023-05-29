@@ -27,8 +27,9 @@ function Additional() {
         .set({ hour: 0, minute: 0, second: 0 });
       const duration = moment.duration(targetDate.diff(now));
 
-      if (duration.asMilliseconds() <= 0 || targetDate.isAfter("2023-05-25")) {
+      if (duration.asMilliseconds() <= 0 || targetDate.isAfter("2023-06-06")) {
         setRemainingTime("Offer expired");
+        setRemainingTimeMobile("Offer expired");
         return;
       }
 
@@ -52,11 +53,11 @@ function Additional() {
       <div className="mobile-price-box p-4 text-white">
         <div className="d-flex justify-content-between align-items-center">
           <div>
-            <p className="fs-2 mb-0">
+            <p className="fs-2 mb-0 animated-text">
               ₹99 <s className="fs-5">₹999</s>
             </p>
             <p className="mb-0">
-              Offer Ends in{" "}
+              {remainingTimeMobile !== "Offer expired" && "Offer Ends in "}
               <strong className="fs-5">{remainingTimeMobile}</strong>
             </p>
           </div>
@@ -78,7 +79,7 @@ function Additional() {
         <div>
           <h3 style={{ color: "#F8E163" }}>The Next gen AI tools</h3>
           <h1 style={{ color: "#D1FFD0" }} className="fw-semibold">
-            ChatGPT & Beyond
+            ChatGPT & AI Bard
           </h1>
           <p className="text-white fw-normal my-5">
             Discover how ChatGPT can spark innovative ideas, streamline your
@@ -93,7 +94,7 @@ function Additional() {
             style={{ backgroundColor: "#213015", border: "1px solid #96D666" }}
           >
             <BsCalendar4 className="me-2" />
-            <p className="fw-light mb-0">26 May 2023</p>
+            <p className="fw-light mb-0">05 June 2023</p>
           </div>
           <div
             className="dt-box rounded d-flex align-items-center justify-content-between py-2 px-3 ms-4"
@@ -132,7 +133,7 @@ function Additional() {
         {/* Register button */}
         <h2 className="fw-semibold my-5 py-5">
           Here's how it works over the
-          <span style={{ color: "#4BA25D" }}> 2 hours</span>
+          <span style={{ color: "#A6EF67" }}> 2 hours</span>
         </h2>
         {/* Webinar Info */}
         <WebinarInfo webinarInfo={webinarInfo1} heading={"2 Hour Webinar"} />
@@ -142,7 +143,7 @@ function Additional() {
         {/* Register button */}
         <h2 className="fw-semibold my-5 py-5">
           WHY Should you attend the
-          <span style={{ color: "#4BA25D" }}> Workshop?</span>
+          <span style={{ color: "#A6EF67" }}> Workshop?</span>
         </h2>
         {/* Webinar Info */}
         <WebinarInfo webinarInfo={webinarInfo2} />
@@ -197,12 +198,12 @@ function Additional() {
         {/* Why GOG section */}
         <h2 className="fw-semibold my-5 py-5">
           Meet your
-          <span style={{ color: "#4BA25D" }}> Mentor</span>
+          <span style={{ color: "#A6EF67" }}> Mentor</span>
         </h2>
         {/* Mentor description section */}
         <MentorSection />
         {/* Mentor description section */}
-        <h2 className="fw-semibold my-5 py-5" style={{ color: "#4BA25D" }}>
+        <h2 className="fw-semibold my-5 py-5" style={{ color: "#A6EF67" }}>
           Certification
         </h2>
         {/* Certificatio section */}

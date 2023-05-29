@@ -44,7 +44,7 @@ const Team = () => {
                     <meta name="robots" content="index, follow"></meta>
             </Helmet>
             <div className="team-title container">
-                <h4>OUR TEAM</h4>
+                <h3>OUR TEAM</h3>
                 <h2>MEET OUR Team</h2>
                 <p>"A Team Of IITians to Boost your Tech Career to New Heights. The Curriculum Team is an experienced group of data analyst instructors"</p>
             </div>

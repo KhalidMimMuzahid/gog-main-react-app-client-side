@@ -265,7 +265,7 @@ const NavBar = ({shouldShowBanner, setShouldShowBanner}) => {
                   >
                     <Link
                       className="text-dark text-decoration-none supper position-relative"
-                      to="https://gog-lms.netlify.app/dashboard/assessment"
+                      to="https://www.courses.geeksofgurukul.com/dashboard/assessment"
                       target="_blank"
                     >
                       Assesment Test

@@ -29,7 +29,7 @@ const Brands = () => {
     return (
         <div className='brands-area'>
             <div className="brands-title">
-                <h4>OUR STUDENTS PLACED AT</h4>
+                <h3>OUR STUDENTS PLACED AT</h3>
                 <h2>FEW OF THE COMPANIES WHERE OUR STUDENTS GOT PLACED</h2>
             </div>
             <div className="container-fluid">

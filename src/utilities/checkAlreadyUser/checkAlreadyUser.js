@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+// import React, { useContext } from "react";
 
 const checkAlreadyUser = (email) => {
   console.log("email: ", email);

@@ -1,7 +1,7 @@
 import React from "react";
-import { useState } from "react";
+
 import { toast } from "react-hot-toast";
-import Loading from "../shared/Loading/Loading";
+
 
 const PriceTable = ({ relod, load, copuoninfo }) => {
   const id = copuoninfo._id;

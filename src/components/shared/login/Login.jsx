@@ -7,12 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./Login.css";
 
-import {
-  AiFillFacebook,
-  AiFillGithub,
-  AiOutlinePhone,
-  tempUser,
-} from "react-icons/ai";
+
 import moment from "moment/moment";
 import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
 import isPhoneVerified from "../../../utilities/isPhoneVerified/isPhoneVerified";

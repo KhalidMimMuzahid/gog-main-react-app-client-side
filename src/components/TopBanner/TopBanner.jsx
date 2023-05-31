@@ -18,7 +18,7 @@ const TopBanner = ({ setShouldShowBanner }) => {
 
   return (
     <div
-      className={`${style.bannerBody} px-5 py-3 d-flex flex-wrap gap-2 gap-lg-5 justify-content-center align-items-center`}
+      className={`${style.bannerBody} px-5 py-2 d-flex flex-wrap gap-2 gap-lg-5 justify-content-center align-items-center`}
     >
       <p className="mb-0 text-center text-black fw-normal">
         Live Seminar on Artificial Intelligence ChatGPT & AI Bard

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import "react-phone-number-input/style.css";
@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider";
 import "./PhoneSignUp.css";
 import { toast } from "react-hot-toast";
-import Loading from "../Loading/Loading";
+//import Loading from "../Loading/Loading";
 import ModalForAlert from "../modalForAlert/ModalForAlert";
 import checkPhoneAlreadyInUsed from "../../../utilities/checkPhoneAlreadyInUsed/checkPhoneAlreadyInUsed";
 
@@ -34,12 +34,10 @@ const PhoneSignUp = () => {
   };
   const {
     setUpRecaptha,
-    setLoading,
-    user,
+    
     loading,
     tempUser,
-    updateUserProfile,
-    auth,
+    
   } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -55,11 +53,11 @@ const PhoneSignUp = () => {
   // set the destination into from
   const from = search?.slice(12) || "/";
 
-  console.log("Frommmmmmmmmmmmmmmm", from);
+  //console.log("Frommmmmmmmmmmmmmmm", from);
 
   const [numberUser, setNumberUser] = useState("");
   // loading
-  const [loadingState, setLoadingState] = useState(false);
+  //const [loadingState, setLoadingState] = useState(false);
 
   const getOtp = async (e) => {
     e.preventDefault();
@@ -89,21 +87,21 @@ const PhoneSignUp = () => {
 
           try {
             const reCall = async () => {
-              console.log("numberrrrrrrrrrrrrrrrrrrrrrrr", number);
+              //console.log("numberrrrrrrrrrrrrrrrrrrrrrrr", number);
               const response = await setUpRecaptha(number);
-              console.log(
-                "responsesssssssssssssssssssssssssssssssssssssssssssss",
-                response
-              );
+              //console.log(
+                //"responsesssssssssssssssssssssssssssssssssssssssssssss",
+                //response
+              //);
               setResult(response);
-              console.log("auth: ", auth);
+              //console.log("auth: ", auth);
               setFlag(true);
             };
             reCall();
             //console.log("This is the second of opt");
           } catch (err) {
             setError(err);
-            console.log("ERRorrrrrrrrrrrrrrrrrr", err);
+            //console.log("ERRorrrrrrrrrrrrrrrrrr", err);
             // setError("Please, input a valid phone number");
           }
         } else {

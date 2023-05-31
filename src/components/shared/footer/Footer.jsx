@@ -34,7 +34,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="https://info.geeksofgurukul.com/" target="_blank">
+                    <Link to="https://www.blogs.geeksofgurukul.com/" target="_blank">
                       Blog
                     </Link>
                   </li>

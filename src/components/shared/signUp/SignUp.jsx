@@ -9,9 +9,7 @@ import "./SignUp.css";
 import {
   AiOutlineEyeInvisible,
   AiOutlineEye,
-  AiFillFacebook,
-  AiFillGithub,
-  AiOutlinePhone,
+  
 } from "react-icons/ai";
 import moment from "moment";
 import checkAlreadyUser from "../../../utilities/checkAlreadyUser/checkAlreadyUser";
@@ -29,11 +27,9 @@ const SignUp = () => {
     updateUserProfile,
     verifyEmail,
     googleSignIn,
-    FaceboolSignin,
-    gitHubSignin,
+    
     setLoading,
-    auth,
-    setUpRecaptha,
+    
   } = useContext(AuthContext);
   const [signUpError, setSignUPError] = useState("");
   const location = useLocation();

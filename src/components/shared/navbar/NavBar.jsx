@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -12,10 +11,10 @@ import { AuthContext } from "../../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
 // import useAdmin from "../../../UseHook/useAdmin";
-import Loading from "../Loading/Loading";
-import { Dropdown, DropdownButton, NavItem } from "react-bootstrap";
+// import Loading from "../Loading/Loading";
+import { Dropdown} from "react-bootstrap";
 // import AdmissionForm from "../../../pages/AdmissionForm/AdmissionForm";
 
 import { FaUser } from "react-icons/fa";

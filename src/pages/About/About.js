@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css'
-import { GrPersonalComputer, IconName } from "react-icons/gr";
+// import { GrPersonalComputer, IconName } from "react-icons/gr";
 
 const About = () => {
     return (

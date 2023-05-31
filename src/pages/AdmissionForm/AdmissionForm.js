@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./AdmissionForm.css";
 import { Link, useNavigate } from "react-router-dom";
 import Accordion from "react-bootstrap/Accordion";
 import { AuthContext } from "../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
-import Loading from "../../components/shared/Loading/Loading";
-import { useQuery } from "@tanstack/react-query";
+// import PhoneInput from "react-phone-number-input";
+// import Loading from "../../components/shared/Loading/Loading";
+// import { useQuery } from "@tanstack/react-query";
 
 import { useForm } from "react-hook-form";
 import moment from "moment";

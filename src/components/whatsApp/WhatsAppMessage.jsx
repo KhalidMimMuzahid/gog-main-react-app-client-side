@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './WhatsAppMessage.css'
 import { AiFillCloseCircle, AiOutlineWhatsApp } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const WhatsAppMessage = () => {
 

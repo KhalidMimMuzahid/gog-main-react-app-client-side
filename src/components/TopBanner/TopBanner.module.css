@@ -4,6 +4,7 @@
     background: #E0FFEB;
     color: black;
     font-family: poppins;
+    font-size: smaller;
     /* padding: 10px, 80px, 10px, 0px; */
     
 }
@@ -12,6 +13,7 @@
     background-color: #27DC69;
     border: none;
     color: white;
+    font-size: smaller;
 }
 
 .bannerBtn:hover{

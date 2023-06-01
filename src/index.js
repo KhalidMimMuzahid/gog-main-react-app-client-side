@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AuthProvider from "./context/AuthProvider";
-import HttpsRedirect from "react-https-redirect";
+// import HttpsRedirect from "react-https-redirect";
 // // importing AWS amplify
 // import { Amplify } from 'aws-amplify';
 // import awsConfig from './aws-exports'

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Admin.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Loading from "../../components/shared/Loading/Loading";
 import { toast } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";

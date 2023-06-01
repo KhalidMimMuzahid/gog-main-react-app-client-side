@@ -8,11 +8,11 @@ import { Navigation,Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaCalendarAlt, FaClock } from "react-icons/fa";
-import python = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/py1.png'
-import machine = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/machine learning.jpg'
-import microsoft = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/microsoft.png'
-import Analyst = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/cognizant.png'
-import arrowimg = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/white-arrow.png'
+const python = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/py1.png'
+const machine = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/machine learning.jpg'
+const microsoft = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/microsoft.png'
+const Analyst = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/cognizant.png'
+const arrowimg = 'https://all-files-for-gog.s3.ap-south-1.amazonaws.com/assets/images/Crouse/white-arrow.png'
 
 const Master = () => {
 

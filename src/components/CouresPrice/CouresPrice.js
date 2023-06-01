@@ -2,7 +2,7 @@ import React from "react";
 import "./CouresPrice.css";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "../shared/Loading/Loading";
-import { toast } from "react-hot-toast";
+
 import { useState } from "react";
 import PriceTable from "../PriceTable/PriceTable";
 const CouresPrice = () => {

@@ -8,7 +8,7 @@ function Faq() {
   return (
     <div className={`mx-auto ${style.outer_acc}`}>
       <div className={`${style.accordion}`}>
-        <Accordion defaultActiveKey="0" className="text-start">
+        <Accordion defaultActiveKey="0" className={`text-start`}>
           {accordionData.map((item, index) => (
             <AccordionItems item={item} key={item.id} />
           ))}

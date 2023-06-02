@@ -12,7 +12,7 @@ const webinarInfo2 = [
   "Access to information: AI is expected to create 97 million new jobs by 2025, which will require workers with skills in areas such as data analysis, critical thinking, and creativity.",
   "Reduced workload: AI could automate up to 45% of tasks performed by knowledge workers.",
   "Improved engagement: Students who are engaged in their learning are more likely to persist in school and achieve their academic goals (University of Southern California).",
-  "Improved learning outcomes: Students who use AI-powered learning tools perform better on exams than students who do not use these tools (University of Cambridge).",
+  "Improved learning outcomes: Students who use AI-powered learning tools perform better on exams than students who do not use these tools.",
 ];
 
 const whyData = [

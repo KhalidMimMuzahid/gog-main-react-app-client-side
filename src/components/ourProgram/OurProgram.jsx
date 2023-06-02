@@ -85,7 +85,7 @@ const OurProgram = () => {
                 <h3>
                 Champs of Basic Coding
                   </h3>
-                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹1199/month</p>
+                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹1199</p>
 
                   <p>
                     BASIC (Beginners' All-purpose Symbolic Instruction Code) is
@@ -152,7 +152,7 @@ const OurProgram = () => {
                 <h3>
                 Champs of Advance Coding
                   </h3>
-                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹1999/month</p>
+                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹1999</p>
                   <p>
                     Students learn the fundamentals of programming through
                     creating interactive stories, designing animations, and
@@ -244,7 +244,7 @@ const OurProgram = () => {
                   <h3>
                     Full Stack Data Analytics
                   </h3>
-                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999/month</p>
+                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999</p>
                   <p>
                     Data analytics is the process of examining, interpreting,
                     and transforming data into useful insights and information
@@ -312,7 +312,7 @@ const OurProgram = () => {
                 <h3>
                 Full Stack Web Development
                   </h3>
-                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999/month</p>
+                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999</p>
                   <p>
                     Full stack web development refers to the process of
                     designing, developing, and deploying a complete web
@@ -407,7 +407,7 @@ const OurProgram = () => {
                   <h3>
                   Electrical Engineering
                   </h3>
-                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999/month</p>
+                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999</p>
                   <p>
                     Electrical engineering is a field of engineering that deals
                     with the study and application of electricity,
@@ -474,7 +474,7 @@ const OurProgram = () => {
                 <h3>
                 Mechanical Engineering
                   </h3>
-                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999/month</p>
+                  <p className="text-black fw-semibold bg-black text-white px-2  d-inline py-1  rounded">₹3999</p>
                   <p>
                     Mechanical engineering is a branch of engineering that deals
                     with the design, manufacturing, and maintenance of

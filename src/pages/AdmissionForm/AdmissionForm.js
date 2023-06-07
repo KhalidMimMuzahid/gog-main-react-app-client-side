@@ -43,7 +43,7 @@ const AdmissionForm = () => {
   const [batchName, setBatchName] = useState("");
   const [selectedCoursesDetails, setSelectedCoursesDetails] = useState({});
   useEffect(() => {
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/all-program")
+    fetch("http://localhost:5000/api/v1/programs/all-program")
       .then((response) => response.json())
       .then((data) => {
         // console.log("data", data?.data);
@@ -89,7 +89,7 @@ const AdmissionForm = () => {
     if (program?.program_id) {
       setCourses([]);
       fetch(
-        `https://geeks-of-gurukul-server-side.vercel.app/all-courses-by-program?_id=${program?.program_id}`
+        `http://localhost:5000/api/v1/courses/all-courses-by-program?_id=${program?.program_id}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -111,7 +111,7 @@ const AdmissionForm = () => {
     //   console.log("batchhhhhhhhhhhhhhhh",data);
     // })
     const res = await fetch(
-      `https://geeks-of-gurukul-server-side.vercel.app/batch?batchName=${batchName}`
+      `http://localhost:5000/api/v1/batches/batch?batchName=${batchName}`
     );
     const batchDetails = await res.json();
     const coursePurchaseDetails = {
@@ -134,7 +134,7 @@ const AdmissionForm = () => {
       },
     };
     // console.log(coursePurchaseDetails);
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/enroll-course",{
+    fetch("http://localhost:5000/api/v1/purchasesCourse/enroll-course",{
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -147,9 +147,9 @@ const AdmissionForm = () => {
         if(data.success) {
           //console.log('dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',data?.data);
           const _id = data?.data?.insertedId || data?.data?._id;
-          //console.log("Idddddddddddddddddddd",_id)
+          console.log("Idddddddddddddddddddd",_id)
           // 1st for stop navigation 
-          //navigate(`/pay/${_id}`)
+          navigate(`/pay/${_id}`)
         }
         else{
           toast.error(data.error);

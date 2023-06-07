@@ -19,14 +19,14 @@ const CheckoutForm = ({ price, coursePurchaseDetails }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://geeks-of-gurukul-server-side.vercel.app/create-payment-intent", {
+    fetch("http://localhost:5000/api/v1/payments/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ price }),
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log("ready to pay:  ", data);
+        console.log("ready to pay:  ", data);
         setClientSecret(data.clientSecret);
       });
   }, [price]);
@@ -35,7 +35,7 @@ const CheckoutForm = ({ price, coursePurchaseDetails }) => {
     event.preventDefault();
     setPayingStatus("");
     setPaymentError("");
-    setIsPaying(true)
+    
     if (!stripe || !elements) {
       console.log("xxxxxxxxxxxxxxxxxxxxxxxx");
       return;
@@ -77,15 +77,18 @@ const CheckoutForm = ({ price, coursePurchaseDetails }) => {
       setIsPaying(false);
       setPaymentError(confirmError.message);
       return;
+    }else{
+      setPaymentError("");
     }
     if (paymentIntent?.status === "succeeded") {
+      
       setPaymentId(paymentIntent?.id);
       console.log("successfully paid: intent Id: ", paymentIntent);
       // TODO: update database for change payment status  post_id paymentIntent?.id
       // course
-
+      setIsPaying(true) 
       fetch(
-        `https://geeks-of-gurukul-server-side.vercel.app/setpaymentstatus?_id=${coursePurchaseDetails?._id}&paymentId=${paymentIntent?.id}`,
+        `http://localhost:5000/api/v1/payments/setpaymentstatus?_id=${coursePurchaseDetails?._id}&paymentId=${paymentIntent?.id}`,
         { method: "POST" }
       )
         .then((res) => res.json())
@@ -102,7 +105,7 @@ const CheckoutForm = ({ price, coursePurchaseDetails }) => {
           }
           setIsPaying(false);
 
-          // setPaymentError("something went wrong, please try again");
+          //setPaymentError("something went wrong, please try again");
         });
     }
   };
@@ -126,8 +129,10 @@ const CheckoutForm = ({ price, coursePurchaseDetails }) => {
             },
           }}
         />
+
+        
         <button
-          className="mt-3 btn btn-primary"
+          className={`mt-3 btn btn-primary ${(!stripe || !clientSecret || payingStatus==="success") && "bg-secondary"}`}
           type="submit"
           disabled={!stripe || !clientSecret || isPaying || payingStatus==="success"}
         >

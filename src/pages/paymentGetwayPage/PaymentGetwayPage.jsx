@@ -6,12 +6,12 @@ import { useLoaderData } from "react-router-dom";
 
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
-console.log("Striprrrrrrrrrreeeeeeeeeeeeeeeee", process.env.REACT_APP_STRIPE_PK);
+//console.log("Striprrrrrrrrrreeeeeeeeeeeeeeeee", process.env.REACT_APP_STRIPE_PK);
 
 const PaymentGetwayPage = () => {
 
   const coursePurchaseDetails= useLoaderData()
-  console.log("coserpersepsdetailsssssssssss", coursePurchaseDetails);
+  //console.log("coserpersepsdetailsssssssssss", coursePurchaseDetails);
 
   const price = coursePurchaseDetails?.appliedPrice;
   const courseName = coursePurchaseDetails?.course?.courseName;

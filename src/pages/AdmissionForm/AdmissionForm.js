@@ -43,7 +43,7 @@ const AdmissionForm = () => {
   const [batchName, setBatchName] = useState("");
   const [selectedCoursesDetails, setSelectedCoursesDetails] = useState({});
   useEffect(() => {
-    fetch("http://localhost:5000/api/v1/programs/all-program")
+    fetch("https://api.geeksofgurukul.com/api/v1/programs/all-program")
       .then((response) => response.json())
       .then((data) => {
         // console.log("data", data?.data);
@@ -89,7 +89,7 @@ const AdmissionForm = () => {
     if (program?.program_id) {
       setCourses([]);
       fetch(
-        `http://localhost:5000/api/v1/courses/all-courses-by-program?_id=${program?.program_id}`
+        `https://api.geeksofgurukul.com/api/v1/courses/all-courses-by-program?_id=${program?.program_id}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -111,7 +111,7 @@ const AdmissionForm = () => {
     //   console.log("batchhhhhhhhhhhhhhhh",data);
     // })
     const res = await fetch(
-      `http://localhost:5000/api/v1/batches/batch?batchName=${batchName}`
+      `https://api.geeksofgurukul.com/api/v1/batches/batch?batchName=${batchName}`
     );
     const batchDetails = await res.json();
     const coursePurchaseDetails = {
@@ -134,7 +134,7 @@ const AdmissionForm = () => {
       },
     };
     // console.log(coursePurchaseDetails);
-    fetch("http://localhost:5000/api/v1/purchasesCourse/enroll-course",{
+    fetch("https://api.geeksofgurukul.com/api/v1/purchasesCourse/enroll-course",{
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -94,7 +94,7 @@ function Additional() {
             style={{ backgroundColor: "#213015", border: "1px solid #96D666" }}
           >
             <BsCalendar4 className="me-2" />
-            <p className="fw-light mb-0">05 June 2023</p>
+            <p className="fw-light mb-0">20 June 2023</p>
           </div>
           <div
             className="dt-box rounded d-flex align-items-center justify-content-between py-2 px-3 ms-4"

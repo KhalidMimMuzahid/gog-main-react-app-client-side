@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.e25a3d92.css",
-    "main.js": "./static/js/main.20bfd682.js",
+    "main.css": "./static/css/main.622efacf.css",
+    "main.js": "./static/js/main.c5051d78.js",
     "static/js/787.6675d423.chunk.js": "./static/js/787.6675d423.chunk.js",
     "static/media/logo (1).png": "./static/media/logo (1).07759d0d9ac25f718def.png",
     "static/media/certificate.png": "./static/media/certificate.b2497d6b45c86fb9470e.png",
-    "static/media/card2.png": "./static/media/card2.f748ac538938480d63ff.png",
-    "static/media/card.png": "./static/media/card.cfb923b521a1f784caca.png",
+    "static/media/card2.png": "./static/media/card2.a9503d9a22d0c067d622.png",
+    "static/media/card.png": "./static/media/card.65c09e35d9b24d7e22f2.png",
     "static/media/mascot2.png": "./static/media/mascot2.a663c8d4cb90131e2001.png",
     "static/media/mascot1.png": "./static/media/mascot1.4e2592d14ed65b37338b.png",
     "static/media/chatgptLogo.png": "./static/media/chatgptLogo.f943b9c06a08ad788545.png",
     "index.html": "./index.html",
-    "main.e25a3d92.css.map": "./static/css/main.e25a3d92.css.map",
-    "main.20bfd682.js.map": "./static/js/main.20bfd682.js.map",
+    "main.622efacf.css.map": "./static/css/main.622efacf.css.map",
+    "main.c5051d78.js.map": "./static/js/main.c5051d78.js.map",
     "787.6675d423.chunk.js.map": "./static/js/787.6675d423.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e25a3d92.css",
-    "static/js/main.20bfd682.js"
+    "static/css/main.622efacf.css",
+    "static/js/main.c5051d78.js"
   ]
 }

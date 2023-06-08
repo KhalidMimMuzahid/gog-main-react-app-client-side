@@ -19,7 +19,7 @@ const CheckoutForm = ({ price, coursePurchaseDetails }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:5000/api/v1/payments/create-payment-intent", {
+    fetch("https://api.geeksofgurukul.com/api/v1/payments/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ price }),
@@ -88,7 +88,7 @@ const CheckoutForm = ({ price, coursePurchaseDetails }) => {
       // course
       setIsPaying(true) 
       fetch(
-        `http://localhost:5000/api/v1/payments/setpaymentstatus?_id=${coursePurchaseDetails?._id}&paymentId=${paymentIntent?.id}`,
+        `https://api.geeksofgurukul.com/api/v1/payments/setpaymentstatus?_id=${coursePurchaseDetails?._id}&paymentId=${paymentIntent?.id}`,
         { method: "POST" }
       )
         .then((res) => res.json())

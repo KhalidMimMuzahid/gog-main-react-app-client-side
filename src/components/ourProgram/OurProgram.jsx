@@ -103,7 +103,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet ">
                   <img src={hourGlass} alt="" />
-                  Duration- 24 weeks
+                  Duration- 12 weeks
                 </li>
                 <li className="course-contnet">
                   <img src={Vector} alt="" />
@@ -169,7 +169,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                   <img src={hourGlass} alt="" />
-                  Duration- 24 weeks
+                  Duration- 12 weeks
                 </li>
                 <li className="course-contnet">
                   <img src={Vector} alt="" />
@@ -262,7 +262,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                   <img src={hourGlass} alt="" />
-                  Duration - 24 weeks
+                  Duration - 12 weeks
                 </li>
                 <li className="course-contnet">
                   <img src={Vector} alt="" />
@@ -331,7 +331,7 @@ const OurProgram = () => {
 
                 <li className="course-contnet">
                   <img src={hourGlass} alt="" />
-                  Duration - 24 weeks
+                  Duration - 12 weeks
                 </li>
                 <li className="course-contnet">
                   <img src={Vector} alt="" />
@@ -429,7 +429,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                   <img src={hourGlass} alt="" />
-                  Duration - 36 weeks
+                  Duration - 12 weeks
                 </li>
                 <li className="course-contnet">
                   <img src={teamLeads} alt="" />
@@ -495,7 +495,7 @@ const OurProgram = () => {
                 </li>
                 <li className="course-contnet">
                   <img src={hourGlass} alt="" />
-                  Duration - 36 weeks
+                  Duration - 12 weeks
                 </li>
                 <li className="course-contnet">
                   <img src={teamLeads} alt="" />

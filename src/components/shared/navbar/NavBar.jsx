@@ -84,8 +84,8 @@ const NavBar = ({shouldShowBanner, setShouldShowBanner}) => {
 
   return (
     <div className="menu-gr shadow-sm">
-      {shouldShowBanner &&
-        <TopBanner setShouldShowBanner ={setShouldShowBanner} />}
+      {/* {shouldShowBanner &&
+        <TopBanner setShouldShowBanner ={setShouldShowBanner} />} */}
       {["xl"].map((expand) => (
         <Navbar
           key={expand}

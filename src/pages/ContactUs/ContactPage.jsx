@@ -44,10 +44,10 @@ function ContactPage() {
                   color: "black",
                   marginLeft: "10px",
                 }}
-                href="tel:+918822791391"
+                href="tel:+919109976088"
               >
                 {" "}
-                +91 8822791391
+                +91 9109976088
               </a>{" "}
             </p>
             <p>

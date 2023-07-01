@@ -1,9 +1,35 @@
 {
+  "auth": {
+    "geeksofgurukulclientc9bd2a08": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
   "hosting": {
     "amplifyhosting": {
-      "lastPushTimeStamp": "2023-04-29T16:56:09.905Z",
+      "providerPlugin": "awscloudformation",
       "service": "amplifyhosting",
-      "type": "cicd"
+      "type": "manual"
     }
   },
   "parameters": {

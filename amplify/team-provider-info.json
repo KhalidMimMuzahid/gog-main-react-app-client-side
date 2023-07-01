@@ -10,13 +10,29 @@
       "StackName": "amplify-geeksofgurukulclient-dev-204533",
       "StackId": "arn:aws:cloudformation:us-east-1:951647433679:stack/amplify-geeksofgurukulclient-dev-204533/81f5a700-e69c-11ed-ad01-12420d62bf27",
       "AmplifyAppId": "d29homx6bcspe3"
+    }
+  },
+  "envtwo": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-geeksofgurukulclient-envtwo-111102-authRole",
+      "UnauthRoleArn": "arn:aws:iam::951647433679:role/amplify-geeksofgurukulclient-envtwo-111102-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::951647433679:role/amplify-geeksofgurukulclient-envtwo-111102-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-geeksofgurukulclient-envtwo-111102-deployment",
+      "UnauthRoleName": "amplify-geeksofgurukulclient-envtwo-111102-unauthRole",
+      "StackName": "amplify-geeksofgurukulclient-envtwo-111102",
+      "StackId": "arn:aws:cloudformation:us-east-1:951647433679:stack/amplify-geeksofgurukulclient-envtwo-111102/69a05c80-e715-11ed-ba43-12ee3bf479c3",
+      "AmplifyAppId": "dvc1vp3dksgn4"
     },
     "categories": {
       "hosting": {
         "amplifyhosting": {
-          "appId": "d29homx6bcspe3",
-          "type": "cicd"
+          "appId": "dvc1vp3dksgn4",
+          "type": "manual"
         }
+      },
+      "auth": {
+        "geeksofgurukulclientc9bd2a08": {}
       }
     }
   }
